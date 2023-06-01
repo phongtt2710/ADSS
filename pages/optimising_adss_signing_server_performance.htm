@@ -1,0 +1,473 @@
+<html>
+  <head>
+    <title>Tối ưu hóa hiệu suất máy chủ ký ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('108','Tối ưu hóa hiệu suất máy chủ ký ADSS');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="optimising_adss_signing_server_performance.htm"
+              title=""
+              >Tối ưu hóa hiệu suất máy chủ ký ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span class="Asc_PageName">Tối ưu hóa hiệu suất máy chủ ký ADSS</span>
+      </p>
+      <p>
+        Máy chủ ký được sử dụng để cung cấp
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >Dịch vụ ký tài liệu và dữ liệu tuân thủ OASIS DSS cho các ứng dụng
+          khách</span
+        >. Máy chủ ký ADSS có thể được điều chỉnh để tối ưu hóa việc xử lý các
+        yêu cầu và phản hồi Ký.
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Hãy xem xét các tùy chọn sau - hãy yêu cầu Tư vấn giải pháp của chúng
+        tôi trợ giúp với các yêu cầu cụ thể của bạn:
+      </p>
+      <ol
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <li>
+          <p>
+            Sử dụng CPU nhanh nhất hiện có - Máy chủ ADSS chủ yếu sử dụng nhiều
+            CPU, nên sử dụng Xeon E3-xxxx hoặc E5-xxxx hoặc các CPU tương đương
+            được đánh giá ở mức 10K passmark
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng đĩa trạng thái rắn thay vì đĩa quay thông thường từ hệ
+            thống. Điều này sẽ cho phép Signing Server hoạt động hiệu quả trên
+            các hoạt động IO
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Đảm bảo có đủ bộ nhớ hệ thống tổng thể và Dịch vụ Windows
+              "Ascertia-ADSS-Service" (hoặc Unix daemon) có đủ bộ nhớ được gán
+              (tối thiểu 4GB, xem xét 8GB cho cao nhất&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >hiệu năng&nbsp;</span
+              >nếu có số lượng lớn khách hàng đồng thời)</span
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng cân bằng tải để phân phối các yêu cầu Ký trên nhiều Máy chủ
+            ký ADSS
+          </p>
+        </li>
+        <li>
+          <p>
+            Cân nhắc sử dụng Dịch vụ Ký cùng với Máy chủ Proxy Ký để chia sẻ
+            tải. Điều này sẽ cho phép Back-end Signing Server tập trung vào Hash
+            signing.&nbsp;
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Kiểm tra xem cài đặt nhật ký theo dõi Máy chủ ADSS có được đặt ở
+              cấp "Lỗi" chứ không phải "Thông tin" và chắc chắn không phải là
+              "Gỡ lỗi" - xem&nbsp;</span
+            ><a
+              href="page.aspx?pageid=ADSS_Server_Logging"
+              target="_blank"
+              style="
+                text-decoration: none;
+                color: #2495d2;
+                font-family: Verdana;
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-align: left;
+              "
+              >Ghi nhật ký máy chủ ADSS</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            C<span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >kiểm tra xem ghi nhật ký lười biếng có đang được sử dụng không và
+              cài đặt có phù hợp không, ví dụ: 5 4000 (ghi vào cơ sở dữ liệu cứ
+              sau 5 giây HOẶC&nbsp;</span
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >sau 4000 giao dịch)</span
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >&nbsp;</span
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >- xem&nbsp;</span
+            ><a
+              href="default.aspx#pageid=global_settings"
+              target="_blank"
+              style="
+                text-decoration: none;
+                color: #2495d2;
+                font-family: Verdana;
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-align: left;
+              "
+              >Cài đặt chung máy chủ ADSS</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng HSM nhanh phù hợp để ký - PCI HSM có thể phản hồi nhanh hơn
+            HSM nối mạng
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng một máy chủ cơ sở dữ liệu mạnh mẽ riêng biệt qua một mạng
+            nhanh phù hợp - điều này cho phép tất cả các tài nguyên hệ thống Ký
+            được dành riêng để ký.&nbsp;
+          </p>
+        </li>
+        <li>
+          <p>
+            Đặt các thông số thích hợp để lựa chọn cẩn thận và giảm thiểu giao dịch Ký sẽ được ghi lại - xem&nbsp;<a
+              target="_blank"
+              href="default.aspx#pageid=signing_service1"
+              style="text-decoration: none; color: #2495d2; line-height: normal"
+              >Thiết đặt Dịch vụ Ký</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng giao thức HTTP cho tất cả các hoạt động ký vì chúng nhanh hơn DSS.&nbsp;
+          </p>
+        </li>
+      </ol>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Xem thêm
+      </p>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="configuring_the_adss_signing_service3.htm" title=""
+              >Cấu hình dịch vụ ký</a
+            ><br /><a href="step_3_-_pdf_sig_appearances1.htm" title=""
+              >Xuất hiện chữ ký PDF</a
+            ><br /><a href="pdf_signature_locations.htm" title=""
+              >Vị trí chữ ký PDF</a
+            ><br /><a href="signing_service_transaction_log_viewer.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ><br /><a href="authentication_logs.htm" title=""
+              >Nhật ký xác thực</a
+            ><br /><a href="signing_logs_archiving.htm" title=""
+              >Lưu trữ nhật ký</a
+            ><br /><a href="signing_service_alerts.htm" title="">Alerts</a
+            ><br /><a href="signing_management_reporting.htm" title=""
+              >Báo cáo quản lý</a
+            ><br /><a href="service_urls.htm" title=""
+              >Ký URL giao diện dịch vụ</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,513 @@
+<html>
+  <head>
+    <title>Cài đặt dịch vụ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('128','Cài đặt dịch vụ');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go&gt; Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo Hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            >&nbsp;&gt;&nbsp;<a href="service_settings1.htm" title=""
+              >Cài đặt dịch vụ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cài đặt dịch vụ</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p><span style="font-family: arial"></span></p>
+      <p>
+        Trang này được sử dụng để định cấu hình các dịch vụ liên quan đến
+         tính toán/nâng cao chữ ký và/hoặc đánh dấu thời gian cho chữ ký.<br />
+        <br />
+        <img
+          alt=""
+          src="images/05-09-2018 5-03-29 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Đối với&nbsp;ký&nbsp;trên thiết bị di động, tùy chọn sau sẽ được hiển thị:</p>
+      <p>
+        <img
+          alt=""
+          src="images/05-09-2018 4-55-35 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Đối với ký MS Word&nbsp;tùy chọn sau sẽ được hiển thị:<br />
+        <br />
+        <img
+          alt=""
+          src="images/05-09-2018 5-06-44 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Các mục cấu hình như sau:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td><strong>Địa chỉ dịch vụ ký tên</strong></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng trường này để thêm (các) địa chỉ Dịch vụ ký.<br /> </span
+              >Điều này là cần thiết khi sử dụng Go&gt;Sign Viewer để hiển thị tài liệu
+              và người dùng muốn ký bằng khóa ký của họ và
+              giấy chứng nhận
+              <span style="text-decoration: underline"
+                >được tổ chức tập trung trên ADSS Server</span
+              >.&nbsp; Ứng dụng kinh doanh phải vượt qua các chi tiết người dùng hoặc
+              bí danh chứng chỉ thông qua API.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Danh sách địa chỉ dịch vụ ký tên</td>
+            <td>
+                Trường này hiển thị các địa chỉ Dịch vụ ký có sẵn có thể
+                được sử dụng để tạo chữ ký người dùng cuối. &nbsp; nhiều dịch vụ
+                địa chỉ có thể được thêm vào để xử lý dịch vụ chính và phụ
+                địa chỉ.&nbsp; Nút Kiểm tra kiểm tra xem Máy chủ ADSS có hoạt động không
+                có sẵn.&nbsp; Nút Xóa xóa một Chữ ký được định cấu hình
+                Địa chỉ dịch vụ.
+            </td>
+          </tr>
+          <tr>
+            <td>Ký hồ sơ</td>
+            <td>
+                Chỉ định cấu hình Ký sẽ được sử dụng cho Go&gt;Sign này
+                hồ sơ.
+            </td>
+          </tr>
+          <tr>
+            <td>Kích hoạt ký ủy quyền từ xa</td>
+            <td>
+                Tùy chọn này cho phép người dùng cấu hình
+              <strong>Ký ủy quyền từ xa.&nbsp;</strong>TRONG
+              <strong>Ký ủy quyền từ xa</strong>, khóa riêng của
+              người dùng được tổ chức ở phía máy chủ. Để truy cập các khóa này, người dùng phải
+              cho phép yêu cầu ký trên thiết bị di động của anh ấy/cô ấy với một
+              khóa ủy quyền. Dịch vụ SAM xác thực chữ ký này
+              yêu cầu ủy quyền để truy cập khóa ký tài liệu và
+              tiến hành ký kết tài liệu.&nbsp;<br />
+              <br />
+              <span class="TipBubble"
+                ><br />
+                ​Trong trường hợp ký bản địa MS Office, cùng một ID khách hàng phải được
+                được sử dụng cho RA và Dịch vụ Go&gt;Sign.&nbsp;</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Địa chỉ dịch vụ xác minh</strong></td>
+            <td>
+                Sử dụng trường này để thêm (các) địa chỉ dịch vụ xác minh.<br />
+                Go&gt;Sign luôn tạo chữ ký PKCS#1 và đây phải là
+                được xác minh và mở rộng sang định dạng chữ ký thích hợp.
+            </td>
+          </tr>
+          <tr>
+            <td>Danh sách địa chỉ dịch vụ xác minh</td>
+            <td>
+                Trường này hiển thị các địa chỉ Dịch vụ xác minh được định cấu hình
+                được sử dụng để xác minh và tùy chọn nâng cao chữ ký. Nhiều
+                địa chỉ dịch vụ có thể được thêm vào.&nbsp; Nút Kiểm tra kiểm tra xem
+                Máy chủ ADSS khả dụng.&nbsp; Nút Remove xóa một
+                địa chỉ Dịch vụ xác minh được định cấu hình.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hồ sơ xác minh</td>
+            <td valign="top">
+                Chỉ định cấu hình Xác minh sẽ được sử dụng với Go&gt;Sign này
+                hồ sơ.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+              <strong>Địa chỉ dịch vụ chứng nhận </strong>
+            </td>
+            <td valign="top">
+                Sử dụng trường này để thêm (các) địa chỉ dịch vụ chứng nhận.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Danh sách Địa chỉ Dịch vụ Chứng nhận</td>
+            <td valign="top">
+                Trường này hiển thị các địa chỉ Dịch vụ chứng nhận có thể được
+                được sử dụng để lấy chứng chỉ chuyển vùng cho các khóa được tạo trong
+                Đi&gt;Ký Applet và thường được sử dụng cho tài liệu phía máy khách
+                ký.&nbsp; Có thể thêm nhiều địa chỉ dịch vụ.&nbsp; Các
+                Nút Kiểm tra kiểm tra xem Máy chủ ADSS có khả dụng hay không.&nbsp; Các
+                Nút Xóa sẽ xóa địa chỉ Dịch vụ Chứng nhận đã định cấu hình.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hồ sơ chứng nhận</td>
+            <td valign="top">
+                Chỉ định hồ sơ chứng nhận sẽ được sử dụng với điều này
+                Đi&gt;Đăng ký hồ sơ.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Cài đặt dịch vụ TSA </strong></td>
+            <td valign="top">
+                Tùy chọn này chỉ nên được sử dụng để tạo tài liệu PDF
+                dấu thời gian như một phần của chữ ký PAdES-LTV (Phần 4). Lĩnh vực này
+                xác định TSA sẽ được sử dụng để lấy dấu thời gian cho kho lưu trữ
+                chữ ký. Cấu hình của (các) địa chỉ TSA được mô tả trong
+                phần này:
+              <a
+                href="page.aspx?pageid=Configuring_Time_Stamp_Authorities_%28TSA%29"
+                target="_blank"
+                >Định cấu hình Cơ quan quản lý Dấu thời gian (TSA).</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Dịch vụ ký di động</strong></td>
+            <td>
+                Dịch vụ Go&gt;Sign cũng hỗ trợ ký trên điện thoại di động bằng
+                giải pháp ConsentID của AET Mobile.
+            </td>
+          </tr>
+          <tr>
+            <td>Địa chỉ dịch vụ ký điện thoại di động</td>
+            <td>
+                Sử dụng trường này để thêm
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >(Các) địa chỉ Dịch vụ Di động</span
+              >.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Danh sách địa chỉ dịch vụ Mobile Signing</td>
+            <td valign="top">
+                Trường này hiển thị các địa chỉ Dịch vụ Di động đã định cấu hình được sử dụng để
+                tính toán các chữ ký. Nhiều địa chỉ dịch vụ có thể được
+                đã thêm.&nbsp; Nút Kiểm tra kiểm tra xem
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Dịch vụ di động</span
+              >
+              có sẵn. Nút Xóa sẽ xóa Di động đã định cấu hình
+               Địa chỉ dịch vụ.
+            </td>
+          </tr>
+          <tr>
+            <td>Hồ sơ dịch vụ ký di động</td>
+            <td>
+                Trường này xác định các
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Dịch vụ di động&nbsp;</span
+              >hồ sơ sẽ được sử dụng với hồ sơ Go&gt;Sign này.
+            </td>
+          </tr>
+          <tr>
+            <td>Chứng chỉ ứng dụng khách TLS<br /></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chọn TLS
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Client&nbsp;</span
+                  >Certificate&nbsp;</span
+                >tồn tại trước trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=key_manager6"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  font-family: Verdana, sans-serif;
+                "
+                >Trình quản lý khóa</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >.&nbsp;<span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Cần có Chứng chỉ ứng dụng khách TLS để xác thực
+                  người dùng di động.</span
+                ></span
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p>Nhấp vào nút Tiếp theo để hiển thị trang Cài đặt nâng cao.</p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="signature_settings.htm" title="">Cài đặt chữ ký</a
+          ><br /><a href="viewer_settings.htm" title="">Cài đặt người xem</a
+          ><br /><a href="key_store_settings.htm" title="">Cài đặt lưu trữ khóa</a
+          ><br /><a href="certificate_filter_criteria.htm" title=""
+            >Tiêu chí lọc chứng chỉ</a
+          ><br /><a href="advanced_settings2.htm" title="">Cài đặt nâng cao</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

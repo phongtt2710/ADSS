@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <title>Tạo hồ sơ chứng chỉ thuộc tính - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('46','Tạo hồ sơ chứng chỉ thuộc tính');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_certification_service.htm"
+              title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_3_-_creating_a_certification_profile.htm"
+              title=""
+              >Bước 2 - Tạo hồ sơ</a
+            >&nbsp;&gt;&nbsp;<a
+              href="creating_an_attribute_profile.htm"
+              title=""
+              >Tạo hồ sơ chứng chỉ thuộc tính</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Tạo hồ sơ chứng chỉ thuộc tính</p>
+      <p style="text-align: justify">
+        <span style="text-align: left"
+          >Trong bước này, bạn có thể tạo một hồ sơ thuộc tính. Hồ sơ thuộc tính
+          là một tập hợp các tham số được định cấu hình trong Dịch vụ chứng nhận
+          ADSS xác định các đặc điểm của chứng chỉ thuộc tính (ví dụ: vòng đời
+          của chứng chỉ cùng với phần mở rộng chứng chỉ, v.v.) sẽ được dịch vụ
+          tạo. Ưu điểm của việc cấu hình cấu hình thuộc tính trên ADSS Server là
+          các ứng dụng khách không cần phải truyền các tham số này trong mỗi
+          thông báo yêu cầu dịch vụ mà có thể chỉ cần tham chiếu đến một cấu
+          hình thuộc tính được cấu hình cụ thể. Máy chủ ADSS cho phép linh hoạt
+          ghi đè các thuộc tính cấu hình nếu được cho phép cụ thể trong cài đặt
+          cấu hình.&nbsp;<br />
+          <br />
+          Điều hướng&nbsp;đến vị trí sau trong Bảng điều khiển máy chủ
+          ADSS:</span
+        >
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="../images/1553523802782.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      Điều này hiển thị một bảng các cấu hình thuộc tính hiện có. Chúng có thể
+      được chỉnh sửa hoặc xóa.
+      <div>
+        <div style="text-align: justify"><br /></div>
+        <div style="text-align: justify">
+          Để tạo hồ sơ mới, hãy nhấp vào biểu tượng <strong>Mới</strong> , điều
+          này sẽ trình bày các hình thức sau:
+        </div>
+        <p style="text-align: justify">
+          <img
+            alt=""
+            src="../images/Certification - Attribute Profile - Details.png"
+            style="border-width: 1px; border-style: solid"
+          />
+        </p>
+        <p style="text-align: justify">Các mục cấu hình như sau:</p>
+        <table class="Asc_Table">
+          <tbody>
+            <tr>
+              <td>Items</td>
+              <td>Mô tả</td>
+            </tr>
+            <tr>
+              <td>Trạng thái</td>
+              <td>
+                Hồ sơ chứng nhận có thể được đánh dấu là Hoạt động hoặc Không
+                hoạt động. Xin lưu ý: hồ sơ thuộc tính không hoạt động sẽ không
+                được sử dụng để xử lý yêu cầu cấp giấy chứng nhận.
+              </td>
+            </tr>
+            <tr>
+              <td>ID hồ sơ</td>
+              <td>
+                Mã định danh duy nhất do hệ thống xác định cho cấu hình này.
+                Điều này phải được tham chiếu trong các yêu cầu dịch vụ chứng
+                nhận nếu hồ sơ thuộc tính này được ứng dụng khách sử dụng.
+              </td>
+            </tr>
+            <tr>
+              <td>Tên hồ sơ</td>
+              <td>
+                Tên duy nhất do Toán tử xác định để dễ dàng nhận dạng con người
+                hơn trong Bảng điều khiển vận hành ADSS. Điều này có thể được
+                tham chiếu thay vì ID hồ sơ trong các yêu cầu dịch vụ chứng nhận
+                nếu ứng dụng khách sử dụng cấu hình thuộc tính này.
+              </td>
+            </tr>
+            <tr>
+              <td>Mô tả hồ sơ</td>
+              <td>
+                Điều này có thể được sử dụng để mô tả cấu hình thuộc tính chi
+                tiết hơn (ví dụ: trong trường hợp nào cấu hình thuộc tính này sẽ
+                được sử dụng và/hoặc loại cài đặt mà cấu hình thuộc tính giữ,
+                v.v.). Điều này chỉ dành cho mục đích thông tin.<br />
+              </td>
+            </tr>
+            <tr>
+              <td>Thuộc tính Authority</td>
+              <td>
+                Chọn một Cơ quan thuộc tính (AA) nội bộ được định cấu hình để xử
+                lý các yêu cầu chứng nhận từ Dịch vụ chứng nhận ADSS.<br />
+                <br />
+                <strong>Ghi chú:</strong> Menu thả xuống sẽ chỉ hiển thị những
+                AA nội bộ đã được định cấu hình (xem
+                <a href="configured_local_aas.htm" target="_blank">Local AAs</a>
+                để biết thêm chi tiết). &nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">Thuật toán băm</td>
+              <td valign="top">
+                Thuật toán băm đã chọn được sử dụng như một phần của quy trình
+                tạo chứng chỉ thuộc tính. Các thuật toán băm sau đây có
+                sẵn:&nbsp;&nbsp; &nbsp;<br />
+                <ul>
+                  <li>SHA1, SHA224, SHA256, SHA384, SHA512</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">Thời hạn hiệu lực</td>
+              <td valign="top">
+                Đặt thời hạn hiệu lực cho thời gian chứng chỉ sẽ có hiệu
+                lực.&nbsp;<br />
+                Các đơn vị thời gian này được hỗ trợ:&nbsp;Phút(s),
+                &nbsp;Giờ(s), &nbsp;Ngày(s), &nbsp;Tháng(s), &nbsp;Năm(s)<br />
+                <br />
+                <strong
+                  ><span style="text-decoration: underline"
+                    >Có thể ghi đè
+                  </span></strong
+                ><br />
+                Đặt cờ này để cho biết liệu thời hạn hiệu lực được cấu hình
+                trong cấu hình thuộc tính có thể bị ứng dụng khách ghi đè bằng
+                cách chuyển các tham số hợp lệ trong thông báo yêu cầu chứng
+                nhận hay không.<br />
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">Phần mở rộng chứng chỉ thuộc tính</td>
+              <td valign="top">
+                Các cờ này xác định xem các tiện ích đã chọn có được thêm vào
+                chứng chỉ thuộc tính hay không. Các tiện ích mở rộng được hỗ trợ
+                là:<br />
+                <ul>
+                  <li>Danh tính kiểm tra</li>
+                  <li>Không có thu hồi Có sẵn</li>
+                  <li>Chứng chỉ tự trị</li>
+                  <li>Tên thân thiện Nội</li>
+                  <li>dung Phiên bản</li>
+                  Mã
+                  <li>định danh chính của</li>
+                  cơ quan (AKI)
+                  <li>Truy cập thông tin cơ quan (AIA</li>
+                  )
+                  <li>Điểm phân phối CRL (CDP)</li>
+                </ul>
+                <strong
+                  ><span style="text-decoration: underline"
+                    >Critical<br /> </span></strong
+                >Đặt cờ quan trọng đánh dấu tiện ích mở rộng có liên quan là
+                quan trọng
+                <strong
+                  ><span style="text-decoration: underline"><br /> </span
+                ></strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        Danh sách các cấu hình thuộc tính hiện có có thể được sắp xếp theo thứ
+        tự tăng dần hoặc giảm dần bằng cách chọn một cột bảng từ danh sách thả
+        xuống.&nbsp;
+        <p>
+          Nhấp vào nút Tìm kiếm trên trang chính Hồ sơ thuộc tính sẽ hiển thị
+          màn hình sau:
+        </p>
+        <p>
+          <img
+            alt=""
+            src="../images/ADSS-Certification-Attribute-Profile-Search.png"
+            style="border-width: 1px; border-style: solid"
+          />
+        </p>
+        <p>
+          Điều này giúp xác định một loại hồ sơ thuộc tính cụ thể được tạo trong
+          Dịch vụ chứng nhận. Hồ sơ có thể được tìm kiếm dựa trên Trạng thái, ID
+          hồ sơ, Tên hồ sơ, Tên cơ quan thuộc tính, Thời hạn hiệu
+          lực.&nbsp;&nbsp;Nếu một tìm kiếm dựa trên nhiều giá trị, thì chúng sẽ
+          được kết hợp với nhau bằng cách sử dụng toán hạng "AND" và do đó chỉ
+          các bản ghi đáp ứng tất cả các tiêu chí mới được trình bày.
+        </p>
+        <p>
+          <span class="TipBubble"
+            >​<br />
+            Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký
+            tự đại diện<br />
+          </span>
+        </p>
+      </div>
+      <div>
+        <div class="pagelist">
+          <p class="Asc_See_Also">Xem thêm</p>
+          <div class="Asc_Sibling_Page_List">
+            <div class="var_Sibling_Page_List">
+              <a href="creating_an_identity_profile.htm" title=""
+                >Tạo hồ sơ chứng nhận</a
+              ><br /><a href="creating_a_cv_certificate_profile.htm" title=""
+                >Tạo hồ sơ chứng chỉ CV</a
+              ><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

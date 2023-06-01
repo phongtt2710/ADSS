@@ -1,0 +1,422 @@
+<html>
+  <head>
+    <title>Dịch vụ chứng nhận ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('41','Dịch vụ chứng nhận ADSS');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <strong
+          ><span style="font-size: 20px">Dịch vụ chứng nhận ADSS </span></strong
+        >
+      </p>
+      <p style="text-align: justify"><span style="font-size: 13px"></span></p>
+      <p style="text-align: justify">
+        Mô-đun Dịch vụ Chứng nhận ADSS cung cấp dịch vụ Cơ quan cấp chứng chỉ
+        cho các ứng dụng khách hoạt động như&nbsp;RA và&nbsp;yêu cầu tạo cặp
+        khóa bất đối xứng và/hoặc gửi khóa công khai để chứng nhận. RFC 2797
+        CMC&nbsp;các giao thức được hỗ trợ cũng như các dịch vụ web SOAP / XML
+        cho các ứng dụng cần chức năng mở rộng như đăng ký người dùng, tạo khóa
+        và quản lý thông tin xác thực chuyển vùng.
+        <br />
+        <br />
+        Khi các khóa được chứng nhận, chúng có thể được tham chiếu cho các mục
+        đích khác, ví dụ như trong các thông báo yêu cầu Dịch vụ ký ADSS bởi các
+        ứng dụng khách. Máy chủ ADSS sử dụng khóa riêng được xác định để ký tài
+        liệu được yêu cầu. Máy chủ ADSS đảm bảo rằng ứng dụng khách đã đăng ký
+        khóa là ứng dụng sau này được phép sử dụng nó, tức là khóa chỉ được dành
+        riêng cho ứng dụng khách sở hữu.&nbsp;<br />
+        <br />
+        ADSS&nbsp;Dịch vụ chứng nhận có thể được sử dụng bởi các ứng dụng kinh
+        doanh để tự động yêu cầu tạo và chứng nhận khóa trên quy mô lớn. Nó đặc
+        biệt có liên quan khi Dịch vụ ký ADSS sẽ sử dụng ký phía máy chủ bằng
+        cách sử dụng các khóa người dùng duy nhất. Một số tổ chức không thể dựa
+        vào người dùng cuối có sẵn khóa ký phù hợp và tuyến đường này cung cấp
+        một cách hiệu quả để cho phép ký. Người dùng cuối có thể tự xác thực với
+        ứng dụng kinh doanh bằng nhiều tùy chọn khác nhau (ví dụ: tên người dùng
+        / mật khẩu được trao đổi qua phiên TLS, mật khẩu lưới một lần, mã thông
+        báo xác thực hai yếu tố, v.v.). Hiện tại, xác thực người dùng cuối được
+        xử lý bởi ứng dụng kinh doanh mặc dù
+        <a target="_blank" href="authorisation_profiles.htm">Ký ủy quyền</a
+        >&nbsp;sử dụng mã thông báo SAML có thể được cung cấp - yêu cầu thêm
+        thông tin.
+        <br />
+        <br />
+        Các khóa được tạo ra được giữ trong cơ sở dữ liệu Máy chủ ADSS ở định
+        dạng được mã hóa. Ngoài ra, Mô-đun bảo mật phần cứng (HSM) có thể được
+        sử dụng để bảo vệ các khóa riêng được tạo và quản lý bởi Máy chủ
+        ADSS.<br />
+        <br />
+        Dịch vụ chứng nhận ADSS cũng cấp chứng chỉ Xác minh thẻ (CV) cho Hộ
+        chiếu điện tử hoạt động như CVCA hoặc DVCA. Nó tuân theo BSI TR-03139
+        (Chính sách chứng chỉ chung) và BSI TR-03110 để tạo chứng chỉ. Nó sử
+        dụng
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >Giao thức BSI TR-03129 cho tất cả các thông tin liên lạc để phát hành chứng chỉ Xác minh thẻ.&nbsp;</span
+        ><br />
+        <br />
+        Hình ảnh sau đây hiển thị các mô-đun con của Dịch vụ chứng nhận, chi tiết được đưa ra trong các phần tiếp theo:
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="../images/CertificationService_HomeScreen.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="text-align: justify"></p>
+      <p style="text-align: justify">
+        <span class="Asc_Sibling_Page_List" style="text-align: left"
+          ><br />
+        </span>
+      </p>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="configuring_the_certification_service.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="configuring_the_certification_service.htm" title=""
+            >Cấu hình dịch vụ chứng nhận</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="directory_integration.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="directory_integration.htm" title="">Tích hợp thư mục</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="x509_certificates.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="x509_certificates.htm" title="">Giấy chứng nhận danh tính</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="attribute_certificates.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="attribute_certificates.htm" title=""
+            >Chứng chỉ thuộc tính</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="cv_certificate.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="cv_certificate.htm" title="">Giấy chứng nhận CV</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="certificate_templates2.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="certificate_templates2.htm" title=""
+            >Mẫu chứng chỉ</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="cv_certificate_templates.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="cv_certificate_templates.htm" title=""
+            >Mẫu chứng chỉ CV</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="certification_transactions_log.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="certification_transactions_log.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="certification_logs_archiving.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="certification_logs_archiving.htm" title="">Lưu trữ nhật ký</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="certification_alerts.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="certification_alerts.htm" title="">Cảnh báo</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="certification_management_reporting.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="certification_management_reporting.htm" title=""
+            >Báo cáo quản lý</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a
+            href="optimising_adss_certification_server_performance.htm"
+            title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a
+            href="optimising_adss_certification_server_performance.htm"
+            title=""
+            >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="service_urls1.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="service_urls1.htm" title=""
+            >URL giao diện dịch vụ chứng nhận</a
+          >
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <p></p>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        Xem thêm
+      </p>
+      <p></p>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <a
+          href="http://kb.ascertia.com/display/AKBS/Ascertia+Knowledge+base"
+          target="_blank"
+          style="
+            text-decoration: none;
+            color: #164587;
+            font-family: Verdana;
+            font-size: 13px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+          "
+          >Cơ sở kiến thức máy chủ ADSS</a
+        >
+      </div>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          font-size: 13px;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="welcome.htm" title="">Chào mừng</a><br /><a
+              href="getting_started.htm"
+              title=""
+              >Bắt đầu</a
+            ><br /><a href="adss_server_-_concepts___architecture.htm" title=""
+              >Khái niệm &amp; Kiến trúc</a
+            ><br /><a href="adss_ra_service.htm" title="">Dịch vụ ADSS RA</a
+            ><br /><a href="adss_server_-_signing_service6.htm" title=""
+              >Dịch vụ ADSS Signing</a
+            ><br /><a href="adss_go-sign_service.htm" title=""
+              >Dịch vụ ký tên&gt;ADSS Go;</a
+            ><br /><a href="adss_ras_service.htm" title="">Dịch vụ ADSS RAS</a
+            ><br /><a href="adss_sam_service.htm" title="">Dịch vụ ADSS SAM</a
+            ><br /><a href="adss_csp_service.htm" title="">Dịch vụ ADSS CSP</a
+            ><br /><a href="tsa_service.htm" title="">Dịch vụ ADSS TSA</a
+            ><br /><a href="adss_server_-_verification_service4.htm" title=""
+              >Dịch vụ ADSS Verification</a
+            ><br /><a href="ocsp_monitor.htm" title="">Màn hình ADSS OCSP</a
+            ><br /><a href="ocsp_service.htm" title="">Dịch vụ ADSS OCSP</a
+            ><br /><a href="adss_scvp_service1.htm" title=""
+              >Dịch vụ ADSS SCVP</a
+            ><br /><a href="adss_xkms_service.htm" title="">Dịch vụ ADSS XKMS</a
+            ><br /><a href="adss_ltan_service.htm" title=""
+              >Dịch vụ ADSS LTANS</a
+            ><br /><a href="adss_hmac_service2.htm" title=""
+              >Dịch vụ ADSS HMAC</a
+            ><br /><a href="adss_decryption_service.htm" title=""
+              >Dịch vụ ADSS Decryption</a
+            ><br /><a href="adss_ocsp_repeater_service.htm" title=""
+              >Dịch vụ ADSS OCSP Repeater</a
+            ><br /><a href="adss_npkd_service.htm" title="">Dịch vụ ADSS NPKD</a
+            ><br /><a href="adss_spoc_service.htm" title="">Dịch vụ ADSS SPOC</a
+            ><br /><a href="manage_cas.htm" title="">Quản lý CAs</a><br /><a
+              href="key_manager6.htm"
+              title=""
+              >Quản lý chủ chốt</a
+            ><br /><a href="trust_manager3.htm" title="">Trình quản lý tin cậy</a
+            ><br /><a href="crl_manager_service.htm" title=""
+              >Màn hình ADSS CRL</a
+            ><br /><a href="global_settings.htm" title="">Cài đặt chung</a
+            ><br /><a href="access_control2.htm" title="">Kiểm soát truy cập</a
+            ><br /><a href="client_manager.htm" title="">Quản lý khách hàng</a
+            ><br /><a href="system_log_viewer.htm" title="">Trình xem nhật ký hệ thống</a
+            ><br /><a href="service_manager.htm" title="">Trình quản lý máy chủ</a
+            ><br /><a href="approval_manager.htm" title="">Trình quản lý phê duyệt</a
+            ><br /><a href="operational_management.htm" title=""
+              >Quản lý vận hành</a
+            ><br /><a href="advanced_configuration.htm" title=""
+              >Cấu hình nâng cao</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

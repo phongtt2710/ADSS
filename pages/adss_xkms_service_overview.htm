@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ ADSS XKMS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('18','ADSS XKMS Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiến trúc</a
+            >&nbsp;&gt;&nbsp;<a href="adss_xkms_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS XKMS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Tổng quan về dịch vụ ADSS XKMS </span></p>
+      <p style="text-align: justify">
+        <span style="text-align: left"
+          >Dịch vụ ADSS XKMS có thể được sử dụng để xác thực chứng chỉ số X.509
+          tiêu chuẩn theo Thông số kỹ thuật quản lý khóa XML (XKMS). Quy trình
+          làm việc điển hình cho Dịch vụ ADSS XKMS như sau:</span
+        >
+      </p>
+      <p style="text-align: justify"></p>
+      <div style="text-align: center">
+        <img
+          alt=""
+          src="../images/ADSS XKMS Service .jpg"
+          style="width: 800px"
+        />
+      </div>
+      <p>&nbsp;</p>
+      <ol>
+        <li>
+          Bên dựa vào (người dùng cuối, khách hàng hoặc ứng dụng kinh doanh của
+          khách hàng) gửi yêu cầu xác thực chứng chỉ đến Dịch vụ ADSS Server
+          XKMS.
+        </li>
+        <li>
+          The ADSS&nbsp;Dịch vụ XKMS thực hiện tất cả các tiêu chuẩn&nbsp;Xác
+          thực chứng chỉ&nbsp;kiểm tra để đảm bảo rằng&nbsp;chứng chỉ&nbsp;được
+          cấp bởi một CA được công nhận và đáng tin cậy và&nbsp;chưa hết hạn,
+          v.v.&nbsp; Là một phần của cơ chế xác thực chứng chỉ này, ADSS Server
+          cũng sẽ yêu cầu thông tin trạng thái chứng chỉ từ nhà cung cấp trạng
+          thái chứng chỉ có liên quan dưới dạng CRL mà nó truy xuất thường xuyên
+          dựa trên chính sách bỏ phiếu cụ thể hoặc cuộc gọi OCSP thời gian thực.
+        </li>
+        <li>
+          Nhà cung cấp dịch vụ trạng thái chứng chỉ sẽ trả về thông tin trạng
+          thái chứng chỉ.
+        </li>
+        <li>
+          Dịch vụ ADSS XKMS sau đó sẽ cung cấp một&nbsp;Xác thực chứng
+          chỉ&nbsp;phản hồi hiển thị trạng thái của&nbsp;chứng chỉ trong yêu
+          cầu&nbsp;là "hợp lệ" hoặc&nbsp;"không hợp lệ".&nbsp; Lưu ý Máy chủ
+          ADSS cũng có thể trả về các mục khác nhau dưới dạng thông tin bằng
+          chứng, bao gồm phản hồi OCSP, nếu ứng dụng khách yêu cầu cụ thể.
+        </li>
+      </ol>
+      <div class="pagelist">
+        <div class="pagelist">
+          <div class="pagelist">
+            <p
+              class="Asc_See_Also"
+              style="
+                font-size: 14px;
+                font-weight: bold;
+                font-style: italic;
+                color: orange;
+                font-family: Verdana;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-align: left;
+              "
+            >
+              Xem thêm
+            </p>
+            <p></p>
+            <div
+              class="Asc_Sibling_Page_List"
+              style="
+                font-size: 13px;
+                font-family: Verdana;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                color: #000000;
+                font-style: normal;
+                font-weight: normal;
+                text-align: left;
+              "
+            >
+              <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+                ><a
+                  href="default.aspx#pageid=tsa_service"
+                  target="_blank"
+                  style="
+                    text-decoration: none;
+                    color: #164587;
+                    font-family: Verdana;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    orphans: 2;
+                    text-align: justify;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                  "
+                ></a
+                ><a
+                  href="default.aspx#pageid=adss_xkms_service"
+                  target="_blank"
+                  style="
+                    text-decoration: none;
+                    color: #164587;
+                    font-family: Verdana;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    orphans: 2;
+                    text-align: justify;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                  "
+                  >Dịch vụ ADSS XKMS</a
+                ><br />
+                <div class="var_Sibling_Page_List">
+                  <a href="introduction4.htm" title=""
+                    >Danh tính đã được chứng minh, niềm tin được cung cấp</a
+                  ><br /><a
+                    href="adss_server_features_and_benefits.htm"
+                    title=""
+                    >Các tính năng và lợi ích của máy chủ ADSS</a
+                  ><br /><a href="adss_server_trust_services.htm" title=""
+                    >Dịch vụ tin cậy máy chủ ADSS</a
+                  ><br /><a
+                    href="adss_server_architecture_interfaces.htm"
+                    title=""
+                    >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+                  ><br /><a href="adss_server_-_signing_service.htm" title=""
+                    >Tổng quan về dịch vụ ký ADSS</a
+                  ><br /><a
+                    href="adss_server_-_verification_service.htm"
+                    title=""
+                    >Tổng quan về dịch vụ xác minh ADSS</a
+                  ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+                    >Tổng quan về dịch vụ ADSS OCSP</a
+                  ><br /><a href="adss_server_-_tsa_service.htm" title=""
+                    >Tổng quan về dịch vụ ADSS TSA</a
+                  ><br /><a href="adss_xkms_service_overview.htm" title=""
+                    >Tổng quan về dịch vụ ADSS XKMS</a
+                  ><br /><a href="adss_scvp_service_overview.htm" title=""
+                    >Tổng quan về dịch vụ ADSS SCVP</a
+                  ><br /><a href="adss_ltan_service_overview.htm" title=""
+                    >Tổng quan về dịch vụ ADSS LTANS</a
+                  ><br /><a href="adss_decryption_service_overview.htm" title=""
+                    >Tổng quan về dịch vụ giải mã ADSS</a
+                  ><br /><a
+                    href="adss_server_-_crl_manager_service.htm"
+                    title=""
+                    >Tổng quan về màn hình ADSS CRL</a
+                  ><br /></div
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

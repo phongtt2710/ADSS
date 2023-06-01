@@ -1,0 +1,415 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ ký ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('13','ADSS Signing Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiếm trúc</a
+            >&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service.htm"
+              title=""
+              >Tổng quan về dịch vụ ký ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p style="text-align: justify">
+        <strong><span style="font-size: 18px"></span></strong
+        ><span class="Asc_PageName">Tổng quan về dịch vụ ký ADSS </span><br />
+        <br />
+        Mục đích của mô-đun Dịch vụ ký là áp dụng chữ ký số cho các tài liệu
+        điện tử.&nbsp;<span style="text-align: left"
+          >Có ba cách khác nhau để sử dụng Dịch vụ ký máy chủ ADSS để ký tài
+          liệu:</span
+        >
+      </p>
+      <ul>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            Theo yêu cầu, ký tài liệu phía máy chủ bằng khóa / chứng chỉ ký được
+            giữ tại Máy chủ ADSS
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            Theo yêu cầu, ký tài liệu phía máy khách bằng khóa / chứng chỉ do
+            người dùng giữ trên thẻ thông minh, mã thông báo USB an toàn hoặc
+            trong kho khóa phần mềm của trình duyệt
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            Xem thư mục tự động ký tài liệu bằng cách sử dụng khóa ký / chứng
+            chỉ được giữ tại Máy chủ ADSS.
+          </div>
+        </li>
+      </ul>
+      <p style="text-align: justify">
+        Ba phương thức ký kết được thảo luận ngắn gọn dưới đây:
+      </p>
+      <p class="Asc_Heading" style="text-align: justify">
+        Ký theo yêu cầu phía máy chủ
+      </p>
+      Chế độ này được đặc trưng bởi thực tế là các tài liệu được ký điện tử tại
+      Máy chủ ADSS. Quy trình làm việc như sau:
+      <ul>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            Ứng dụng khách thực hiện cuộc gọi đến Dịch vụ ký ADSS và cung cấp
+            tài liệu cần ký và&nbsp;chi tiết về hồ sơ ký được cấu hình tại Máy
+            chủ ADSS sẽ được sử dụng cho chữ ký này.&nbsp; Hồ sơ ký xác định
+            loại chữ ký sẽ được tạo ra,&nbsp;nào&nbsp;Khóa ký sẽ được sử dụng,
+            loại hình xuất hiện chữ ký hiển thị để tạo, v.v.&nbsp; Hầu hết
+            các&nbsp;Cấu hình được xác định&nbsp;Bởi hồ sơ ký có thể bị ứng dụng
+            khách ghi đè trong cuộc gọi nếu được yêu cầu.
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            ADSS Server sau đó ký tài liệu theo yêu cầu của hồ sơ ký đã xác định
+            và trả lại tài liệu đã ký trở lại ứng dụng khách như minh họa bên
+            dưới.<br />
+            <br />
+            <div style="text-align: center">
+              <span style="text-align: left"
+                >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span
+              ><img
+                alt=""
+                src="../images/ADSS Signing Service-1-a.jpg"
+                style="width: 300px"
+              />
+            </div>
+          </div>
+        </li>
+      </ul>
+      <p style="text-align: justify">
+        Lưu ý rằng Máy chủ ADSS có thể quản lý nhiều khóa ký và chứng chỉ và do
+        đó Dịch vụ ký có thể ký tài liệu bằng các khóa duy nhất cho nhiều người
+        dùng cuối doanh nghiệp hoặc cá nhân. Cũng lưu ý rằng chữ ký có thể được
+        đính kèm (như được hiển thị), nhúng (ví dụ: bên trong PDF) hoặc tách rời
+        (tức là chữ ký tự tồn tại, tách biệt với tài liệu gốc).
+      </p>
+      <p style="text-align: justify">
+        Ví dụ: ứng dụng khách có thể là ứng dụng web chịu trách nhiệm đăng ký
+        khách hàng cuối dựa trên Internet và tạo khóa / chứng chỉ của họ bằng
+        Dịch vụ chứng nhận ADSS (được giải thích trong phần Máy chủ ADSS - Dịch
+        vụ chứng nhận). Sau đó, những khách hàng này có thể ký tài liệu bằng
+        Dịch vụ ký ADSS bằng các khóa duy nhất của họ được giữ trên Máy chủ
+        ADSS. Hình minh họa sau đây giải thích quy trình làm việc này:
+      </p>
+      <div style="text-align: center">
+        <img
+          alt=""
+          src="../images/ADSS Signing Service-2-a.jpg"
+          style="width: 800px"
+        />
+      </div>
+      <p style="text-align: justify">
+        Mô tả dòng công việc sau đây giải thích quy trình được hiển thị trong sơ
+        đồ ở trên.
+      </p>
+      <ol>
+        <li>
+          <div style="text-align: justify">
+            Khách hàng cuối hoặc ứng dụng kinh doanh của khách hàng thực hiện
+            một giao dịch trực tuyến dẫn đến một tài liệu được ký bởi khách hàng
+            cuối. Ứng dụng khách bắt đầu quá trình ký bằng cách yêu cầu mã ủy
+            quyền từ khách hàng cuối. Khách hàng cuối cùng cung cấp ủy quyền để
+            ký&nbsp;tài liệu, thường là sau khi đã xem tài liệu sẽ được ký trong
+            trình duyệt của khách hàng.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Ứng dụng kinh doanh của khách hàng sau đó thực hiện yêu cầu ký đến
+            Dịch vụ ký ADSS yêu cầu ký tài liệu giao dịch thay mặt cho khách
+            hàng cuối. Ứng dụng khách cũng cung cấp hồ sơ ký, chi tiết về chứng
+            chỉ ký của khách hàng và cả mã ủy quyền do khách hàng cung cấp để mở
+            khóa khóa riêng của khách hàng. Thông báo yêu cầu này từ ứng dụng
+            khách đến Máy chủ ADSS có thể tùy chọn được ký và vận chuyển qua
+            phiên TLS được xác thực máy khách-máy chủ. Giao tiếp này hiện đang
+            đồng bộ mặc dù chế độ không đồng bộ (ví dụ: sử dụng yêu cầu ký dựa
+            trên email) cũng có thể được hỗ trợ theo yêu cầu.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Dịch vụ ký ADSS xác minh thông báo yêu cầu và kiểm tra xem mã ủy
+            quyền của khách hàng có mở khóa thành công mã của người dùng đó hay
+            không&nbsp;khóa riêng. Nếu vậy, Dịch vụ ký sau đó ký tài liệu và trả
+            lại cho ứng dụng khách.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Ứng dụng khách sau đó có thể lưu trữ tài liệu đã ký cục bộ và / hoặc
+            cung cấp cho khách hàng.
+          </div>
+        </li>
+      </ol>
+      <p style="text-align: justify">
+        Đây chỉ là một ví dụ về quy trình làm việc có thể - Máy chủ ADSS đủ linh
+        hoạt để hỗ trợ nhiều kịch bản quy trình công việc kinh doanh.&nbsp;
+      </p>
+
+      <p style="text-align: justify">
+        Trong cả hai trường hợp sử dụng (tức là ký công ty và ký người dùng
+        cuối) ở trên, Dịch vụ ký ADSS hỗ trợ chữ ký dựa trên PDF, chữ ký PKCS#7
+        / CMS và XML DigSig. Dịch vụ ký ADSS cũng có thể tùy chọn nhúng dấu thời
+        gian mật mã do Cơ quan đóng dấu thời gian bên ngoài (TSA) phát hành để
+        chứng minh độc lập thời gian ký chính xác. Dịch vụ ký ADSS cũng có thể
+        nhúng phản hồi của Cơ quan xác thực OCSP để tạo chữ ký dài hạn ETSI AdES
+        (điều này chứng tỏ rằng khóa ký của người ký là hợp lệ tại thời điểm
+        ký).&nbsp; Thông tin thu hồi dựa trên CRL cũng có thể được nhúng bởi
+        Dịch vụ ký ADSS mặc dù đây là
+        <span style="text-decoration: underline">chỉ</span> được khuyến nghị nếu
+        kích thước của CRL nhỏ, vì nếu không, kích thước tài liệu sẽ trở nên
+        cồng kềnh do CRL được nhúng.
+      </p>
+      <p style="text-align: justify">
+        Lược đồ giao thức phản hồi yêu cầu ADSS Signing Service được mô tả trong
+        Hướng dẫn dành cho nhà phát triển ADSS. Các nhà phát triển ứng dụng
+        khách có thể xây dựng các trình xử lý cuộc gọi dịch vụ web của riêng họ
+        hoặc sử dụng trình bao bọc máy khách Java hoặc C# do Ascertia cung cấp.
+      </p>
+      <p class="Asc_Heading" style="text-align: justify">
+        Ký theo yêu cầu phía máy khách (Zero Footprint Signing)
+      </p>
+      <span style="font-family: arial; font-size: 13px"> </span>Chế độ hoạt động
+      này được đặc trưng bởi thực tế là người dùng cuối giữ các khóa ký của họ
+      cục bộ trong kho khóa Windows hoặc có thể trên thẻ thông minh hoặc mã
+      thông báo bảo mật USB; Và họ muốn sử dụng các khóa và chứng chỉ này để ký
+      tài liệu trên hệ thống máy tính để bàn của họ. The Ascertia Go&gt;Sign
+      applet đã được tạo ra đặc biệt để cho phép người dùng cuối ký tài liệu mà
+      không yêu cầu bất kỳ phần mềm ký nào được cài đặt trên máy khách. Trong
+      những trường hợp như vậy, Dịch vụ ký ADSS có thể được yêu cầu để tạo ra
+      một hàm băm của tài liệu sẽ được ký, và sau đó giá trị băm thực sự được ký
+      bởi Go&gt;Đăng nhập applet trong môi trường trình duyệt của khách hàng.
+      Dịch vụ ký ADSS sau đó nhận giá trị băm đã ký và nhúng giá trị này trở lại
+      tài liệu để tạo thành tài liệu được ký cuối cùng. Sơ đồ sau đây minh họa
+      quá trình này:
+      <div style="text-align: center">
+        <img
+          alt=""
+          src="../images/On Demand Client-Side Signing-a.jpg"
+          style="width: 800px"
+        />
+      </div>
+      <p>&nbsp;</p>
+      <ol>
+        <li>
+          <div style="text-align: justify">
+            Khách hàng cuối cùng và ứng dụng kinh doanh của khách hàng tham gia
+            vào một giao dịch kinh doanh dẫn đến việc sản xuất một tài liệu cần
+            được ký bởi khách hàng cuối. Tài liệu dự kiến sẽ được xem trong
+            trình duyệt (ví dụ: dưới dạng tài liệu PDF sử dụng Adobe®&nbsp;Độc
+            giả) và người dùng sau đó được yêu cầu ký nó.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Nếu khách hàng cuối quyết định tiến hành quá trình ký, ứng dụng
+            khách sẽ yêu cầu Máy chủ ADSS băm tài liệu.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            ADSS Server trả về giá trị băm cho tài liệu.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Trình duyệt của khách hàng tải xuống Ascertia Go&gt;Ký applet và giá
+            trị băm sẽ được ký.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Đi&gt;Sign applet yêu cầu người dùng ký giá trị băm bằng thẻ thông
+            minh của họ và sau khi ký Go&gt;Sign applet gửi giá trị băm đã ký
+            đến ứng dụng khách.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Ứng dụng khách gửi giá trị băm đã ký đến Máy chủ ADSS để nhúng vào
+            tài liệu gốc.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            ADSS trả về tài liệu đã ký đã lắp ráp trở lại ứng dụng khách (tức là
+            tài liệu có giá trị băm đã ký được nhúng bên trong nó).
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Ứng dụng khách có thể hiển thị tài liệu trong trình duyệt, lưu trữ
+            hoặc gửi cho người dùng.
+          </div>
+        </li>
+      </ol>
+      <p style="text-align: justify">
+        Quy trình trên chỉ là một đại diện cấp cao của quy trình làm việc và có
+        thể có các biến thể. Ascertia cũng cung cấp một loạt các applet cho các
+        kịch bản kinh doanh khác nhau bao gồm một để băm, ký và lắp ráp chữ ký
+        tài liệu cục bộ mà không yêu cầu Máy chủ ADSS. Ascertia cũng có thể cung
+        cấp một phiên bản của Go&gt;Ký applet cho phép các tài liệu PDF được xem
+        cục bộ trong trình xem applet an toàn. &nbsp;Hơn nữa, Ascertia có thể
+        cung cấp một phiên bản của Go&gt;Đăng nhập applet sử dụng thông tin đăng
+        nhập chuyển vùng (tức là an toàn&nbsp;key container được gửi đến applet
+        từ ADSS Server) để cung cấp khả năng ký từ bất kỳ máy nào mà không cần
+        smartcard / token vật lý.&nbsp;Để biết thêm chi tiết về khác
+        nhau&nbsp;Đi&gt;Vui lòng ký các phiên bản applet&nbsp;sự tiếp xúc
+        <a href="mailto:contactinfo@ascertia.com">info@ascertia.com</a>.
+      </p>
+      <p class="Asc_Heading" style="text-align: justify">
+        Ký thư mục đã xem - Sử dụng ứng dụng khách Auto File Processor (AFP)
+      </p>
+      <div style="text-align: justify">
+        Trong chế độ hoạt động này, Dịch vụ ký ADSS hoạt động với Bộ xử lý tệp
+        tự động ADSS (AFP). Đây là một ứng dụng khách được thiết kế để tự động
+        ký (hoặc trong tương lai xác minh hoặc lưu trữ) các tài liệu được tìm
+        thấy trong (các) thư mục đầu vào cụ thể. Quy trình làm việc trong trường
+        hợp này như sau:<br />
+        <br />
+        <div style="text-align: center">
+          <img
+            alt=""
+            src="../images/Watched Folder Signing Using the Auto File ProcessorClient Applictation-a.jpg"
+            style="width: 800px"
+          />
+        </div>
+        <br />
+        Ứng dụng Bộ xử lý tệp tự động ADSS (AFP) thường xuyên thăm dò một hoặc
+        nhiều thư mục đầu vào đã xem cho các tài liệu được ký khớp với bộ lọc
+        được chỉ định&nbsp;Tiêu chí.
+      </div>
+      <ol>
+        <li>
+          <div style="text-align: justify">
+            AFP sau đó thực hiện các yêu cầu ký (sử dụng giao diện HTTP được tối
+            ưu hóa thuần túy để có hiệu suất cao) cho Dịch vụ ký ADSS
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Máy chủ ADSS ký các tài liệu bằng cách sử dụng hồ sơ ký được xác
+            định và trả lại tài liệu đã ký cho AFP
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            AFP sau đó lưu tài liệu đã ký vào một thư mục đầu ra được cấu hình.
+          </div>
+        </li>
+      </ol>
+      <p style="text-align: justify">
+        Để biết thêm chi tiết về ứng dụng ADSS AFP, vui lòng xem hướng dẫn sử
+        dụng riêng cho sản phẩm này. Xin lưu ý rằng các định dạng chữ ký được hỗ
+        trợ là chữ ký PDF, PKCS#7/CMS và XML DigSig. Đối với PKCS#7/CMS và XML DigSig, bạn
+        có thể chọn xem chữ ký nên là "bao bọc" hay "tách rời". Máy chủ ADSS
+        cũng có thể tạo chữ ký dài hạn với dấu thời gian mật mã nhúng và thông
+        tin thu hồi OCSP / CRL.
+      </p>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        Xem thêm
+      </p>
+      <p></p>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          font-size: 13px;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="adss_server_features_and_benefits.htm" title=""
+              >Các tính năng và lợi ích của máy chủ ADSS</a
+            ><br /><a href="adss_server_trust_services.htm" title=""
+              >Dịch vụ tin cậy máy chủ ADSS</a
+            ><br /><a href="adss_server_architecture_interfaces.htm" title=""
+              >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+            ><br /><a href="adss_server_-_signing_service.htm" title=""
+              >Tổng quan về dịch vụ ký ADSS</a
+            ><br /><a href="adss_server_-_verification_service.htm" title=""
+              >Tổng quan về dịch vụ xác minh ADSS</a
+            ><br /><a href="adss_server_-_certification_service.htm" title=""
+              >Tổng quan về dịch vụ chứng nhận ADSS</a
+            ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS OCSP</a
+            ><br /><a href="adss_server_-_tsa_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS TSA</a
+            ><br /><a href="adss_xkms_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS XKMS</a
+            ><br /><a href="adss_scvp_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS SCVP</a
+            ><br /><a href="adss_ltan_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS LTANS</a
+            ><br /><a href="adss_decryption_service_overview.htm" title=""
+              >Tổng quan về dịch vụ giải mã ADSS</a
+            ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+              >Tổng quan về màn hình ADSS CRL</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

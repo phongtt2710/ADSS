@@ -1,0 +1,420 @@
+<html>
+  <head>
+    <title>Chứng chỉ thiết bị - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('29','Chứng chỉ thiết bị');parent.MenuItemSelected('adss_ra_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_ra_service.htm"
+              title=""
+              >Dịch vụ ADSS RA</a
+            >&nbsp;&gt;&nbsp;<a href="device_certificates.htm" title=""
+              >Chứng chỉ thiết bị</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Chứng chỉ thiết bị</p>
+      <p>
+        Trang này cho phép Nhà điều hành dịch vụ ADSS RA được ủy quyền phù hợp
+        quản lý&nbsp;thiết bị mà chứng chỉ thiết bị sẽ được cấp. Chỉ những thiết
+        bị được liên kết với các danh mục thiết bị được phê duyệt cho thiết bị
+        hiện đang đăng nhập&nbsp;Nhà điều hành RA
+        <span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: normal;
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            word-spacing: 0px;
+            float: none;
+            white-space: normal;
+            widows: 1;
+            font-stretch: normal;
+            -webkit-text-stroke-width: 0px;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >được hiển thị&nbsp;</span
+        >.
+      </p>
+      <p>
+        Trang sau sẽ được hiển thị bằng cách nhấp vào nút Chứng chỉ thiết bị:
+      </p>
+      <p style="font-family: arial; text-align: justify">
+        <img
+          alt=""
+          src="../images/RA 6.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="text-align: justify">
+        Bạn có thể nhập chi tiết thiết bị vào tệp được phân tách bằng dấu phẩy
+        (CSV). &nbsp;Bấm <strong>vào biểu tượng Nhập </strong>và trang sau được
+        hiển thị:
+      </p>
+      <div>
+        <img
+          alt=""
+          src="../images/RA 7.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+      </div>
+      <br />
+      Cấu trúc tệp CSV phải chứa các cột được phân tách bằng dấu phẩy theo thứ
+      tự sau:<br />
+      <ol>
+        <li>Tên thiết bị</li>
+        <li>Tên quản trị</li>
+        <li>viên Email</li>
+        <li>ID danh mục</li>
+        <li>ID hồ sơ Địa</li>
+        <li>chỉ IP</li>
+        <li>Trạng thái thiết bị</li>
+      </ol>
+      <p>
+        Mục 1-5 và 7 là bắt buộc. &nbsp;Mục 6, địa chỉ IP là tùy
+        chọn.&nbsp;<span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: normal;
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            word-spacing: 0px;
+            float: none;
+            white-space: normal;
+            widows: 1;
+            font-stretch: normal;
+            -webkit-text-stroke-width: 0px;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >Nếu các mục dữ liệu này không có mặt hoặc được cung cấp theo thứ tự
+          này thì quá trình nhập sẽ không thành công.<br />
+          <br /> </span
+        >Để bỏ qua giá trị cột địa chỉ IP tùy chọn, hãy viết nó là:<br />
+        <br />
+        Tên thiết bị, Tên quản trị viên, Email, ID danh mục, ID hồ sơ, Trạng
+        thái thiết bị&nbsp;&nbsp;<br />
+        <br />
+        Một&nbsp;Thiết bị mới&nbsp;được thêm bằng cách chọn
+        nút&nbsp;<strong>Mới</strong>&nbsp;từ màn hình đầu tiên ở trên. Màn hình
+        cấu hình sau sau đó được hiển thị:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/2019-06-21_19-28-03.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        Các mục cấu hình như sau:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Trạng thái</td>
+            <td>
+              Một thiết bị có thể được đánh dấu là Hoạt động hoặc Không hoạt
+              động. &nbsp;<br />
+              Chỉ dịch vụ RA mới có thể sử dụng các thiết bị đang hoạt động để
+              xử lý các yêu cầu thiết bị (sử dụng SCEP hoặc qua giao diện
+              web)<br />
+            </td>
+          </tr>
+          <tr>
+            <td>ID thiết bị<br /></td>
+            <td>
+              Mã định danh duy nhất do Hệ thống xác định cho thiết bị này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên thiết bị<br /></td>
+            <td>
+              Tên duy nhất do toán tử xác định để nhận dạng con người dễ dàng
+              hơn trong Bảng điều khiển ADSS Server RA.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Mô tả thiết bị<br /></td>
+            <td>
+              Sử dụng trường này để mô tả cách thiết bị này được sử dụng - điều
+              này chỉ dành cho mục đích thông tin nhà điều hành.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Quản trị viên thiết bị<br /></td>
+            <td>Tên của người được chỉ định quản lý thiết bị.<br /></td>
+          </tr>
+          <tr>
+            <td>Email<br /></td>
+            <td>
+              Địa chỉ email của người quản lý thiết bị - được sử dụng để gửi
+              thông báo qua email về chứng chỉ, hết hạn, v.v.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Danh mục<br /></td>
+            <td>Danh mục sẽ được liên kết với thiết bị này.<br /></td>
+          </tr>
+          <tr>
+            <td>Hồ sơ RA<br /></td>
+            <td>
+              Cấu hình RA sẽ được liên kết với thiết bị này xác định các quy tắc
+              DN với thiết bị này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên phân biệt thiết bị<br /></td>
+            <td>
+              Tên phân biệt thiết bị hiển thị các trường khớp với Cấu hình
+              RA.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Cài đặt mã hóa phản hồi</td>
+            <td>
+              Chọn Thuật toán Mã hóa Phản hồi để mã hóa Phản hồi SCEP. Các thuật
+              toán Mã hóa sau đây có sẵn:<br />
+              <ol>
+                <li>AES 128_CBC</li>
+                <li>AES 192_CBC</li>
+                <li>AES 256_CBC</li>
+                <li>DES_CBC</li>
+                <li>DES_EDE3_CBC</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>Địa chỉ IP<br /></td>
+            <td>
+              Địa chỉ IP tùy chọn của thiết bị/ứng dụng sẽ được liên kết với
+              thiết bị.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Thử thách mật khẩu<br /></td>
+            <td>
+              Mật khẩu được tạo ngẫu nhiên để xác minh xác thực thiết bị khi
+              giao tiếp diễn ra để tạo chứng chỉ đối với thiết bị này.<br />
+              <ul>
+                <li>
+                  Nếu mật khẩu không được gửi trong yêu cầu SCEP thì yêu cầu này
+                  sẽ không được giải quyết.
+                </li>
+                <li>
+                  Nếu mật khẩu không được gửi trong yêu cầu giao diện web thì
+                  yêu cầu này sẽ được coi là yêu cầu Người dùng cuối và các yêu
+                  cầu được phát hành/đang chờ xử lý sẽ được hiển thị trong
+                  mô-đun con Chứng chỉ người dùng cuối.
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Tạo PFX<br /></td>
+            <td>
+              Nếu quản trị viên thiết bị không muốn sử dụng phương pháp tiếp cận
+              dựa trên SCEP hoặc PKCS#10 / CSR thì Nhà điều hành RA có thể sử
+              dụng nút Tạo PFX. Khi khóa / chứng chỉ được tạo thì chứng chỉ /
+              PFX sẽ có sẵn để tải xuống trên bảng điều khiển RA
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="Asc_See_Also">
+        <span
+          style="
+            font-style: normal;
+            font-weight: normal;
+            widows: 1;
+            color: #000000;
+          "
+          >Danh sách các thiết bị hiện có có thể được liệt kê trong một trong
+          hai&nbsp;</span
+        ><strong style="color: #000000; font-style: normal; widows: 1"
+          >Tăng dần&nbsp;</strong
+        ><span
+          style="
+            font-style: normal;
+            font-weight: normal;
+            widows: 1;
+            color: #000000;
+          "
+          >hoặc&nbsp;</span
+        ><strong style="color: #000000; font-style: normal; widows: 1"
+          >Giảm dần</strong
+        ><span
+          style="
+            font-style: normal;
+            font-weight: normal;
+            widows: 1;
+            color: #000000;
+          "
+          >&nbsp;Đặt hàng theo tiêu chí: Thiết bị&nbsp;ID, Thiết bị&nbsp;Tên
+          và&nbsp;Được tạo tại. &nbsp;Chúng có thể được tìm kiếm bằng cách nhấp
+          vào nút Tìm kiếm hiển thị trang Thiết bị tìm kiếm như hình dưới
+          đây:</span
+        >
+      </p>
+      <p
+        style="
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          font-stretch: normal;
+          font-size: 14px;
+          line-height: normal;
+          font-family: arial;
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          word-spacing: 0px;
+          white-space: normal;
+          widows: 1;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/1553503028543.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          font-stretch: normal;
+          font-size: 14px;
+          line-height: normal;
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          word-spacing: 0px;
+          white-space: normal;
+          widows: 1;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        Nhập tiêu chí tìm kiếm dựa trên ID thiết bị, Tên thiết bị, Quản trị viên
+        thiết bị, Email, Danh mục và Cấu hình RA. <br />
+        Nếu nhiều hơn một tham số tìm kiếm được cung cấp, chúng được kết hợp
+        bằng toán tử AND và kết quả được trình bày tương ứng.<br />
+        <!-- Display tip bubble with icon and colored background. -->
+      </p>
+      <div class="TipBubble">
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 1;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            background-color: #f0fff0;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            color: #4f8a10;
+          "
+          ><br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký tự đại diện.</span
+        >
+      </div>
+      <p>&nbsp;</p>
+      <br />
+      <span
+        style="
+          font-size: 14px;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+        "
+        ><span style="color: #ffa500"
+          ><strong><em>Xem thêm</em></strong></span
+        ><br />
+        <br />
+      </span>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_the_ra_service1.htm" title=""
+            >Cấu hình dịch vụ RA</a
+          ><br /><a href="end-user_certificates.htm" title=""
+            >Chứng chỉ người dùng cuối</a
+          ><br /><a href="transactions_log_viewer5.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          ><br /><a href="logs_archiving9.htm" title="">Lưu trữ nhật ký</a
+          ><br /><a href="alerts6.htm" title="">Cảnh báo</a><br /><a
+            href="ra_service_interface_urls.htm"
+            title=""
+            >URL giao diện dịch vụ RA</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

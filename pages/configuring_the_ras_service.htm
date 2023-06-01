@@ -1,0 +1,432 @@
+<html>
+  <head>
+    <title>Định cấu hình Dịch vụ RAS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('148','Định cấu hình Dịch vụ RAS');parent.MenuItemSelected('adss_ras_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+            href="adss_ras_service.htm"
+            title=""
+            >Dịch vụ ADSS RAS</a
+          >&nbsp;&gt;&nbsp;<a href="configuring_the_ras_service.htm" title=""
+              >Định cấu hình Dịch vụ RAS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Định cấu hình Dịch vụ RAS</span></p>
+      <p>
+        Đây là các bước cần thực hiện khi cấu hình ADSS RAS
+        Dịch vụ.&nbsp;<br />
+        &nbsp;&nbsp;<br />
+        Thứ tự thực hiện các bước không&nbsp;quan trọng; nó là
+         có thể quay lại bước trước đó và thực hiện các thay đổi sau nếu
+         yêu cầu.
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                vertical-align: top;
+                font-weight: bold;
+                width: 150pt;
+                text-align: left;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+            Bước
+            </td>
+            <td
+              style="
+                vertical-align: top;
+                font-weight: bold;
+                text-align: left;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              Mô tả
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <a
+                href="default.aspx#pageid=step_1___configuring_ras_profile1"
+                target="_blank"
+                ><span
+                  style="
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    color: #2495d2;
+                  "
+                  >Bước&nbsp;</span
+                >1</a
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Định cấu hình một hoặc nhiều Cấu hình RAS sẽ phù hợp với
+            quản lý người dùng, khóa ký, thiết bị được ủy quyền, ủy quyền
+            yêu cầu, ký yêu cầu, nhận hàm băm đã ký (tức là PKCS#1
+            chữ ký) và trạng thái hiện tại của chúng.&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Các ứng dụng khách tham khảo Hồ sơ RAS trong
+                thông báo yêu cầu được gửi đến Dịch vụ ADSS RAS.</span
+              >&nbsp;<span>&nbsp;</span><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span style="text-decoration: none; color: #2495d2"
+                ><a
+                  href="default.aspx#pageid=step_2___registering_business_applications"
+                  target="_blank"
+                  ><span
+                    style="
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                    "
+                    >Step&nbsp;</span
+                  >2</a
+                ></span
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Đăng ký một hoặc nhiều ứng dụng khách trong Máy khách
+            Giám đốc. Bây giờ chúng có thể được ủy quyền để đưa ra yêu cầu đối với một hoặc
+            nhiều Hồ sơ RAS hơn.<span>&nbsp;</span><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <a
+                href="default.aspx#pageid=step_3___configuring_notification_settings1"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                "
+                ><span
+                  style="
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                  >Bước&nbsp;</span
+                >3</a
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Định cấu hình Email &amp; Cài đặt SMS sẽ được sử dụng để gửi
+            các OTP đến địa chỉ email và số điện thoại di động đã đăng ký của người dùng
+            để đăng ký thiết bị người dùng.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              <span style="text-decoration: none; color: #2495d2"
+                ><a
+                  href="default.aspx#pageid=step_3___using_the_service_manager"
+                  target="_blank"
+                  style="
+                    text-decoration: none;
+                    color: #2495d2;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #d3d3d3;
+                    text-align: left;
+                  "
+                  ><span
+                    style="
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                    "
+                    >Bước&nbsp;</span
+                  >4</a
+                ></span
+              ><a
+                href="default.aspx#pageid=step_3___using_the_service_manager"
+                target="_blank"
+                ><br />
+              </a>
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Sử dụng Trình quản lý dịch vụ ADSS RAS để bắt đầu/dừng/khởi động lại
+            dịch vụ. Dịch vụ ADSS RAS được yêu cầu khởi động lại khi một trong hai
+            có sự thay đổi trong cấu hình trình quản lý dịch vụ RAS hoặc RAS
+            Hồ sơ được thêm/cập nhật/xóa.<br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi trong số này được mô tả trong các phần sau:<br />
+        <br />
+        <span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            font-size: 13px;
+            color: #000000;
+          "
+        ></span>
+      </p>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="step_1___configuring_ras_profile1.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="step_1___configuring_ras_profile1.htm" title=""
+            >Bước 1 - Định cấu hình Cấu hình RAS</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="step_2___registering_business_applications.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="step_2___registering_business_applications.htm" title=""
+            >Bước 2 - Đăng ký ứng dụng kinh doanh</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="step_3___configuring_notification_settings1.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="step_3___configuring_notification_settings1.htm" title=""
+            >Bước 3 - Định cấu hình Cài đặt Thông báo</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="step_3___using_the_service_manager.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="step_3___using_the_service_manager.htm" title=""
+            >Bước 4 - Sử dụng Trình quản lý dịch vụ</a
+          >
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <br />
+      <p></p>
+    </div>
+  </body>
+</html>

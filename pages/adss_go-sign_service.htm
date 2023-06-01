@@ -1,0 +1,476 @@
+<html>
+  <head>
+    <title>ADSS Go>Dịch vụ ký tên - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('110','ADSS Go>Dịch vụ ký tên');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go>Dịch vụ ký tên</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span
+          style="
+            color: #000000;
+            font-family: Verdana;
+            font-size: 20px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 700;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+          "
+          >ADSS Go>Dịch vụ ký tên</span
+        >
+      </p>
+      <p>
+        ADSS Go Sign Service trao quyền cho các ứng dụng kinh doanh thực hiện ký
+        tài liệu trên máy của người dùng bằng cách sử dụng thông tin đăng nhập
+        được tổ chức cục bộ bởi người dùng hoặc trên máy chủ. Ngoài ra, ADSS Go
+        Sign Service cho phép các ứng dụng kinh doanh hiển thị tài liệu PDF một
+        cách an toàn bằng cách sử dụng Trình xem ký hiệu Go dựa trên HTML phía
+        máy chủ. Nó được tích hợp đầy đủ với khả năng ký Go Sign PDF. Trình xem
+        này cho phép người dùng xem tài liệu ở chế độ phẳng, do đó cung cấp
+        thuộc tính "Những gì bạn thấy là những gì bạn ký (WYSIWYS)".<br />
+        <br />
+        ADSS Go Sign Service có thể sử dụng ADSS Server Services phụ trợ, để
+        thực hiện các tác vụ khác nhau bao gồm tạo chữ ký phía máy chủ, xác minh
+        chữ ký cục bộ do người dùng tạo và nâng cao chữ ký cơ bản thành định
+        dạng chữ ký dài hạn. Hơn nữa, nếu Go Sign Service được sử dụng để tạo và
+        chứng nhận khóa, thì Máy chủ ADSS có thể cấp chứng chỉ và lưu trữ an
+        toàn khóa riêng của người dùng.<br />
+        <br />
+        <strong
+          class="Asc_Heading"
+          style="
+            font-size: 16px;
+            font-weight: bold;
+            color: #5281e7;
+            font-family: Verdana;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+          "
+          >Đi Đăng nhập ứng dụng khách<br /> </strong
+        >Ứng dụng Go Sign Client đã được thiết kế để cho phép những người bận
+        rộn, không có kỹ thuật dễ dàng và nhanh chóng ký tài liệu và dữ liệu
+        bằng cách sử dụng các khóa ký do máy khách nắm giữ. Nó hoạt động với các
+        trình duyệt web hiện đại để cho phép công dân và doanh nghiệp chuyển
+        sang màu xanh lá cây bằng cách loại bỏ các phê duyệt trên giấy và do đó
+        tránh được chi phí bưu chính / chuyển phát nhanh, xử lý, lưu trữ và băm
+        nhỏ.<br />
+        <br />
+        Ứng dụng Go Sign Client có khả năng tạo chữ ký bằng cách sử dụng các
+        khóa ký được tổ chức cục bộ (ví dụ: trên thẻ thông minh / mã thông báo
+        USB an toàn qua PKCS11 hoặc các khóa được quản lý bằng phần mềm được
+        truy cập thông qua Windows CAPI hoặc Mac Keychain keystore). Là một tùy
+        chọn nâng cao, Go Sign Client Apps có thể tạo cặp khóa và yêu cầu ký
+        chứng chỉ (PKCS10), có thể được chứng nhận bởi ADSS Server.<br />
+        <br />
+        Ứng dụng Go Sign Client có thể ký tài liệu bằng khóa và chứng chỉ được
+        tạo trên và lưu trữ bởi Máy chủ ADSS ở định dạng PFX (PKCS12). Người
+        dùng cần cung cấp mật khẩu PFX chính xác để ký một tài liệu hoặc đối
+        tượng dữ liệu. Các ứng dụng kinh doanh có thể xác thực cục bộ người
+        dùng, ví dụ: sử dụng xác thực đa yếu tố, trước khi yêu cầu Máy chủ ADSS
+        trả về thông tin xác thực chuyển vùng tương ứng của họ.<br />
+        <br />
+        Hai loại Ứng dụng khách Go Sign có sẵn là:
+      </p>
+      <ol>
+        <li>Go&gt;Sign Desktop&nbsp;</li>
+        <li>Go&gt;Sign Applet</li>
+      </ol>
+      <p style="text-align: justify">
+        <strong
+          ><span style="text-decoration: underline; font-size: 16px"
+            >Go&gt;Sign Desktop</span
+          ></strong
+        ><br />
+        Go Sign Desktop là một ứng dụng phần mềm trung gian mới cho phép người
+        dùng ký các tài liệu bằng các khóa ký cục bộ mà không cần sử dụng các
+        Applet Java đã ký. Các nhà cung cấp trình duyệt đang ngừng hỗ trợ cho
+        Java Applet, như Google Chrome đã làm và do đó Go Sign Desktop cung cấp
+        một giải pháp thay thế tốt. Go Sign Desktop là một ứng dụng tiện ích nhỏ
+        chạy trên máy tính để bàn của người dùng và tất cả các giao tiếp đều
+        thông qua JavaScript trong phiên trình duyệt web. <br />
+        <strong
+          class="Asc_Heading"
+          style="
+            font-size: 16px;
+            font-weight: bold;
+            color: #5281e7;
+            font-family: Verdana;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+          "
+          ><br /> </strong
+        ><span style="font-size: 16px"
+          ><strong
+            ><span style="text-decoration: underline"
+              >Go&gt;Sign Applet</span
+            ></strong
+          ></span
+        ><br />
+        Go&gt;Sign Applet là một plugin applet dựa trên Java an toàn được tự
+        động tải xuống và chạy trong trình duyệt web của người dùng và cung cấp
+        trải nghiệm ký in không chân thực sự. Lưu ý Chương trình phụ trợ dựa
+        trên việc triển khai cục bộ Môi trường thời gian chạy Java và sử dụng
+        NPAPI. Một số trình duyệt web phổ biến vẫn hỗ trợ Java Applet và NPAPI
+        nhưng Google Chrome đã ngừng hỗ trợ và những trình duyệt khác sẽ làm
+        theo. Microsoft Edge không hỗ trợ Java.<br />
+        <strong
+          class="Asc_Heading"
+          style="
+            font-size: 16px;
+            font-weight: bold;
+            color: #5281e7;
+            font-family: Verdana;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+          "
+          ><br />
+        </strong>
+      </p>
+      <div style="text-align: justify"></div>
+      <p style="text-align: justify">
+        <strong
+          class="Asc_Heading"
+          style="
+            font-size: 16px;
+            font-weight: bold;
+            color: #5281e7;
+            font-family: Verdana;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+          "
+          >Trình xem tài liệu PDF</strong
+        ><br />
+        Trình xem tài liệu PDF tích hợp được tích hợp hoàn toàn với Go&gt;Ký khả
+        năng ký PDF. Trình xem này cho phép Go&gt;Đăng nhập người dùng để xem
+        tài liệu ở chế độ phẳng, do đó cung cấp thuộc tính "Những gì bạn thấy là
+        những gì bạn ký (WYSIWYS)". Go&gt;Trình xem Tài liệu Ký cung cấp một số
+        tính năng để hỗ trợ trải nghiệm người dùng như phóng to, điều hướng
+        trang dễ dàng, khả năng vẽ các trường chữ ký trống, khả năng nhấp để
+        đăng nhập trong trường trống hiện có và thực thi quyền truy cập tài
+        liệu.
+      </p>
+      <div style="text-align: justify"></div>
+      <p style="text-align: justify">
+        Các phần sau trong chương này hướng dẫn về cách cấu hình Go&gt;Sign
+        Service để tích hợp Go dễ dàng hơn&gt;Ký Applet hoặc Go&gt;Đăng nhập
+        Desktop và Document Viewer vào các ứng dụng kinh doanh.
+      </p>
+      <p style="text-align: justify"><span style="font-size: 13px"></span></p>
+      <p style="text-align: justify">
+        <span style="font-size: 13px"
+          ><img
+            alt=""
+            src="../images/16-01-2019 5-10-52 PM.jpg"
+            style="border-width: 1px; border-style: solid"
+          /><br />
+        </span>
+      </p>
+      <p class="Asc_Sibling_Page_List" style="text-align: justify"></p>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="configuring_the_go-sign_service.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="configuring_the_go-sign_service.htm" title=""
+            >Định cấu hình Go&gt;Dịch vụ ký tên</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="language_manager.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="language_manager.htm" title="">Trình quản lý ngôn ngữ</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="preferred_sig__locations.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="preferred_sig__locations.htm" title=""
+            >Vị trí chữ ký PDF</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="transactions_log_viewer4.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="transactions_log_viewer4.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="logs_archiving8.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="logs_archiving8.htm" title="">Lưu trữ nhật ký</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="alerts5.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center"><a href="alerts5.htm" title="">Cảnh báo</a></div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="go-sign_service_interface_urls.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="go-sign_service_interface_urls.htm" title=""
+            >URL giao diện dịch vụ Go-Sign</a
+          >
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <p></p>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+       Xem thêm
+      </p>
+      <p></p>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <a
+          href="http://kb.ascertia.com/display/AKBS/Ascertia+Knowledge+base"
+          target="_blank"
+          style="
+            text-decoration: none;
+            color: #164587;
+            font-family: Verdana;
+            font-size: 13px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+          "
+          >Cơ sở kiến thức máy chủ ADSS</a
+        >
+      </div>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          font-size: 13px;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="welcome.htm" title="">Chào mừng</a><br /><a
+              href="getting_started.htm"
+              title=""
+              >Bắt đầu</a
+            ><br /><a href="adss_server_-_concepts___architecture.htm" title=""
+              >Khái niệm &amp; Kiến trúc</a
+            ><br /><a href="adss_ra_service.htm" title="">Dịch vụ ADSS RA</a
+            ><br /><a href="adss_server_certification_service.htm" title=""
+              >Dịch vụ chứng nhận ADSS</a
+            ><br /><a href="adss_server_-_signing_service6.htm" title=""
+              >Dịch vụ ký ADSS</a
+            ><br /><a href="adss_ras_service.htm" title="">Dịch vụ ADSS RAS</a
+            ><br /><a href="adss_sam_service.htm" title="">Dịch vụ ADSS SAM</a
+            ><br /><a href="adss_csp_service.htm" title="">Dịch vụ ADSS CSP</a
+            ><br /><a href="tsa_service.htm" title="">Dịch vụ ADSS TSA</a
+            ><br /><a href="adss_server_-_verification_service4.htm" title=""
+              >Dịch vụ xác minh ADSS</a
+            ><br /><a href="ocsp_monitor.htm" title="">Màn hình ADSS OCSP</a
+            ><br /><a href="ocsp_service.htm" title="">Dịch vụ ADSS OCSP </a
+            ><br /><a href="adss_scvp_service1.htm" title=""
+              >Dịch vụ ADSS SCVP </a
+            ><br /><a href="adss_xkms_service.htm" title="">Dịch vụ ADSS XKMS </a
+            ><br /><a href="adss_ltan_service.htm" title=""
+              >Dịch vụ ADSS LTANS </a
+            ><br /><a href="adss_hmac_service2.htm" title=""
+              >Dịch vụ ADSS HMAC </a
+            ><br /><a href="adss_decryption_service.htm" title=""
+              >Dịch vụ ADSS Decryption </a
+            ><br /><a href="adss_ocsp_repeater_service.htm" title=""
+              >Dịch vụ ADSS OCSP Repeater </a
+            ><br /><a href="adss_npkd_service.htm" title="">Dịch vụ ADSS NPKD </a
+            ><br /><a href="adss_spoc_service.htm" title="">Dịch vụ ADSS SPOC </a
+            ><br /><a href="manage_cas.htm" title="">Quản lý CAs</a><br /><a
+              href="key_manager6.htm"
+              title=""
+              >Quản lý Key </a
+            ><br /><a href="trust_manager3.htm" title="">Quản lý Trust</a
+            ><br /><a href="crl_manager_service.htm" title=""
+            >Màn hình ADSS CRL</a
+            ><br /><a href="global_settings.htm" title="">Cài đặt chung</a
+            ><br /><a href="access_control2.htm" title="">Kiểm soát truy cập</a
+            ><br /><a href="client_manager.htm" title="">Quản lý khách hàng</a
+            ><br /><a href="system_log_viewer.htm" title="">Trình xem nhật ký hệ thống</a
+            ><br /><a href="service_manager.htm" title="">Trình quản lý máy chủ</a
+            ><br /><a href="approval_manager.htm" title="">Trình quản lý phê duyệt</a
+            ><br /><a href="operational_management.htm" title=""
+              >Quản lý vận hành</a
+            ><br /><a href="advanced_configuration.htm" title=""
+              >Cấu hình nâng cao</a
+            ><br /></div
+        ></span>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,705 @@
+<html>
+  <head>
+    <title>Trình xem nhật ký giao dịch - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('61','Trình xem nhật ký giao dịch');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <span
+        class="breadcrumbs"
+        style="font-family: arial; font-size: 10px; color: #cbc9ba"
+        ><span class="var_breadcrumbs"
+          ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+            href="adss_server_certification_service.htm"
+            title=""
+            >Dịch vụ chứng nhận ADSS</a
+          >&nbsp;&gt;&nbsp;<a href="certification_transactions_log.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          ></span
+        ></span
+      >
+      <p class="Asc_PageName">Trình xem nhật ký giao dịch</p>
+      <p>
+        Dịch vụ chứng nhận ADSS lưu giữ hồ sơ của mọi yêu cầu và phản hồi tương
+        ứng được thực hiện cho dịch vụ trong nhật ký giao dịch cho mục đích kiểm
+        toán. Mỗi mục trong hình ảnh được mô tả dưới đây:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/TLV Certification.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p></p>
+      <p>Mỗi mục trong ảnh chụp màn hình được mô tả bên dưới:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Items<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>Xóa tìm kiếm<br /></td>
+            <td>
+              Sau một&nbsp;<strong>tìm kiếm&nbsp;</strong>Cửa sổ này sẽ chỉ hiển
+              thị các bản ghi đã lọc. Các&nbsp;<strong>Xóa tìm kiếm</strong
+              >&nbsp;được sử dụng để xem toàn bộ bản ghi.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tìm kiếm<br /></td>
+            <td>
+              Thao tác này sẽ mở ra một cửa sổ mới, nơi các tiêu chí tìm kiếm có
+              thể được nhập dựa trên từng cột của lưới giao dịch. <br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tùy chỉnh cột <br /></td>
+            <td>
+              Thao tác này sẽ mở ra một cửa sổ mới để định cấu hình cột nào cần
+              được hiển thị trong lưới và cột nào cần được ẩn. Xem bên dưới để
+              biết thêm chi tiết<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">|&lt; &lt; &gt; &gt;|<br /></td>
+            <td valign="top">
+              Các nút này dùng để điều hướng các trang khác nhau của nhật ký
+              giao dịch. <br />
+              <br />
+              <strong>Ghi chú:</strong>&nbsp;Số lượng bản ghi hiển thị trên mỗi
+              trang có thể được cấu hình từ bên trong Thiết đặt chung.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Nhật ký xuất khẩu<br /></td>
+            <td valign="top">
+              Xuất nhật ký giao dịch thành tệp CSV nén ở định dạng con người có
+              thể đọc được.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Xác minh tính toàn vẹn<br /></td>
+            <td valign="top">
+              Xác minh tính toàn vẹn của hồ sơ nhật ký giao dịch dịch vụ chứng
+              nhận. Nó phát hiện các bản ghi bị giả mạo và bị xóa và tạo ra một
+              báo cáo có thể được xuất sang ổ đĩa vật lý. <br />
+              <br />
+              <strong>Ghi chú:</strong> Khi xuất báo cáo xác minh HMAC, bạn nên
+              lưu tệp có phần mở rộng ".html" để có thể xem báo cáo trong trình
+              duyệt internet.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hiển thị đã lưu trữ<br /></td>
+            <td valign="top">
+              Thao tác này sẽ mở ra một cửa sổ mới, nơi bạn có thể nhập và xem
+              tệp đã lưu trữ trước đó, tức là nhật ký giao dịch được lưu trữ /
+              xuất.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">ID đăng nhập<br /></td>
+            <td valign="top">
+              Một số sê-ri duy nhất cho bản ghi nhật ký, nó được hệ thống xác
+              định và không phải là một phần của thông báo yêu cầu/phản hồi.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Loại yêu cầu<br /></td>
+            <td valign="top">
+              Phần tử này xác định loại yêu cầu đã nhận được.
+              <br />
+              <br />
+              Đối với chứng chỉ X.509, các loại yêu cầu sau được sử dụng:<br />
+              <ol>
+                <li>Tạo</li>
+                <li>Renew&nbsp;</li>
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Rekey&nbsp;</span
+                  >
+                </li>
+                <li>Khôi phục khóa</li>
+                <li>Thay đổi mật khẩu</li>
+                <li>Thu hồi</li>
+                <li>Xóa Nhập</li>
+                <li>ủy</li>
+                <li>quyền</li>
+                <li>trái phép</li>
+                <li>Nhận thông tin hồ sơ</li>
+              </ol>
+              <br />
+              Và đối với chứng chỉ CV hộ chiếu điện tử, các loại yêu cầu sau
+              được sử dụng:<br />
+              <ol>
+                <li>Yêu cầu chứng chỉ trong nước</li>
+                <li>Yêu cầu chứng chỉ nước ngoài</li>
+                <li>Yêu cầu chứng chỉ hệ thống kiểm tra</li>
+                <li>Nhận chứng chỉ CA</li>
+                <li>Chứng chỉ khóa lại</li>
+                <li>Gửi chứng chỉ</li>
+                <li>Nhận CRL</li>
+                <li>Nhận danh sách chính</li>
+              </ol>
+              <br />
+              <strong>Ghi chú: </strong>Mỗi yêu cầu này được mô tả chi tiết
+              trong Hướng dẫn dành cho nhà phát triển ADSS.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Trạng thái phản hồi<br /></td>
+            <td valign="top">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Điều này cho thấy</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;phản hồi được trả về.&nbsp;Các giá trị có thể
+                là:&nbsp;</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li>Thành công</li>
+                <li>thất bại</li>
+                <li>đang chờ xử lý</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Bí danh chứng chỉ</td>
+            <td valign="top">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Mã định danh duy nhất cho chứng chỉ (như được cung cấp bởi ứng
+                dụng khách trong thông báo yêu cầu).</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Yêu cầu thời gian<br /></td>
+            <td valign="top">Ghi lại ngày/giờ khi nhận được yêu cầu.<br /></td>
+          </tr>
+          <tr>
+            <td valign="top">Thời gian đáp ứng<br /></td>
+            <td valign="top">Ghi lại ngày/giờ khi phản hồi được gửi.<br /></td>
+          </tr>
+          <tr>
+            <td>Yêu cầu/Phản hồi<br /></td>
+            <td>Cung cấp liên kết để xem tin nhắn yêu cầu/phản hồi.</td>
+          </tr>
+          <tr>
+            <td>ID Khách hàng <br /></td>
+            <td>
+              Đây là ID khách hàng như được tìm thấy trong thông báo yêu cầu.
+              ADSS &nbsp;Dịch vụ chứng nhận xác minh đó là ID khách hàng hợp
+              pháp như đã đăng ký trong mô-đun Người quản lý khách hàng trước
+              khi cấp quyền truy cập vào dịch vụ chứng nhận. <br />
+              <br />
+              Để biết thêm chi tiết, hãy xem liên kết Đăng ký Ứng dụng Kinh
+              doanh
+            </td>
+          </tr>
+          <tr>
+            <td>TLS Cert <br /></td>
+            <td>
+              Nhấp vào <strong>View </strong>liên kết bên dưới cột này hiển thị
+              chứng chỉ xác thực máy khách TLS. Các
+              <strong>View</strong>&nbsp;liên kết chỉ xuất hiện khi xác thực máy
+              khách TLS được sử dụng để gửi yêu cầu đến dịch vụ chứng nhận.
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td>Ký chứng nhận<br /></td>
+            <td>
+              Nhấp vào liên kết "Xem" dưới cột này sẽ hiển thị chứng chỉ ký yêu
+              cầu. Liên kết "Xem" chỉ xuất hiện khi yêu cầu đã ký được gửi đến
+              dịch vụ chứng nhận. <br />
+              <br />
+              <strong>Ghi chú:</strong> Các yêu cầu đã ký chỉ được hỗ trợ để cấp
+              chứng chỉ X.509 và không liên quan đến chứng chỉ CV được sử dụng
+              trong Hộ chiếu điện tử.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Error Code</td>
+            <td valign="top">
+              Di chuột qua liên kết "Xem" để hiển thị.&nbsp;Hồ sơ không được
+              phép, Dịch vụ đã dừng, v.v.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      Các bản ghi giao dịch Dịch vụ chứng nhận có thể được sắp xếp theo thứ tự
+      tăng dần hoặc giảm dần bằng cách chọn một cột bảng từ danh sách thả xuống.
+      Từ menu thả xuống ở màn hình trên,&nbsp;chọn
+      <strong>Import Archived</strong>&nbsp;và nhấp
+      vào&nbsp;<strong>Go&nbsp;</strong>Nút.&nbsp;Thao tác này sẽ hiển thị màn
+      hình sau:&nbsp;
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="../images/1553526902254.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Items<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>Nhập tệp giao dịch đã lưu trữ</td>
+            <td>
+              Sử dụng tùy chọn này để duyệt tệp nhật ký đã lưu trữ ở định dạng
+              zip từ máy vận hành. Bằng cách sử dụng tùy chọn này, tệp nhật ký
+              lưu trữ được tải lên trên máy chủ ADSS. <br />
+              <br />
+              Nó có thể là một hoạt động tốn kém nếu tệp có kích thước lớn, vì
+              vậy nhà điều hành được phép tải lên một tệp có kích thước tối đa
+              lên đến 25 MB. Sử dụng tùy chọn đường dẫn tệp đã lưu trữ cho các
+              tệp lớn hơn 25 MB.
+            </td>
+          </tr>
+          <tr>
+            <td>Đường dẫn tệp giao dịch đã lưu trữ<br /></td>
+            <td>
+              Sử dụng tùy chọn này nếu kích thước tệp lớn hơn 25 MB. Tùy chọn
+              này không tải tệp lưu trữ lên máy chủ. Thay vào đó, máy chủ đọc
+              tệp từ đường dẫn tệp nhất định trước khi nhập, nhanh hơn tùy chọn
+              trên. Bạn có thể chỉ định đường dẫn hệ thống tệp cục bộ hoặc đường
+              dẫn mạng.<br />
+              <br />
+              <strong>Ghhi chú:</strong> Chỉ định tên tệp nhật ký lưu trữ trong
+              đường dẫn tệp.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="text-align: justify">
+        &nbsp;<span class="TipBubble"
+          >Các tệp lưu trữ được tạo ở định dạng CSV cho đến ADSS Server v4.7.5
+          nhưng từ v4.7.6 trở đi, các tệp lưu trữ được nén để tiết kiệm dung
+          lượng đĩa khi lưu trữ. <br />
+          <br />
+          Nếu bạn đang nhập các tệp đã lưu trữ được tạo bằng cách triển khai
+          trước v4.7.6 vào ADSS Server v4.7.6 trở lên thì trước tiên hãy nén
+          chúng trước khi nhập, nếu không ADSS Server sẽ không nhận ra chúng là
+          tệp lưu trữ chính xác.</span
+        >
+      </p>
+      <p style="text-align: justify">
+        Như đã giải thích ở trên, nhấp vào nút Tìm kiếm trên Trình xem nhật ký
+        giao dịch chứng nhận sẽ hiển thị màn hình sau:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/1553526668188.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p></p>
+      <p style="text-align: justify">
+        Điều này giúp xác định một loại giao dịch dịch vụ chứng nhận cụ thể.
+        Giao dịch có thể được tìm kiếm dựa trên "ID nhật ký", "Bí danh chứng
+        chỉ", "Loại yêu cầu", "Loại chứng chỉ", "Trạng thái phản hồi", "ID khách
+        hàng", "Thời gian yêu cầu từ", "Thời gian yêu cầu", "Thời gian phản hồi
+        từ" và "Thời gian phản hồi đến". Nếu một tìm kiếm dựa trên nhiều giá
+        trị, thì chúng sẽ được kết hợp với nhau bằng cách sử dụng toán hạng
+        "AND" và do đó chỉ các bản ghi đáp ứng tất cả các tiêu chí mới được
+        trình bày.
+      </p>
+      <p style="text-align: justify">
+        <span class="TipBubble"
+          >​<br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký
+          tự đại diện.<br />
+        </span>
+      </p>
+      <p>
+        Nhấp vào nút Tùy chỉnh cột trên Trình xem nhật ký giao dịch chứng nhận
+        sẽ hiển thị màn hình sau:
+      </p>
+      <p>
+        &nbsp;<img
+          alt=""
+          src="../images/1536151907111.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p></p>
+      <p style="text-align: justify">
+        Theo mặc định, một vài cột nằm trong danh sách "Cột đã chọn". Để ẩn một
+        cột, hãy di chuyển cột bắt buộc vào danh sách "Cột có sẵn"
+      </p>
+      <p style="text-align: justify">
+        Mỗi bản ghi nhật ký trong cơ sở dữ liệu được bảo vệ bằng mật
+        mã&nbsp;HMAC checksum để phát hiện bất kỳ sửa đổi cố ý hoặc vô tình nào
+        của hồ sơ. Nhấp vào biểu tượng&nbsp;<strong
+          >Xác minh tính toàn vẹn </strong
+        >Nút xác minh tính toàn vẹn của nhật ký bằng cách kiểm tra từng tổng
+        kiểm tra và tạo báo cáo như hình dưới đây:
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="../images/1553526765130.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="text-align: justify">
+        Nhấp vào&nbsp;<strong>Export logs</strong>&nbsp;<strong
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+          "
+        ></strong
+        >để xuất yêu cầu / phản hồi sang tệp mạng.&nbsp;<br
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+          "
+        />
+        Nhấp vào&nbsp;<strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        >&nbsp;<strong>Sửa lỗi HMAC</strong>&nbsp;nút sẽ tính toán lại HMAC cho
+        các bản ghi nhật ký giao dịch được tôi luyện cho mô-đun này.<br
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+            text-align: left;
+          "
+        />
+        <br
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+            text-align: left;
+          "
+        />
+        <strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        ><strong>Ghhi chú:</strong>&nbsp;Tùy chọn này sẽ không phát hiện các bản
+        ghi bị xóa trái phép nhưng nó sẽ chỉ sửa các sửa đổi trái phép và / hoặc
+        các bản ghi không rõ ràng mà giá trị HMAC không có / không chính xác.
+      </p>
+      <p style="text-align: justify">
+        <span class="TipBubble"
+          ><br />
+          ​<span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-align: left;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              float: none;
+              display: inline !important;
+              font-family: Arial;
+              color: #000000;
+            "
+            >Xác minh tính toàn vẹn&nbsp;tính năng có sẵn cho nhật ký giao dịch
+            của tất cả các dịch vụ trong Máy chủ ADSS.</span
+          ></span
+        >
+      </p>
+      <p>
+        Nhấp vào liên kết cho&nbsp;<strong>ID đăng nhập</strong>&nbsp;Hiển thị
+        chi tiết về giao dịch đã chọn như hình dưới đây:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/1553526828370.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Nhấp vào <strong>View</strong> liên kết bên dưới cột yêu cầu/phản hồi
+        cho yêu cầu XML&nbsp;hiển thị yêu cầu và phản hồi XML cho giao dịch ký
+        đã chọn trong các tab khác nhau:
+      </p>
+      <p>
+        <img
+          alt=""
+          style="
+            width: 643px;
+            height: 479px;
+            border-width: 1px;
+            border-style: solid;
+          "
+          src="../images/ADSS-CertificationTransactionRequest.png"
+        />
+      </p>
+      <p>
+        Nhấp vào<strong>Response </strong>tab hiển thị phản hồi XML như bên dưới:
+      </p>
+      <p>
+        <img
+          alt=""
+          style="
+            width: 646px;
+            height: 477px;
+            border-width: 1px;
+            border-style: solid;
+          "
+          src="../images/ADSS-CertificationTransactionReponse.png"
+        />
+      </p>
+      <p>
+        Bạn có thể xuất các tệp XML yêu cầu / phản hồi sang ổ đĩa vật lý bằng cách nhấp vào nút Xuất có liên quan.
+      </p>
+      <p></p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+            <a href="configuring_the_certification_service.htm" title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            ><br /><a href="directory_integration.htm" title=""
+              >Tích hợp thư mục</a
+            ><br /><a href="x509_certificates.htm" title=""
+              >Giấy chứng nhận danh tính</a
+            ><br /><a href="attribute_certificates.htm" title=""
+              >Chứng chỉ thuộc tính</a
+            ><br /><a href="cv_certificate.htm" title="">Giấy chứng nhận CV</a
+            ><br /><a href="cv_certificate_templates.htm" title=""
+              >Mẫu chứng chỉ CV</a
+            ><br /><a href="certification_transactions_log.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ><br /><a href="certification_logs_archiving.htm" title=""
+              >Lưu trữ nhật ký</a
+            ><br /><a href="certification_alerts.htm" title="">Cảnh báo</a><br /><a
+              href="certification_management_reporting.htm"
+              title=""
+              >Báo cáo quản lý</a
+            ><br /><a
+              href="optimising_adss_certification_server_performance.htm"
+              title=""
+              >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</a
+            ><br /><a href="service_urls1.htm" title=""
+              >URL giao diện dịch vụ chứng nhận</a
+            ><br />
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

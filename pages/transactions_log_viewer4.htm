@@ -1,0 +1,522 @@
+<html>
+  <head>
+    <title>Trình xem nhật ký giao dịch - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('143','Trình xem nhật ký giao dịch');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go>Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a href="transactions_log_viewer4.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Trình xem nhật ký giao dịch</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p>
+        Nhật ký giao dịch ADSS Go Sign Service ghi lại mọi yêu cầu và tin nhắn
+        phản hồi.
+      </p>
+      <p>
+        &nbsp;<img
+          alt=""
+          src="../images/1536151045659.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>Order by<br /></td>
+            <td>
+              Trình đơn thả xuống này được sử dụng để sắp xếp các bản ghi theo
+              cột đã chọn.
+            </td>
+          </tr>
+          <tr>
+            <td>Clear Search</td>
+            <td>
+              Sau khi Tìm kiếm, cửa sổ này sẽ chỉ hiển thị các bản ghi đã lọc.
+              Các nút<strong>Clear Search</strong> được sử dụng để xem toàn bộ
+              hồ sơ.
+            </td>
+          </tr>
+          <tr>
+            <td>Search<br /></td>
+            <td valign="top">
+              Thao tác này sẽ mở ra một cửa sổ mới, nơi các tiêu chí tìm kiếm có
+              thể được nhập dựa trên từng cột của lưới giao dịch.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Customise Columns</td>
+            <td>
+              Thao tác này sẽ mở ra một cửa sổ mới để định cấu hình cột nào cần
+              được hiển thị trên lưới và cột nào cần được ẩn. Xem bên dưới để
+              biết chi tiết
+            </td>
+          </tr>
+          <tr>
+            <td>Export Logs</td>
+            <td>
+              Xuất nhật ký giao dịch đã chọn thành tệp CSV nén ở định dạng con
+              người có thể đọc được.
+            </td>
+          </tr>
+          <tr>
+            <td>Verify Integrity</td>
+            <td>
+              Xác minh tính toàn vẹn của bản ghi nhật ký giao dịch dịch vụ Go
+              Sign. Nó phát hiện các bản ghi giả mạo và tạo ra một báo cáo có
+              thể được xuất sang ổ đĩa vật lý. Khi xuất báo cáo xác minh HMAC,
+              bạn nên lưu tệp có phần mở rộng ".html" để có thể xem báo cáo
+              trong trình duyệt internet
+            </td>
+          </tr>
+          <tr>
+            <td>|&lt; &lt; &gt; &gt;|</td>
+            <td>
+              Các nút này dùng để điều hướng các trang khác nhau của nhật ký
+              giao dịch. Lưu ý rằng số lượng bản ghi hiển thị trên mỗi trang có
+              thể được cấu hình từ bên trong Thiết đặt chung Các điều khoản
+              khác.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hiển thị đã lưu trữ<br /></td>
+            <td valign="top">
+              Thao tác này sẽ mở ra một cửa sổ mới, nơi bạn có thể nhập và xem
+              tệp đã lưu trữ trước đó, tức là nhật ký giao dịch được lưu trữ /
+              xuất.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">ID đăng nhập&nbsp;<br /></td>
+            <td valign="top">
+              Một số sê-ri duy nhất cho bản ghi nhật ký, nó là số do hệ thống
+              xác định để quản lý nhật ký và nó không phải là một phần của thông
+              báo yêu cầu/phản hồi.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">ID giao dịch<br /></td>
+            <td valign="top">
+              Cột này thể hiện ID giao dịch do ứng dụng kinh doanh cung cấp<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Trạng thái phản hồi<br /></td>
+            <td valign="top">
+              Điều này cho thấy liệu "thành công" hay "thất bại" đã được trả về
+              để đáp lại<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Yêu cầu thời gian<br /></td>
+            <td valign="top">Ghi lại ngày/giờ khi nhận được yêu cầu.<br /></td>
+          </tr>
+          <tr>
+            <td valign="top">Thời gian đáp ứng<br /></td>
+            <td valign="top">Ghi lại ngày/giờ khi phản hồi được gửi.<br /></td>
+          </tr>
+          <tr>
+            <td valign="top">Yêu cầu/Phản hồi<br /></td>
+            <td valign="top">
+              Cung cấp liên kết để xem tin nhắn yêu cầu/phản hồi.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Tài liệu đầu vào<br /></td>
+            <td valign="top">
+              Nhấp vào Xem liên kết để hiển thị chứng từ đầu vào cho giao dịch
+              cụ thể. Xem liên kết sẽ chỉ xuất hiện nếu tài liệu đang được lưu
+              trữ trong tệp nhật ký (không phải là tùy chọn mặc định). &nbsp;<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Tài liệu đầu ra<br /></td>
+            <td valign="top">
+              Nhấp vào Xem liên kết bên dưới cột này để hiển thị chứng từ đầu ra
+              cho giao dịch cụ thể. Xem liên kết sẽ chỉ xuất hiện nếu tài liệu
+              đang được lưu trữ trong tệp nhật ký (không phải là tùy chọn mặc
+              định)<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">ID khách hàng<br /></td>
+            <td valign="top">
+              Đây là ID khách hàng như được tìm thấy trong thông báo yêu cầu.
+              ADSS Go Sign Service xác minh nó là hợp pháp
+              <span
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                "
+                >Khách hàng&nbsp;</span
+              >ID như đã đăng ký trong mô-đun Trình quản lý khách hàng trước khi
+              cấp quyền truy cập vào dịch vụ Go Sign.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Chứng nhận TLS</td>
+            <td>
+              Nhấp vào liên kết "Xem" trong cột này sẽ hiển thị chứng chỉ xác
+              thực máy khách TLS. Liên kết "Xem" chỉ hiển thị khi xác thực máy
+              khách TLS được sử dụng để gửi yêu cầu đến dịch vụ Go Sign.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <br />
+      Các bản ghi giao dịch Go Sign Service có thể được sắp xếp theo thứ tự tăng
+      dần hoặc giảm dần bằng cách chọn một cột bảng từ danh sách thả xuống. Từ
+      menu thả xuống ở màn hình trên, chọn
+      <strong>Import Archived</strong>&nbsp;và nhấp vào
+      nút&nbsp;<strong>Go&nbsp;</strong>.&nbsp;Thao tác này sẽ hiển thị màn hình
+      sau:&nbsp; &nbsp;
+      <p style="text-align: justify">
+        <img
+          alt=""
+          style="
+            width: 833px;
+            height: 214px;
+            border-width: 1px;
+            border-style: solid;
+          "
+          src="../images/Archived Data.png"
+        /><br />
+        <br />
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item<br /></td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Nhập tệp giao dịch đã lưu trữ</td>
+            <td>
+              Sử dụng tùy chọn này để duyệt tệp nhật ký đã lưu trữ ở định dạng
+              zip từ máy vận hành. Bằng cách sử dụng tùy chọn này, tệp nhật ký
+              lưu trữ được tải lên trên máy chủ ADSS. Nó có thể là một hoạt động
+              tốn kém nếu tệp có kích thước lớn, vì vậy nhà điều hành được phép
+              tải lên một tệp có kích thước tối đa lên đến 25 MB. Sử dụng tùy
+              chọn đường dẫn tệp đã lưu trữ cho các tệp lớn hơn 25 MB.
+            </td>
+          </tr>
+          <tr>
+            <td>Đường dẫn tệp giao dịch đã lưu trữ&nbsp;</td>
+            <td>
+              Sử dụng tùy chọn này nếu kích thước tệp lớn hơn 25 MB. Tùy chọn
+              này không tải tệp lưu trữ lên máy chủ. Thay vào đó, máy chủ đọc
+              tệp từ đường dẫn tệp nhất định trước khi nhập, nhanh hơn tùy chọn
+              trên. Bạn có thể chỉ định đường dẫn hệ thống tệp cục bộ hoặc đường
+              dẫn mạng.<br />
+              Chú thích: Chỉ định tên tệp nhật ký đã lưu trữ trong đường dẫn
+              tệp.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      &nbsp;
+      <span class="TipBubble"
+        ><span
+          style="text-align: left; background-color: #f0fff0; color: #4f8a10"
+          >​</span
+        ><span style="text-align: left"
+          >Các tệp lưu trữ được tạo ở định dạng csv cho đến ADSS Server v4.7.5
+          nhưng từ v4.7.6 trở đi, các tệp lưu trữ được nén để tiết kiệm dung
+          lượng đĩa khi lưu trữ. Nếu bạn đang nhập các tệp đã lưu trữ được tạo
+          bằng cách sử dụng triển khai trước v4.7.6 vào ADSS Server v4.7.6 trở
+          lên thì trước tiên hãy nén chúng trước khi nhập, nếu không ADSS Server
+          sẽ không nhận ra chúng là tệp được lưu trữ chính xác.</span
+        ></span
+      >
+      <p><span style="text-align: justify"></span></p>
+      <p>
+        Như đã giải thích ở trên, nhấp vào nút Tìm kiếm trên Go Sign
+        Transactions Log Viewer sẽ hiển thị màn hình sau:&nbsp;
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p>
+        &nbsp;<img
+          alt=""
+          src="../images/1536151204832.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p
+        style="
+          font-weight: normal;
+          background-color: #ffffff;
+          text-align: justify;
+        "
+      >
+        Điều này giúp xác định vị trí một loại giao dịch dịch vụ ký kết cụ thể.
+        Giao dịch có thể được tìm kiếm dựa trên loại phản hồi, trạng thái phản
+        hồi, thời gian yêu cầu, thời gian phản hồi và ID khách hàng. Nếu một tìm
+        kiếm dựa trên nhiều giá trị, thì chúng sẽ được kết hợp với nhau bằng
+        cách sử dụng toán hạng "AND" và do đó chỉ các bản ghi đáp ứng tất cả các
+        tiêu chí mới được trình bày.
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p
+        style="
+          font-weight: normal;
+          background-color: #ffffff;
+          text-align: justify;
+        "
+      >
+        <span class="TipBubble"
+          ><br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký
+          tự đại diện.</span
+        >
+      </p>
+      <p>
+        <br />
+        <span style="text-align: justify"
+          >Nhấp vào nút Tùy chỉnh cột trên Go Sign Transactions Log Viewer sẽ
+          hiển thị màn hình sau:<br />
+          <br />
+          &nbsp;<img
+            alt=""
+            src="../images/1536151265190.png"
+            style="border-width: 1px; border-style: solid"
+          /><br />
+        </span>
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p>
+        <span style="text-align: justify"
+          >Theo mặc định, một vài cột nằm trong danh sách "Cột đã chọn". Để ẩn
+          một cột, hãy di chuyển cột bắt buộc vào danh sách "Cột có sẵn"</span
+        >
+      </p>
+      <p>
+        Mỗi bản ghi nhật ký trong cơ sở dữ liệu được bảo vệ bằng tổng kiểm tra
+        HMAC mật mã để phát hiện bất kỳ sửa đổi hồ sơ cố ý hoặc vô tình nào.
+        Nhấp vào biểu tượng nút&nbsp;<strong style="text-align: justify"
+          >Verify Integrity&nbsp;</strong
+        ><span style="text-align: justify"></span>
+          Xác minh tính toàn vẹn của nhật ký bằng cách kiểm tra từng tổng kiểm
+          tra và tạo báo cáo như hình dưới đây:</span
+        >
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          style="border-width: 1px; border-style: solid"
+          src="../images/GoSign Service Verify Integrity.jpg" 
+        />
+      </p>
+      <p style="text-align: justify"></p>
+      <div>
+        Nhấp vào nút&nbsp;<strong>Export logs</strong>&nbsp;<strong
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+          "
+        ></strong
+        >để xuất yêu cầu/phản hồi sang tệp mạng.&nbsp;<br
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+          "
+        />
+        Nhấp&nbsp;vào nút<strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        >&nbsp;<strong>Fix HMAC Errors</strong>&nbsp; sẽ tính toán lại HMAC cho các bản ghi nhật ký giao dịch được tôi luyện cho mô-đun này.<br
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+            text-align: left;
+          "
+        />
+        <br
+          style="
+            color: #000000;
+            font-family: Tahoma, Arial;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            font-size: 10.6667px;
+            text-align: left;
+          "
+        />
+        <strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        ><strong>Ghi chú:</strong>&nbsp;Tùy chọn này sẽ không phát hiện các bản ghi bị xóa trái phép nhưng nó sẽ chỉ sửa các sửa đổi trái phép và / hoặc các bản ghi không rõ ràng mà giá trị HMAC không có / không chính xác.
+      </div>
+      <p>
+        <span class="TipBubble"
+          >​<br />
+          Tính năng Xác minh tính toàn vẹn có sẵn cho nhật ký giao dịch của tất cả các dịch vụ trong Máy chủ ADSS.</span
+        >
+      </p>
+      <div>
+        <p
+          style="
+            font-weight: normal;
+            background-color: #ffffff;
+            text-align: justify;
+          "
+        >
+          <span
+            style="font-size: 12pt; font-family: arial; color: #555555"
+          ></span>
+        </p>
+        <p class="Asc_See_Also">Xem thêm</p>
+        <div class="Asc_Sibling_Page_List">
+          <div class="var_Sibling_Page_List">
+            <a href="configuring_the_go-sign_service.htm" title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            ><br /><a href="language_manager.htm" title="">Trình quản lý ngôn ngữ</a
+            ><br /><a href="preferred_sig__locations.htm" title=""
+              >Vị trí chữ ký PDF</a
+            ><br /><a href="logs_archiving8.htm" title="">Lưu trữ nhật ký</a
+            ><br /><a href="alerts5.htm" title="">Cảnh báo</a><br /><a
+              href="go-sign_service_interface_urls.htm"
+              title=""
+              >URL giao diện dịch vụ Go-Sign</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

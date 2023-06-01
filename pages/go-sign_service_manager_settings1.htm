@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <title>Bước 3 - Sử dụng Trình quản lý dịch vụ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('140','Bước 3 - Sử dụng Trình quản lý dịch vụ');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go>Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Cấu hình Go>Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="go-sign_service_manager_settings1.htm"
+              title=""
+              >Bước 3 - Sử dụng Trình quản lý dịch vụ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Bước 3 - Sử dụng Trình quản lý dịch vụ</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p></p>
+      <p style="background-color: #ffffff; text-align: justify">
+        <span style="text-align: left"
+          >Sau khi thực hiện thay đổi cấu hình trong ADSS Go Sign Service, dịch
+          vụ phải được khởi động lại để các thay đổi có hiệu lực. Mô-đun Go Sign
+          Service Manager cho phép các nhà khai thác bắt đầu hoặc dừng dịch vụ
+          và cũng thực hiện các thay đổi ảnh hưởng đến toàn bộ Dịch vụ Go Sign.
+          Nhấp vào nút "Trình quản lý dịch vụ" và trang sau được hiển thị:</span
+        >
+      </p>
+      <p style="background-color: #ffffff; text-align: justify">
+        <img
+          alt=""
+          src="../images/05-09-2018 5-35-58 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="background-color: #ffffff; text-align: justify">
+        Các mục cấu hình như sau:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item<br /></td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Địa chỉ dịch vụ</td>
+            <td>
+              Địa chỉ của
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Go&gt;Sign</span
+              >
+              dịch vụ được kiểm soát từ Trình quản lý dịch vụ này. Đảm bảo địa
+              chỉ trỏ đến URL dịch vụ chính xác, tức là nếu bạn đang chạy dịch
+              vụ trên nhiều máy trong cấu hình cân bằng tải thì hãy kiểm tra xem
+              tên có chính xác cho phiên bản cụ thể cần được khởi động / dừng /
+              khởi động lại hay không. Theo mặc định, nó sẽ là của máy cục
+              bộ..<br />
+              <br />
+              <strong>Ghi chú:</strong> nếu địa chỉ Go Sign Service không được
+              định cấu hình trong hồ sơ Go Sign thì địa chỉ dịch vụ được định
+              cấu hình ở đây sẽ được sử dụng.
+            </td>
+          </tr>
+          <tr>
+            <td>Bắt đầu<br /></td>
+            <td>
+              Bắt đầu dịch vụ. Trạng thái sẽ thay đổi thành "Đang chạy" sau khi
+              bắt đầu thành công.
+            </td>
+          </tr>
+          <tr>
+            <td>Dừng<br /></td>
+            <td>
+              Dừng dịch vụ. Trạng thái sẽ thay đổi thành "Đã dừng" sau khi dịch
+              vụ bị dừng.
+            </td>
+          </tr>
+          <tr>
+            <td>Khởi động lại<br /></td>
+            <td>
+              Dừng và sau đó bắt đầu dịch vụ trong một lần, Trạng thái sẽ thay
+              đổi thành "Đang chạy" sau khi khởi động lại thành công.
+            </td>
+          </tr>
+          <tr>
+            <td>Lưu trữ tài liệu trong nhật ký giao dịch<br /></td>
+            <td>
+              Quản trị viên Máy chủ ADSS có thể chọn hộp kiểm này để lưu trữ tài
+              liệu cần ký trong bản ghi nhật ký yêu cầu dịch vụ và tài liệu đã
+              ký trong bản ghi nhật ký phản hồi.<br />
+              <strong
+                ><br />
+                Lưu ý đặc biệt:</strong
+              >
+              Tùy chọn này phải được sử dụng cẩn thận! Tùy thuộc vào kích thước
+              và khối lượng tài liệu được ký thiết đặt, tùy chọn này có thể làm
+              tăng đáng kể kích thước của bản ghi nhật ký Máy chủ ADSS và do đó
+              yêu cầu kích thước cơ sở dữ liệu. Theo mặc định, tùy chọn này bị
+              tắt.
+            </td>
+          </tr>
+          <tr>
+            <td>Go&gt;Ký địa chỉ dịch vụ</td>
+            <td>
+              Chỉ định địa chỉ của Go Sign Server sẽ được nhúng trong ứng dụng
+              khách để giao tiếp với Go Sign Server.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="background-color: #ffffff; text-align: justify"></p>
+      <p>
+        <span style="background-color: #ffffff"
+          ><br />
+          <span class="TipBubble"
+            >​<br />
+            Đảm bảo tất cả các thay đổi được lưu bằng cách nhấp vào Tiết kiệm và
+            khởi động lại dịch vụ để thực hiện các thay đổi có hiệu lực.<br /> </span
+        ></span>
+      </p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_a_go-sign_profile.htm" title=""
+            >Bước 1 - Tạo hồ sơ Go-Sign</a
+          ><br /><a href="registering_business_applications.htm" title=""
+            >Bước 2 - Đăng ký ứng dụng kinh doanh</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

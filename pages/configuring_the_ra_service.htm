@@ -1,0 +1,258 @@
+<html>
+  <head>
+    <title>Bước 4 - Sử dụng Trình quản lý dịch vụ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('28','Bước 4 - Sử dụng Trình quản lý dịch vụ');parent.MenuItemSelected('adss_ra_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_ra_service.htm"
+              title=""
+              >Dịch vụ ADSS RA</a
+            >&nbsp;&gt;&nbsp;<a href="configuring_the_ra_service1.htm" title=""
+              >Cấu hình dịch vụ RA</a
+            >&nbsp;&gt;&nbsp;<a href="configuring_the_ra_service.htm" title=""
+              >Bước 4 - Sử dụng Trình quản lý dịch vụ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Bước 4 - Sử dụng Trình quản lý dịch vụ</p>
+      <p>
+        Các&nbsp;Trình quản lý dịch vụ cho phép&nbsp;các nhà khai thác được ủy
+        quyền phù hợp để bắt đầu / dừng ADSS RA&nbsp;Dịch vụ và thay đổi cấu
+        hình dịch vụ tổng thể. Tuy nhiên, nếu dịch vụ bị dừng thì các yêu cầu
+        không còn được chấp nhận (bao gồm các yêu cầu SCEP, PKCS#10 / CSR,
+        PFX)&nbsp;the ADSS RA Service continues to&nbsp;xử lý các yêu cầu hiện
+        có và cho phép các lệnh quản trị từ giao diện GUI dịch vụ RA.
+      </p>
+      <p>
+        Màn hình sau được hiển thị khi nhấp vào nút "Trình quản lý dịch vụ":
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/1557398842001.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Tên máy chủ<br /></td>
+            <td>
+              Địa chỉ của Dịch vụ RA đang được kiểm soát từ Trình quản lý dịch
+              vụ này. Đảm bảo địa chỉ trỏ đến URL dịch vụ chính xác, tức là nếu
+              bạn đang chạy dịch vụ trên nhiều máy trong cấu hình cân bằng tải
+              thì hãy kiểm tra xem tên có chính xác cho phiên bản cụ thể cần
+              được khởi động / dừng / khởi động lại hay không. Theo mặc định, nó
+              sẽ là của máy cục bộ.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Bắt đầu<br /></td>
+            <td>
+              Bắt đầu dịch vụ. Trạng thái sẽ thay đổi thành "Đang chạy" sau khi
+              bắt đầu thành công.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Dừng<br /></td>
+            <td>
+              Dừng dịch vụ. Trạng thái sẽ thay đổi thành "Đã dừng" sau khi dịch
+              vụ bị dừng.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Khởi động lại<br /></td>
+            <td>
+              Dừng và sau đó bắt đầu dịch vụ trong một lần, Trạng thái sẽ thay
+              đổi thành "Đang chạy" sau khi khởi động lại thành công.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Chứng chỉ RA SCEP<br /></td>
+            <td>
+              Chứng chỉ có mục đích "Chứng chỉ RA" trong Trình quản lý khóa được
+              liệt kê trong menu thả xuống này. Chứng chỉ này được trả về thiết
+              bị khi thiết bị gửi yêu cầu GetCACert. Nó được sử dụng để mã hóa
+              yêu cầu PKCS#10 / CSR được tạo bởi thiết bị để gửi đến Dịch vụ
+              ADSS RA.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Đảm bảo các yêu cầu của khách hàng dựa trên dịch vụ web được ký<br />
+            </td>
+            <td>
+              Bằng cách bật tùy chọn này, Dịch vụ ADSS RA sẽ chỉ chấp nhận các
+              yêu cầu đã ký từ dịch vụ web. Yêu cầu chưa ký sẽ không được chấp
+              nhận.<br />
+              <br />
+              <strong>Ghi:</strong> Các yêu cầu SCEP luôn được ký nên kiểm tra
+              này không ảnh hưởng đến việc xử lý và xác thực của nó.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Ký tất cả các yêu cầu đến CA Server<br /></td>
+            <td>
+              Tùy chọn này được sử dụng để cho phép mỗi yêu cầu chứng nhận được
+              ký bởi Dịch vụ ADSS RA khi được gửi đến Máy chủ ADSS CA.<br />
+              <br />
+              <strong>Ghi:</strong> Chỉ những chứng chỉ đó mới được hiển thị
+              bằng cách bật tùy chọn này trong menu thả xuống tương ứng được cấp
+              với mục đích "Chứng chỉ RA" từ Trình quản lý khóa<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Sử dụng chứng chỉ ký yêu cầu<br /></td>
+            <td>
+                Tùy chọn này được sử dụng để bật Ký yêu cầu trước khi chuyển tiếp yêu cầu đến ADSS CA Server.&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chọn chứng chỉ ký yêu cầu&nbsp;</span
+                >tồn tại từ trước trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=key_manager6"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  font-family: Verdana, sans-serif;
+                "
+                >Quản lý chủ chốt</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >.&nbsp;</span
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span class="TipBubble"
+          ><br />
+          Đảm bảo tất cả các thay đổi được lưu bằng cách nhấp vào Tiết kiệm và khởi động lại dịch vụ để thực hiện các thay đổi có hiệu lực.</span
+        >
+      </p>
+      <p style="font-family: arial; text-align: justify">
+        <span style="font-family: arial"></span>
+      </p>
+      <p style="font-family: arial; text-align: justify"></p>
+      <p class="Asc_See_Also" style="text-align: left">Xem thêm</p>
+      <div class="pagelist" style="text-align: left">
+        <span class="Asc_Sibling_Page_List"
+          ><div class="var_Sibling_Page_List">
+            <a href="profile_categories.htm" title=""
+              >Bước 1 - Danh mục hồ sơ</a
+            ><br /><a href="ra_profiles.htm" title="">Bước 2 - Hồ sơ RA</a
+            ><br /><a href="registering_business_application.htm" title=""
+              >Bước 3 - Đăng ký ứng dụng kinh doanh</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

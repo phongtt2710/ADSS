@@ -1,0 +1,446 @@
+<html>
+  <head>
+    <title>
+      Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS - ADSS-Admin-Guide
+    </title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('68','Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="optimising_adss_certification_server_performance.htm"
+              title=""
+              >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span class="Asc_PageName"
+          >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</span
+        >
+      </p>
+      <p>
+        Dịch vụ chứng nhận được sử dụng để cung cấp dịch vụ cho CA cho phép các
+        ứng dụng kinh doanh yêu cầu các thế hệ và/hoặc chứng nhận chính cũng như
+        các yêu cầu chứng nhận dựa trên nhà điều hành. Máy chủ chứng nhận ADSS
+        có thể được điều chỉnh để tối ưu hóa việc xử lý các yêu cầu và phản hồi
+        Chứng nhận.
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Hãy xem xét các tùy chọn sau - hãy yêu cầu Tư vấn giải pháp của chúng
+        tôi trợ giúp với các yêu cầu cụ thể của bạn:
+      </p>
+      <ol
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <li>
+          <p>
+            Sử dụng CPU nhanh nhất hiện có - Máy chủ ADSS chủ yếu sử dụng nhiều
+            CPU, nên sử dụng Xeon E3-xxxx hoặc E5-xxxx hoặc các CPU tương đương
+            được đánh giá ở mức 10K passmark
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng đĩa trạng thái rắn thay vì đĩa quay thông thường từ hệ
+            thống. Điều này sẽ cho phép Máy chủ chứng nhận hoạt động hiệu quả
+            trên các hoạt động IO
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Đảm bảo có đủ bộ nhớ hệ thống tổng thể và Dịch vụ Windows
+              "Ascertia-ADSS-Service" (hoặc Unix daemon) được gán đủ bộ nhớ (tối
+              thiểu 4GB, xem xét 8GB cho cao nhất&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >hiệu năng&nbsp;</span
+              >nếu có số lượng lớn khách hàng đồng thời)</span
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng cân bằng tải để phân phối các yêu cầu Chứng nhận trên nhiều
+            Máy chủ chứng nhận ADSS
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Kiểm tra xem cài đặt nhật ký theo dõi Máy chủ ADSS có được đặt ở
+              cấp "Lỗi" chứ không phải "Thông tin" và chắc chắn không phải là
+              "Gỡ lỗi" - xem&nbsp;</span
+            ><a
+              href="page.aspx?pageid=ADSS_Server_Logging"
+              target="_blank"
+              style="
+                text-decoration: none;
+                color: #2495d2;
+                font-family: Verdana;
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-align: left;
+              "
+              >Ghi nhật ký máy chủ ADSS</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            C<span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Kiểm tra xem ghi nhật ký lười biếng có đang được sử dụng không và
+              cài đặt có phù hợp không, ví dụ: 5 4000&nbsp;</span
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >sau 4000 giao dịch)</span
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >&nbsp;</span
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >- xem&nbsp;</span
+            ><a
+              href="default.aspx#pageid=global_settings"
+              target="_blank"
+              style="
+                text-decoration: none;
+                color: #2495d2;
+                font-family: Verdana;
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-align: left;
+              "
+              >Cài đặt chung máy chủ ADSS</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng HSM nhanh phù hợp để ký - PCI HSM có thể phản hồi nhanh hơn
+            HSM nối mạng
+          </p>
+        </li>
+        <li>
+          <p>
+            Sử dụng một máy chủ cơ sở dữ liệu mạnh mẽ riêng biệt qua mạng nhanh
+            phù hợp - điều này cho phép tất cả các tài nguyên hệ thống Chứng
+            nhận được dành riêng cho các hoạt động chứng chỉ&nbsp;
+          </p>
+        </li>
+        <li>
+          <p>
+            Đặt các thông số thích hợp để lựa chọn cẩn thận và giảm thiểu giao dịch Chứng nhận cần ghi nhật ký - xem&nbsp;<a
+              target="_blank"
+              href="default.aspx#pageid=certification_service1"
+              style="text-decoration: none; color: #2495d2; line-height: normal"
+              >Cài đặt dịch vụ chứng nhận</a
+            >
+          </p>
+        </li>
+      </ol>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Xem thêm
+      </p>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="configuring_the_certification_service.htm" title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            ><br /><a href="directory_integration.htm" title=""
+              >Tích hợp thư mục</a
+            ><br /><a href="x509_certificates.htm" title=""
+              >Giấy chứng nhận danh tính</a
+            ><br /><a href="attribute_certificates.htm" title=""
+              >Chứng chỉ thuộc tính</a
+            ><br /><a href="cv_certificate.htm" title="">Giấy chứng nhận CV</a
+            ><br /><a href="certificate_templates2.htm" title=""
+              >Mẫu chứng chỉ</a
+            ><br /><a href="cv_certificate_templates.htm" title=""
+              >Mẫu chứng chỉ CV</a
+            ><br /><a href="certification_transactions_log.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ><br /><a href="certification_logs_archiving.htm" title=""
+              >Lưu trữ nhật ký</a
+            ><br /><a href="certification_alerts.htm" title="">Alerts</a
+            ><br /><a href="certification_management_reporting.htm" title=""
+              >Báo cáo quản lý</a
+            ><br /><a href="service_urls1.htm" title=""
+              >URL giao diện dịch vụ chứng nhận</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,612 @@
+<html>
+  <head>
+    <title>Tạo PKCS10/CSR - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('135','Tạo PKCS10/CSR');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+        ></span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+            href="adss_go-sign_service.htm"
+            title=""
+            >ADSS Go&gt; Dịch vụ ký tên</a
+          >&nbsp;&gt;&nbsp;<a
+            href="configuring_the_go-sign_service.htm"
+            title=""
+            >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+          >&nbsp;&gt;&nbsp;<a
+            href="configuring_a_go-sign_profile.htm"
+            title=""
+            >Bước 1 - Tạo Hồ sơ Go-Sign</a
+          >&nbsp;&gt;&nbsp;<a href="pkcs10_csr_creation.htm" title=""
+              >Tạo PKCS10/CSR</a
+            ></span
+          ></span
+        >
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span
+          class="Asc_PageName"
+          size="4"
+          style="font-size: 20px; font-weight: bold"
+          >Tạo PKCS10/CSR</span
+        >
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span
+          class="heading"
+          size="4"
+          style="font-size: 20pt; font-family: arial; color: #555555"
+        ></span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-family: arial"></span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-family: Verdana"
+          >Để tạo hồ sơ Go&gt;Sign mới cho Tạo PKCS#10/CSR bằng cách sử dụng
+          Truy cập&gt;Đăng ký Máy tính để bàn, </span
+        >nhấp vào nút&nbsp;<strong>Mới</strong>&nbsp;. Điều này sẽ trình bày các
+        trình hướng dẫn sau:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/1557381887149.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi phần tử của biểu mẫu được mô tả dưới đây:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                vertical-align: top;
+                font-weight: bold;
+                width: 150pt;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              Mục
+            </td>
+            <td
+              style="
+                vertical-align: top;
+                font-weight: bold;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              Mô tả
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Trạng thái
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Hồ sơ Go&gt;Sign có thể được đánh dấu là Đang hoạt động hoặc Không hoạt động.&nbsp; Ghi chú
+            rằng một hồ sơ không hoạt động sẽ không được sử dụng để xử lý các yêu cầu
+            được tạo bởi ứng dụng khách.&nbsp;
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            ID hồ sơ
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Một trường bắt buộc cung cấp một giá trị duy nhất do hệ thống xác định
+            định danh cho hồ sơ này.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            Tên hồ sơ
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Tên duy nhất bắt buộc được xác định bởi Quản trị viên máy chủ ADSS
+            để nhận dạng hồ sơ dễ dàng hơn trong Nhà điều hành ADSS
+            Bảng điều khiển.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            Mô tả tiểu sử
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Điều này có thể được sử dụng để mô tả hồ sơ chi tiết hơn (ví dụ: trong
+            hồ sơ Go&gt;Sign này sẽ được sử dụng trong những trường hợp nào). Đây là
+            chỉ cho mục đích thông tin.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            Ký tài liệu
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Chọn tùy chọn này nếu bạn muốn tạo hồ sơ Go&gt;Sign cho
+               ký tài liệu bằng Go&gt;Sign
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Desktop</span
+              >.<span>&nbsp;</span
+              ><a
+                href="document_signing.htm"
+                style="text-decoration: none; color: #2495d2"
+                target="_blank"
+                >Bấm vào đây</a
+              ><span>&nbsp;</span>đối với tài liệu ký kết tài liệu.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            Tạo chứng chỉ
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Chọn tùy chọn này nếu bạn muốn tạo hồ sơ Go&gt;Sign cho
+            tạo chứng chỉ bằng cách sử dụng Go&gt;Sing Desktop.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            Tạo PKCS#10/CSR
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Chọn tùy chọn này nếu bạn muốn tạo Hồ sơ Go&gt;Sign cho
+            Tạo PKCS#10/CSR bằng Go&gt;Sign Desktop
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Nhấp vào nút Tiếp theo sẽ hiển thị&nbsp;Tạo chứng chỉ
+      Cài đặt&nbsp;trang.
+      </p>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          font-size: 13px;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <div class="iconpanel">
+          <div align="center">
+            <a href="certificate_generation_settings1.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="certificate_generation_settings1.htm" title=""
+              >Cài đặt tạo chứng chỉ</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="key_store_settings1.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="key_store_settings1.htm" title="">Cài đặt lưu trữ khóa</a>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+      <div
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <p
+          class="Asc_See_Also"
+          style="
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: orange;
+          "
+        >
+          Xem thêm
+        </p>
+        <div class="Asc_Sibling_Page_List" style="font-size: 13px">
+          <div class="var_Sibling_Page_List">
+            <a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            ><br /><a href="certificate_generation.htm" title=""
+              >Cấu hình tạo chứng chỉ</a
+            ><br /><a href="supported_signature_type.htm" title=""
+              >Các loại chữ ký được hỗ trợ</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <title>Thuộc tính ký CMS/CAdES - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('122','Thuộc tính ký CMS/CAdES');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go&gt; Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo Hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            >&nbsp;&gt;&nbsp;<a href="signature_settings.htm" title=""
+              >Cài đặt chữ ký</a
+            >&nbsp;&gt;&nbsp;<a href="cms_signature1.htm" title=""
+              >Thuộc tính ký CMS/CAdES</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Thuộc tính ký CMS/CAdES</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p><span style="font-family: arial"></span></p>
+      <p>
+        Trang này được sử dụng để định cấu hình cài đặt chữ ký CMS/CAdES
+         sẽ được sử dụng bởi ứng dụng Go Sign.
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/Go-Sign-Cades.png"
+          style="width: 840px; height: 665px"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục<br /></td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Loại chữ ký CMS</td>
+            <td style="text-align: justify">
+                Một trường bắt buộc để chọn loại chữ ký CMS sẽ là
+                được sản xuất bởi hồ sơ này. xem
+              <a href="supported_signature_type.htm" target="_blank"
+                >Các loại chữ ký được hỗ trợ</a
+              >
+              để biết thêm chi tiết về các loại chữ ký được hỗ trợ bởi
+               Đi đăng ký dịch vụ.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>Chữ ký/Mối quan hệ tài liệu</td>
+            <td style="text-align: justify">
+                This field defines how the signature will be placed in the signed
+                CMS. Currently only Enveloping relationship is
+                supported.
+              <ul></ul>
+            </td>
+          </tr>
+          <tr>
+            <td>thuật toán băm</td>
+            <td>
+              <div style="text-align: justify">
+                Thuật toán băm đã chọn được sử dụng như một phần của chữ ký
+                 quá trình thế hệ. Sau đây là băm được hỗ trợ
+                 thuật toán:&nbsp; &nbsp;&nbsp;
+              </div>
+              <ul>
+                <li style="text-align: justify">SHA1</li>
+                <li style="text-align: justify">
+                  SHA2 (SHA224, SHA256, SHA384, SHA512)
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Chữ ký EPES&nbsp;</td>
+            <td>
+              <div style="text-align: justify">
+                Cài đặt chữ ký điện tử dựa trên chính sách rõ ràng (EPES) là
+                 chỉ khả dụng cho các loại Chữ ký CAdES. Bằng cách cho phép
+                 hộp kiểm Thêm mã định danh chính sách chữ ký, Dấu hiệu đi
+                 hồ sơ có thể được sử dụng để tạo chữ ký (EPES) trong đó một
+                 chính sách chữ ký OID, URI và thông báo người dùng được thêm vào
+                 chữ ký số như quy định dưới đây.
+              </div>
+              <ol>
+                <li>
+                  <div style="text-align: justify">
+                    <strong>ID đối tượng chính sách chữ ký</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Cung cấp OID chính sách chữ ký sẽ được thêm cho EPES
+                     chữ ký.
+                  </div>
+                </li>
+                <li>
+                  <div style="text-align: justify">
+                    <strong>URI chính sách chữ ký</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Cung cấp URI chính sách chữ ký sẽ được thêm cho EPES
+                     chữ ký. Nếu không có URI chính sách nào được xác định bên trong
+                     Đăng nhập hồ sơ sau đó cấu hình EPES sẽ được thực hiện
+                     trong tệp policy.properties có tại:
+                    <strong>[Thư mục cài đặt ADSS]/dịch vụ/</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Mở tệp này trong bất kỳ trình soạn thảo văn bản nào và nhập chính sách OID và
+                     đường dẫn đến tài liệu chính sách
+                  </div>
+                  <strong>
+                    <div style="text-align: justify">
+                      <strong
+                        >e.g. 1.2.3.4.5 = "F:/Policy_File"<br />
+                        <br />
+                      </strong>
+                    </div> </strong
+                  ><span class="TipBubble">
+                    <div style="text-align: justify">
+                        ​Dịch vụ Go Sign của ADSS có thể truy xuất chữ ký
+                        tài liệu chính sách theo một trong các cách sau:
+                    </div>
+                    <div style="text-align: justify"><br /></div>
+                    <div style="text-align: justify">
+                        Sử dụng URI chính sách được xác định trong hồ sơ Go Sign. ADSS
+                        Go Sign Service sẽ sử dụng URI chính sách này để truy xuất
+                        tài liệu chính sách có sẵn trực tuyến và giá trị băm của nó
+                        sẽ được tính toán và nhúng vào các thuộc tính đã ký
+                        của chữ ký.
+                    </div>
+                    <div style="text-align: justify"><br /></div>
+                    <div style="text-align: justify">
+                        Sử dụng tài liệu chính sách chữ ký được cấu hình cục bộ. Các
+                        ADSS Go Sign Service sẽ sử dụng con trỏ tệp văn bản này để
+                        truy xuất tài liệu chính sách đã lưu cục bộ, băm và nhúng
+                        nó trong các thuộc tính đã ký của chữ ký.
+                    </div>
+                  </span>
+                </li>
+                <li>
+                  <div style="text-align: justify">
+                    <strong>Chính sách chữ ký Thông báo người dùng</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Cung cấp thông báo người dùng sẽ được thêm vào chữ ký EPES.
+                  </div>
+                </li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      Nhấp vào nút Tiếp theo sẽ hiển thị trang Cài đặt Lưu trữ Khóa.
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="pdf_signature1.htm" title="">Thuộc tính ký PDF/PAdES</a
+          ><br /><a href="signature_settings_-_pdf_hash.htm" title=""
+            >Thuộc tính ký mã băm PDF/PAdES</a
+          ><br /><a href="xml_signature1.htm" title=""
+            >Thuộc tính ký XML/XAdES</a
+          ><br /><a href="msword_signing_attributes.htm" title=""
+            >Thuộc tính ký MS Office</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

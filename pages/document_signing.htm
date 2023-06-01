@@ -1,0 +1,423 @@
+<html>
+  <head>
+    <title>Cấu hình ký tài liệu - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('113','Cấu hình ký tài liệu');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Home</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go>Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cấu hình ký tài liệu</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p><span style="font-family: arial"></span></p>
+      <p>
+        Để tạo hồ sơ Go Sign mới để ký tài liệu, hãy nhấp vào biểu tượng
+        nút&nbsp;<strong style="font-family: arial">New</strong>&nbsp;. Màn hình
+        sau đây được hiển thị:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/1557386731635.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Các mục cấu hình như sau:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Items<br /></td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Trạng thái<br /></td>
+            <td>
+              Hồ sơ Go Sign có thể được đánh dấu là Hoạt động hoặc Không hoạt
+              động. Lưu ý rằng cấu hình không hoạt động sẽ không được sử dụng để
+              xử lý các yêu cầu được tạo bởi ứng dụng khách.
+            </td>
+          </tr>
+          <tr>
+            <td>ID hồ sơ<br /></td>
+            <td>
+              Một trường bắt buộc cung cấp mã định danh duy nhất do hệ thống xác
+              định cho cấu hình này.
+            </td>
+          </tr>
+          <tr>
+            <td>Tên hồ sơ</td>
+            <td>
+              Tên duy nhất bắt buộc do Quản trị viên máy chủ ADSS xác định để
+              nhận dạng cấu hình dễ dàng hơn trong Bảng điều khiển vận hành
+              ADSS.
+            </td>
+          </tr>
+          <tr>
+            <td>Mô tả hồ sơ</td>
+            <td>
+              Điều này có thể được sử dụng để mô tả hồ sơ chi tiết hơn (ví dụ:
+              hồ sơ Go Sign này sẽ được sử dụng trong trường hợp nào). Điều này
+              chỉ dành cho mục đích thông tin.
+            </td>
+          </tr>
+          <tr>
+            <td>Ký tài liệu</td>
+            <td>
+              Chọn tùy chọn này nếu bạn muốn tạo hồ sơ Go Sign để ký tài liệu.
+            </td>
+          </tr>
+          <tr>
+            <td>Tạo chứng chỉ</td>
+            <td>
+              Chọn tùy chọn này nếu bạn muốn tạo hồ sơ Go Sign để tạo chứng chỉ
+              bằng Go Sign Desktop.
+              <a href="certificate_generation.htm">Bấm vào đây</a> để lập tài
+              liệu tạo chứng chỉ.
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;PKCS#10/CSR Creation</td>
+            <td>
+              <span
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                "
+                >Chọn tùy chọn này nếu bạn muốn tạo Go Sign Profile để tạo
+                PKCS10/CSR bằng Go Sign Desktop</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Nguồn đầu vào tài liệu<br /></td>
+            <td valign="top">
+              Xác định vị trí của tài liệu hoặc dữ liệu cần ký. &nbsp;<br />
+              <br />
+              Khi điều này được đặt thành "Máy chủ", dữ liệu sẽ được chuyển từ
+              ứng dụng nghiệp vụ đến ADSS Server Go Sign Service, nó sẽ được băm
+              và gửi đến Go Sign Client để ký.<br />
+              <br />
+              Khi điều này được đặt thành "Khách hàng", dữ liệu sẽ được lấy
+              từ<span
+                class="Apple-converted-space"
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;bộ nhớ trình duyệt hoặc nó có thể đọc nó từ ổ đĩa của
+                người dùng. Go Sign Client sẽ chuyển dữ liệu trở lại ADSS Server
+                để băm và giá trị băm sẽ được trả về Go Sign Client để ký.<br />
+                <br /> </span
+              >Để bảo mật và đơn giản cho Go Sign Client, tất cả quá trình băm
+              diễn ra trong ADSS Server Go Sign Service.
+              <br />
+              <br />
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xem Hướng dẫn dành cho nhà phát triển ADSS Server Go Sign phần
+                4.3 Chức năng xử lý bài đăng.<br />
+                <br /> </span
+              ><strong>Ghi chú:</strong> "Máy chủ" là mặc định và "Máy khách"
+              được sử dụng để tích hợp phức tạp hơn.
+            </td>
+          </tr>
+          <tr>
+            <td>Nguồn đầu ra tài liệu</td>
+            <td>
+              ADSS Server Go Sign Service tạo dữ liệu đã ký đầu ra cuối cùng.<br />
+              <br />
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Khi điều này được đặt thành "Máy chủ"<span
+                  class="Apple-converted-space"
+                  >&nbsp;này&nbsp;</span
+                ></span
+              >sẽ có sẵn cho ứng dụng nghiệp vụ (ứng dụng cần gọi ADSS Server và
+              yêu cầu gửi lại dữ liệu hoặc tài liệu đã ký. &nbsp;<br />
+              <br />
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Khi điều này được đặt thành "Khách hàng"<span
+                  class="Apple-converted-space"
+                  >&nbsp;Dữ liệu hoặc tài liệu đã ký sẽ được trả lại để nó có
+                  thể được cung cấp trong trình duyệt để xem, có sẵn cho ứng
+                  dụng kinh doanh hoặc được ghi vào ổ đĩa của người dùng</span
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >. &nbsp;<br />
+                <br />
+                Xem Hướng dẫn dành cho nhà phát triển ADSS Server Go Sign phần 4.3 Chức năng xử lý bài đăng.<br />
+                <br /> </span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><strong>Chú thích:</strong></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+              "Máy chủ" là mặc định và "Máy khách" được sử dụng để tích hợp phức tạp hơn.</span
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p>
+        <span
+          style="
+            font-weight: normal;
+            font-family: arial;
+            font-size: 13px;
+            color: #000000;
+          "
+          class="Asc_Sibling_Page_List"
+        ></span>
+      </p>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="signature_settings.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="signature_settings.htm" title="">Cài đặt chữ ký</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="viewer_settings.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="viewer_settings.htm" title="">Cài đặt trình xem</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="key_store_settings.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="key_store_settings.htm" title="">Cài đặt cửa hàng chính</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="certificate_filter_criteria.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="certificate_filter_criteria.htm" title=""
+            >Tiêu chí lọc chứng chỉ</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="service_settings1.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="service_settings1.htm" title="">Cài đặt dịch vụ</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="advanced_settings2.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="advanced_settings2.htm" title="">Cài đặt nâng cao</a>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <p></p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="certificate_generation.htm" title=""
+            >Cấu hình tạo chứng chỉ</a
+          ><br /><a href="pkcs10_csr_creation.htm" title=""
+            >PKCS10/CSR Creation</a
+          ><br /><a href="supported_signature_type.htm" title=""
+            >Các loại chữ ký được hỗ trợ</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

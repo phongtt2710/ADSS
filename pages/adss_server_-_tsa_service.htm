@@ -1,0 +1,289 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ ADSS TSA - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('17','ADSS TSA Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiến trúc</a
+            >&nbsp;&gt;&nbsp;<a href="adss_server_-_tsa_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS TSA</a
+            ></span
+          ></span
+        >
+      </p>
+      <p style="text-align: justify">
+        <span class="Asc_PageName"
+          ><strong
+            ><span class="Asc_PageName" style="font-size: 18px"></span></strong
+          >Tổng quan về dịch vụ ADSS TSA</span
+        >
+      </p>
+      <p style="text-align: justify">
+        Dịch vụ ADSS TSA là mô-đun đánh dấu thời gian tuân thủ RFC 3161 và RFC
+        5816 tạo ra mã thông báo dấu thời gian để chứng minh rằng một số dữ liệu
+        hoặc tài liệu tồn tại tại một thời điểm cụ thể. Dịch vụ ADSS TSA hoạt
+        động ở hai chế độ sau:
+      </p>
+      <div style="text-align: justify">
+        <p></p>
+        <ul>
+          <li>
+            <span style="text-align: left"
+              >Dịch vụ dấu thời gian khép kín, sử dụng các khóa TSA được tổ chức
+              cục bộ của Máy chủ ADSS</span
+            >
+          </li>
+          <li>
+            <span style="text-align: left"
+              >Dịch vụ Dấu thời gian proxy, nơi các yêu cầu được chuyển
+              tiếp</span
+            >
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+      <p class="Asc_Heading">Dịch vụ dấu thời gian địa phương</p>
+      <div class="Bullet-dot" style="text-align: justify">
+        <p>
+          Quy trình làm việc điển hình cho Dịch vụ ADSS TSA khi sử dụng Khóa TSA
+          cục bộ như sau:
+        </p>
+        <p style="text-align: center">
+          <img
+            alt=""
+            src="../images/Local Timestamp Service .jpg"
+            style="width: 850px"
+          />
+        </p>
+        <div
+          class="StyleListNumberBefore0ptAfter6pt"
+          style="text-align: justify"
+        >
+          <ol>
+            <li>
+              Khách hàng cuối hoặc ứng dụng kinh doanh gửi đối tượng dữ liệu đến
+              dấu thời gian đến Dịch vụ TSA của ADSS Server.
+            </li>
+            <li>
+              ADSS Server TSA Service sử dụng Khóa TSA cục bộ để tạo mã thông
+              báo dấu thời gian và gửi phản hồi dấu thời gian trở lại khách hàng
+              cuối.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="Asc_Heading" style="text-align: justify">
+        Dịch vụ Dấu thời gian proxy sử dụng Máy chủ TSA Bên ngoài
+      </div>
+      <ul></ul>
+      <p style="text-align: justify">
+        Quy trình làm việc điển hình cho Dịch vụ ADSS TSA sử dụng TSA bên ngoài
+        như sau:
+      </p>
+      <p style="text-align: center">
+        <img
+          alt=""
+          src="../images/Proxy Timestamp Service using an External TSA Server .jpg"
+          style="width: 850px"
+        />
+      </p>
+      <ol>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Người dùng cuối hoặc ứng dụng kinh doanh gửi đối tượng dữ liệu đến
+            dấu thời gian đến Dịch vụ ADSS TSA (ví dụ: đơn xin cấp bằng sáng
+            chế, nộp hồ sơ dự thầu, hóa đơn, báo cáo, v.v.). Dữ liệu của người
+            dùng cuối có thể đã được ký hoặc có thể chưa được ký.
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Dịch vụ ADSS TSA chuyển tiếp yêu cầu dấu thời gian đến TSA bên ngoài
+            qua HTTP dựa trên chính sách TSA đang được sử dụng. Như đã giải
+            thích trong&nbsp;phần Dịch vụ ADSS TSA, có thể thiết lập nhiều TSA,
+            mỗi TSA có chính sách TSA riêng.
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Dịch vụ ADSS TSA nhận lại phản hồi dấu thời gian từ TSA bên ngoài.
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Dịch vụ ADSS TSA&nbsp;chuyển tiếp này&nbsp;Phản hồi dấu thời gian
+            cho khách hàng cuối
+          </div>
+        </li>
+      </ol>
+      <p style="text-align: justify">
+        Dịch vụ ADSS TSA có thể được sử dụng trong các yêu cầu chuyển tiếp chế
+        độ proxy đến máy chủ TSA thiết bị. &nbsp;Trong trường hợp này, nó vẫn
+        cung cấp giá trị trong việc quản lý các giao dịch Giao thức Dấu thời
+        gian (TSP) và ghi lại chúng cho mục đích báo cáo thông tin quản
+        lý.&nbsp; Dữ liệu có thể được xuất để hệ thống thanh toán có thể được
+        cung cấp dữ liệu sử dụng.&nbsp;
+      </p>
+      <p class="Asc_Heading" style="text-align: justify">
+        Triển khai dịch vụ ADSS TSA
+      </p>
+      <p style="text-align: justify">
+        Trong ví dụ dưới đây, Dịch vụ ADSS TSA được triển khai như một dịch vụ
+        cục bộ trong cấu hình cân bằng tải, tính sẵn sàng cao.
+        &nbsp;A&nbsp;Nguồn thời gian độc lập thứ cấp (Meinberg LANTIME GPS NTP
+        Server) được sử dụng để cung cấp thời gian đáng tin cậy để so sánh với
+        đồng hồ hệ thống nội bộ của máy chủ TSA.
+      </p>
+      <div style="text-align: center">
+        <img
+          alt=""
+          src="../images/ADSS TSA Service Deployment.jpg"
+          style="width: 825px"
+        />
+      </div>
+      <div><br /></div>
+      <div><br /></div>
+      <div class="pagelist">
+        <div class="pagelist">
+          <p
+            class="Asc_See_Also"
+            style="
+              font-size: 14px;
+              font-weight: bold;
+              font-style: italic;
+              color: orange;
+              font-family: Verdana;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              orphans: 2;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-align: left;
+            "
+          >
+            Xem thêm
+          </p>
+          <p></p>
+          <div
+            class="Asc_Sibling_Page_List"
+            style="
+              font-size: 13px;
+              color: #000000;
+              font-family: Verdana;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              orphans: 2;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-align: left;
+            "
+          >
+            <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+              ><a
+                href="default.aspx#pageid=tsa_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Dịch vụ ADSS TSA</a
+              ><br />
+              <div class="var_Sibling_Page_List">
+                <a href="introduction4.htm" title=""
+                  >Danh tính đã được chứng minh, niềm tin được cung cấp</a
+                ><br /><a href="adss_server_features_and_benefits.htm" title=""
+                  >Các tính năng và lợi ích của máy chủ ADSS</a
+                ><br /><a href="adss_server_trust_services.htm" title=""
+                  >Dịch vụ tin cậy máy chủ ADSS</a
+                ><br /><a
+                  href="adss_server_architecture_interfaces.htm"
+                  title=""
+                  >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+                ><br /><a href="adss_server_-_signing_service.htm" title=""
+                  >Tổng quan về dịch vụ ký ADSS</a
+                ><br /><a href="adss_server_-_verification_service.htm" title=""
+                  >Tổng quan về dịch vụ xác minh ADSS</a
+                ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS OCSP</a
+                ><br /><a href="adss_server_-_tsa_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS TSA</a
+                ><br /><a href="adss_xkms_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS XKMS</a
+                ><br /><a href="adss_scvp_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS SCVP</a
+                ><br /><a href="adss_ltan_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS LTANS</a
+                ><br /><a href="adss_decryption_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ giải mã ADSS</a
+                ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+                  >Tổng quan về màn hình ADSS CRL</a
+                ><br /></div
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

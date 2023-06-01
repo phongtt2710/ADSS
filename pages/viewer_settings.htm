@@ -1,0 +1,648 @@
+<html>
+  <head>
+    <title>Cài đặt người xem - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('125','Cài đặt người xem');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go&gt; Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo Hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            >&nbsp;&gt;&nbsp;<a href="viewer_settings.htm" title=""
+              >Cài đặt người xem</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cài đặt người xem</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p>
+        <span
+          style="
+            font-weight: normal;
+            font-family: arial;
+            font-size: 13px;
+            color: #000000;
+          "
+          class="subheading"
+        ></span>
+      </p>
+      <p>
+        Trang này được sử dụng để xác định các cấu hình sẽ được sử dụng
+         bởi Go&gt;Sign Viewer
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/GoSign Profile Page.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p></p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Bật trình xem tài liệu</td>
+            <td>
+                Chọn tùy chọn này nếu bạn muốn xem các tài liệu PDF trong
+                trình duyệt. Bạn cũng có thể tạo các trường trống, ký tên và xác minh
+                chữ ký.<br />
+              <strong>Ghi chú:</strong> Người dùng không thể tắt trình xem cho MS Office
+              hồ sơ
+            </td>
+          </tr>
+          <tr>
+            <td>Cho phép tạo và xóa trường trống</td>
+            <td>
+                Tùy chọn này sẽ cho phép người dùng tạo hoặc xóa trống
+                các trường chữ ký trong các tài liệu PDF sẽ được sử dụng cho
+                chữ ký có thể nhìn thấy. Bằng cách kích hoạt tùy chọn này sẽ hiển thị Vẽ
+                trong thanh công cụ xem tài liệu.
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Tự động gán tên trường<br />
+                đến các trường chữ ký mới&nbsp;
+            </td>
+            <td>
+                Nếu tùy chọn này được bật trong Hồ sơ Go&gt;Sign thì
+                Go&gt;Sign Viewer tự động gán tên cho chữ ký mới
+                trường.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>Cho phép ký tài liệu</td>
+            <td>
+                Tùy chọn này sẽ cho phép người dùng ký các tài liệu PDF từ
+                trình xem tài liệu. Bằng cách bật tùy chọn này sẽ hiển thị nút Đăng nhập
+                trong thanh công cụ xem tài liệu.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>Cho phép cấu hình chữ ký tay&nbsp;</td>
+            <td>
+                Tùy chọn này được sử dụng để xác định tùy chọn cấu hình nào cho
+                bản vẽ chữ ký tay nên có sẵn cho người dùng trong
+                quay số chữ ký trong khi thực hiện thao tác ký. khả thi
+                giá trị là <br />
+              <ul>
+                <li>
+                  <strong>Vẽ tranh:</strong> Bằng cách kích hoạt hộp kiểm này sẽ hiển thị một
+                  vẽ khu vực trong đoạn hội thoại ký để vẽ chữ ký tay
+                  thủ công bằng chuột máy tính
+                </li>
+                <li>
+                  <strong>Chữ:</strong>Bằng cách kích hoạt hộp kiểm này sẽ hiển thị một
+                  hộp văn bản trên hộp thoại ký để nhập văn bản cần
+                  được sử dụng như hình ảnh chữ ký tay. Một cửa sổ xem trước cũng được hiển thị
+                  ở đó.
+                </li>
+                <li>
+                  <strong>Tải lên:</strong> Bằng cách bật hộp kiểm này, người dùng là
+                  được cung cấp với nút tải lên trên đoạn hội thoại ký kết tới
+                  tải lên hình ảnh chữ ký tay trong khi thực hiện ký
+                  hoạt động
+                </li>
+              </ul>
+              <strong>Ghi chú:</strong> tùy chọn này sẽ không hiển thị nếu người dùng bật
+              tùy chọn "sử dụng thiết bị máy tính bảng chữ ký".
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hiển thị tùy chọn ký tất cả các trường</span
+              >
+            </td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Bằng cách bật tùy chọn này, người dùng sẽ thấy tùy chọn "Ký tất cả được chỉ định
+                trường" trên hộp thoại ký trong khi ký
+                tài liệu nếu hai hoặc nhiều trường chữ ký được gán cho tài liệu đó
+                người dùng.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Hiển thị lý do ký&nbsp;</td>
+            <td>
+                Bằng cách bật tùy chọn này, người dùng sẽ thấy trường lý do ký
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >trên hộp thoại ký trong khi ký tài liệu.</span
+              >Kích hoạt hộp kiểm "Bắt buộc" làm cho nó
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >bắt buộc đối với người dùng</span
+              >&nbsp;để cung cấp lý do ký kết trong quá trình ký kết hoạt động.
+            </td>
+          </tr>
+          <tr>
+            <td>Hiển thị vị trí ký&nbsp;</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Bằng cách bật tùy chọn này, người dùng sẽ thấy vị trí ký
+                cánh đồng </span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >trên hộp thoại ký trong khi ký tài liệu. </span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Kích hoạt hộp kiểm "Bắt buộc" làm cho nó<span
+                  class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >bắt buộc đối với người dùng</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;để cung cấp vị trí ký kết trong quá trình ký kết
+                hoạt động.</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hiển thị thông tin liên hệ</td>
+            <td valign="top">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Bằng cách bật tùy chọn này, người dùng sẽ thấy liên hệ ký kết
+                trường thông tin </span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >trên hộp thoại ký trong khi ký tài liệu.<span
+                  class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Kích hoạt hộp kiểm "Bắt buộc" làm cho nó<span
+                  class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >bắt buộc đối với người dùng</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;để cung cấp thông tin liên lạc ký kết trong quá trình
+                thao tác ký.</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Cho phép điền biểu mẫu</td>
+            <td valign="top">
+                Tùy chọn này sẽ cho phép người dùng điền vào các trường biểu mẫu trong PDF
+                tài liệu bên trong trình xem tài liệu Go&gt;Sign.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Cho phép tải xuống tài liệu</td>
+            <td valign="top">
+                Tùy chọn này sẽ cho phép người dùng tải xuống các tài liệu PDF trên
+                máy khách từ trình xem tài liệu. Bằng cách kích hoạt tính năng này
+                tùy chọn sẽ hiển thị nút Tải xuống trong trình xem tài liệu
+                thanh công cụ.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Cho phép in tài liệu</td>
+            <td valign="top">
+                Tùy chọn này sẽ cho phép người dùng in tài liệu PDF từ
+                trình xem tài liệu. Bằng cách kích hoạt tùy chọn này sẽ hiển thị Print
+                trong thanh công cụ xem tài liệu.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Hiển thị bảng thông tin bên phải&nbsp;</td>
+            <td valign="top">
+                Tùy chọn này sẽ cho phép người dùng xem thông tin chữ ký
+                trong ngăn bên phải của trình xem. Nó chứa thông tin về
+                trường chữ ký trống, chữ ký tồn tại trong tài liệu PDF, kích thước
+                và tên của nó.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Cho phép xác minh chữ ký</td>
+            <td valign="top">
+                Tùy chọn này sẽ cho phép người dùng xác minh chữ ký đã tạo
+                trong trình xem tài liệu.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Cho phép hoạt động từ chối</td>
+            <td valign="top">
+                Tùy chọn này sẽ cho phép người dùng từ chối thao tác ký
+                cho các tài liệu PDF. Bằng cách kích hoạt tùy chọn này sẽ hiển thị
+                Nút từ chối trong thanh công cụ xem tài liệu.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Nhắc lý do từ chối&nbsp;</td>
+            <td valign="top">
+                Bằng cách bật tùy chọn này, một cửa sổ bật lên sẽ mở ra khi người dùng nhấp vào
+                trên nút từ chối trong trình xem Go&gt;Sign và người dùng phải
+                cung cấp lý do từ chối.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Kết thúc URL</td>
+            <td valign="top">
+                Chỉ định URL nơi người dùng sẽ được chuyển hướng sau khi nhấp vào
+                nút Kết thúc của trình xem tài liệu.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p></p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="signature_settings.htm" title="">Cài đặt chữ ký</a
+          ><br /><a href="key_store_settings.htm" title="">Cài đặt lưu trữ khóa</a
+          ><br /><a href="certificate_filter_criteria.htm" title=""
+            >Tiêu chí lọc chứng chỉ</a
+          ><br /><a href="service_settings1.htm" title="">Cài đặt dịch vụ</a
+          ><br /><a href="advanced_settings2.htm" title="">Cài đặt nâng cao</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

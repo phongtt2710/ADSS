@@ -1,0 +1,762 @@
+<html>
+  <head>
+    <title>Cài đặt lưu trữ khóa - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('126','Cài đặt lưu trữ khóa');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+            href="adss_go-sign_service.htm"
+            title=""
+            >ADSS Go&gt; Dịch vụ ký tên</a
+          >&nbsp;&gt;&nbsp;<a
+            href="configuring_the_go-sign_service.htm"
+            title=""
+            >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+          >&nbsp;&gt;&nbsp;<a
+            href="configuring_a_go-sign_profile.htm"
+            title=""
+            >Bước 1 - Tạo Hồ sơ Go-Sign</a
+          >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+            >Cấu hình ký tài liệu</a
+          >&nbsp;&gt;&nbsp;<a href="key_store_settings.htm" title=""
+              >Cài đặt lưu trữ khóa</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cài đặt lưu trữ khóa</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p><span style="font-family: arial"></span></p>
+      <p>
+        Trang này được sử dụng để định cấu hình cài đặt lưu trữ khóa từ vị trí khóa
+         sẽ được chọn để tính toán các chữ ký.
+        <br />
+        <br />
+        <img
+          alt=""
+          src="../images/27-Mar-18 2-10-20 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #d3d3d3;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Cài đặt loại máy khách</span
+              >
+            </td>
+            <td>
+              <ol
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                "
+              >
+                <li style="text-align: left">
+                  <strong>Go&gt;Sign Desktop<br /> </strong
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Go&gt;Sign Desktop là một ứng dụng phần mềm trung gian cung cấp
+                    một cách tiếp cận thay thế cho Go&gt;Sign Applet. Nó phải là
+                    được cài đặt trên máy tính để bàn của người dùng cuối và tránh tất cả các
+                    các hạn chế và các vấn đề về trải nghiệm người dùng có liên quan
+                    với các applet Java đã ký trên Chrome, Edge và các trình duyệt khác.
+                    &nbsp;Go&gt;Sign Desktop hoạt động với mọi trình duyệt HTML5 và
+                    giao tiếp thông qua JavaScript.<br />
+                    <br />
+                    <span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        float: none;
+                        background-color: #ffffff;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Go&gt;Sign Desktop được sử dụng để ký mã băm của
+                      dữ liệu của người dùng bằng cách sử dụng các khóa ký được lưu giữ cục bộ trên một
+                      thẻ thông minh, trên mã thông báo USB an toàn hoặc trong Windows hoặc Mac
+                      Cửa hàng móc khóa. &nbsp;Nó có thể sử dụng API gốc (Windows
+                      CAPI/CNG hoặc Mac Keychain) &nbsp;hoặc giao diện PKCS#11.
+                      &nbsp; (LƯU Ý: &nbsp;Mac Keychain sẽ được hỗ trợ trong
+                      phát hành ngắn hạn)<br />
+                      <br />
+                      Là một tùy chọn đặc biệt, nó cũng có thể tạo một cặp khóa cục bộ
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant: normal;
+                          font-weight: normal;
+                          letter-spacing: normal;
+                          line-height: normal;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          word-spacing: 0px;
+                          float: none;
+                          background-color: #ffffff;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >và xử lý yêu cầu ký chứng chỉ PKCS#10
+                        tương tác với ADSS Server.</span
+                      ></span
+                    ><br />
+                    <br />
+                  </span>
+                </li>
+                <li style="text-align: justify">
+                  <strong
+                    ><strong
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        background-color: #ffffff;
+                      "
+                      >Go&gt;Sign Applet</strong
+                    ><br /> </strong
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Go&gt;Sign Applet là một applet Java đã ký được sử dụng cho
+                    phía khách hàng
+                    <span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        float: none;
+                        background-color: #ffffff;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      ><span class="Apple-converted-space">&nbsp;</span>ký kết
+                      băm dữ liệu của người dùng bằng cách sử dụng các khóa ký được tổ chức cục bộ
+                      được giữ trên thẻ thông minh, trên mã thông báo USB an toàn hoặc trong Windows
+                      hoặc cửa hàng Mac Keychain. &nbsp;Nó có thể sử dụng API gốc
+                      (Windows CAPI/CNG hoặc Mac Keychain) &nbsp;hoặc PKCS#11
+                      giao diện.<span class="Apple-converted-space"
+                        >&nbsp;</span
+                      ></span
+                    >giải pháp chữ ký số. &nbsp; <br />
+                    <br />
+                    GHI CHÚ:<br />
+                    Các cảnh báo và kiểm soát bảo mật Java mới có tác động tiêu cực
+                     ảnh hưởng đến trải nghiệm người dùng với
+                    <span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        float: none;
+                        background-color: #ffffff;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >applet đã ký<span class="Apple-converted-space"
+                        >&nbsp;chẳng hạn như&nbsp;</span
+                      ></span
+                    >Đi&gt;Ký Applet. Chrome (và sắp tới là các trình duyệt khác) không
+                    hỗ trợ NPAPI được Go&gt;Sign Applet sử dụng lâu hơn. &nbsp;
+                    Do đó, người dùng Go&gt;Sign Applet hiện tại nên
+                    chuyển sang sử dụng Go&gt;Sign Desktop hoặc thay đổi cách tiếp cận và
+                    sử dụng các khóa và chứng chỉ được lưu trữ tập trung hoặc những khóa được lưu trữ trên
+                    thiết bị di động. &nbsp;Máy chủ ADSS hỗ trợ cả ba
+                    các loại.</span
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                  ></span>
+                </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #d3d3d3;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Cài đặt kho khóa</span
+              ><br />
+            </td>
+            <td>
+              <ol
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                "
+              >
+                <li>
+                  <strong>API gốc của hệ điều hành<br /> </strong
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Chọn tùy chọn này nếu bạn muốn sử dụng khóa ký
+                    từ kho khóa API gốc của hệ điều hành (Windows
+                    CAPI/CNG hoặc Mac Keychain).<br />
+                    <br />
+                  </span>
+                </li>
+                <li>
+                  <strong
+                    ><strong
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        background-color: #ffffff;
+                      "
+                      >Cài đặt PKCS#11</strong
+                    ><br /> </strong
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                  ></span
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Chọn tùy chọn này để giải quyết kho lưu trữ khóa bằng PKCS#11
+                    giao diện.</span
+                  ><br
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                    "
+                  />
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Cung cấp tên của thiết bị trong trường Tên thiết bị,
+                    ví dụ. Aladdin</span
+                  ><br
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                    "
+                  />
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Cung cấp tên thư viện trình điều khiển PKCS#11 trong Tên thư viện
+                    trường, ví dụ: eTPKCS11.dll<br />
+                    <ul
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                      "
+                    >
+                      <li>
+                        <strong
+                          >Sử dụng hộp thoại gốc của nhà cung cấp phần cứng cho mã PIN/Cụm mật khẩu
+                          lời nhắc:</strong
+                        ><span>&nbsp;</span>Kích hoạt tùy chọn này sẽ đảm bảo
+                        Hộp thoại PIN/Passphrase gốc của nhà cung cấp phần cứng được sử dụng để
+                        nhắc người dùng. Bỏ chọn hộp kiểm này để sử dụng tùy chỉnh
+                        Giao diện người dùng máy chủ ADSS.<br />
+                        <br />
+                        <span class="TipBubble"
+                          >Khi tùy chọn này được bật và người dùng đang thực hiện
+                          đăng nhập trong cùng một phiên thì người dùng phải nhập
+                          mật khẩu mỗi lần.<br />
+                          <br />
+                          Nếu tùy chọn này bị tắt thì tùy chỉnh của Ascertia
+                           hộp thoại sẽ được trình bày để nhập mật khẩu và
+                           để ký hàng loạt, bạn chỉ phải nhập mật khẩu
+                           một lần trong cùng một phiên.<br />
+                        </span>
+                      </li>
+                    </ul>
+                    <br /> </span
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                  ></span>
+                </li>
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    ><strong
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        background-color: #ffffff;
+                      "
+                      ><strong
+                        style="
+                          color: #000000;
+                          font-family: Verdana;
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant: normal;
+                          letter-spacing: normal;
+                          line-height: normal;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          word-spacing: 0px;
+                          background-color: #ffffff;
+                        "
+                        ><strong
+                          style="
+                            color: #000000;
+                            font-family: Verdana;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            word-spacing: 0px;
+                            background-color: #ffffff;
+                          "
+                          ><strong
+                            style="
+                              color: #000000;
+                              font-family: Verdana;
+                              font-size: 14px;
+                              font-style: normal;
+                              font-variant: normal;
+                              letter-spacing: normal;
+                              line-height: normal;
+                              text-align: left;
+                              text-indent: 0px;
+                              text-transform: none;
+                              white-space: normal;
+                              word-spacing: 0px;
+                              background-color: #ffffff;
+                            "
+                            >Khóa chuyển vùng</strong
+                          ><br /> </strong
+                        ><span
+                          style="
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant: normal;
+                            font-weight: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            word-spacing: 0px;
+                            float: none;
+                            background-color: #ffffff;
+                            display: inline !important;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                        ></span
+                        ><span
+                          style="
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant: normal;
+                            font-weight: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            word-spacing: 0px;
+                            float: none;
+                            background-color: #ffffff;
+                            display: inline !important;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                        ></span
+                        ><span
+                          style="
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant: normal;
+                            font-weight: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-align: left;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            word-spacing: 0px;
+                            float: none;
+                            background-color: #ffffff;
+                            display: inline !important;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                          >Chọn tùy chọn này nếu khóa ký sử dụng phần mềm
+                          vùng chứa khóa chuyển vùng được giữ trên Máy chủ ADSS.</span
+                        ></strong
+                      ></strong
+                    ></span
+                  >
+                </li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Nhấp vào nút Tiếp theo sẽ hiển thị trang Tiêu chí lọc chứng chỉ.
+      </p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="signature_settings.htm" title="">Cài đặt chữ ký</a
+          ><br /><a href="viewer_settings.htm" title="">Cài đặt người xem</a
+          ><br /><a href="certificate_filter_criteria.htm" title=""
+            >Tiêu chí lọc chứng chỉ</a
+          ><br /><a href="service_settings1.htm" title="">Cài đặt dịch vụ</a
+          ><br /><a href="advanced_settings2.htm" title="">Cài đặt nâng cao</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

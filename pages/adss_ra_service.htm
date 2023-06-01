@@ -1,0 +1,274 @@
+<html>
+  <head>
+    <title>Dịch vụ ADSS RA - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('23','ADSS RA Service');parent.MenuItemSelected('adss_ra_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_ra_service.htm"
+              title=""
+              >ADSS RA Service</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">ADSS RA Service</p>
+      <p>
+        Dịch vụ ADSS RA nhận và quản lý&nbsp;Yêu cầu ký chứng chỉ (CSR, còn được
+        gọi là PKCS#10 / CSR)&nbsp;từ các thực thể cuối có thể bao gồm người
+        dùng, máy chủ web, thiết bị mạng và các thực thể khác.&nbsp; Dịch vụ
+        ADSS RA cũng nhận và quản lý các yêu cầu thu hồi chứng chỉ.&nbsp; Những
+        yêu cầu như vậy có thể được nhận:&nbsp;
+      </p>
+      <p></p>
+      <ul>
+        <li>thông qua giao thức SCEP tiêu chuẩn ngành, hoặc&nbsp;</li>
+        <li>thông qua giao diện dịch vụ web, hoặc&nbsp;</li>
+        <li>thông qua ADSS Go&gt;Dịch vụ ký và Applet. &nbsp;</li>
+      </ul>
+      <p>
+        Các yêu cầu&nbsp;thành công&nbsp;được chấp nhận và xử lý được chuyển đến
+        Cơ quan cấp chứng chỉ (CA) được xác định để hành động.&nbsp; Dịch vụ
+        ADSS RA sẽ nhận được phản hồi từ CA và sẽ cung cấp phản hồi thích hợp
+        cho người yêu cầu. &nbsp;
+      </p>
+      <p>Một số chức năng nổi bật của Dịch vụ ADSS RA là:</p>
+      <ul>
+        <li>Đăng ký chi tiết của tất cả các thực thể cuối yêu cầu chứng chỉ</li>
+        <li>
+          Cho phép các yêu cầu chứng chỉ được phê duyệt hoặc từ chối bằng cách
+          sử dụng một trong hai&nbsp;quy trình tự động (có thể định cấu hình)
+          hoặc bằng cách sử dụng các quy trình thủ công với Toán tử RA đáng tin
+          cậy
+        </li>
+        <li>
+          Liên lạc với CA có liên quan để lấy chứng chỉ, sau đó cung
+          cấp&nbsp;phương tiện giao hàng phù hợp cho các đơn vị cuối cùng yêu
+          cầu
+        </li>
+        <li>
+          Quản lý quy trình gia hạn chứng chỉ có thể tuân theo quy trình làm
+          việc khác nhau&nbsp;tùy thuộc vào khả năng của thực thể cuối
+        </li>
+        <li>
+          Quản lý quy trình thu hồi chứng chỉ có thể được khởi xướng
+          bởi&nbsp;chủ sở hữu chứng chỉ hoặc Nhà điều hành RA đáng tin cậy&nbsp;
+        </li>
+      </ul>
+      <p>
+        Cách dịch vụ ADSS RA thực hiện các tác vụ này có thể khác nhau tùy thuộc
+        vào việc người dùng đang được đăng ký hay các thực thể như thiết bị
+        mạng,&nbsp;Ứng dụng phần mềm&nbsp;hoặc máy chủ web đang được đăng
+        ký.&nbsp;Các trang sau đây mô tả các quá trình này.&nbsp;Trang chủ Dịch
+        vụ ADSS RA được hiển thị bên dưới:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/06-09-2018 9-30-53 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <span class="Asc_Sibling_Page_List">
+        <div class="iconpanel">
+          <div align="center">
+            <a href="configuring_the_ra_service1.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="configuring_the_ra_service1.htm" title=""
+              >Cấu hình dịch vụ RA</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="device_certificates.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="device_certificates.htm" title="">Chứng chỉ thiết bị</a>
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="end-user_certificates.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="end-user_certificates.htm" title=""
+              >Chứng chỉ người dùng cuối</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="transactions_log_viewer5.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="transactions_log_viewer5.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="logs_archiving9.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="logs_archiving9.htm" title="">Lưu trữ nhật ký</a>
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="alerts6.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center"><a href="alerts6.htm" title="">Cảnh báo</a></div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="ra_service_interface_urls.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="ra_service_interface_urls.htm" title=""
+              >URL giao diện dịch vụ RA</a
+            >
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </span>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        Xem thêm
+      </p>
+      <p></p>
+      <div class="pagelist">
+        <span class="Asc_Sibling_Page_List"
+          ><a
+            href="http://kb.ascertia.com/display/AKBS/Ascertia+Knowledge+base"
+            target="_blank"
+            style="
+              text-decoration: none;
+              color: #164587;
+              font-family: Verdana;
+              font-size: 13px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+            "
+            >Cơ sở kiến thức máy chủ ADSS</a
+          ><br />
+          <div class="var_Sibling_Page_List">
+            <a href="welcome.htm" title="">Chào mừng</a><br /><a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm &amp; Kiến trúc</a
+            ><br /><a href="adss_ra_service.htm" title="">Dịch vụ ADSS RA</a
+            ><br /><a href="adss_server_certification_service.htm" title=""
+              >Dịch vụ chứng nhận ADSS</a
+            ><br /><a href="adss_server_-_signing_service6.htm" title=""
+              >Dịch vụ ký ADSS</a
+            ><br /><a href="adss_go-sign_service.htm" title=""
+              >ADSS Go&gt;Dịch vụ ký tên</a
+            ><br /><a href="adss_ras_service.htm" title="">Dịch vụ ADSS RAS</a
+            ><br /><a href="adss_sam_service.htm" title="">Dịch vụ ADSS SAM</a
+            ><br /><a href="adss_csp_service.htm" title="">Dịch vụ ADSS CSP</a
+            ><br /><a href="tsa_service.htm" title="">Dịch vụ ADSS TSA</a
+            ><br /><a href="adss_server_-_verification_service4.htm" title=""
+              >Dịch vụ ADSS Verification</a
+            ><br /><a href="ocsp_monitor.htm" title="">Màn hình ADSS OCSP</a
+            ><br /><a href="ocsp_service.htm" title="">Dịch vụ ADSS OCSP</a
+            ><br /><a href="adss_scvp_service1.htm" title=""
+              >Dịch vụ  ADSS SCVP</a
+            ><br /><a href="adss_xkms_service.htm" title="">Dịch vụ ADSS XKMS</a
+            ><br /><a href="adss_ltan_service.htm" title=""
+              >Dịch vụ ADSS LTANS</a
+            ><br /><a href="adss_hmac_service2.htm" title=""
+              >Dịch vụ ADSS HMAC</a
+            ><br /><a href="adss_decryption_service.htm" title=""
+              >Dịch vụ ADSS Decryption</a
+            ><br /><a href="adss_ocsp_repeater_service.htm" title=""
+              >Dịch vụ ADSS OCSP Repeater</a
+            ><br /><a href="adss_npkd_service.htm" title="">Dịch vụ ADSS NPKD</a
+            ><br /><a href="adss_spoc_service.htm" title="">Dịch vụ ADSS SPOC</a
+            ><br /><a href="manage_cas.htm" title="">Quản lý CA</a><br /><a
+              href="key_manager6.htm"
+              title=""
+              >Quản lý chủ chốt</a
+            ><br /><a href="trust_manager3.htm" title="">Trình quản lý tin cậy</a
+            ><br /><a href="crl_manager_service.htm" title=""
+              >Màn hình ADSS CRL</a
+            ><br /><a href="global_settings.htm" title="">Cài đặt chung</a
+            ><br /><a href="access_control2.htm" title="">Kiểm soát truy cập</a
+            ><br /><a href="client_manager.htm" title="">Quản lý khách hàng</a
+            ><br /><a href="system_log_viewer.htm" title="">Trình xem nhật ký hệ thống</a
+            ><br /><a href="service_manager.htm" title="">Trình quản lý máy chủ</a
+            ><br /><a href="approval_manager.htm" title="">Trình quản lý phê duyệt</a
+            ><br /><a href="operational_management.htm" title=""
+              >Quản lý vận hành</a
+            ><br /><a href="advanced_configuration.htm" title=""
+              >Cấu hình nâng cao</a
+            ><br />
+          </div>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

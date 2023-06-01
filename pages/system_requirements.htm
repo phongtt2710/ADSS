@@ -1,0 +1,694 @@
+<html>
+  <head>
+    <title>Yêu cầu hệ thống - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('5','Yêu cầu hệ thống');parent.MenuItemSelected('getting_started');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="getting_started.htm"
+              title=""
+              >Bắt đầu</a
+            >&nbsp;&gt;&nbsp;<a href="system_requirements.htm" title=""
+              >Yêu cầu hệ thống</a
+            ></span
+          ></span
+        >
+      </p>
+      <span class="Asc_PageName">Yêu cầu hệ thống</span><br />
+      <p>Bảng sau liệt kê các yêu cầu hệ thống cho Máy chủ ADSS:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Thành phần</td>
+            <td>Yêu cầu</td>
+          </tr>
+          <tr>
+            <td>Dịch vụ ADSS</td>
+            <td>
+              ADSS Server là một ứng dụng Java 11 EE được hỗ trợ trên các nền
+              tảng này (hỏi về hỗ trợ cho người khác):<br />
+              <br />
+              <strong
+                ><span style="text-decoration: underline"
+                  >Hệ điều hành:</span
+                ></strong
+              ><br />
+              Hệ điều hành 64-bit sau được hỗ trợ (32-bit theo yêu cầu):<br />
+              <ul>
+                <li>Máy chủ Windows 2019, 2016, 2012 R2, 2012</li>
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Linux (RedHat v7.x, v8.x, CentOS v7.x, v8.x, SUSE)</span
+                  >
+                </li>
+              </ul>
+              <strong
+                ><span style="text-decoration: underline"
+                  >Phần cứng:</span
+                ></strong
+              >&nbsp;<br />
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nên sử dụng CPU đa lõi hiện đại như Xeon E3-xxxx hoặc E5-xxxx
+                hoặc E55-xx hoặc E56-xx hoặc tương tự, với RAM 16GB (RAM tối
+                thiểu 8GB) và dung lượng đĩa 200GB. RAM bổ sung có thể được yêu
+                cầu để cấp nguồn cho các dịch vụ ký hoặc lưu trữ LTANS. Cần
+                khoảng 0,5GB đến 1GB dung lượng đĩa để giữ nhật ký theo dõi trên
+                100.000 giao dịch dịch vụ.</span
+              >
+              <br />
+              <strong
+                ><span style="text-decoration: underline"
+                  ><br />
+                  Cơ sở dữ liệu:</span
+                ></strong
+              ><br />
+              Máy chủ ADSS lưu dữ liệu cấu hình và giao dịch của nó trong cơ sở
+              dữ liệu. Các cơ sở dữ liệu sau đây được hỗ trợ:<br />
+              <ul>
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Microsoft SQL Server 2019, 2017, 2016, 2014, 2012 (Express,
+                    Standard, Web or Enterprise Edition)</span
+                  >
+                </li>
+                <li>Cơ sở dữ liệu Azure SQL</li>
+                <li>Oracle 19c, 12c</li>
+                <li>
+                  PostgreSQL v13.x,
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >v12.x,&nbsp;</span
+                  >v11.x, v10.x, v9.6.x
+                </li>
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >MySQL v8.x, Percona-XtraDB-Cluster-v5.7.x and v8.0<br />
+                  </span>
+                </li>
+              </ul>
+              Cần khoảng 1GB dung lượng cơ sở dữ liệu để lưu trữ nhật ký dịch vụ
+              từ 100.000 giao dịch cho mỗi dịch vụ trừ khi chúng thường xuyên
+              được lưu trữ tự động hoặc tùy chỉnh.
+              <ul></ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Máy chủ cơ sở dữ liệu tùy chọn</td>
+            <td>
+              Cơ sở dữ liệu có thể được chạy trên một máy chủ riêng biệt nếu
+              thích. &nbsp;Điều này được khuyến nghị cho các môi trường hiệu
+              suất cao để cho phép tất cả các tài nguyên máy chủ được chuyển
+              hướng đến các dịch vụ Máy chủ ADSS. &nbsp;<br />
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                ><span style="text-decoration: underline"
+                  ><br />
+                  Phần cứng:</span
+                ></strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                class="Apple-converted-space"
+                >&nbsp;</span
+              >&nbsp;<br />
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nên sử dụng CPU đa lõi hiện đại như Xeon E3-xxxx hoặc E5-xxxx
+                hoặc E55-xx hoặc E56-xx hoặc tương tự, với RAM 16GB</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >, thông thường sẽ cần 5-10GB dung lượng đĩa trở lên tùy thuộc
+                vào yêu cầu sử dụng và lưu giữ dữ liệu / nhật ký giao
+                dịch.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;Hệ thống máy khách&nbsp;<br />
+              (hệ thống gửi yêu cầu dịch vụ đến ADSS Server)
+            </td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Bất kỳ hệ thống hợp lý. ADSS Client SDK for Java API yêu cầu
+                JRE v1.7 trở lên. ADSS Client SDK cho .NET yêu cầu Microsoft
+                .NET Framework 4.5 trở lên.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;Trình duyệt của nhà điều hành</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Các trình duyệt sau được hỗ trợ cho Nhà khai thác Máy chủ
+                ADSS:</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul>
+                <li>Google Chrome 70.x trở lên</li>
+                <li>Mozilla Firefox 60.x trở lên</li>
+                <li>Microsoft Edge 35.x trở lên</li>
+                <li>Microsoft Internet Explorer (IE) 11.x</li>
+              </ul>
+              <ul></ul>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;HSM tùy chọn</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nếu được yêu cầu, các mô-đun bảo mật phần cứng sau được hỗ
+                trợ:</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul>
+                <li>Thales SafeNet Luna và ProtectServer HSM</li>
+                <li>nCipher nShield Solo hoặc Connect HSM</li>
+                <li>HSM Utimaco</li>
+                <li>Microsoft Azure Key Vault HSM</li>
+                <li>
+                  Amazon AWS Cloud HSM (Được hỗ trợ khi triển khai ADSS Server
+                  trên Linux)&nbsp;
+                </li>
+              </ul>
+              <ul></ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Proxy DMZ tùy chọn <br />
+              máy<br />
+            </td>
+            <td>
+              <div>
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Một máy chủ proxy DMZ có thể được cấu hình nếu cần. Các máy
+                  proxy DMZ sau đây được hỗ trợ:</span
+                ><br
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                />
+                <ul
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                >
+                  <li>
+                    Windows Server - Microsoft IIS 8.0 trở lên, Apache hoặc IBM
+                    HTTP Server
+                  </li>
+                  <li>Linux - Máy chủ HTTP Apache hoặc IBM</li>
+                </ul>
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Sử dụng CPU hợp lý, RAM 2GB, dung lượng đĩa 100 MB</span
+                ><br />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span class="Asc_Heading">Kịch bản triển khai điển hình</span><br />
+        <br />
+        Sơ đồ cài đặt Máy chủ ADSS điển hình trông như thế này:
+      </p>
+      <p class="Asc_See_Also">
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            float: none;
+            display: inline !important;
+            color: #000000;
+          "
+        >
+          <img
+            alt=""
+            style="
+              width: 915px;
+              height: 505px;
+              border-width: 1px;
+              border-style: solid;
+            "
+            src="../images/system.png"
+          /><br />
+          <br />
+        </span>
+      </p>
+      <p style="font-family: Verdana">
+        <span>
+          Máy chủ ADSS và cơ sở dữ liệu mà nó sử dụng đều có thể được cài đặt
+          trên cùng một máy. RAM 12GB được khuyến nghị cho tình huống như vậy.
+          Đối với môi trường hiệu suất cao, nên cài đặt chúng trên các hệ thống
+          riêng biệt.&nbsp;<br />
+          <br />
+          Các chi tiết được hiển thị ở trên là các yêu cầu hệ thống tối thiểu;
+          Chúng có thể cần được sửa đổi để đáp ứng các yêu cầu sử dụng cụ thể.
+          Đối với các hệ thống thông lượng cao, hãy cân nhắc sử dụng nhiều Máy
+          chủ ADSS cân bằng tải trong cách sắp xếp khả năng phục hồi cân bằng
+          tải mạng. Nhiều CPU vật lý có thể được thêm vào mặc dù cần có giấy
+          phép bổ sung cho những thứ này. Hệ thống ảo hóa cũng được hỗ trợ.<br />
+          <br />
+          ADSS Server cũng có thể được cài đặt trên cùng một hệ thống với ứng
+          dụng kinh doanh mà nó phục vụ.<br />
+          <br />
+          <span class="Asc_Heading">Hỗ trợ HSM để gói chìa khóa <br /> </span
+          ><br />
+          Nếu bạn muốn sử dụng Máy chủ ADSS với việc tạo khóa người dùng dựa
+          trên HSM của nó gói và xuất dưới KEK tĩnh hoặc động thì hãy cẩn thận
+          với các thông số kỹ thuật của HSM bạn đặt hàng hoặc cố gắng sử dụng
+          lại.<br />
+          <br />
+          Điều tốt nhất cần làm là chạy Máy chủ ADSS
+          <a
+            href="default.aspx#pageid=running_the_hardware_crypto_source_test_utility"
+            target="_blank"
+            >PKCS#11 Tiện ích kiểm tra</a
+          >
+          để kiểm tra xem HSM có hỗ trợ các cơ chế cần thiết cho việc này và
+          thực sự là các chức năng khác hay không. Các nhà cung cấp HSM được
+          biết là thay đổi các cơ chế được hỗ trợ trong lĩnh vực này và một số
+          loại trừ các cơ chế đó khỏi danh sách cho phép khi ở FIPS 140-2. Nếu
+          nghi ngờ, hãy kiểm tra với bộ phận hỗ trợ của Ascertia và cũng kiểm
+          tra với nhà cung cấp HSM của bạn rằng cơ chế AES_CBC_ENCRYPT_DATA được
+          hỗ trợ để gói và xuất khóa.<br />
+        </span>
+      </p>
+      <p>
+        <br />
+        <span
+          style="
+            font-size: 14px;
+            font-style: italic;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: bold;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #ffa500;
+          "
+          >Xem thêm</span
+        >
+      </p>
+      <p></p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="glossary.htm" title="">Thuật ngữ</a><br /><a
+            href="reference_to_pki_standards.htm"
+            title=""
+            >Tham khảo các tiêu chuẩn PKI</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

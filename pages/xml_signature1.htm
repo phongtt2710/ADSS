@@ -1,0 +1,306 @@
+<html>
+  <head>
+    <title>Thuộc tính ký XML/XAdES - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('123','Thuộc tính ký XML/XAdES');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go&gt; Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo Hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            >&nbsp;&gt;&nbsp;<a href="signature_settings.htm" title=""
+              >Cài đặt chữ ký</a
+            >&nbsp;&gt;&nbsp;<a href="xml_signature1.htm" title=""
+              >Thuộc tính ký XML/XAdES</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Thuộc tính ký XML/XAdES</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p><span style="font-family: arial"></span></p>
+      <p>
+        Trang này được sử dụng để định cấu hình cài đặt chữ ký XML/XAdES
+        sẽ được Go&gt;Sign Desktop/applet sử dụng:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/Go-Sign-XADES.png"
+          style="width: 840px; height: 825px"
+        /><br />
+        <br />
+        Các mục cấu hình như sau:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Cài đặt chữ ký XML</td>
+            <td style="text-align: justify">
+                Một trường bắt buộc để chọn loại chữ ký XML sẽ là
+                được sản xuất bởi hồ sơ này.
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >xem<span class="Apple-converted-space">&nbsp;</span></span
+              ><a
+                href="supported_signature_type.htm"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                target="_blank"
+                >Các loại chữ ký được hỗ trợ</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span class="Apple-converted-space">&nbsp;</span>phần cho
+                thêm chi tiết về các loại chữ ký được Go&gt;Sign hỗ trợ
+                Dịch vụ.&nbsp;</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Chữ ký/Mối quan hệ tài liệu</td>
+            <td>
+              <div style="text-align: justify">
+                Trường này xác định cách chữ ký sẽ được đặt trong
+                XML đã ký, tức là cái này bên trong cái kia hay chúng đã đặt
+                riêng biệt. Sau đây là các mối quan hệ được hỗ trợ:&nbsp;
+              </div>
+              <ul>
+                <li style="text-align: justify">Enveloping</li>
+                <li style="text-align: justify">Enveloped</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                thuật toán băm</td>
+            <td>
+              <div style="text-align: justify">
+                Thuật toán băm đã chọn được sử dụng như một phần của chữ ký
+                quá trình thế hệ. Sau đây là băm được hỗ trợ
+                thuật toán:&nbsp; &nbsp;&nbsp;
+              </div>
+              <ul>
+                <li style="text-align: justify">SHA1</li>
+                <li style="text-align: justify">
+                  SHA2 (SHA224, SHA256, SHA384, SHA512)
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Mã hóa XML sau khi ký</td>
+            <td>
+                Bật thuộc tính này để mã hóa phần tử xml, ví dụ: Khối hàng
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;
+                Ký phần XML<br /></td>
+            <td>
+              <div style="text-align: justify">
+                Điều này xác định cách một phần tử cụ thể có thể được ký trong XML
+                tài liệu. Phần tử có thể được xác định riêng lẻ hoặc thông qua XPath.
+                Nhiều yếu tố ký kết cũng có thể được thêm vào. XPath sử dụng đường dẫn
+                các biểu thức để chọn các nút hoặc tập hợp nút trong tài liệu XML.
+                XPath sử dụng các biểu thức đường dẫn để điều hướng trong các tài liệu XML. XPath
+                có thể được thiết lập theo nhiều cách.&nbsp;
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <div style="text-align: justify">
+                Nếu hộp kiểm được bật và hệ thống không thể tìm thấy
+                yếu tố ký XML đã xác định thì nó sẽ trả về lỗi. Nếu như
+                mối quan hệ chữ ký/tài liệu được Bao bọc&nbsp;sau đó
+                Cài đặt ký&nbsp;phần&nbsp;XML phải được bật
+              </div>
+              <div style="text-align: justify">
+                <strong><br /> </strong>
+              </div>
+              <strong>
+                <div style="text-align: justify">
+                  <strong>Ví dụ Xpath:</strong>
+                </div>
+              </strong>
+              <div style="text-align: justify">/root/books/author</div>
+              <div style="text-align: justify">//publisher</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Chữ ký EPES</td>
+            <td>
+              <div style="text-align: justify">
+                Cài đặt chữ ký điện tử dựa trên chính sách rõ ràng (EPES) là
+                 chỉ khả dụng cho các loại Chữ ký XAdES. Bằng cách cho phép
+                 hộp kiểm Thêm mã định danh chính sách chữ ký, Go&gt;Sign
+                 hồ sơ có thể được sử dụng để tạo chữ ký (EPES) trong đó một
+                 chính sách chữ ký OID, URI và thông báo người dùng được thêm vào
+                 chữ ký số như quy định dưới đây.
+              </div>
+              <ol>
+                <li>
+                  <div style="text-align: justify">
+                    <strong>ID đối tượng chính sách chữ ký</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Cung cấp OID chính sách chữ ký sẽ được thêm cho EPES
+                     chữ ký.
+                  </div>
+                  <div style="text-align: justify"><br /></div>
+                </li>
+                <li>
+                  <div style="text-align: justify">
+                    <strong>URI chính sách chữ ký</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Cung cấp URI chính sách chữ ký sẽ được thêm cho EPES
+                    signatures.f không có URI chính sách nào được xác định bên trong
+                    Go&gt;Ký hồ sơ sau đó cấu hình EPES sẽ được thực hiện
+                    trong tệp <strong>policy.properties</strong> tại:
+                    <strong>[ADSS Installation Directory]/service/</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Mở tệp này trong bất kỳ trình soạn thảo văn bản nào và nhập chính sách OID và
+                     đường dẫn đến tài liệu chính sách
+                  </div>
+                  <strong>
+                    <div style="text-align: justify">
+                      <strong
+                        >e.g. 1.2.3.4.5 = "F:/Policy_File"<br />
+                        <br />
+                      </strong>
+                    </div> </strong
+                  ><span class="TipBubble">
+                    <div style="text-align: justify">
+                        ​Dịch vụ ADSS Go&gt;Sign có thể truy xuất chữ ký
+                        tài liệu chính sách theo một trong các cách sau:
+                    </div>
+                    <div style="text-align: justify"><br /></div>
+                    <div style="text-align: justify">
+                        Sử dụng URI chính sách được xác định trong hồ sơ Go&gt;Sign. ADSS
+                        Go&gt;Sign Service sẽ sử dụng URI chính sách này để truy xuất
+                        tài liệu chính sách có sẵn trực tuyến và giá trị băm của nó
+                        sẽ được tính toán và nhúng vào các thuộc tính đã ký
+                        của chữ ký.
+                    </div>
+                    <div style="text-align: justify"><br /></div>
+                    <div style="text-align: justify">
+                        Sử dụng tài liệu chính sách chữ ký được cấu hình cục bộ. Các
+                        ADSS Go&gt;Sign Service sẽ sử dụng con trỏ tệp văn bản này để
+                        truy xuất tài liệu chính sách đã lưu cục bộ, băm và nhúng
+                        nó trong các thuộc tính đã ký của chữ ký.
+                    </div>
+                  </span>
+                </li>
+                <li>
+                  <div style="text-align: justify">
+                    <strong>Chính sách chữ ký Thông báo người dùng</strong>
+                  </div>
+                  <div style="text-align: justify">
+                    Cung cấp thông báo người dùng sẽ được thêm vào chữ ký EPES.
+                  </div>
+                </li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Nhấp vào nút Tiếp theo sẽ hiển thị trang Cài đặt Lưu trữ Khóa.</p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="pdf_signature1.htm" title="">Thuộc tính ký PDF/PAdES</a
+          ><br /><a href="signature_settings_-_pdf_hash.htm" title=""
+            >Thuộc tính ký mã băm PDF/PAdES</a
+          ><br /><a href="cms_signature1.htm" title=""
+            >Thuộc tính ký CMS/CAdES</a
+          ><br /><a href="msword_signing_attributes.htm" title=""
+            >Thuộc tính ký MS Office</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

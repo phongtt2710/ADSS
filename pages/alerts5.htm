@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>Cảnh báo - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('145','Cảnh báo');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go>Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a href="alerts5.htm" title="">Cảnh báo</a></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cảnh báo</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p></p>
+      <p style="text-align: justify">
+        ADSS Go Sign Service có thể được cấu hình để tạo cảnh báo dựa trên
+        email, SMS và / hoặc SNMP khi xảy ra các sự kiện sau:
+      </p>
+      <ul>
+        <li>
+          <span style="text-align: left"
+            >Đã xảy ra lỗi nội bộ (Lý do bao gồm cơ sở dữ liệu hoặc không gian
+            không khả dụng, v.v.)</span
+          >
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Nếu dịch vụ không thể sử dụng khóa ký nhật ký tại thời điểm lưu trữ
+            tự động</span
+          >
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Khi quá trình lưu trữ hoàn tất thành công</span
+          >
+        </li>
+      </ul>
+      <p style="text-align: justify">
+        <span style="text-align: left"
+          >Các nhà khai thác hệ thống sẽ nhận được các cảnh báo này được xác
+          định trong GUI dịch vụ.</span
+        >
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="../images/GoSign - Alerts.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Đã xảy ra lỗi nội bộ&nbsp;</td>
+            <td>
+              Khi được bật, một cảnh báo sẽ được gửi bất cứ khi nào xảy ra lỗi
+              nội bộ trong quá trình xử lý yêu cầu (ví dụ: cơ sở dữ liệu không
+              thể truy cập được).&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Không thể sử dụng Khóa ký nhật ký tại thời điểm lưu trữ tự
+              động&nbsp;
+            </td>
+            <td>
+              Khi được bật, một cảnh báo sẽ được gửi bất cứ khi nào không thể sử
+              dụng Khóa ký nhật ký tại thời điểm lưu trữ tự động. Lưu ý rằng
+              Khóa Ký Nhật ký được cấu hình trong Cài đặt chung &gt;&gt;Phần
+              Chứng chỉ hệ thống.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>Khi lưu trữ được thực hiện&nbsp;</td>
+            <td>
+                Khi được bật, dịch vụ sẽ gửi cảnh báo bất cứ khi nào tự động lưu trữ được thực hiện.
+            </td>
+          </tr>
+          <tr>
+            <td>&gt;&gt; và &lt;&lt;&nbsp;</td>
+            <td>
+                Các nút này được sử dụng để chọn và bỏ chọn các nhà khai thác hệ thống mà cảnh báo được gửi đến.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p>
+        <span
+          style="
+            font-weight: normal;
+            font-family: arial;
+            font-size: 13px;
+            color: #000000;
+          "
+          class="subheading"
+        >
+        </span>
+      </p>
+      <p>Nhấp vào nút <strong>Save </strong>để các thay đổi có hiệu lực.</p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_the_go-sign_service.htm" title=""
+            >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+          ><br /><a href="language_manager.htm" title="">Trình quản lý ngôn ngữ</a
+          ><br /><a href="preferred_sig__locations.htm" title=""
+            >Vị trí chữ ký PDF</a
+          ><br /><a href="transactions_log_viewer4.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          ><br /><a href="logs_archiving8.htm" title="">Lưu trữ nhật ký </a
+          ><br /><a href="go-sign_service_interface_urls.htm" title=""
+            >URL giao diện dịch vụ Go-Sign</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

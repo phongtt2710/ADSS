@@ -1,0 +1,241 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ xác minh ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('14','ADSS Verification Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiếm trúc</a
+            >&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_verification_service.htm"
+              title=""
+              >Tổng quan về dịch vụ xác minh ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Tổng quan về dịch vụ xác minh ADSS</p>
+      <p>
+        Dịch vụ xác minh ADSS là một giải pháp phía máy chủ cho cả xác minh tài
+        liệu được ký điện tử và xác thực chứng chỉ (kiểm tra chứng chỉ chưa hết
+        hạn, không bị thu hồi, được ký bởi CA đáng tin cậy, v.v.). Một quy trình
+        làm việc điển hình như sau:<br />
+        <br />
+      </p>
+      <div style="text-align: center">
+        <img
+          alt=""
+          src="../images/ADSS Verification Service.jpg"
+          style="width: 800px"
+        />
+      </div>
+      <ol>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Khách hàng cuối gửi tài liệu đã ký đến ứng dụng khách hàng (ví dụ:
+            đơn đặt hàng đã ký, hóa đơn, báo cáo, v.v.). Chữ ký của khách hàng
+            cuối có thể là một trong các loại sau: Chữ ký PDF, Chữ ký có dấu
+            thời gian PDF, Chữ ký PDF có Dấu thời gian và thông tin thu hồi cho
+            chuỗi chứng chỉ của người ký, PKCS#7/CMS, Chữ ký dấu thời gian
+            PKCS#7/CMS (CAdES-T), Chữ ký dấu thời gian PKCS#7/CMS với thông tin
+            thu hồi cho chuỗi chứng chỉ của người ký&nbsp;(CAdES-X-Long), XML
+            DigSig, XML DigSig với Dấu thời gian (XAdES-T), XML DigSig với Dấu
+            thời gian và thông tin thu hồi cho chuỗi chứng chỉ của người
+            ký&nbsp;(XAdES-X-Long) hoặc định dạng S/MIME. Tài liệu có thể đã
+            được ký nhiều lần (như một phần của quy trình phê duyệt). Giấy chứng
+            nhận của người ký có thể đã được cấp bởi nhiều CA khác nhau.
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Ứng dụng khách muốn ủy thác tất cả sự phức tạp của việc xác minh chữ
+            ký cho Máy chủ ADSS, do đó nó thực hiện yêu cầu xác minh chữ ký cho
+            Máy chủ ADSS&nbsp;và chuyển tài liệu đã ký trong yêu cầu này. Lưu ý
+            Ascertia cũng cung cấp một thành phần cổng ADSS loại bỏ sự cần thiết
+            phải truyền toàn bộ tài liệu đã ký đến máy chủ ADSS (ví dụ trong
+            trường hợp khi nó đang được vận hành bởi một nhà cung cấp dịch vụ
+            bên ngoài).
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Dịch vụ xác minh ADSS thực hiện tất cả các kiểm tra xác minh chữ ký
+            tiêu chuẩn để đảm bảo rằng chữ ký đã được ký chính xác, chứng chỉ
+            của người ký được cấp bởi CA được công nhận và đáng tin cậy và không
+            hết hạn, v.v. Là một phần của thuật toán xác minh chữ ký này, Máy
+            chủ ADSS cũng sẽ yêu cầu thông tin trạng thái chứng chỉ từ bên liên
+            quan&nbsp;nhà cung cấp trạng thái chứng chỉ; hoặc dưới dạng CRL mà
+            nó truy xuất thường xuyên dựa trên một chính sách bỏ phiếu cụ thể
+            hoặc cuộc gọi OCSP theo thời gian thực.
+          </div>
+        </li>
+        <li>
+          <div class="StyleListNumberBefore0ptAfter6pt">
+            Nhà cung cấp dịch vụ trạng thái chứng chỉ sẽ trả về thông tin trạng
+            thái chứng chỉ.
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Sau đó, ADSS Server sẽ cung cấp phản hồi xác minh chữ ký hiển thị
+            trạng thái tổng thể của từng chữ ký trong tài liệu là "đáng tin
+            cậy", "không đáng tin cậy" hoặc "không xác định". Lưu ý Máy chủ ADSS
+            cũng có thể trả về các mục khác nhau dưới dạng thông tin bằng chứng,
+            bao gồm phản hồi OCSP nếu ứng dụng khách yêu cầu cụ thể.
+          </div>
+        </li>
+      </ol>
+      <p>
+        Lưu ý rằng ứng dụng khách có thể tự thực hiện xác minh chữ ký và chỉ ủy
+        quyền xác thực chứng chỉ cho Dịch vụ xác minh ADSS; trong trường hợp
+        này, ADSS Server chỉ thực hiện tập hợp con của các kiểm tra trên liên
+        quan đến xác thực chứng chỉ.<br />
+        <br />
+        <span class="Asc_Heading">
+          Tạo chữ ký dài hạn từ các chữ ký cơ bản như một phần của quy trình Xác
+          minh ADSS</span
+        >
+      </p>
+      Trong một số môi trường, có thể có yêu cầu Ứng dụng khách tăng cường chữ
+      ký cơ bản của khách hàng cuối để trở thành chữ ký dài hạn, để tính hợp lệ
+      của nó có thể được chứng minh trong tương lai. &nbsp;Ứng dụng máy khách có
+      thể yêu cầu điều này từ Máy chủ ADSS như một phần của thông báo yêu cầu
+      xác minh. &nbsp;Trong trường hợp như vậy, Dịch vụ xác minh ADSS sẽ xác
+      minh chữ ký, bao gồm trạng thái chuỗi chứng chỉ của người ký và nếu thành
+      công thì thực sự nhúng thông tin bằng chứng này vào bên trong chữ ký của
+      người dùng, để tham khảo trong tương lai. &nbsp;Dịch vụ xác minh ADSS cũng
+      sẽ nhúng dấu thời gian từ Cơ quan đóng dấu thời gian (TSA) được định cấu
+      hình trong chữ ký của khách hàng cuối, để chữ ký dài hạn được hình thành.
+      Chữ ký dài hạn này sẽ được trả lại cho Ứng dụng Khách hàng.<span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: left;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 1;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          float: none;
+          display: inline !important;
+          font-family: Arial;
+          color: #000000;
+        "
+      ></span>
+      <div class="pagelist">
+        <p
+          class="Asc_See_Also"
+          style="
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: orange;
+            font-family: Verdana;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            orphans: 2;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-align: left;
+          "
+        >
+          Xem thêm<br />
+          <br />
+          <a
+            href="default.aspx#pageid=adss_server_-_verification_service4"
+            target="_blank"
+            style="
+              font-size: 13px;
+              font-style: normal;
+              font-weight: normal;
+              text-align: justify;
+            "
+            >Dịch vụ xác minh ADSS</a
+          ><br />
+          <span
+            style="
+              font-style: normal;
+              font-weight: normal;
+              text-align: justify;
+              font-size: 13px;
+              color: #000000;
+            "
+          ></span>
+        </p>
+        <div class="var_Sibling_Page_List">
+          <a href="adss_server_features_and_benefits.htm" title=""
+            >Các tính năng và lợi ích của máy chủ ADSS</a
+          ><br /><a href="adss_server_trust_services.htm" title=""
+            >Dịch vụ tin cậy máy chủ ADSS</a
+          ><br /><a href="adss_server_architecture_interfaces.htm" title=""
+            >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+          ><br /><a href="adss_server_-_signing_service.htm" title=""
+            >Tổng quan về dịch vụ ký ADSS</a
+          ><br /><a href="adss_server_-_verification_service.htm" title=""
+            >Tổng quan về dịch vụ xác minh ADSS</a
+          ><br /><a href="adss_server_-_certification_service.htm" title=""
+            >Tổng quan về dịch vụ chứng nhận ADSS</a
+          ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+            >Tổng quan về dịch vụ ADSS OCSP</a
+          ><br /><a href="adss_server_-_tsa_service.htm" title=""
+            >Tổng quan về dịch vụ ADSS TSA</a
+          ><br /><a href="adss_xkms_service_overview.htm" title=""
+            >Tổng quan về dịch vụ ADSS XKMS</a
+          ><br /><a href="adss_scvp_service_overview.htm" title=""
+            >Tổng quan về dịch vụ ADSS SCVP</a
+          ><br /><a href="adss_ltan_service_overview.htm" title=""
+            >Tổng quan về dịch vụ ADSS LTANS</a
+          ><br /><a href="adss_decryption_service_overview.htm" title=""
+            >Tổng quan về dịch vụ giải mã ADSS</a
+          ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+            >Tổng quan về màn hình ADSS CRL</a
+          ><br />
+        </div>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>

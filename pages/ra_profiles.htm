@@ -1,0 +1,1801 @@
+<html>
+  <head>
+    <title>Bước 2 - Hồ sơ RA - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('26','Bước 2 - Hồ sơ RA');parent.MenuItemSelected('adss_ra_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_ra_service.htm"
+              title=""
+              >Dịch vụ ADSS RA</a
+            >&nbsp;&gt;&nbsp;<a href="configuring_the_ra_service1.htm" title=""
+              >Cấu hình dịch vụ RA</a
+            >&nbsp;&gt;&nbsp;<a href="ra_profiles.htm" title=""
+              >Bước 2 - Hồ sơ RA</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Bước 2 - Hồ sơ RA</p>
+      <p>
+        Cấu hình RA được sử dụng để xác định chi tiết yêu cầu chứng chỉ như quy
+        tắc tên phân biệt (DName), loại khóa, khóa&nbsp;kích thước, các&nbsp;Địa
+        chỉ Dịch vụ CA và hồ sơ dịch vụ chứng nhận sẽ được sử dụng. Màn hình này
+        cho phép các Nhà khai thác RA có đặc quyền phù hợp để quản lý (xem,
+        thêm, chỉnh sửa, xóa) các Cấu hình RA. Trang sau đây được hiển thị khi
+        bấm vào nút RA Profiles:
+      </p>
+      <p style="font-family: arial; text-align: justify">
+        <img
+          alt=""
+          src="../images/1553261194725.png"
+          style="border-width: 1px; border-style: solid"
+        />&nbsp;
+      </p>
+      <p style="font-family: arial; text-align: justify">
+        <span style="text-align: left; font-family: Verdana"
+          >Màn hình này hiển thị tất cả các Cấu hình RA hiện có. Cấu hình RA
+          hiện tại có thể được chỉnh sửa hoặc xóa bằng cách sử dụng các nút có
+          liên quan. Một hồ sơ RA mới có thể được tạo bằng cách nhấp
+          vào&nbsp;Mới&nbsp;nút. Màn hình cấu hình sau được hiển thị:<br />
+          <br />
+          <img
+            alt=""
+            src="../images/1557401894741.png"
+            style="border-width: 1px; border-style: solid"
+          /><br />
+        </span>
+      </p>
+      <p style="font-family: arial; text-align: justify">
+        <span style="font-family: Verdana">Các mục cấu hình như sau:</span>
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Trạng thái<br /></td>
+            <td>
+              Một hồ sơ có thể được đánh dấu là Hoạt động hoặc Không hoạt động.
+              Hồ sơ không hoạt động không có sẵn để xử lý.&nbsp;Chỉ dịch vụ RA
+              mới có thể sử dụng cấu hình Hiện hoạt để quản lý yêu cầu/phản hồi
+              chứng chỉ.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>ID hồ sơ<br /></td>
+            <td>
+              Mã định danh duy nhất do Hệ thống xác định cho cấu hình này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên hồ sơ<br /></td>
+            <td>
+              Tên duy nhất do Nhà điều hành xác định để dễ dàng nhận dạng con
+              người hơn trong Bảng điều khiển nhà điều hành máy chủ ADSS.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Mô tả hồ sơ<br /></td>
+            <td>
+              Sử dụng trường này để mô tả cách sử dụng Hồ sơ này. Điều này chỉ
+              dành cho mục đích thông tin của nhà điều hành.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Địa chỉ dịch vụ chứng nhận<br /></td>
+            <td>
+              Điều này xác định địa chỉ URI dịch vụ chứng nhận để gửi yêu cầu CA
+              đến. Để xem danh sách các giao diện dịch vụ chứng nhận có thể có
+              <a href="service_urls1.htm">Bấm vào đây</a>.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Danh sách
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #d3d3d3;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >Địa chỉ dịch vụ</span
+              >
+            </td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Trường này hiển thị
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >Địa chỉ dịch vụ có thể được tạo chứng chỉ người dùng. Nhiều địa
+                chỉ dịch vụ có thể được thêm vào. Nút Kiểm tra kiểm tra xem ADSS
+                có
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >Dịch vụ có sẵn. Nút Xóa xóa đã định cấu hình
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >Địa chỉ dịch vụ.&nbsp;</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hồ sơ chứng nhận</span
+              >
+            </td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Cấu hình được cấu hình trong Dịch vụ chứng nhận ADSS xác định
+                cách xử lý các yêu cầu ký chứng chỉ từ Dịch vụ ADSS RA.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >ID khách hàng</span
+              ><br />
+            </td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hiển thị ID khách hàng của
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >Dịch. Dịch vụ RA sẽ gửi ID khách hàng này trong khi liên lạc
+                với
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận dịch vụ&nbsp;</span
+                >
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >dịch vụ xác minh rằng đây là ID khách hàng đã đăng ký trong
+                mô-đun Người quản lý khách hàng trước khi cấp quyền truy cập vào
+                dịch vụ này.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng Xác thực máy khách TLS</span
+              >
+            </td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sau khi bật tùy chọn này,&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Dịch vụ ADSS RA sẽ&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >giao tiếp với ADSS
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chứng nhận&nbsp;</span
+                >Dịch vụ qua TLS Client Authentication,<span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >chọn Chứng chỉ Máy khách TLS&nbsp;</span
+                >tồn tại từ trước trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=key_manager6"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  font-family: Verdana, sans-serif;
+                "
+                >Quản lý chủ chốt</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >. Người dùng có thể chọn chứng chỉ từ danh sách các chứng chỉ
+                có sẵn bằng cách nhấp vào menu thả xuống xuất hiện khi nó được
+                bật.</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Ghi:</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;Cần phải đăng ký CA tổ chức phát hành của Chứng chỉ xác
+                thực máy khách TLS trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=step_1___identifying_the_ta"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Trình quản lý tin cậy</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;với mục đích&nbsp;</span
+              ><strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >CA để xác minh chứng chỉ máy khách TLS</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >.&nbsp;</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Ký yêu cầu chứng nhận<br /></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tùy chọn này được sử dụng để cho phép mỗi yêu cầu chứng nhận
+                được ký bởi Dịch vụ ADSS RA khi được gửi đến Máy chủ ADSS
+                CA.</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chọn chứng chỉ ký yêu cầu&nbsp;</span
+                >tồn tại từ trước trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=key_manager6"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  font-family: Verdana, sans-serif;
+                "
+                >Quản lý chủ chốt</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >.&nbsp;</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Ghi:</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;Chỉ những chứng chỉ đó mới được hiển thị bằng cách bật
+                tùy chọn này trong menu thả xuống tương ứng được cấp với mục
+                đích "Chứng chỉ RA" từ Trình quản lý khóa<br />
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>Danh mục hồ sơ<br /></td>
+            <td>
+              Xác định Danh mục hồ sơ mà các chứng chỉ do hồ sơ RA này cấp thuộc
+              về, ví dụ: Datacenter-Network, Production-Network,
+              Testing-Network, Production-Auditing, v.v. Toán tử RA chỉ có thể
+              chọn những danh mục được gán cho chúng. Mỗi Hồ sơ RA chỉ có thể
+              được liên kết với một Danh mục Hồ sơ.<br />
+              <br />
+              Một Danh mục hồ sơ có thể có nhiều hơn một Cấu hình RA được liên
+              kết với nó.&nbsp;<br />
+              <br />
+              Nhà điều hành RA có thể được chỉ định nhiều Danh mục hồ sơ, do đó
+              Nhà điều hành RA có thể truy cập nhiều Cấu hình RA và nhiều Danh
+              mục Hồ sơ nếu chúng được ủy quyền.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Thuật toán chính</td>
+            <td>
+              Loại cặp khóa sẽ được tạo khi chứng chỉ được tạo bằng Cuộc họp mặt
+              đối mặt hoặc Dịch vụ ADSS RA (tạo khóa phía máy chủ). &nbsp;<br />
+              <br />
+              <strong
+                ><strong
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                  >Ghi</strong
+                >:</strong
+              >
+              This attribute is ignored if key is generated on client side
+              (SCEP, Go&gt;Ký Applet (MSCAPI, PKCS#11) hoặc PKCS#10 / CSR).<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Độ dài khóa<br /></td>
+            <td>
+              Kích thước của cặp khóa được tạo khi chứng chỉ được tạo bằng Cuộc
+              họp mặt đối mặt hoặc Dịch vụ ADSS RA (tạo khóa phía máy chủ).
+              GHI:&nbsp;Thuộc tính này bị bỏ qua nếu khóa được tạo ở phía máy
+              khách (SCEP, Go&gt;Ký Applet (MSCAPI, PKCS11) hoặc PKCS10 /
+              CSR).<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên phân biệt đối tượng<br /></td>
+            <td>
+              Các thuộc tính và giá trị mặc định được sử dụng để tạo chứng chỉ.
+              Biểu tượng $ có nghĩa là giá trị của thuộc tính này có thể được
+              cung cấp bởi người yêu cầu&nbsp;hoặc Nhà điều hành dịch vụ ADSS
+              RA.<br />
+              <br />
+              <!-- Display tip bubble with icon and colored background. -->
+              <div class="TipBubble">
+                <span
+                  style="
+                    color: #4f8a10;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #f0fff0;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                  "
+                  >Nếu Nguồn tiền điện tử là Azure Key Vault HSM, thì&nbsp;Yêu
+                  cầu dịch vụ RA chỉ có thể sử dụng các ký tự này&nbsp;Đối với
+                  bí danh chứng chỉ:</span
+                ><br
+                  style="
+                    color: #4f8a10;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                />
+                <span
+                  style="
+                    color: #4f8a10;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #f0fff0;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                  "
+                  >A-Z, a-z, 0-9 và dấu gạch nối "-"</span
+                >
+              </div>
+              <!-- Display tip bubble with icon and colored background. -->
+              <div class="TipBubble">
+                <br />
+                Tất cả các ký tự đặc biệt ngoại trừ ký hiệu '$' có thể được sử
+                dụng trong Tên phân biệt chủ đề.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Thời hạn hiệu lực<br /></td>
+            <td>
+              Đặt thời hạn hiệu lực và chọn đơn vị thời gian từ menu thả xuống
+              (phút), giờ, ngày, tháng và năm) để đặt thời hạn hiệu lực của
+              chứng chỉ.<br />
+              <br />
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                ><strong
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                  >Ghi</strong
+                >:&nbsp;</strong
+              >Dịch vụ CA có thể ghi đè điều này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Gửi thông báo tại thời điểm gia hạn chứng chỉ<br /></td>
+            <td>
+              Nếu được bật, hãy nhắc (các) Nhà điều hành ADSS RA, (các) quản trị
+              viên thiết bị hoặc người dùng cuối đã xác định rằng chứng chỉ yêu
+              cầu gia hạn. &nbsp;Các thông báo cảnh báo này được cấu hình trong
+              phần Cảnh báo. ADSS RA Server hỗ trợ cảnh báo dựa trên email, SMS
+              và SNMP.<br />
+              <br />
+              Hộp kiểm này bị tắt theo mặc định, để bật nó, hãy bật cảnh báo hết
+              hạn trong <strong>Máy chủ RA &gt; Trang cảnh báo</strong>.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Cho phép tự động phê duyệt các yêu cầu dựa trên web<br /></td>
+            <td>
+              Nếu được bật thì mọi yêu cầu đến cấu hình này sẽ được xử lý tự
+              động.<br />
+              Nếu không được chọn thì mọi yêu cầu đến hồ sơ này sẽ được ghi lại
+              là đang chờ xử lý trong trang Thiết bị hoặc Người dùng cuối tương
+              ứng. Nhà điều hành RA có thể xem xét yêu cầu và quyết định phê
+              duyệt hay từ chối. Một cảnh báo qua email sẽ được gửi đến người
+              dùng tương ứng nếu cảnh báo được định cấu hình trong Dịch vụ RA
+              &gt; Cảnh báo.<br />
+              Lưu ý: Các yêu cầu dựa trên SCEP luôn được phê duyệt tự động bất
+              kể cài đặt này.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Cho phép đăng ký người dùng thông qua Dịch vụ RAS</strong
+              ><br />
+            </td>
+            <td>
+              Hộp kiểm này được sử dụng để cho phép đăng ký người dùng thông qua
+              Dịch vụ ủy quyền từ xa (RAS).<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Địa chỉ dịch vụ RAS<br /></td>
+            <td>Sử dụng trường này để thêm (es) địa chỉ dịch vụ RAS.<br /></td>
+          </tr>
+          <tr>
+            <td>Danh sách địa chỉ dịch vụ RAS<br /></td>
+            <td>
+              Trường này hiển thị các địa chỉ Dịch vụ RAS có thể được sử dụng để
+              đăng ký người dùng. Nhiều địa chỉ dịch vụ có thể được thêm vào.
+              Nút Kiểm tra kiểm tra xem Dịch vụ RAS ADSS có khả dụng hay không.
+              Nút Xóa sẽ xóa địa chỉ Dịch vụ RAS đã định cấu hình.&nbsp;<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Hồ sơ RAS<br /></td>
+            <td>
+              Chỉ định cấu hình RAS sẽ được sử dụng cho cấu hình RA này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>ID khách hàng<br /></td>
+            <td>
+              Hiển thị ID khách hàng của dịch vụ RAS. Dịch vụ RA sẽ gửi ID khách
+              hàng này trong khi liên lạc với dịch vụ RAS. Dịch vụ RAS xác minh
+              rằng đây là dịch vụ đã đăng ký
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Khách hàng &nbsp;</span
+              >ID trong mô-đun Trình quản lý khách hàng trước khi cấp quyền truy
+              cập vào dịch vụ này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Sử dụng Xác thực máy khách TLS<br /></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sau khi bật tùy chọn này,&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Dịch vụ ADSS RA sẽ </span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >giao tiếp với Dịch vụ ADSS RAS qua Xác thực máy khách TLS,
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >chọn Chứng chỉ Máy khách TLS&nbsp;</span
+              ><a
+                href="default.aspx#pageid=key_manager6"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  font-family: Verdana, sans-serif;
+                "
+                >Quản lý chủ chốt</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >. Người dùng có thể chọn chứng chỉ từ danh sách các chứng chỉ có sẵn bằng cách nhấp vào menu thả xuống xuất hiện khi nó được bật.</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Ghi:</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;Cần phải đăng ký CA tổ chức phát hành của Chứng chỉ xác thực máy khách TLS trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=step_1___identifying_the_ta"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Trình quản lý tin cậy</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;với mục đích&nbsp;</span
+              ><strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >CA để xác minh chứng chỉ máy khách TLS</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >.&nbsp;</span
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span class="TipBubble">
+            Người vận hành RA phải đảm bảo rằng Độ dài khóa, Thuật toán khóa và DName&nbsp;các thuộc tính và sự xuất hiện của chúng được xác định trong Hồ sơ RA hoàn toàn giống với&nbsp;được xác định trong Máy chủ ADSS CA &gt;
+            Hồ sơ chứng nhận được xác định trong điều này&nbsp;Hồ sơ RA.&nbsp; Nếu có bất kỳ biến thể nào thì hồ sơ chứng nhận CA thường ghi đè hồ sơ RA và do đó kết quả bắt buộc có thể không được phân phối.</span
+        >Cấu hình của Cấu hình RA hiện đã hoàn tất. Để có những thay đổi&nbsp;có hiệu lực trong hệ thống đang chạy, ADSS Server sẽ nhắc khởi động lại Dịch vụ RA:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/1553500508534.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Hồ sơ RA&nbsp;có thể được sắp xếp theo nhiều cách khác nhau để giúp quản trị dễ dàng hơn.&nbsp;Nhấp vào nút Tìm kiếm và&nbsp;Tìm kiếm trang Hồ sơ RA như được hiển thị:
+      </p>
+      <p style="font-family: arial; text-align: justify">
+        <img
+          alt=""
+          src="../images/25-03-2019%2012-59-09%20PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="text-align: justify">
+        Nhập tiêu chí tìm kiếm dựa trên Trạng thái hồ sơ, ID hồ sơ và Tên hồ sơ. Nếu nhiều hơn một tiêu chí tìm kiếm được cung cấp, chúng được kết hợp bằng toán tử AND.
+      </p>
+      <p style="text-align: justify">
+        <span class="TipBubble"
+          ><br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký tự đại diện.</span
+        >
+      </p>
+      <span class="Asc_See_Also">Xem thêm</span>
+      <div class="Asc_Sibling_Page_List">
+        <br />
+        <div class="var_Sibling_Page_List">
+          <a href="profile_categories.htm" title=""
+            >Bước 1 - Danh mục hồ sơ</a
+          ><br /><a href="registering_business_application.htm" title=""
+            >Bước 3 - Đăng ký ứng dụng kinh doanh</a
+          ><br /><a href="configuring_the_ra_service.htm" title=""
+            >Bước 4 - Sử dụng Trình quản lý dịch vụ</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

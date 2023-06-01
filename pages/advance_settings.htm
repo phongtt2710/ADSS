@@ -1,0 +1,2767 @@
+<html>
+  <head>
+    <title>Cài đặt nâng cao - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('90','Cài đặt nâng cao');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_signing_service3.htm"
+              title=""
+              >Cấu hình dịch vụ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_3_-_configuring_a_signing_profile.htm"
+              title=""
+              >Bước 4 - Định cấu hình hồ sơ ký</a
+            >&nbsp;&gt;&nbsp;<a href="advance_settings.htm" title=""
+              >Cài đặt nâng cao</a
+            ></span
+          ></span
+        >
+      </p>
+      <p
+        class="Asc_PageName"
+        style="
+          font-size: 20px;
+          font-weight: bold;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Cài đặt nâng cao
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Màn hình Cài đặt nâng cao sau đây được hiển thị trong cấu hình hồ sơ ký,
+        mỗi tùy chọn được thảo luận trong bảng bên dưới:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/SigningService-SigningProfile-AdvanceSettings.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Các mục cấu hình như sau:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                vertical-align: top;
+                font-weight: bold;
+                width: 150pt;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 1;
+                  word-spacing: 0px;
+                "
+                >Bước</strong
+              >
+            </td>
+            <td
+              style="
+                vertical-align: top;
+                font-weight: bold;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 1;
+                  word-spacing: 0px;
+                "
+                >Mô tả</strong
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Kích thước từ điển chữ ký
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Kích thước từ điển chữ ký là từ điển chữ ký được phân bổ được sử
+              dụng để nhúng chữ ký vào tài liệu PDF. Kích thước mặc định là 40
+              KB, tuy nhiên, người dùng có thể thay đổi nó cho phù hợp dựa trên
+              kích thước chữ ký.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép chuyển đổi tài liệu
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <p style="margin: 0in 0in 0pt; text-align: justify">
+                Bằng cách bật hộp kiểm này trong hồ sơ Ký PDF, các tài liệu
+                không phải PDF trước tiên được chuyển đổi thành PDF và sau đó
+                được ký, các định dạng PDF-A có thể được hỗ trợ là:
+              </p>
+              <ul>
+                <li style="text-align: justify">1a</li>
+                <li style="text-align: justify">1b</li>
+                <li style="text-align: justify">2a</li>
+                <li style="text-align: justify">2b</li>
+                <li style="text-align: justify">3b</li>
+              </ul>
+              <p style="margin: 0in 0in 0pt; text-align: justify">
+                <strong>Ghi chú:</strong><span>&nbsp;</span>Bạn phải bật<span
+                  >&nbsp;</span
+                ><a
+                  href="https://manuals.ascertia.com/adss-admin-guide/pdf_signing_attributes2.htm"
+                  style="text-decoration: none; color: #2495d2"
+                  >Cài đặt phông chữ</a
+                ><span>&nbsp;</span>trên tab Thiết đặt Chữ ký
+              </p>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Sử dụng khóa
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Bằng cách bật hộp kiểm này, có thể kiểm tra xem phần mở rộng Sử
+              dụng khóa của chứng chỉ ký có chứa chữ ký số và / hoặc không thoái
+              thác để được chấp nhận trong hồ sơ ký này hay không. Nếu phần mở
+              rộng Sử dụng khóa của chứng chỉ không khớp với cài đặt này, nó sẽ
+              không được phép sử dụng cho mục đích ký trong cấu hình này.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Phần mở rộng Ràng buộc cơ bản
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Bật hộp kiểm này để đặt thêm hạn chế rằng chứng chỉ ký tài liệu
+              phải là chứng chỉ thực thể cuối thay vì chứng chỉ CA.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Hồ sơ ủy quyền
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Hồ sơ ủy quyền được sử dụng để chỉ định danh sách người ủy quyền
+                (tức là người dùng cuối đã đăng ký) có thể cung cấp ủy quyền ký
+                một hoặc nhiều tài liệu bằng khóa ký tài liệu cụ thể được lưu
+                giữ trong cơ sở dữ liệu Máy chủ ADSS hoặc HSM.&nbsp;
+              </div>
+              <div style="text-align: justify">
+                Ký ủy quyền đặc biệt hiệu quả khi được sử dụng để bảo vệ hoặc
+                cung cấp hành vi hợp pháp khi ký bằng chứng chỉ đủ điều kiện có
+                độ tin cậy cao hoặc chứng chỉ gốc Adobe được tổ chức trong HSM
+                được kết nối với Máy chủ ADSS. Điều này cũng cung cấp bằng chứng
+                kiểm toán nội bộ mạnh mẽ về việc ký và phê duyệt ký các tài liệu
+                quan trọng và đảm bảo các tài liệu không thay đổi từ chữ ký ủy
+                quyền đầu tiên đến chữ ký ủy quyền cuối cùng.
+              </div>
+              <div style="text-align: justify">
+                Để biết chi tiết về cách cấu hình Hồ sơ ủy quyền, hãy xem
+                phần&nbsp;<a
+                  href="https://manuals.ascertia.com/adss-admin-guide/authorisation_profiles.htm"
+                  >Cài đặt chung &gt; Hồ sơ ủy quyền</a
+                >.&nbsp;
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <strong>
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span style="font-weight: 400">&nbsp;</span
+                  ><span style="font-weight: 400"
+                    >Yêu cầu ký ủy quyền chỉ được hỗ trợ bằng cách sử dụng các
+                    dịch vụ web và giao thức DSS; nó không được hỗ trợ khi sử
+                    dụng chế độ HTTP.</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong>Tùy chọn bảo vệ PDF</strong>
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Sử dụng các cài đặt Quyền này để tăng tính linh hoạt cho bảo mật
+              tài liệu của bạn. Bằng cách tùy chỉnh cài đặt quyền, bạn có thể
+              bật hoặc tắt người dùng thực hiện một số hành động nhất định
+              (chẳng hạn như in, chỉnh sửa tài liệu hoặc sao chép văn bản).
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Sử dụng cụm mật khẩu quyền
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify"></div>
+              <div style="text-align: justify">
+                Bật tùy chọn này để đặt quyền cấp tài liệu trên tệp PDF như được
+                xác định trong đặc tả ISO 32000.&nbsp;
+              </div>
+              <strong>
+                <div style="text-align: justify">
+                  <strong
+                    ><br />
+                    Ghi chú:&nbsp;</strong
+                  ><span style="font-weight: 400"
+                    >Các cài đặt quyền này không được hỗ trợ cho chữ ký
+                    PAdES-LTV.</span
+                  >
+                </div>
+              </strong>
+              <div style="text-align: justify"></div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 1;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #d3d3d3;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #333333;
+                "
+                >Cụm mật khẩu quyền</span
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Nhập cụm mật khẩu sẽ được đặt trên tài liệu PDF để thay đổi quyền
+              của tài liệu này.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép in ấn
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Người dùng được phép in tài liệu.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép sửa đổi nội dung
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Người dùng được phép sửa đổi nội dung, ví dụ: thay đổi nội dung
+              của trang hoặc chèn hoặc xóa trang.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép sao chép và trích xuất nội dung<br />
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                <span style="text-align: left"
+                  >Người dùng được phép chèn, xóa và xoay trang và thêm dấu
+                  trang.&nbsp;</span
+                >
+              </div>
+              <div style="text-align: justify">
+                <br />
+                <strong>Ghji chú:</strong><span>&nbsp;</span>Không thể thay đổi
+                nội dung của trang trừ khi có sự cho phép<span>&nbsp;</span
+                ><strong>Cho phép sửa đổi nội dung</strong
+                ><span>&nbsp;</span>cũng được cấp.<br />
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép lắp ráp tài liệu
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Người dùng được phép sao chép hoặc trích xuất văn bản và đồ họa từ
+              tài liệu, bao gồm sử dụng các công nghệ hỗ trợ như trình đọc màn
+              hình hoặc các thiết bị trợ năng khác.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép truy cập văn bản cho người khiếm thị
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Người dùng được phép trích xuất văn bản và đồ họa để sử dụng bởi
+              các thiết bị trợ năng.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Chỉ cho phép điền các trường biểu mẫu
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Người dùng được phép điền vào các trường biểu mẫu (chỉ dành cho mã
+              hóa 128 bit).
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cho phép nhận xét
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Người dùng được phép thêm hoặc sửa đổi chú thích văn bản và các
+              trường biểu mẫu tương tác.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong
+                >Kiểm tra việc thu hồi chứng chỉ người ký trước khi ký</strong
+              >
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Chọn tùy chọn này nếu bạn muốn kiểm tra việc thu hồi chứng chỉ
+                người ký (tối đa CA đã đăng ký) trước khi ký.&nbsp;
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <strong>
+                <div style="text-align: justify">
+                  <strong>Ghi chú:&nbsp;</strong
+                  ><span style="font-weight: 400"
+                    >Tùy chọn này sẽ chỉ có thể được cấu hình nếu bất kỳ loại
+                    chữ ký nào sau đây được chọn trên trang Cài đặt Chữ
+                    ký.</span
+                  >
+                </div>
+              </strong>
+              <ul>
+                <li style="text-align: justify">AdES BES</li>
+                <li style="text-align: justify">AdES T</li>
+                <li style="text-align: justify">Chữ ký PDF tiêu chuẩn</li>
+                <li style="text-align: justify">
+                  Chữ ký PDF với dấu thời gian được nhúng
+                </li>
+              </ul>
+              <div style="text-align: justify">
+                &nbsp;Trong khi đối với các loại chữ ký nâng cao khác, tùy chọn
+                này sẽ được bật và chuyển sang màu xám theo mặc định.
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><strong>Tính toán hàm băm tại thời điểm ký</strong></span
+              ><br />
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nếu tùy chọn này được chọn thì Dịch vụ ký sẽ tính toán hàm băm
+                của dữ liệu đã cho trong hoạt động ký. Nếu tùy chọn này bị vô
+                hiệu hóa thì Dịch vụ ký chỉ ký giá trị băm đã cho.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Thuật toán băm</span
+              ><br />
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Thuật toán băm đã chọn được sử dụng trong quá trình tạo chữ ký
+                để:&nbsp;<span
+                  style="
+                    line-height: normal;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Tính toán hàm băm của dữ liệu đã cho</span
+                >. Các thuật toán này được hỗ trợ:&nbsp; &nbsp;&nbsp;
+              </div>
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  line-height: normal;
+                "
+              >
+                <li style="text-align: justify">SHA1</li>
+                <li style="text-align: justify">
+                  SHA2 (SHA224, SHA256, SHA384, SHA512)
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong>Bật tính năng ký từ xa</strong>
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Phần này xác định cấu hình cần thiết cho các yêu cầu chuyển
+                  tiếp đến Máy chủ ký ADSS hoặc Dịch vụ ADSS RAS khác.</span
+                ><br />
+              </span>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Chuyển tiếp yêu cầu ký đến ADSS RAS / Dịch vụ ký
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Kích hoạt điều này sẽ làm cho Máy chủ ADSS này hoạt động như một
+                máy chủ proxy. Máy chủ ADSS proxy này sẽ giữ cục bộ tài liệu và
+                sẽ chỉ gửi cấu trúc chữ ký đến hệ thống tạo eSeals (tức là Máy
+                chủ ký ADSS) để ký hoặc nó có thể được sử dụng để hỗ trợ Ủy
+                quyền ký từ xa thông qua dịch vụ ADSS RAS. Giao tiếp cho cả hai
+                giao diện sẽ là:&nbsp;
+              </div>
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li style="text-align: justify">Plain HTTP</li>
+                <li style="text-align: justify">TLS Server Authentication</li>
+                <li style="text-align: justify">TLS Client Authentication</li>
+              </ul>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <div style="text-align: justify">
+                  <strong>Note</strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >: Toàn bộ quá trình ký hoạt động ở chế độ đồng bộ trong
+                    trường hợp nếu Máy chủ ADSS hoạt động như một máy chủ proxy
+                    và trong trường hợp giao tiếp với dịch vụ RAS, việc ký từ xa
+                    sẽ được thực hiện trong một<span
+                      style="
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >chế độ đồng bộ.</span
+                    ></span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Địa chỉ Dịch vụ Từ xa
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng trường này để thêm&nbsp;<span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Hệ thống tạo eSeals (tức là Máy chủ ký ADSS)</span
+                >&nbsp;hoặc (các) địa chỉ dịch vụ RAS.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Danh sách địa chỉ dịch vụ từ xa
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Trường này hiển thị khả năng có sẵn<span>&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hệ thống tạo eSeals (tức là Máy chủ ký ADSS)</span
+              ><span>&nbsp;</span>(Các) địa chỉ có thể được sử dụng để tạo chữ
+              ký người dùng cuối hoặc dịch vụ RAS<span>&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >(Các) địa chỉ sử dụng để ký ủy quyền từ xa</span
+              >. Nhiều địa chỉ dịch vụ có thể được thêm vào để xử lý các địa chỉ
+              dịch vụ Chính và Phụ như một cơ chế dự phòng.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              ID hồ sơ
+            </td>
+            <td
+              style="
+                text-align: justify;
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chỉ định Hồ sơ ký của&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hệ thống tạo eSeals (tức là Máy chủ ký ADSS)&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >được sử dụng để tạo chữ ký người dùng cuối hoặc hồ sơ RAS được
+                sử dụng để ký ủy quyền từ xa.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Client ID
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Chỉ định tên ID khách hàng được đăng ký trong&nbsp;<span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Hệ thống tạo eSeals (tức là Máy chủ ký ADSS) hoặc dịch vụ
+                  RAS</span
+                >.
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <strong>
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span style="font-weight: 400">
+                    ID khách hàng là tùy chọn khi tùy chọn 'Chuyển tiếp yêu cầu
+                    ký đến Dịch vụ ký ADSS từ xa' được chọn trong Cài đặt ký từ
+                    xa.&nbsp;&nbsp;</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Bí mật khách hàng
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Cung cấp Bí mật máy khách được tạo đối với Máy khách được cấu
+                hình ở trên khi nó được đăng ký.
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <strong>
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span style="font-weight: 400">&nbsp;</span
+                  ><span style="font-weight: 400"
+                    >Không chia sẻ Bí mật khách hàng với bất kỳ ai. Khi bí mật
+                    máy khách được cấu hình thì toán tử không thể nhìn thấy nó
+                    vì một khi toán tử rời khỏi trang này, bí mật máy khách sẽ
+                    được che giấu bằng dấu hoa thị vì lý do bảo mật và không thể
+                    nhìn thấy lại.&nbsp;&nbsp;</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Sử dụng xác thực máy khách TLS
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Sau khi bật&nbsp;<span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Máy chủ ADSS là</span
+                ><span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >cần thiết để giao tiếp với&nbsp;<span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Hệ thống tạo eSeals</span
+                  >&nbsp;hoặc Dịch vụ RAS qua Xác thực máy khách TLS, sau
+                  đó&nbsp;<span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Select the TLS&nbsp;<span
+                      style="
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Khách hàng&nbsp;</span
+                    >Chứng chỉ&nbsp;</span
+                  >tồn tại từ trước trong&nbsp;</span
+                ><a
+                  href="https://manuals.ascertia.com/ADSS-Admin-Guide/default.aspx#pageid=key_manager6"
+                  target="_blank"
+                  style="font-family: Verdana, sans-serif"
+                  >Quản lý Khóa</a
+                ><span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >.&nbsp;</span
+                >
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;Cần phải đăng ký CA Tổ chức phát hành của chứng chỉ
+                    TLS của Khách hàng trong&nbsp;</span
+                  ><a
+                    href="https://manuals.ascertia.com/ADSS-Admin-Guide/default.aspx#pageid=step_1___identifying_the_ta"
+                    target="_blank"
+                    style="font-weight: 400"
+                    >Trình quản lý tin cậy</a
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;với&nbsp;</span
+                  ><strong
+                    >CA để xác minh chứng chỉ máy khách TLS&nbsp;<span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >mục đích</span
+                    ></strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >.&nbsp;</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <strong
+          style="
+            font-family: Verdana;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            orphans: 2;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            font-size: 16px;
+            text-align: justify;
+            color: #008000;
+            background-color: #ffffff;
+          "
+          ><span style="font-size: 16px"
+            >E-Passport LDS<a name="EPassport"><br /> </a></span
+        ></strong>
+      </p>
+      <div style="text-align: -webkit-left">
+        <strong
+          style="
+            font-family: Verdana;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            orphans: 2;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            font-size: 16px;
+            text-align: justify;
+            color: #008000;
+            background-color: #ffffff;
+          "
+          ><span style="font-size: 14px; font-weight: 400; color: #000000"
+            >Nếu LDS Hộ chiếu Điện tử sẽ được chọn làm Loại Chữ ký trên tab
+            Chung, tab Cài đặt Nâng cao sẽ chỉ hiển thị các tùy chọn sau:<br /> </span
+        ></strong>
+      </div>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/SignServ-AdvanceSet-RemoteSet.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Các mục cấu hình như sau:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                vertical-align: top;
+                font-weight: bold;
+                width: 150pt;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 1;
+                  word-spacing: 0px;
+                "
+                >Bước</strong
+              >
+            </td>
+            <td
+              style="
+                vertical-align: top;
+                font-weight: bold;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 1;
+                  word-spacing: 0px;
+                "
+                >Mô tả</strong
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong>Cài đặt thu hồi</strong>
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Trong phần này, nhà điều hành có thể chọn xem việc thu hồi
+                chứng chỉ Người ký Tài liệu có cần được kiểm tra trước khi ký
+                LDS hay không bằng cách đánh dấu hộp kiểm 'Kiểm tra việc thu hồi
+                chứng chỉ người ký trước khi ký'.&nbsp;</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong>Cài đặt Ký Thánh Hữu Ngày Sau</strong>
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <p style="margin: 0in 0in 0pt; text-align: justify">
+                Phần này giải thích như sau:&nbsp;
+              </p>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Thuật toán băm
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+                Thuật toán băm đã chọn được sử dụng trong quá trình tạo chữ ký
+                để:&nbsp;<span
+                  style="
+                    line-height: normal;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Tính toán hàm băm của dữ liệu đã cho</span
+                >. Các thuật toán này được hỗ trợ:&nbsp; &nbsp;&nbsp;
+              </div>
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  line-height: normal;
+                "
+              >
+                <li style="text-align: justify">SHA1</li>
+                <li style="text-align: justify">
+                  SHA2 (SHA224, SHA256, SHA384, SHA512)
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Phiên bản đối tượng bảo mật tài liệu
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              Trường này hiển thị phiên bản của đối tượng bảo mật LDS. Các phiên
+              bản được hỗ trợ hiện tại là v0 và v1.&nbsp;
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Thêm chứng chỉ Người ký Tài liệu vào chữ ký
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify"></div>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  color: #091e42;
+                "
+              ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  color: #091e42;
+                "
+                >Trường này sẽ
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #091e42;
+                  "
+                  >Chỉ được&nbsp;</span
+                >Hiển thị nếu V0 được chọn trong menu thả xuống ở trên. Việc bao
+                gồm chứng chỉ Người ký tài liệu trong CMS là tùy chọn trong v0
+                và bắt buộc trong v1. Do đó, trong trường hợp v0, tùy chọn thêm
+                chứng chỉ Người ký tài liệu hay không sẽ được cung cấp cho nhà
+                điều hành.</span
+              ><strong>
+                <div style="text-align: justify">
+                  <span style="font-weight: 400"></span>
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Có thể ghi đè&nbsp;
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  color: #091e42;
+                "
+                >Hộp kiểm này sẽ được sử dụng để ghi đè cài đặt hồ sơ liên quan
+                đến tùy chọn này. Nếu tùy chọn này được bật, thì máy chủ sẽ sử
+                dụng hướng được cung cấp bởi các ứng dụng khách trong yêu cầu có
+                thêm chứng chỉ hay không.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong>Cài đặt ký từ xa</strong>
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Phần này giải thích như sau:</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Bật tính năng ký từ xa&nbsp;
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify"></div>
+              <div style="text-align: justify">
+                <span style="text-align: left"
+                  >Hộp kiểm này cho phép nhà điều hành xác định cấu hình cần
+                  thiết cho các yêu cầu chuyển tiếp đến một Máy chủ ký ADSS
+                  khác.<br />
+                </span>
+              </div>
+              <strong>
+                <div style="text-align: justify">
+                  <span style="font-weight: 400"></span>
+                </div>
+              </strong>
+              <div style="text-align: justify"></div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 1;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #d3d3d3;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #333333;
+                "
+                ><span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: justify;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #d3d3d3;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chuyển tiếp yêu cầu ký đến Dịch vụ ký ADSS</span
+                ></span
+              >
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+                Kích hoạt điều này sẽ làm cho Máy chủ ADSS này hoạt động như một
+                máy chủ proxy. Máy chủ ADSS proxy này sẽ giữ dữ liệu cục bộ và
+                sẽ chỉ gửi hàm băm dữ liệu đến Dịch vụ ký phụ trợ để ký. Giao
+                tiếp cho cả hai giao diện sẽ là:&nbsp;
+              </div>
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li style="text-align: justify">Plain HTTP</li>
+                <li style="text-align: justify">TLS Server Authentication</li>
+                <li style="text-align: justify">TLS Client Authentication</li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Địa chỉ dịch vụ
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng trường này để thêm (các) địa chỉ Dịch vụ Ký phụ
+                trợ.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Danh sách địa chỉ dịch vụ
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              Trường này hiển thị danh sách tất cả các địa chỉ do nhà điều hành
+              thêm vào. Nhiều địa chỉ dịch vụ có thể được thêm vào để xử lý các
+              địa chỉ dịch vụ Chính và Phụ như một cơ chế dự phòng.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Hồ sơ ký kết
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+                text-align: justify;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chỉ định Hồ sơ ký của&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Máy chủ ký ADSS phụ trợ&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >được sử dụng để tạo chữ ký.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              ID khách hàng
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Chỉ định tên ID khách hàng được đăng ký trong&nbsp;<span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Máy chủ ký ADSS phụ trợ</span
+                >.
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Sử dụng xác thực máy khách TLS
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                <span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Nếu nó được yêu cầu giao tiếp với Máy chủ ký ADSS phụ trợ qua
+                  Xác thực máy khách TLS, thì&nbsp;<span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Chọn TLS&nbsp;<span
+                      style="
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Khách hàng&nbsp;</span
+                    >Chứng chỉ&nbsp;</span
+                  >tồn tại từ trước trong&nbsp;</span
+                ><a
+                  href="https://manuals.ascertia.com/ADSS-Admin-Guide/default.aspx#pageid=key_manager6"
+                  target="_blank"
+                  style="
+                    text-decoration: none;
+                    color: #2495d2;
+                    font-family: Verdana, sans-serif;
+                  "
+                  >Quản lý Khóa</a
+                ><span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >.&nbsp;</span
+                >
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;Cần phải đăng ký CA Tổ chức phát hành của chứng chỉ
+                    TLS của Khách hàng trong&nbsp;</span
+                  ><a
+                    href="https://manuals.ascertia.com/ADSS-Admin-Guide/default.aspx#pageid=step_1___identifying_the_ta"
+                    target="_blank"
+                    style="
+                      text-decoration: none;
+                      color: #2495d2;
+                      font-weight: 400;
+                    "
+                    >Trình quản lý tin cậy</a
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;với&nbsp;</span
+                  ><strong
+                    >CA để xác minh chứng chỉ máy khách TLS&nbsp;<span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >mục đích</span
+                    ></strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >.&nbsp;</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Xem thêm
+      </p>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="general_settings.htm" title="">Cài đặt chung</a><br /><a
+              href="configuring_pdf_signing_attributes.htm"
+              title=""
+              >Cài đặt chữ ký</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

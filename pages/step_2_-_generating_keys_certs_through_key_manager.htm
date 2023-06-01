@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Bước 1 - Tạo khóa và chứng chỉ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('72','Bước 1 - Tạo khóa và chứng chỉ');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          style="
+            background-color: #ffffff;
+            font-family: arial;
+            font-size: 10px;
+            color: #cbc9ba;
+          "
+          class="breadcrumbs"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_signing_service3.htm"
+              title=""
+              >Cấu hình dịch vụ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_2_-_generating_keys_certs_through_key_manager.htm"
+              title=""
+              >Bước 1 - Tạo khóa và chứng chỉ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Bước 1 - Tạo khóa và chứng chỉ</p>
+      <p>Như đã giải thích trước đó, có ba tùy chọn về cách quản lý khóa ký:</p>
+      <ul>
+        <li>
+          <p class="Bullet-dot">
+            <strong>Ký bằng khóa ký công ty do ADSS Server quản lý</strong
+            >&nbsp;- Thông thường trong những trường hợp như vậy, sẽ có số lượng
+            khóa nhỏ (ví dụ: cho bộ phận bán hàng, cho bộ phận tài khoản, v.v.)
+            và chúng có thể được tạo thủ công bởi nhà điều hành ADSS bằng Trình
+            quản lý khóa như được giải thích trong phần này.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            <strong
+              >Ký bằng khóa người dùng riêng lẻ do Máy chủ ADSS quản
+              lý&nbsp;</strong
+            >- Nếu môi trường có hàng trăm hoặc hàng nghìn người dùng thì nhà
+            điều hành ADSS tạo và xác nhận khóa theo cách thủ công cho mỗi người
+            dùng thông qua GUI Trình quản lý khóa không phải là một giải pháp
+            hiệu quả. Đối với các tình huống như vậy trực tuyến
+            <a target="_blank" href="adss_server_certification_service.htm"
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;được khuyến khích. Điều này có thể tự động tạo và chứng nhận
+            khóa thay mặt cho các ứng dụng kinh doanh thông qua API dịch vụ web.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            <strong
+              >Ký bằng phím phía máy khách (ví dụ: trong cửa hàng Windows CAPI
+              hoặc trên thẻ thông minh)</strong
+            >&nbsp;- Trong trường hợp này, việc tạo khóa và chứng chỉ và phân
+            phối chúng cho người dùng cuối nằm ngoài phạm vi của Máy chủ ADSS.
+            Máy chủ ADSS và đặc biệt là applet Go Sign giả định rằng các khóa ký
+            tồn tại và có sẵn thông qua môi trường Microsoft CAPI. Go Sign
+            applet cũng có thể truy cập các khóa ký thông qua giao diện PKCS11
+            trên các nền tảng không phải Windows.
+          </p>
+        </li>
+      </ul>
+      <p></p>
+      <p>
+        Để tạo khóa trong mô-đun Trình quản lý khóa, hãy xem phần:&nbsp;<a
+          href="page.aspx?pageid=Generating_New_Keys"
+          target="_blank"
+          >Tạo khóa mới</a
+        >&nbsp;trong khi để nhập khóa trong Máy chủ ADSS do bên thứ ba cấp, hãy
+        xem phần:&nbsp;<a href="page.aspx?pageid=Importing_Keys" target="_blank"
+          >Nhập khóa</a
+        >. Lưu ý rằng các khóa bạn muốn nhập PHẢI ở định dạng PKCS12 / PFX. Khi
+        tạo / nhập khóa để ký tài liệu, hãy chọn mục đích chính "<strong
+          ><em>Ký tài liệu</em></strong
+        >". Các khóa được giữ trong thiết bị PKCS11 cũng có thể được sử dụng để ký tài liệu, xem phần&nbsp;<a
+          href="page.aspx?pageid=Creating_a_New_Hardware_Crypto_Profile"
+          target="_blank"
+          >Nguồn tiền điện tử</a
+        >&nbsp;để định cấu hình và nhập các khóa từ nó.
+      </p>
+      <p>
+        Khi cặp khóa được tạo thì Khóa công khai cần được chứng nhận. Nó có thể được chứng nhận bằng cách tạo ra
+        <a
+          target="_blank"
+          href="page.aspx?pageid=Generating_PKCS_10_Certificate_Requests"
+          >Chứng chỉ tự ký</a
+        >
+        và/hoặc
+        <a
+          target="_blank"
+          href="page.aspx?pageid=Generating_PKCS_10_Certificate_Requests"
+          >Chứng chỉ được ủy quyền</a
+        >.
+      </p>
+      <p></p>
+      <p></p>
+      <p class="Asc_See_Also" style="text-align: left">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List" style="text-align: left">
+        <div class="var_Sibling_Page_List">
+          <a href="step_2_-_register_cas_using_trust_manager1.htm" title=""
+            >Bước 2 - Đăng ký CA </a
+          ><br /><a href="step_3_-_configuring_crl_monitor.htm" title=""
+            >Bước 3 - Cấu hình màn hình CRL</a
+          ><br /><a href="step_3_-_configuring_a_signing_profile.htm" title=""
+            >Bước 4 - Định cấu hình hồ sơ ký</a
+          ><br /><a href="step_1_-_registering_client_applications.htm" title=""
+            >Bước 5 - Đăng ký ứng dụng kinh doanh</a
+          ><br /><a
+            href="step_4_-_using_the_signing_service_manager.htm"
+            title=""
+            >Bước 6 - Sử dụng Trình quản lý dịch vụ</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

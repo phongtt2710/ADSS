@@ -1,0 +1,464 @@
+<html>
+  <head>
+    <title>ADSS Server Architecture &amp; Interfaces - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('12','ADSS Server Architecture &amp; Interfaces');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span
+            class="breadcrumbs"
+            style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ></span
+          ><span
+            class="breadcrumbs"
+            style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ></span
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiến trúc</a
+            >&nbsp;&gt;&nbsp;<a
+              href="adss_server_architecture_interfaces.htm"
+              title=""
+              >Kiến trúc máy chủ ADSS
+            </a></span
+          ></span
+        >
+      </p>
+      <p style="text-align: justify">
+        <span class="Asc_PageName">Kiến trúc máy chủ ADSS </span>
+      </p>
+      <p style="text-align: justify">
+        Sơ đồ sau đây cung cấp tổng quan về kiến trúc sản phẩm Máy chủ ADSS và
+        các giao diện có sẵn:
+      </p>
+      <p style="text-align: center">
+        <img
+          alt=""
+          src="../images/ADSS Server Architecture and Interface - 1.JPG"
+          style="width: 820px"
+        />
+      </p>
+      <p class="Asc_Heading" style="text-align: justify">Kiến trúc</p>
+      ADSS Server là một ứng dụng Java 11 EE và sử dụng các phiên bản hiện tại
+      của Apache Tomcat v9.0.43 và Java JDK 11.0.12. Việc sử dụng các phiên bản
+      Tomcat và JDK cụ thể sẽ được xem xét theo thời gian.&nbsp; Chúng nên được
+      sử dụng làm môi trường được hỗ trợ 'hộp đen' cho Máy chủ ADSS và không
+      được sử dụng chung hơn.&nbsp; Các phiên bản này có thể cùng tồn tại với
+      bất kỳ phiên bản Java nào khác trên nền tảng và bất kỳ vùng chứa ứng dụng
+      web nào khác.&nbsp; Do kiến trúc Java 11 EE của nó, việc triển khai ADSS
+      Server với các container web khác như WebLogic và JBoss có thể được xem
+      xét trên cơ sở dự án nhưng thực sự không bắt buộc - hãy hỏi
+      <a href="mailto:sales@ascertia.com">sales@ascertia.com</a> để biết thông
+      tin.&nbsp; Lưu ý rằng các web container đóng gói bởi Ascertia được hỗ trợ
+      đầy đủ bởi Ascertia như là một phần của thỏa thuận hỗ trợ ADSS Server.
+      <p style="text-align: justify">
+        Môi trường phát triển chính cho ADSS Server là Windows Server, tuy nhiên
+        Linux ngày càng trở nên phổ biến và hỗ trợ cho các phiên bản và biến thể
+        RedHat và SuSe, cũng như Solaris 11, được cung cấp.&nbsp;&nbsp;Hỗ trợ
+        cho các biến thể hoặc hệ điều hành khác có sẵn theo yêu cầu. ADSS Server
+        đã được thiết kế để có thể chạy trong hầu hết mọi môi trường Java 11 EE
+        phù hợp.
+      </p>
+      <p style="text-align: justify">
+        ADSS Server yêu cầu cơ sở dữ liệu để lưu trữ cấu hình chính sách, dữ
+        liệu nội bộ khác cũng như các sự kiện hệ thống và nhật ký giao dịch.
+        ADSS Server sử dụng công nghệ Hibernate để làm việc với một loạt các hệ
+        thống quản lý cơ sở dữ liệu. Cơ sở dữ liệu phát triển chính là Microsoft
+        SQL Server Enterprise Edition tuy nhiên các cơ sở dữ liệu khác như SQL
+        Server Express, Oracle, PostgreSQL và MySQL&nbsp;đều được thử nghiệm và
+        phê duyệt sử dụng. Xem Hướng dẫn Cài đặt Máy chủ ADSS để biết thêm chi
+        tiết về các phiên bản được hỗ trợ và thông tin MySQL. &nbsp;Lưu ý, tiếc
+        là Oracle không cho phép Ascertia tự do phân phối lại trình điều khiển
+        JDBC cho MySQL và vì vậy điều này phải được tải xuống trước khi cài
+        đặt.<span
+          style="
+            font-weight: bold;
+            text-align: left;
+            font-size: 16px;
+            color: #add8e6;
+          "
+          >&nbsp;</span
+        >
+      </p>
+      <p class="Asc_Heading">Kiến trúc triển khai</p>
+      <p>
+        Máy chủ ADSS được triển khai dưới dạng ba phiên bản máy chủ tomcat
+        Apache riêng biệt. Các thành phần này được đặt tên là ADSS Server Core,
+        ADSS Server Console và ADSS Server Service. Các thành phần này có thể
+        được cài đặt trên một máy duy nhất trong một cài đặt thông thường hoặc
+        trên nhiều máy trong môi trường cân bằng tải. Chi tiết của từng thành
+        phần này được liệt kê dưới đây:
+      </p>
+      <div>
+        <span
+          style="
+            font-family: tahoma, arial, helvetica, sans-serif;
+            font-size: 13px;
+          "
+          ><strong></strong
+        ></span>
+      </div>
+      <div>
+        <strong class="Asc_SubHeading">
+          <p>Lõi máy chủ ADSS</p>
+        </strong>
+      </div>
+      <p>Thành phần ADSS Server Core thực hiện các hoạt động cốt lõi sau:</p>
+      <div>
+        <span
+          style="
+            font-family: tahoma, arial, helvetica, sans-serif;
+            font-size: 13px;
+          "
+        ></span>
+      </div>
+      <div>
+        <div>
+          <ul>
+            <li>Lưu trữ nhật ký</li>
+            <li>
+              Xác minh HMAC tự động để đảm bảo tính toàn vẹn của hồ sơ cơ sở dữ
+              liệu
+            </li>
+            <li>
+              Tự động gia hạn chứng chỉ cơ sở hạ tầng (do CA địa phương cấp)
+            </li>
+            <li>Tự động xuất bản CRL (do CA địa phương phát hành)</li>
+            <li>Tự động đồng bộ hóa các tệp cấu hình</li>
+            <li>Quản lý giấy phép</li>
+          </ul>
+          <p>
+            Tại một khoảng thời gian khi ADSS Server Core bị dừng, tất cả các
+            hoạt động được đề cập ở trên cũng sẽ bị dừng. Hai thành phần khác
+            tức là Bảng điều khiển máy chủ ADSS và Dịch vụ máy chủ ADSS sẽ tiếp
+            tục cung cấp dịch vụ của họ mặc dù ADSS Server Core bị dừng<br />
+            <br />
+            Có thể cài đặt nhiều phiên bản ADSS Server Core hoạt động trong môi
+            trường sẵn sàng cao. Tại một thời điểm duy nhất, chỉ một phiên bản
+            ADSS Server Core có thể hoạt động như một phiên bản chính, Các phiên
+            bản khác chạy dưới dạng nô lệ có thể thay thế phiên bản chính khi
+            phiên bản chính không hoạt động bình thường.&nbsp;Bạn có thể tìm
+            thêm chi tiết về cấu hình tính khả dụng cao của ADSS Server Core
+            <a
+              href="default.aspx#pageid=high_availability_settings"
+              target="_blank"
+              >Ở đây</a
+            >.<br />
+            <br />
+          </p>
+        </div>
+        <div>
+          <strong class="Asc_SubHeading">
+            <p>Bảng điều khiển máy chủ ADSS</p>
+          </strong>
+        </div>
+        <p>
+          Thành phần Bảng điều khiển Máy chủ ADSS được sử dụng để tạo cấu hình
+          quản trị Máy chủ ADSS.&nbsp;Có thể cài đặt nhiều phiên bản Bảng điều
+          khiển máy chủ ADSS hoạt động trong môi trường sẵn sàng cao.&nbsp;Tại
+          một thời điểm duy nhất, chỉ một phiên bản Bảng điều khiển máy chủ ADSS
+          có thể hoạt động như một phiên bản chính và được sử dụng cho các cấu
+          hình. Các trường hợp khác chạy dưới dạng nô lệ có thể thay thế vị trí
+          của master khi master instance không hoạt động đúng. &nbsp;Bạn có thể
+          tìm thêm chi tiết về cấu hình tính khả dụng cao của Bảng điều khiển
+          máy chủ ADSS
+          <a
+            href="default.aspx#pageid=high_availability_settings"
+            target="_blank"
+            >Ở đây</a
+          >.
+        </p>
+        <div>
+          <strong class="Asc_SubHeading">
+            <p>Dịch vụ máy chủ ADSS</p>
+          </strong>
+        </div>
+        <div>
+          <p>
+            Thành phần ADSS Server Service được sử dụng để xử lý các yêu cầu đến
+            từ các bên dựa vào.&nbsp;Các yêu cầu này có thể dành cho bất kỳ dịch
+            vụ Máy chủ ADSS nào được cấp phép, ví dụ: Ký, Xác minh, XKMS, SCVP,
+            LTANS, v.v.&nbsp;Chi tiết về từng dịch vụ này được cung cấp trong
+            các chương sau của hướng dẫn này. &nbsp;Có thể cài đặt nhiều phiên
+            bản của thành phần ADSS Server Service. &nbsp;Khi nhiều phiên bản
+            của thành phần ADSS Server Service được cài đặt, mô-đun ADSS CRL
+            Monitor chạy trong môi trường sẵn sàng cao trong khi tất cả các dịch
+            vụ khác chạy riêng lẻ nhưng chúng có thể được cân bằng tải bằng cách
+            triển khai mô-đun cân bằng tải phần cứng bổ sung không nằm trong
+            phạm vi triển khai Máy chủ ADSS.
+          </p>
+        </div>
+        <div>
+          <p class="Asc_Heading">Giao diện bên ngoài</p>
+        </div>
+      </div>
+      <p>Sơ đồ sau đây cho thấy các giao diện bên ngoài của ADSS Server:</p>
+      <div>
+        <p style="text-align: center">
+          <img
+            alt=""
+            src="../images/ADSS Server Architecture and Interface-2.jpg"
+            style="width: 720px"
+          />
+        </p>
+        <div>
+          <p style="text-align: justify">
+            <span style="color: #000000"
+              >Các giao diện được đánh số để tham khảo và mô tả dưới đây:</span
+            >
+          </p>
+          <ol>
+            <li>
+              Dịch vụ ADSS XKMS và Dịch vụ xác minh ADSS có thể được cấu hình để
+              chuyển tiếp các yêu cầu xác thực chứng chỉ đến Máy chủ XKMS bên
+              ngoài.
+            </li>
+            <li>
+              Dịch vụ ADSS SCVP có thể được cấu hình để chuyển tiếp các yêu cầu
+              xác thực chứng chỉ đến Máy chủ SCVP bên ngoài.
+            </li>
+          </ol>
+          <p class="Asc_Heading" style="text-align: justify">Mô-đun nội bộ</p>
+        </div>
+        <p>
+          <span style="font-size: 13px"></span>ADSS Server là một ứng dụng đa
+          chức năng cung cấp một loạt các dịch vụ tin cậy; Nó thường có thể là
+          trường hợp mặc dù không phải tất cả các dịch vụ đều được yêu cầu bởi
+          mọi ứng dụng kinh doanh. Do đó, Ascertia cấp phép cho các mô-đun Máy
+          chủ ADSS riêng lẻ. Ascertia cũng nhóm các mô-đun dịch vụ thành các gói
+          sau:<br />
+          <strong><span style="text-decoration: underline"></span></strong>
+        </p>
+        <p class="Asc_Heading">Máy chủ doanh nghiệp ADSS</p>
+        <div>
+          <p style="font-weight: bold"></p>
+          <p>
+            ADSS Enterprise Server hướng đến các tổ chức muốn triển khai chủ yếu
+            các dịch vụ tạo và xác minh chữ ký số. Nó đi kèm với các mô-đun sau:
+          </p>
+        </div>
+        <p>&nbsp;</p>
+        <p style="text-align: center">
+          <img
+            alt=""
+            src="../images/ADSS Enterprise Server.jpg"
+            style="width: 800px"
+          />
+        </p>
+        <p style="text-align: left"><span style="font-family: arial"></span></p>
+        <p style="text-align: justify">
+          Dịch vụ chứng nhận ADSS cũng được bao gồm trong gói này nếu được yêu
+          cầu tạo và chứng nhận khóa ký của người dùng cuối. Các khóa / chứng
+          chỉ này sau đó được lưu trên Máy chủ ADSS (có thể bên trong HSM) do đó
+          cung cấp khả năng chữ ký số phía máy chủ.
+        </p>
+        <p style="text-align: justify">
+          Hình trên cho thấy cách các mô-đun Dịch vụ ADSS (hiển thị màu xanh
+          lam) cung cấp dịch vụ tin cậy cho các ứng dụng bên ngoài. Các mô-đun
+          tiện ích (hiển thị bằng màu nâu) là các mô-đun cấp thấp hơn cung cấp
+          dịch vụ của chúng cho các mô-đun dịch vụ. Có các mô-đun và thành phần
+          cấp thấp hơn bổ sung được hiển thị bằng màu xanh lá cây cung cấp chức
+          năng chung cơ bản cho các mô-đun cao hơn. Mỗi mô-đun được mô tả chi
+          tiết sau trong hướng dẫn này.
+        </p>
+        <p class="Asc_Heading" style="text-align: left">
+          Máy chủ cơ sở hạ tầng ADSS
+        </p>
+        <p style="text-align: left"><span style="font-family: arial"></span></p>
+        <span class="Asc_SubHeading">
+          <p>
+            <span style="font-weight: normal; color: black"
+              >ADSS Infrastructure Server hướng đến các tổ chức có nhu cầu triển
+              khai các thành phần hạ tầng PKI như CA, OCSP, XKMS, SCVP,
+              Long-term Archiving (LTANS) &amp;nbsp;và Máy chủ dấu thời gian
+              (TSP).</span
+            >
+          </p>
+        </span>
+        <p>Máy chủ cơ sở hạ tầng ADSS có thể được cung cấp các mô-đun sau:</p>
+        <p style="text-align: center">
+          <span style="font-family: arial"
+            ><img
+              alt=""
+              src="../images/ADSS Infrastructure Server.jpg"
+              style="width: 800px"
+            /><br />
+          </span>
+        </p>
+        <p>
+          <span style="font-family: arial"><br /> </span
+          ><span style="font-size: 12pt; font-family: 'times new roman', serif">
+          </span
+          >Tất nhiên có thể đóng gói ADSS Server cho các nhu cầu cụ thể của
+          khách hàng.&amp;nbsp;Mỗi mô-đun được cấp phép hiển thị cho nhà điều
+          hành ADSS (giả sử vai trò nhà điều hành của họ có quyền truy cập vào
+          nó) thông qua dòng menu Mô-đun dịch vụ&amp;nbsp; như hình dưới đây.
+          Các mô-đun không được cấp phép hoặc những mô-đun mà vai trò người vận
+          hành chưa được gán đủ đặc quyền để truy cập mô-đun sẽ bị xóa khỏi GUI.
+          Lưu ý dòng thứ hai được hiển thị bên dưới dành cho các Mô-đun tiện
+          ích; Đây là những điểm chung cho tất cả các dịch vụ trên:
+        </p>
+        <p>
+          <img
+            alt=""
+            src="../images/ADSSServicesBanner.png"
+            style="
+              color: #000000;
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 1;
+              word-spacing: 0px;
+              font-family: arial;
+            "
+          />
+        </p>
+        <p>
+          <span class="TipBubble"
+            >Bất kỳ mô-đun nào không được gán cho vai trò của người vận hành sẽ
+            bị ẩn khỏi bảng điều khiển của người vận hành. Ví dụ: Trình quản lý
+            phê duyệt, là một phần của tính năng Điều khiển kép, bị ẩn trong ảnh
+            chụp màn hình ở trên.&nbsp;Chỉ những phần tử được cấp phép của Máy
+            chủ ADSS mới được hiển thị cho nhà điều hành và mọi mô-đun không có
+            giấy phép đều bị ẩn và vẫn vô hình.</span
+          >
+        </p>
+        <div>
+          <div>
+            <div
+              class="Asc_Sibling_Page_List"
+              style="
+                font-size: 13px;
+                color: #000000;
+                font-family: Verdana;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                orphans: 2;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-align: left;
+              "
+            >
+              <span
+                class="Asc_Sibling_Page_List"
+                style="font-size: 13px"
+              ></span>
+            </div>
+            <div class="pagelist">
+              <span class="Asc_Sibling_Page_List"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        Xem thêm
+      </p>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          font-size: 13px;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a href="adss_server_features_and_benefits.htm" title=""
+              >Các tính năng và lợi ích của máy chủ ADSS</a
+            ><br /><a href="adss_server_trust_services.htm" title=""
+              >Dịch vụ tin cậy máy chủ ADSS</a
+            ><br /><a href="adss_server_architecture_interfaces.htm" title=""
+              >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+            ><br /><a href="adss_server_-_signing_service.htm" title=""
+              >Tổng quan về dịch vụ ký ADSS</a
+            ><br /><a href="adss_server_-_verification_service.htm" title=""
+              >Tổng quan về dịch vụ xác minh ADSS</a
+            ><br /><a href="adss_server_-_certification_service.htm" title=""
+              >Tổng quan về dịch vụ chứng nhận ADSS</a
+            ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS OCSP</a
+            ><br /><a href="adss_server_-_tsa_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS TSA</a
+            ><br /><a href="adss_xkms_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS XKMS</a
+            ><br /><a href="adss_scvp_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS SCVP</a
+            ><br /><a href="adss_ltan_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS LTANS</a
+            ><br /><a href="adss_decryption_service_overview.htm" title=""
+              >Tổng quan về dịch vụ giải mã ADSS</a
+            ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+              >Tổng quan về màn hình ADSS CRL</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

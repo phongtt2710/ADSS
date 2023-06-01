@@ -1,0 +1,911 @@
+<html>
+  <head>
+    <title>Báo cáo thống kê phiên bản - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('105','Báo cáo thống kê phiên bản');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a href="signing_management_reporting.htm" title=""
+              >Báo cáo quản lý</a
+            >&nbsp;&gt;&nbsp;<a href="service_statistical_reports.htm" title=""
+              >Báo cáo thống kê dịch vụ</a
+            >&nbsp;&gt;&nbsp;<a href="instances_stats_report.htm" title=""
+              >Báo cáo thống kê phiên bản</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <p
+        class="Asc_PageName"
+        style="
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 20px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: bold;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        Báo cáo thống kê phiên bản
+      </p>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 400;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        Báo cáo trạng thái phiên bản sẽ cung cấp cho chúng ta ý tưởng về việc sử
+        dụng tất cả các phiên bản Dịch vụ ký đang chạy trên Máy chủ ADSS trong
+        một khoảng thời gian cụ thể. Bằng cách nhấp vào liên kết Thống kê phiên
+        bản từ đầu trang, màn hình sau sẽ được hiển thị:&nbsp;
+      </p>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 400;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/Instance_R.png"
+          style="width: 847px; height: 556px"
+        />
+      </p>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 400;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      ></p>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <table
+        style="
+          border: medium;
+          text-align: justify;
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 400;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          border-collapse: collapse;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+        "
+        border="1"
+        cellspacing="0"
+        cellpadding="0"
+      >
+        <tbody></tbody>
+      </table>
+      Các mục cấu hình như sau:<br />
+      &nbsp;&nbsp;<br />
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-color: #666666;
+          text-align: left;
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 400;
+          text-decoration: none;
+          word-spacing: 0px;
+          border-right-style: dashed;
+          border-bottom-style: dashed;
+          white-space: normal;
+          border-collapse: collapse;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                width: 150pt;
+                font-weight: bold;
+                vertical-align: top;
+                background-color: lightgray;
+              "
+            >
+              <strong
+                style="
+                  text-align: left;
+                  color: #000000;
+                  text-transform: none;
+                  line-height: normal;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  widows: 1;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></strong
+              >Item&nbsp;
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                font-weight: bold;
+                vertical-align: top;
+                background-color: #b6d5f2;
+              "
+            >
+              <strong
+                style="
+                  text-align: left;
+                  color: #000000;
+                  text-transform: none;
+                  line-height: normal;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  widows: 1;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Mô tả</strong
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                width: 150pt;
+                vertical-align: top;
+                background-color: lightgray;
+              "
+            >
+              Period
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                vertical-align: top;
+                background-color: #ffffff;
+              "
+            >
+              <div style="text-align: justify"></div>
+              <div
+                style="
+                  padding: 0px;
+                  color: #000000;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-decoration: none;
+                  margin-top: 0px;
+                  margin-right: 0px;
+                  margin-bottom: 0px;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  orphans: 2;
+                  -webkit-text-stroke-width: 0px;
+                  text-align: justify;
+                "
+                dir="ltr"
+              >
+                <span
+                  style="
+                    font: 14px Verdana;
+                    text-align: left;
+                    text-transform: none;
+                    text-indent: 0px;
+                    letter-spacing: normal;
+                    word-spacing: 0px;
+                    display: inline;
+                    white-space: normal;
+                    widows: 1;
+                    float: none;
+                    -webkit-text-stroke-width: 0px;
+                    color: #000000;
+                  "
+                  >Menu thả xuống khoảng thời gian sẽ giúp chúng tôi chọn khoảng
+                  thời gian mà báo cáo phải được tạo. Menu thả xuống chứa khoảng
+                  thời gian:&nbsp;<br />
+                </span>
+              </div>
+              <span
+                style="
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-decoration: none;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  orphans: 2;
+                  float: none;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+              </span>
+              <ul
+                style="
+                  text-align: left;
+                  color: #000000;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-decoration: none;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  orphans: 2;
+                  -webkit-text-stroke-width: 0px;
+                "
+                dir="ltr"
+              >
+                <li>
+                  <div
+                    style="
+                      padding: 0px;
+                      margin-top: 0px;
+                      margin-right: 0px;
+                      margin-bottom: 0px;
+                      text-align: justify;
+                    "
+                  >
+                    &nbsp;<strong
+                      ><span style="text-decoration: underline"
+                        >7 ngày qua</span
+                      ></strong
+                    ><br />
+                    <span
+                      style="
+                        font: 14px Verdana;
+                        text-align: left;
+                        text-transform: none;
+                        text-indent: 0px;
+                        letter-spacing: normal;
+                        word-spacing: 0px;
+                        display: inline;
+                        white-space: normal;
+                        widows: 1;
+                        float: none;
+                        -webkit-text-stroke-width: 0px;
+                        color: #000000;
+                      "
+                      >Trong trường hợp 7 ngày qua, báo cáo sẽ được tạo trong dữ
+                      liệu 7 ngày qua (bao gồm cả ngày hiện tại) cho (các) phiên
+                      bản đã chọn trong menu thả xuống phiên bản. Thanh ngang sẽ
+                      hiển thị ngày và thanh dọc sẽ hiển thị số lượng giao
+                      dịch.&nbsp;<br /> </span
+                    ><span
+                      style="
+                        font: 14px Verdana;
+                        text-align: left;
+                        text-transform: none;
+                        text-indent: 0px;
+                        letter-spacing: normal;
+                        word-spacing: 0px;
+                        display: inline;
+                        white-space: normal;
+                        widows: 1;
+                        float: none;
+                        -webkit-text-stroke-width: 0px;
+                        color: #000000;
+                      "
+                      ><br />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style="
+                      padding: 0px;
+                      margin-top: 0px;
+                      margin-right: 0px;
+                      margin-bottom: 0px;
+                      text-align: justify;
+                    "
+                  >
+                    <strong
+                      ><span style="text-decoration: underline"
+                        >24 giờ qua<span
+                          style="
+                            text-align: left;
+                            text-transform: none;
+                            line-height: normal;
+                            text-indent: 0px;
+                            letter-spacing: normal;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant: normal;
+                            word-spacing: 0px;
+                            display: inline;
+                            white-space: normal;
+                            widows: 1;
+                            font-stretch: normal;
+                            float: none;
+                            -webkit-text-stroke-width: 0px;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                          ><br /> </span></span></strong
+                    ><span
+                      style="
+                        font: 14px Verdana;
+                        text-align: left;
+                        text-transform: none;
+                        text-indent: 0px;
+                        letter-spacing: normal;
+                        word-spacing: 0px;
+                        display: inline;
+                        white-space: normal;
+                        widows: 1;
+                        float: none;
+                        -webkit-text-stroke-width: 0px;
+                        color: #000000;
+                      "
+                      >Trong trường hợp 24 giờ qua, báo cáo sẽ được tạo trong dữ
+                      liệu 24 giờ qua. Thanh ngang sẽ hiển thị số giờ và thanh
+                      dọc sẽ hiển thị số lượng giao dịch.<br />
+                    </span>
+                  </div>
+                </li>
+              </ul>
+              <span
+                style="
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-decoration: none;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  orphans: 2;
+                  float: none;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+              </span>
+              <ul
+                style="
+                  text-align: left;
+                  color: #000000;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-decoration: none;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  orphans: 2;
+                  -webkit-text-stroke-width: 0px;
+                "
+                dir="ltr"
+              >
+                <li>
+                  <div
+                    style="
+                      padding: 0px;
+                      margin-top: 0px;
+                      margin-right: 0px;
+                      margin-bottom: 0px;
+                      text-align: justify;
+                    "
+                  >
+                    <strong
+                      ><span style="text-decoration: underline"
+                        >12 giờ qua<span
+                          style="
+                            text-align: left;
+                            text-transform: none;
+                            line-height: normal;
+                            text-indent: 0px;
+                            letter-spacing: normal;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant: normal;
+                            word-spacing: 0px;
+                            display: inline;
+                            white-space: normal;
+                            widows: 1;
+                            font-stretch: normal;
+                            float: none;
+                            -webkit-text-stroke-width: 0px;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                          ><br /> </span></span></strong
+                    ><span
+                      style="
+                        font: 14px Verdana;
+                        text-align: left;
+                        text-transform: none;
+                        text-indent: 0px;
+                        letter-spacing: normal;
+                        text-decoration: none;
+                        word-spacing: 0px;
+                        white-space: normal;
+                        orphans: 2;
+                        widows: 1;
+                        float: none;
+                        -webkit-text-stroke-width: 0px;
+                        background-color: #ffffff;
+                        display: inline !important;
+                        color: #000000;
+                      "
+                      >Trong trường hợp 12 giờ qua, báo cáo sẽ được tạo trong dữ
+                      liệu 12 giờ qua. Thanh ngang sẽ hiển thị mười hai giờ kéo
+                      dài với khoảng thời gian 30 phút và thanh dọc sẽ hiển thị
+                      số lượng giao dịch.</span
+                    ><span
+                      style="
+                        text-align: left;
+                        text-transform: none;
+                        text-indent: 0px;
+                        letter-spacing: normal;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: 400;
+                        text-decoration: none;
+                        word-spacing: 0px;
+                        white-space: normal;
+                        orphans: 2;
+                        float: none;
+                        -webkit-text-stroke-width: 0px;
+                        background-color: #ffffff;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      ><br />
+                    </span>
+                  </div>
+                </li>
+              </ul>
+              <span
+                style="
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-decoration: none;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  orphans: 2;
+                  float: none;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify"></div>
+              </span>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                width: 150pt;
+                vertical-align: top;
+                background-color: lightgray;
+              "
+            >
+              Ví dụ
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                vertical-align: top;
+                background-color: #ffffff;
+              "
+            >
+              <div style="text-align: justify">
+                Danh sách thả xuống Phiên bản sẽ chứa danh sách tất cả các phiên
+                bản Dịch vụ ký cho một phiên bản cụ thể sẽ được chọn. Nếu chúng
+                tôi muốn báo cáo được tạo cho tất cả các phiên bản, chúng tôi
+                chỉ cần chọn tùy chọn 'Tất cả' có sẵn trong danh sách thả xuống
+                Phiên bản.&nbsp;
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                width: 150pt;
+                vertical-align: top;
+                background-color: lightgray;
+              "
+            >
+              <div style="text-align: justify">
+                Hiển thị thời gian dưới dạng
+              </div>
+            </td>
+            <td
+              style="
+                padding: 8px;
+                border: 1px solid #666666;
+                vertical-align: top;
+                background-color: #ffffff;
+              "
+            >
+              <div style="text-align: justify">
+                Trình đơn thả xuống Hiển thị thời gian dưới dạng cho phép nhà
+                điều hành chọn múi giờ để hiển thị thời gian trên báo cáo. Các
+                múi giờ có sẵn trong menu thả xuống là 'UTC' và 'Địa phương'.<br />
+                Trong trường hợp múi giờ UTC, báo cáo sẽ hiển thị thời gian ở
+                định dạng UTC và trong trường hợp Địa phương, báo cáo sẽ hiển
+                thị thời gian theo múi giờ địa phương của nhà khai thác.<br />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <p
+        class="Asc_See_Also"
+        style="
+          color: orange;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: italic;
+          font-variant: normal;
+          font-weight: bold;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        Xem thêm
+      </p>
+      <p>
+        <span
+          style="
+            text-align: justify;
+            text-transform: none;
+            text-indent: 0px;
+            letter-spacing: normal;
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            text-decoration: none;
+            word-spacing: 0px;
+            white-space: normal;
+            orphans: 2;
+            float: none;
+            -webkit-text-stroke-width: 0px;
+            overflow-wrap: break-word;
+            background-color: #ffffff;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+        >
+        </span>
+      </p>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          color: #000000;
+          text-transform: none;
+          text-indent: 0px;
+          letter-spacing: normal;
+          font-family: Verdana;
+          font-size: 13px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: 400;
+          text-decoration: none;
+          word-spacing: 0px;
+          white-space: normal;
+          orphans: 2;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        <div class="var_Sibling_Page_List">
+          <a href="service_report.htm" title="">Báo cáo thống kê dịch vụ</a><br /><a
+            href="usage_report.htm"
+            title=""
+            >Báo cáo thống kê sử dụng</a
+          ><br /><a href="signing_profiles_report.htm" title=""
+            >Báo cáo thống kê hồ sơ</a
+          ><br /><a href="client_stats_report.htm" title=""
+            >Báo cáo thống kê khách hàng</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

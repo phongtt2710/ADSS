@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <title>Bước 4 - Định cấu hình hồ sơ ký - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('75','Bước 4 - Định cấu hình hồ sơ ký');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Home</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_signing_service3.htm"
+              title=""
+              >Cấu hình dịch vụ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_3_-_configuring_a_signing_profile.htm"
+              title=""
+              >Bước 4 - Định cấu hình hồ sơ ký</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName" style="text-align: justify">
+        Bước 4 - Định cấu hình hồ sơ ký
+      </p>
+      <p style="text-align: justify">
+        Để giúp các ứng dụng kinh doanh yêu cầu các hoạt động ký dễ dàng hơn,
+        Dịch vụ ký ADSS sử dụng Hồ sơ ký. Hồ sơ ký xác định định dạng và đặc
+        điểm của chữ ký số sẽ được tạo ra khi hồ sơ này được tham chiếu trong
+        yêu cầu ký từ ứng dụng khách. Hồ sơ ký thêm các điều khiển chính sách
+        vào hoạt động ký và có thể được sử dụng để ngăn chặn các thay đổi không
+        mong muốn đối với các yêu cầu - ví dụ: thực thi việc sử dụng khóa ký của
+        công ty, kiểm soát giao diện chữ ký, định dạng chữ ký,
+        v.v.&nbsp;&nbsp;<br />
+        <br />
+        Để tạo hoặc chỉnh sửa Hồ sơ ký kết, hãy nhấp vào "Hồ sơ ký" và màn hình
+        sau được hiển thị:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/SigningProfiles.PNG"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Một hồ sơ mới có thể được tạo bằng cách nhấp
+        vào&nbsp;<strong>Nút</strong>&nbsp;mới.&nbsp; Một hồ sơ hiện có có thể
+        được chỉnh sửa bằng cách nhấp vào&nbsp;<strong>Nút </strong> Chỉnh sửa.
+        Nếu bạn muốn tạo hồ sơ mới bằng cách sao chép phần lớn hồ sơ hiện có,
+        hãy nhấp vào<strong>&nbsp;Tạo một bản sao</strong>. &nbsp;&nbsp;Chi tiết
+        cấu hình hồ sơ ký được mô tả trong các trang con tiếp theo.
+      </p>
+      <p style="text-align: justify">
+        Bảng ký hồ sơ có thể được sắp xếp theo một trong hai
+        <strong>Tăng dần </strong>hoặc <strong>Giảm dần</strong> Sắp xếp bằng
+        cách chọn một cột bảng từ danh sách thả xuống. Danh sách có thể được sắp
+        xếp theo ID hồ sơ ký, Tên hồ sơ ký, Loại chữ ký, Được tạo tại thời điểm
+        hoặc Status.Ngoài ra còn có một cơ sở tìm kiếm:
+      </p>
+      <p style="text-align: justify">
+        Nhấp vào nút Tìm kiếm trên trang chính Signing Profiles sẽ hiển thị màn
+        hình sau:
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="../images/SignServ-SignProf-Search.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Điều này giúp xác định vị trí một hồ sơ ký cụ thể mà Dịch vụ Ký có thể
+        đã cấu hình. Hồ sơ ký có thể được tìm kiếm dựa trên Trạng thái, ID hồ sơ
+        ký, Tên hồ sơ ký, Loại chữ ký.Nếu tìm kiếm dựa trên nhiều giá trị, thì
+        chúng sẽ được kết hợp với nhau bằng cách sử dụng toán hạng "VÀ" và do đó
+        chỉ các bản ghi đáp ứng tất cả các tiêu chí mới được trình bày.
+      </p>
+      <p style="text-align: justify">
+        <span class="TipBubble"
+          ><br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký
+          tự đại diện.</span
+        ><span class="TipBubble"
+          >Nhiều tài liệu hoặc hàm băm có thể được gửi đến dịch vụ ký ADSS
+          Server trong một yêu cầu ký tài liệu duy nhất (qua giao diện HTTP chỉ
+          hỗ trợ một tài liệu tại một thời điểm). Điều quan trọng cần lưu ý là
+          tất cả các tài liệu được gửi để ký trong một yêu cầu phải cho cùng một
+          loại chữ ký, ví dụ.PDF hoặc XML hoặc PKCS7. Xem hướng dẫn của Nhà phát
+          triển Máy chủ ADSS để tìm hiểu cách gửi nhiều tài liệu để đăng nhập
+          vào một yêu cầu ký OASIS DSS.</span
+        >
+      </p>
+      <p>
+        <span class="Asc_Sibling_Page_List"
+          ><span class="TipBubble"
+            ><span style="font-size: 14px"
+              >Hồ sơ trùng lặp sẽ được tạo mà không có <strong>"Tên"</strong> và
+              <strong>"Mô tả"</strong> của Hồ sơ đã chọn. ID duy nhất tự động
+              tạo hoặc ID có sẵn tiếp theo sẽ được gán cho Hồ sơ.</span
+            ><br /> </span
+          ><br />
+        </span>
+      </p>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="general_settings.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="general_settings.htm" title="">Cài đặt chung</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="configuring_pdf_signing_attributes.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="configuring_pdf_signing_attributes.htm" title=""
+            >Cài đặt chữ ký</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="advance_settings.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="advance_settings.htm" title="">Cài đặt nâng cao</a>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <p></p>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        Xem thêm
+      </p>
+      <p></p>
+      <div
+        class="pagelist"
+        style="
+          font-family: Verdana;
+          font-size: 14px;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          color: #000000;
+          font-style: normal;
+          font-weight: normal;
+          text-align: justify;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><div class="var_Sibling_Page_List">
+            <a
+              href="step_2_-_generating_keys_certs_through_key_manager.htm"
+              title=""
+              >Bước 1 - Tạo khóa và chứng chỉ</a
+            ><br /><a
+              href="step_2_-_register_cas_using_trust_manager1.htm"
+              title=""
+              >Bước 2 - Đăng ký CA</a
+            ><br /><a href="step_3_-_configuring_crl_monitor.htm" title=""
+              >Bước 3 - Cấu hình màn hình CRL</a
+            ><br /><a
+              href="step_1_-_registering_client_applications.htm"
+              title=""
+              >Bước 5 - Đăng ký ứng dụng kinh doanh</a
+            ><br /><a
+              href="step_4_-_using_the_signing_service_manager.htm"
+              title=""
+              >Bước 6 - Sử dụng Trình quản lý dịch vụ</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

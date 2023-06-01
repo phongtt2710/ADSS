@@ -1,0 +1,994 @@
+<html>
+  <head>
+    <title>Tạo hồ sơ chứng chỉ CV - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('47','Tạo hồ sơ chứng chỉ CV');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_certification_service.htm"
+              title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_3_-_creating_a_certification_profile.htm"
+              title=""
+              >Bước 2 - Tạo hồ sơ</a
+            >&nbsp;&gt;&nbsp;<a
+              href="creating_a_cv_certificate_profile.htm"
+              title=""
+              >Tạo hồ sơ chứng chỉ CV</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Tạo hồ sơ chứng chỉ CV</span></p>
+      <p>
+        <span style="text-align: left"
+          >Bước này xác định cách&nbsp;tạo hồ sơ chứng chỉ CV trong Dịch vụ
+          chứng nhận.&nbsp;<span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: left;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >Hồ sơ chứng chỉ CV là một tập hợp các tham số được định cấu hình
+            trong Dịch vụ chứng nhận ADSS xác định các đặc điểm của chứng chỉ.
+            Các cấu hình được tạo để quản lý các chế độ xử lý yêu cầu, tức là Tự
+            động / Thủ công và các thuộc tính chứng chỉ khác</span
+          ></span
+        >
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Để quản lý Hồ sơ Chứng chỉ CV, hãy điều hướng&nbsp;đến màn hình sau
+        trong Bảng điều khiển máy chủ ADSS:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/Cvcert.jpg"
+          style="
+            border-width: 1px;
+            border-style: solid;
+            width: 880px;
+            height: 185px;
+          "
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-weight: 400"
+          >Để tạo hồ sơ mới, hãy nhấp vào biểu
+          tượng&nbsp;<strong>Mới</strong>&nbsp;hoặc tạo bản sao của hồ sơ hiện
+          có bằng cách nhấp vào&nbsp;<strong>Tạo một bản sao</strong>&nbsp;nút.
+          Nhấp vào</span
+        ><strong>Mới</strong> sẽ hiển thị màn hình sau:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/CertServ-CVCertProfile-New.png"
+          style="
+            width: 834px;
+            height: 600px;
+            border-width: 1px;
+            border-style: solid;
+          "
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Trong trường hợp DVCA, các trường sau sẽ được hiển thị trong Chế độ xử
+        lý yêu cầu:&nbsp;<br />
+        <br />
+        <img
+          alt=""
+          src="../images/DVCA-ReqProcessMode.jpg"
+          style="
+            width: 834px;
+            height: 242px;
+            border-width: 1px;
+            border-style: solid;
+          "
+        /><br />
+        <br />
+        Các mục cấu hình như sau:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                vertical-align: top;
+                font-weight: bold;
+                width: 150pt;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              Items
+            </td>
+            <td
+              valign="top"
+              style="
+                vertical-align: top;
+                font-weight: bold;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              Mô tả
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Nhận dạng hồ sơ</strong
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Định nghĩa như sau:
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Trạng thái
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Hồ sơ chứng chỉ CV có thể được đánh dấu Hoạt động hoặc Không hoạt
+              động. Lưu ý: hồ sơ chứng chỉ CV không hoạt động sẽ không được sử
+              dụng để xử lý các yêu cầu chứng nhận.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              ID hồ sơ
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Mã định danh duy nhất do hệ thống xác định cho cấu hình này.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Tên hồ sơ
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Tên duy nhất do Toán tử xác định để dễ dàng nhận dạng con người
+              hơn trong Bảng điều khiển vận hành ADSS.&nbsp;<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Mô tả hồ sơ
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Điều này có thể được sử dụng để mô tả hồ sơ chứng chỉ CV chi tiết
+              hơn (ví dụ: trong trường hợp nào hồ sơ chứng chỉ này sẽ được sử
+              dụng và / hoặc loại cài đặt hồ sơ chứng chỉ giữ, v.v.). Điều này
+              chỉ dành cho mục đích thông tin.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong>Chi tiết chứng chỉ</strong>
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Định nghĩa như sau:</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Mẫu chứng chỉ CV
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Trường này cho phép toán tử chọn mẫu cho các chứng chỉ được cấp
+                bằng cách sử dụng cấu hình này.</span
+              >&nbsp;<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Sử dụng Thời hạn hiệu lực từ Mẫu
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Nút radio này cho phép người vận hành sử dụng thời hạn hiệu lực
+              được xác định trong Mẫu chứng chỉ CV đã chọn.&nbsp;&nbsp;
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Sử dụng Thời hạn hiệu lực tùy chỉnh
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nút radio này cho phép người vận hành xác định thủ công thời
+                hạn hiệu lực của các chứng chỉ sẽ được cấp bằng cấu hình
+                này.&nbsp;<span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Nhà điều hành có thể chọn số Năm, Tháng hoặc Ngày từ trường
+                  thả xuống và xác định giá trị cần thiết trong trường tương
+                  ứng.</span
+                ></span
+              >
+              <ol></ol>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Chế độ xử lý yêu cầu</strong
+              ><br />
+            </td>
+            <td
+              valign="top"
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Định nghĩa như sau:&nbsp;
+              <ul></ul>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Tự động<br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div>
+                Các yêu cầu ở chế độ Tự động sẽ được Dịch vụ Chứng nhận xử lý tự
+                động, nơi không cần bất kỳ người vận hành nào can thiệp thủ
+                công. Các yêu cầu khác nhau trong trường hợp cả CVCA và DVCA như
+                hình dưới đây:<br />
+                <ul>
+                  <li>
+                    Đối với phiên bản CVCA:
+                    <ul>
+                      <li>
+                        <strong>Yêu cầu chứng chỉ CA:</strong> SPOC thực hiện
+                        các yêu cầu này để nhận Chứng chỉ CA bao gồm CVCA và
+                        chứng chỉ liên kết.&nbsp;
+                      </li>
+                      <li>
+                        <strong>Yêu cầu chứng chỉ nước ngoài:</strong> để có
+                        được chứng chỉ cho DVCA nước ngoài
+                      </li>
+                      <li>
+                        <strong>Yêu cầu chứng chỉ trong nước:</strong> để có
+                        được chứng chỉ cho DVCA trong nước<br />
+                        <br />
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Đối với phiên bản DVCA:
+                    <ul>
+                      <li>
+                        <strong>Yêu cầu chứng chỉ CA:</strong> Hệ thống kiểm tra
+                        thực hiện các yêu cầu này để có được DVCA và chứng chỉ
+                        CVCA gốc.&nbsp;
+                      </li>
+                      <li>
+                        <strong>Yêu cầu chứng chỉ hệ thống kiểm tra:</strong>để
+                        có được chứng chỉ hệ thống kiểm định do DVCA cấp;
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Cẩm nang
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Các yêu cầu ở chế độ Thủ công sẽ được xử lý thủ công, nơi người
+                vận hành có thể xem xét nội dung của yêu cầu, viện dẫn bất kỳ
+                quy tắc kiểm tra nào và phê duyệt hoặc từ chối yêu
+                cầu.&nbsp;&nbsp;</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Xử lý các yêu cầu được xác thực mà không cần phê duyệt
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              Bằng cách đánh dấu hộp kiểm này, các yêu cầu được xác thực sẽ được
+              xử lý tự động ngay cả khi chúng được chọn cho chế độ Thủ công. Các
+              yêu cầu được xác thực được CVCA nước ngoài chấp thuận trong khi
+              yêu cầu chứng chỉ DVCA nước ngoài bằng cách tính toán chữ ký trên
+              yêu cầu chứng chỉ bằng khóa CVCA. Một dạng yêu cầu xác thực khác
+              là những yêu cầu trong đó DVCA (trong nước / nước ngoài) yêu cầu
+              khóa lại chứng chỉ và tính toán chữ ký trên yêu cầu chứng chỉ bằng
+              khóa cũ của nó. Chữ ký đặc biệt trên yêu cầu chứng chỉ có thể được
+              xác minh kỹ thuật số bằng khóa công khai có liên quan và do phê
+              duyệt thủ công này có thể được bỏ qua cho các yêu cầu
+              đó.&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><br /> </span
+              ><br />
+              <strong>Ghi chú: </strong>Hộp kiểm này vẫn bị vô hiệu hóa nếu chỉ
+              chọn 'Yêu cầu chứng chỉ CA' cho chế độ Thủ công vì đối với các yêu
+              cầu này, điều này không liên quan.&nbsp;
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <br />
+      </div>
+      <div
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        Danh sách các cấu hình chứng chỉ hiện có có thể được sắp xếp theo thứ tự
+        tăng dần hoặc giảm dần bằng cách chọn một cột bảng từ danh sách thả
+        xuống.&nbsp;
+      </div>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <p>
+          Nhấp vào<strong>'Search'</strong>&nbsp;nút trên trang chính Hồ sơ
+          chứng chỉ CV sẽ hiển thị màn hình sau:
+        </p>
+        <p style="font-weight: 400">
+          <img
+            alt=""
+            src="../images/CertServ-CVCertProfile-Search.png"
+            style="
+              width: 840px;
+              height: 235px;
+              border-width: 1px;
+              border-style: solid;
+            "
+          />
+        </p>
+        <p style="font-weight: 400">
+          Hồ sơ có thể được tìm kiếm dựa trên Trạng thái, ID hồ sơ, Tên hồ sơ và
+          Thời hạn hiệu lực. Nếu một tìm kiếm dựa trên nhiều giá trị, thì chúng
+          sẽ được kết hợp với nhau bằng cách sử dụng toán hạng "AND" và do đó
+          chỉ các bản ghi đáp ứng tất cả các tiêu chí mới được trình bày.<br />
+          <!-- Display tip bubble with icon and colored background. -->
+        </p>
+        <div class="TipBubble">
+          <br />
+          &nbsp;<span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như
+            ký tự đại diện</span
+          >.
+        </div>
+      </div>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <p
+          class="Asc_See_Also"
+          style="
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: orange;
+          "
+        >
+          Xem thêm
+        </p>
+        <div class="Asc_Sibling_Page_List" style="font-size: 13px">
+          <div class="var_Sibling_Page_List">
+            <a href="creating_an_identity_profile.htm" title=""
+              >Tạo hồ sơ chứng nhận</a
+            ><br /><a href="creating_an_attribute_profile.htm" title=""
+              >Tạo hồ sơ chứng chỉ thuộc tính</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <title>Cấu hình tạo chứng chỉ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('130','Cấu hình tạo chứng chỉ');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go&gt; Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo Hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="certificate_generation.htm" title=""
+              >Cấu hình tạo chứng chỉ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span
+          class="Asc_PageName"
+          style="
+            color: #000000;
+            font-family: Verdana;
+            font-size: 20px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 700;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+          "
+          >Cấu hình tạo chứng chỉ</span
+        >
+      </p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p><span style="font-family: arial"></span></p>
+      <p>
+        Để tạo hồ sơ Go&gt;Sign mới cho Tạo chứng chỉ bằng cách sử dụng
+        Đi&gt;Đăng ký Màn hình nền, nhấp vào&nbsp;<strong style="font-family: arial"
+          >Mới</strong
+        >&nbsp;cái nút. Điều này sẽ trình bày trình hướng dẫn sau:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/1557384760478.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Mỗi phần tử của biểu mẫu được mô tả dưới đây:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Trạng thái</td>
+            <td>
+                Hồ sơ Go&gt;Sign có thể được đánh dấu là Đang hoạt động hoặc Không hoạt động.&nbsp; Ghi chú
+                rằng một hồ sơ không hoạt động sẽ không được sử dụng để xử lý các yêu cầu
+                được tạo bởi ứng dụng khách.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>ID hồ sơ</td>
+            <td>
+                Một trường bắt buộc cung cấp một giá trị duy nhất do hệ thống xác định
+                định danh cho hồ sơ này.
+            </td>
+          </tr>
+          <tr>
+            <td>Tên hồ sơ</td>
+            <td>
+                Tên duy nhất bắt buộc được xác định bởi Quản trị viên máy chủ ADSS
+                để nhận dạng hồ sơ dễ dàng hơn trong Nhà điều hành ADSS
+                Bảng điều khiển.
+            </td>
+          </tr>
+          <tr>
+            <td>Mô tả tiểu sử</td>
+            <td>
+                Điều này có thể được sử dụng để mô tả hồ sơ chi tiết hơn (ví dụ: trong
+                hồ sơ Go&gt;Sign này sẽ được sử dụng trong những trường hợp nào). Đây là
+                chỉ cho mục đích thông tin.
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Ký tài liệu</td>
+            <td valign="top">
+                Chọn tùy chọn này nếu bạn muốn tạo hồ sơ Go&gt;Sign cho
+                ký tài liệu bằng Go&gt;Sign
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Desktop</span
+              >.
+              <a href="document_signing.htm" target="_blank">Bấm vào đây</a> vì
+              tài liệu ký kết tài liệu.
+            </td>
+          </tr>
+          <tr>
+            <td>Tạo chứng chỉ</td>
+            <td>
+                Chọn tùy chọn này nếu bạn muốn tạo hồ sơ Go&gt;Sign cho
+                tạo chứng chỉ bằng cách sử dụng Go&gt;Sing
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Desktop</span
+              >.
+            </td>
+          </tr>
+          <tr>
+            <td>PKCS#10/CSR Creation<br /></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chọn tùy chọn này nếu bạn muốn tạo Hồ sơ Go&gt;Sign cho
+                Tạo PKCS#10/CSR bằng Go&gt;Sign Desktop</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p></p>
+      Nhấp vào nút Tiếp theo sẽ hiển thị&nbsp;Tạo chứng chỉ
+       Cài đặt&nbsp;trang.
+      <div class="Asc_Sibling_Page_List">
+        <div class="iconpanel">
+          <div align="center">
+            <a href="certificate_generation_settings.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="certificate_generation_settings.htm" title=""
+              >Cài đặt tạo chứng chỉ</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="key_store_settings_.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="key_store_settings_.htm" title="">Cài đặt lưu trữ khóa</a>
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="service_settings.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="service_settings.htm" title="">Cài đặt dịch vụ</a>
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="advanced_settings1.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="advanced_settings1.htm" title="">Cài đặt nâng cao</a>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+      <div>
+        <p class="Asc_See_Also">Xem thêm</p>
+        <div class="Asc_Sibling_Page_List">
+          <div class="var_Sibling_Page_List">
+            <a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            ><br /><a href="pkcs10_csr_creation.htm" title=""
+              >Tạo PKCS10/CSR</a
+            ><br /><a href="supported_signature_type.htm" title=""
+              >Các loại chữ ký được hỗ trợ</a
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

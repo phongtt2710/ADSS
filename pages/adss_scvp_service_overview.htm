@@ -1,0 +1,280 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ ADSS SCVP - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('19','ADSS SCVP Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiến trúc</a
+            >&nbsp;&gt;&nbsp;<a href="adss_scvp_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS SCVP</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Tổng quan về dịch vụ ADSS SCVP </span></p>
+      <span style="font-size: 13px">
+        <div>
+          <p style="font-family: arial; text-align: justify">
+            <span style="font-size: 14px; text-align: left"></span>
+          </p>
+        </div>
+      </span>
+      <div>
+        <p style="text-align: justify">
+          <span style="text-align: left"
+            >Dịch vụ ADSS SCVP&nbsp;hỗ trợ Giao thức xác thực chứng chỉ dựa trên
+            máy chủ (SCVP),&nbsp;RFC 5055. &nbsp;Đây là giao thức phản hồi yêu
+            cầu được mã hóa ASN.1 để xác định đường dẫn giữa chứng chỉ số X.509
+            và gốc đáng tin cậy; và xác thực đường dẫn đó theo một chính sách
+            xác thực cụ thể. &nbsp;SCVP hỗ trợ hai chế độ hoạt động có thể được
+            sử dụng kết hợp hoặc riêng biệt:</span
+          >
+        </p>
+      </div>
+      <div>
+        <ol>
+          <li>
+            Khám phá đường dẫn được ủy quyền (DPD); để khám phá đường dẫn giữa
+            chứng chỉ số X.509 và gốc đáng tin cậy, và
+          </li>
+          <li>
+            Xác thực đường dẫn được ủy quyền (DPV); để xác thực đường dẫn theo
+            chính sách xác thực đã xác định trong ADSS Server.
+          </li>
+        </ol>
+        Dịch vụ ADSS SCVP vượt trội vì khả năng mở rộng, khả năng phục hồi và
+        khả năng xác định trước các chính sách xác thực khác nhau cho từng
+        CA;&nbsp;và để lưu vào bộ nhớ cache các kết quả xác thực theo cách đảm
+        bảo hiệu suất xác thực của nó được tối ưu hóa. Chính sách xác thực có
+        thể được đặt thành xác thực cơ bản hoặc có thể bao gồm một loạt các tùy
+        chọn xác thực nâng cao và cũng có thể xác định chính sách cho các CA
+        chưa đăng ký. Sự chú ý đến chi tiết trong quản lý bảo mật bao gồm kiểm
+        soát kép tùy chọn các tính năng cụ thể, báo cáo quản lý và chế độ xem
+        nhật ký giao dịch của thông tin xác thực là trước bất kỳ điều gì được
+        thấy ở nơi khác và những khía cạnh này là chìa khóa để giảm thiểu thời
+        gian và chi phí của nhân viên hoạt động.
+      </div>
+      <div>
+        <br />
+        Một luồng công việc điển hình của Dịch vụ SCVP như sau:
+      </div>
+      <div></div>
+      <div><br /></div>
+      <div>
+        <div style="text-align: center">
+          <img
+            alt=""
+            src="../images/ADSS SCVP Service .jpg"
+            style="width: 830px"
+          />
+        </div>
+        <br />
+        <ol>
+          <li>
+            Bên dựa vào (người dùng cuối hoặc ứng dụng kinh doanh của khách
+            hàng) gửi yêu cầu xác thực chứng chỉ đến Dịch vụ ADSS SCVP.
+          </li>
+          <li>
+            Dịch vụ ADSS SCVP thực hiện tất cả các kiểm tra xác thực chứng chỉ
+            tiêu chuẩn để đảm bảo rằng chứng chỉ không hết hạn và được cấp bởi
+            CA được công nhận và đáng tin cậy, v.v. &nbsp;Là một phần của cơ chế
+            xác thực chứng chỉ này, ADSS Server cũng sẽ yêu cầu thông tin trạng
+            thái chứng chỉ từ nhà cung cấp trạng thái chứng chỉ có liên quan
+            dưới dạng CRL mà nó truy xuất thường xuyên dựa trên chính sách bỏ
+            phiếu cụ thể hoặc thông qua yêu cầu OCSP.
+          </li>
+          <li>
+            Phản hồi SCVP sẽ được soạn dựa trên trạng thái chứng chỉ và / hoặc thông tin bổ sung theo yêu cầu của người yêu cầu trong yêu cầu.
+          </li>
+          <li>
+            Sau đó, Dịch vụ ADSS SCVP sẽ cung cấp phản hồi xác thực chứng chỉ hiển thị trạng thái của chứng chỉ trong phản hồi là "hợp lệ" hoặc "không hợp lệ".
+          </li>
+        </ol>
+        <div style="text-align: justify">
+            Dịch vụ ADSS SCVP cũng có thể hoạt động ở chế độ proxy, chuyển tiếp hoặc chuyển tiếp yêu cầu SCVP đến một SCVP Responder khác.
+        </div>
+      </div>
+      <div>
+        <div style="text-align: justify">
+          <span style="font-family: arial"></span>
+        </div>
+        <div class="pagelist">
+          <p
+            class="Asc_See_Also"
+            style="
+              font-size: 14px;
+              font-weight: bold;
+              font-style: italic;
+              color: orange;
+              font-family: Verdana;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              orphans: 2;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-align: left;
+            "
+          >
+            Xem thêm
+          </p>
+          <p></p>
+          <div
+            class="Asc_Sibling_Page_List"
+            style="
+              font-size: 13px;
+              font-family: Verdana;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              orphans: 2;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              color: #000000;
+              font-style: normal;
+              font-weight: normal;
+              text-align: left;
+            "
+          >
+            <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+              ><a
+                href="default.aspx#pageid=tsa_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=adss_xkms_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=adss_scvp_service1"
+                class="Asc_Sibling_Page_List"
+                target="_blank"
+                style="
+                  font-size: 13px;
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Dịch vụ ADSS SCVP</a
+              ><br />
+              <div class="var_Sibling_Page_List">
+                <a href="introduction4.htm" title=""
+                  >Danh tính đã được chứng minh, niềm tin được cung cấp</a
+                ><br /><a href="adss_server_features_and_benefits.htm" title=""
+                  >Các tính năng và lợi ích của máy chủ ADSS</a
+                ><br /><a href="adss_server_trust_services.htm" title=""
+                  >Dịch vụ tin cậy máy chủ ADSS</a
+                ><br /><a
+                  href="adss_server_architecture_interfaces.htm"
+                  title=""
+                  >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+                ><br /><a href="adss_server_-_signing_service.htm" title=""
+                  >Tổng quan về dịch vụ ký ADSS</a
+                ><br /><a href="adss_server_-_verification_service.htm" title=""
+                  >Tổng quan về dịch vụ xác minh ADSS</a
+                ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS OCSP</a
+                ><br /><a href="adss_server_-_tsa_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS TSA</a
+                ><br /><a href="adss_xkms_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS XKMS</a
+                ><br /><a href="adss_scvp_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS SCVP</a
+                ><br /><a href="adss_ltan_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS LTANS</a
+                ><br /><a href="adss_decryption_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ giải mã ADSS</a
+                ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+                  >Tổng quan về màn hình ADSS CRL</a
+                ><br /></div
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

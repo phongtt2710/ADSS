@@ -1,0 +1,688 @@
+<html>
+  <head>
+    <title>Cài đặt tạo chứng chỉ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('131','Cài đặt tạo chứng chỉ');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+            href="adss_go-sign_service.htm"
+            title=""
+            >ADSS Go&gt; Dịch vụ ký tên</a
+          >&nbsp;&gt;&nbsp;<a
+            href="configuring_the_go-sign_service.htm"
+            title=""
+            >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+          >&nbsp;&gt;&nbsp;<a
+            href="configuring_a_go-sign_profile.htm"
+            title=""
+            >Bước 1 - Tạo Hồ sơ Go-Sign</a
+          >&nbsp;&gt;&nbsp;<a
+              href="certificate_generation_settings.htm"
+              title=""
+              >Cài đặt tạo chứng chỉ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cài đặt tạo chứng chỉ</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p>
+        <span
+          style="
+            font-weight: normal;
+            font-family: arial;
+            font-size: 13px;
+            color: #000000;
+          "
+          class="subheading"
+        ></span>
+      </p>
+      <p>
+        Trang này được sử dụng để định cấu hình Cài đặt tạo chứng chỉ
+         sẽ được tạo trong Go&gt;Sign Desktop.
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/GoSign-GoSignProfile.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>thuật toán chính<br /></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chỉ định thuật toán khóa sẽ được sử dụng để tạo khóa
+                ghép nối từ Go&gt;Sign Desktop.</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li>RSA</li>
+                <li>ECDSA</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Curve Type</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chọn Loại đường cong sẽ được sử dụng để tạo khóa
+                ghép nối từ Go&gt;Sign Desktop. ADSS Server hỗ trợ như sau
+                Các loại đường cong:</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li>NIST P</li>
+                <li>SEC2 K</li>
+                <li>Brainpool R</li>
+                <li>Brainpool T</li>
+              </ul>
+              <div>
+                <strong>Ghi chú:</strong>Trình đơn thả xuống Loại đường cong sẽ là
+                chỉ khả dụng khi <strong>ECDSA</strong> thuật toán được chọn
+                trong trường thuật toán khóa.<br />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Độ dài phím<br /></td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chỉ định Độ dài khóa so với đã chọn ở trên
+                thuật toán.&nbsp;</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Các lựa chọn cho&nbsp;</span
+                  >RSA keys are&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp;
+                  <ul>
+                    <li>1024</li>
+                    <li>2048</li>
+                    <li>3072</li>
+                    <li>4096</li>
+                  </ul>
+                </li>
+              </ul>
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      background-color: #ffffff;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Các lựa chọn cho ECDSA</span
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp; phím là:</span
+                  ><br />
+                  <ul>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >160</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >192&nbsp;</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >224</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >256</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >320</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >384</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >512</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >521</span
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>mật khẩu mạnh<br /></td>
+            <td>
+                Chỉ định độ mạnh của mật khẩu bằng cách cung cấp thông thường mong muốn
+                sự biểu lộ.&nbsp; <br />
+              <br />
+              Xem liên kết sau để kiểm tra một số ví dụ về thông thường
+               biểu thức:<br />
+              <a
+                href="http://www.mkyong.com/regular-expressions/10-java-regular-expression-examples-you-should-know/"
+                target="_blank"
+                >http://www.mkyong.com/regular-expressions/10-java-regular-expression-examples-you-should-know/</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p>Nhấp vào nút Tiếp theo sẽ hiển thị trang Cài đặt Lưu trữ Khóa.</p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="key_store_settings_.htm" title="">Cài đặt lưu trữ khóa </a
+          ><br /><a href="service_settings.htm" title="">Cài đặt dịch vụ</a
+          ><br /><a href="advanced_settings1.htm" title="">Cài đặt nâng cao</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

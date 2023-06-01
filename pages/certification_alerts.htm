@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <title>Cảnh báo - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('63','Cảnh báo');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a href="certification_alerts.htm" title=""
+              >Cảnh báo</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cảnh báo</p>
+      <p style="text-align: justify">
+        Dịch vụ có thể được cấu hình để tạo cảnh báo qua email, SMS và / hoặc
+        SNMP khi các sự kiện sau xảy ra:
+      </p>
+      <ul>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            <span style="background-color: #ffffff"
+              >Không tạo được chứng chỉ
+            </span>
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            <span style="background-color: #ffffff"
+              >Không thể liên lạc với thư mục</span
+            >
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            <span style="background-color: #ffffff">Đã xảy ra lỗi nội bộ</span>
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            <span style="background-color: #ffffff"
+              >Nếu dịch vụ không thể sử dụng khóa ký nhật ký tại thời điểm lưu
+              trữ tự động</span
+            >
+          </div>
+        </li>
+        <li>
+          <div class="Bullet-dot" style="text-align: justify">
+            <span style="background-color: #ffffff"
+              >Khi quá trình lưu trữ hoàn tất thành công</span
+            >
+          </div>
+        </li>
+      </ul>
+      <p style="text-align: justify">
+        Các nhà khai thác hệ thống sẽ nhận được các cảnh báo này cũng có thể
+        được cấu hình tại đây.
+      </p>
+      <p style="text-align: justify">
+        <span style="background-color: #ffffff"
+          ><img
+            alt=""
+            style="border-width: 1px; border-style: solid"
+            src="../images/CAlert.PNG"
+          /><br />
+        </span>
+      </p>
+      <span style="text-align: left"
+        >Các mục cấu hình như sau:<br />
+        <br />
+        <table class="Asc_Table">
+          <tbody>
+            <tr>
+              <td>Items<br /></td>
+              <td>Mô tả<br /></td>
+            </tr>
+            <tr>
+              <td>Không thể tạo chứng chỉ<br /></td>
+              <td>
+                Dịch vụ chứng nhận ADSS sẽ gửi cảnh báo đến các nhà khai thác có
+                liên quan khi không tạo được chứng chỉ vì bất kỳ lý do gì.
+                <br />
+              </td>
+            </tr>
+            <tr>
+              <td>Không thể liên lạc với thư mục<br /></td>
+              <td>
+                Khi Active Directory không thể giao tiếp với Dịch vụ Chứng nhận
+                do một số lỗi mạng, Máy chủ ADSS sẽ gửi cảnh báo cho nhà điều
+                hành.<br />
+              </td>
+            </tr>
+            <tr>
+              <td>Đã xảy ra lỗi nội bộ<br /></td>
+              <td>
+                Khi được bật, Dịch vụ chứng nhận ADSS sẽ gửi cảnh báo khi xảy ra
+                lỗi nội bộ trong quá trình xử lý yêu cầu chứng nhận (ví dụ: cơ
+                sở dữ liệu không thể truy cập được). <br />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Không thể sử dụng Khóa ký nhật ký tại thời điểm lưu trữ tự
+                động<br />
+              </td>
+              <td>
+                Khi được bật, cảnh báo sẽ được gửi bất cứ khi nào hệ thống không
+                thể sử dụng Khóa ký nhật ký tại thời điểm lưu trữ tự động.
+                <br />
+                <strong>Ghi chú:</strong>&nbsp;Khóa ký nhật ký được cấu hình
+                trong&nbsp;<a href="system_certificates.htm" target="_blank"
+                  >Cài đặt chung</a
+                >&nbsp;module. <br />
+              </td>
+            </tr>
+            <tr>
+              <td>Khi lưu trữ được thực hiện<br /></td>
+              <td>
+                Khi được bật, dịch vụ sẽ gửi cảnh báo bất cứ khi nào tự động lưu
+                trữ được thực hiện. <br />
+              </td>
+            </tr>
+            <tr>
+              <td>&gt;&gt; và &lt;&lt;<br /></td>
+              <td>
+                Các nút này được sử dụng để chọn và bỏ chọn các nhà khai thác hệ
+                thống mà cảnh báo được gửi đến. Các toán tử trong danh sách "Nhà
+                khai thác được chọn" sẽ nhận được các cảnh báo được định cấu
+                hình<br />
+              </td>
+            </tr>
+          </tbody>
+        </table> </span
+      ><br />
+      Bấm <strong>Save </strong>để các thay đổi có hiệu lực.
+      <p>
+        <span
+          class="subheading"
+          style="font-family: arial; font-size: 16px; color: #cbc9ba"
+        ></span>
+      </p>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        Xem thêm
+      </p>
+      <p></p>
+      <div
+        class="pagelist"
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <span style="text-align: justify; font-size: 13px"
+          >
+          <div class="var_Sibling_Page_List">
+            <a href="configuring_the_certification_service.htm" title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            ><br /><a href="directory_integration.htm" title=""
+              >Tích hợp thư mục</a
+            ><br /><a href="x509_certificates.htm" title=""
+              >Giấy chứng nhận danh tính</a
+            ><br /><a href="attribute_certificates.htm" title=""
+              >Chứng chỉ thuộc tính</a
+            ><br /><a href="cv_certificate.htm" title="">Giấy chứng nhận CV</a
+            ><br /><a href="cv_certificate_templates.htm" title=""
+              >Mẫu chứng chỉ CV</a
+            ><br /><a href="certification_transactions_log.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ><br /><a href="certification_logs_archiving.htm" title=""
+              >Lưu trữ nhật ký</a
+            ><br /><a href="certification_alerts.htm" title="">Cảnh báo</a><br /><a
+              href="certification_management_reporting.htm"
+              title=""
+              >Báo cáo quản lý</a
+            ><br /><a
+              href="optimising_adss_certification_server_performance.htm"
+              title=""
+              >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</a
+            ><br /><a href="service_urls1.htm" title=""
+              >URL giao diện dịch vụ chứng nhận</a
+            ><br />
+            </div>
+        </span>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+  </body>
+</html>

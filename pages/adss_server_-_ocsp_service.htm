@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ ADSS OCSP - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('16','ADSS OCSP Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiến trúc</a
+            >&nbsp;&gt;&nbsp;<a href="adss_server_-_ocsp_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS OCSP</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName" style="text-align: justify">
+        Tổng quan về dịch vụ ADSS OCSP
+      </p>
+      <p class="Basictable" style="text-align: justify">
+        Dịch vụ OCSP là một mô-đun máy chủ cung cấp thông tin về trạng thái thu
+        hồi chứng chỉ số trong thời gian thực. Nó hoàn toàn tuân thủ IETF RFC
+        6960 và tuân thủ một phần với Giao thức trạng thái chứng chỉ trực tuyến
+        RFC 5019 (OCSP). Một quy trình làm việc điển hình như sau:
+      </p>
+      <ol>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Khách hàng cuối gửi email đã ký, đơn đặt hàng đã ký, hóa đơn, báo
+            cáo, v.v. Giấy chứng nhận của người ký có thể đã được cấp bởi nhiều
+            CA khác nhau.
+          </div>
+        </li>
+        <li>
+          <div style="text-align: justify">
+            Ứng dụng khách của Bên dựa muốn ủy quyền sự phức tạp của việc kiểm
+            tra trạng thái chứng chỉ cho Máy chủ ADSS, do đó nó thực hiện yêu
+            cầu OCSP cho Dịch vụ ADSS OCSP và chuyển (các) mã định danh chứng
+            chỉ số trong yêu cầu này.
+          </div>
+        </li>
+      </ol>
+      <div>
+        Dịch vụ ADSS OCSP thực hiện tất cả các kiểm tra trạng thái chứng chỉ
+        tiêu chuẩn và trả về phản hồi OCSP cho ứng dụng khách.<br />
+      </div>
+      <ol></ol>
+      <p style="text-align: center">
+        <br />
+        <img
+          alt=""
+          src="../images/ADSS OCSP Service .jpg"
+          style="width: 850px"
+        />
+      </p>
+      <strong> <br /> </strong>Lưu ý Máy chủ ADSS có thể không có thẩm quyền đối
+      với chứng chỉ có trạng thái đang được yêu cầu. Trong trường hợp này, nó có
+      thể thực hiện một yêu cầu OCSP mới và gửi yêu cầu này đến máy chủ OCSP bên
+      ngoài chịu trách nhiệm về chứng chỉ này. Phản hồi nhận được từ người trả
+      lời OCSP ngang hàng sau đó được Máy chủ ADSS nhận được và có thể được
+      chuyển tiếp lại cho người yêu cầu ban đầu.
+      <p class="Asc_Heading" style="text-align: justify">
+        Tính sẵn sàng cao, triển khai hiệu suất cao
+      </p>
+      <p style="text-align: justify">
+        Máy chủ ADSS và đặc biệt là các dịch vụ như ADSS OCSP có thể được triển khai trong cấu hình cân bằng tải, tính sẵn sàng cao. &nbsp;
+      </p>
+      <p style="text-align: center">
+        <img
+          alt=""
+          src="../images/ADSS OCSP HA Deployment.png"
+          style="width: 553px; height: 292px"
+        />
+      </p>
+      <p
+        class="Asc_See_Also"
+        style="
+          font-size: 14px;
+          font-weight: bold;
+          font-style: italic;
+          color: orange;
+          font-family: Verdana;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        Xem thêm
+      </p>
+      <p></p>
+      <div
+        class="Asc_Sibling_Page_List"
+        style="
+          font-size: 13px;
+          color: #000000;
+          font-family: Verdana;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: left;
+        "
+      >
+        <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+          ><a
+            href="default.aspx#pageid=ocsp_service"
+            target="_blank"
+            style="
+              text-decoration: none;
+              color: #164587;
+              font-family: Verdana;
+              font-size: 13px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+            "
+            >Dịch vụ ADSS OCSP</a
+          ><br />
+          <div class="var_Sibling_Page_List">
+            <a href="introduction4.htm" title=""
+              >Danh tính đã được chứng minh, niềm tin được cung cấp</a
+            ><br /><a href="adss_server_features_and_benefits.htm" title=""
+              >Các tính năng và lợi ích của máy chủ ADSS</a
+            ><br /><a href="adss_server_trust_services.htm" title=""
+              >Dịch vụ tin cậy máy chủ ADSS</a
+            ><br /><a
+              href="adss_server_architecture_interfaces.htm"
+              title=""
+              >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+            ><br /><a href="adss_server_-_signing_service.htm" title=""
+              >Tổng quan về dịch vụ ký ADSS</a
+            ><br /><a href="adss_server_-_verification_service.htm" title=""
+              >Tổng quan về dịch vụ xác minh ADSS</a
+            ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS OCSP</a
+            ><br /><a href="adss_server_-_tsa_service.htm" title=""
+              >Tổng quan về dịch vụ ADSS TSA</a
+            ><br /><a href="adss_xkms_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS XKMS</a
+            ><br /><a href="adss_scvp_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS SCVP</a
+            ><br /><a href="adss_ltan_service_overview.htm" title=""
+              >Tổng quan về dịch vụ ADSS LTANS</a
+            ><br /><a href="adss_decryption_service_overview.htm" title=""
+              >Tổng quan về dịch vụ giải mã ADSS</a
+            ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+              >Tổng quan về màn hình ADSS CRL</a
+            ><br /></div></span>
+      </div>
+    </div>
+  </body>
+</html>

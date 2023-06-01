@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Bước 3 - Cấu hình màn hình CRL - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('74','Bước 3 - Cấu hình màn hình CRL');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_signing_service3.htm"
+              title=""
+              >Cấu hình dịch vụ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_3_-_configuring_crl_monitor.htm"
+              title=""
+              >Bước 3 - Cấu hình màn hình CRL</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Bước 3 - Cấu hình màn hình CRL</p>
+      <p style="text-align: justify">
+        Mô-đun Giám sát CRL được Dịch vụ ký sử dụng để kiểm tra thông tin thu
+        hồi chứng chỉ cho các CA được đăng ký trong Trình quản lý tin cậy với
+        chính sách xác thực được đặt thành "Bộ nhớ cache CRL cục bộ". Đảm bảo
+        chính sách truy xuất CRL được cấu hình chính xác cho các CA trong ADSS
+        <a
+          href="page.aspx?pageid=Step_3___Configuring_CRL_Settings"
+          target="_blank"
+          >Trình quản lý tin cậy</a
+        >. Cũng đảm bảo rằng
+        <a href="page.aspx?pageid=CRL_Manager_Service" target="_blank"
+          >CRL Monitor</a
+        >
+        đang chạy và nó đang bỏ phiếu cho CRL cho những CA có tính năng bỏ phiếu
+        tự động được bật.
+      </p>
+      <p style="text-align: justify">
+        <span style="text-align: left"
+          >Đối với các CA chưa đăng ký, CRL hiện tại của họ sẽ được kéo động khi
+          yêu cầu xác thực đầu tiên được nhận và lưu vào bộ nhớ cache cho đến
+          khi hết hạn hoặc trong khoảng thời gian được chỉ định trong tệp thuộc
+          tính hệ thống. Đối với các CA phát hành quá mức CRL trước thời gian
+          cập nhật tiếp theo, chúng tôi khuyên bạn nên đăng ký chúng để CRL
+          Monitor có thể kiểm tra các CRL được cấp quá mức đó và tải xuống
+          thường xuyên. Điều này sẽ tối ưu hóa quá trình xác thực.</span
+        >
+      </p>
+      <p style="text-align: justify">
+        <span style="text-align: left"
+          >Đối với những CA yêu cầu xác thực OCSP, Máy chủ ADSS chứa máy khách
+          OCSP tích hợp sẵn và các chi tiết này được xác định trong mô-đun Trình
+          quản lý tin cậy. Khi được yêu cầu và khi được cấp phép, Dịch vụ OCSP
+          địa phương có thể được sử dụng để cung cấp quy trình xử lý thẩm quyền
+          xác thực OCSP cho một hoặc nhiều CA.</span
+        >
+      </p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a
+            href="step_2_-_generating_keys_certs_through_key_manager.htm"
+            title=""
+            >Bước 1 - Tạo khóa và chứng chỉ</a
+          ><br /><a
+            href="step_2_-_register_cas_using_trust_manager1.htm"
+            title=""
+            >Bước 2 - Đăng ký CA</a
+          ><br /><a href="step_3_-_configuring_a_signing_profile.htm" title=""
+            >Bước 4 - Định cấu hình hồ sơ ký</a
+          ><br /><a href="step_1_-_registering_client_applications.htm" title=""
+            >Bước 5 - Đăng ký ứng dụng kinh doanh</a
+          ><br /><a
+            href="step_4_-_using_the_signing_service_manager.htm"
+            title=""
+            >Bước 6 - Sử dụng Trình quản lý dịch vụ</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

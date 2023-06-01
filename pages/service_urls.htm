@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <title>Ký URL giao diện dịch vụ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('109','Ký URL giao diện dịch vụ');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a href="service_urls.htm" title=""
+              >Ký URL giao diện dịch vụ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Ký URL giao diện dịch vụ </span></p>
+      <p style="text-align: justify">
+        <span style="background-color: #ffffff"
+          >Dịch vụ ký ADSS sử dụng các URL khác nhau tùy thuộc vào giao thức
+          giao diện mà nó đang sử dụng hoặc chức năng mà nó đang thực hiện hoặc
+          liệu TLS có đang được sử dụng hay không.&nbsp;</span
+        ><span style="background-color: #ffffff"
+          >Chi tiết về giao thức giao diện được cung cấp trong Hướng dẫn dành
+          cho nhà phát triển ADSS riêng biệt.&nbsp;</span
+        ><span style="background-color: #ffffff"
+          >Trang này mô tả các URL khác nhau được sử dụng bởi Dịch vụ ký
+          ADSS:</span
+        >
+      </p>
+      <p class="Asc_Heading" style="text-align: justify">Giao diện DSS</p>
+      <p>
+        Các URL dưới đây nên được sử dụng bởi các ứng dụng khách khi gửi yêu cầu
+        ký tài liệu bằng giao thức OASIS DSS tiêu chuẩn:
+      </p>
+      <blockquote
+        style="margin: 0px 0px 0px 40px; border: medium none; padding: 0px"
+      >
+        <table class="Asc_Table_Interfaces">
+          <tbody>
+            <tr>
+              <td>&nbsp;Plain HTTP:</td>
+              <td>&nbsp;http://MachineName:8777/adss/signing/dss</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Server Authentication:</td>
+              <td>&nbsp;https://MachineName:8778/adss/signing/dss</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Mutual Authentication:</td>
+              <td>&nbsp;https://MachineName:8779/adss/signing/dss</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <p class="Asc_Heading" style="text-align: justify">Giao diện HTTP</p>
+      <p>
+        Các URL dưới đây nên được các ứng dụng khách sử dụng khi gửi yêu cầu ký
+        tài liệu bằng giao thức ký tài liệu dựa trên HTTP (đây là giao diện được
+        tối ưu hóa cho hiệu suất cao hơn):
+      </p>
+      <blockquote
+        style="margin: 0px 0px 0px 40px; border: medium none; padding: 0px"
+      >
+        <table class="Asc_Table_Interfaces">
+          <tbody>
+            <tr>
+              <td>&nbsp;Plain HTTP:</td>
+              <td>&nbsp;http://MachineName:8777/adss/signing/hdsi</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Server Authentication:</td>
+              <td>&nbsp;https://MachineName:8778/adss/signing/hdsi</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Mutual Authentication:</td>
+              <td>&nbsp;https://MachineName:8779/adss/signing/hdsi</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+      </blockquote>
+      <span class="Asc_Heading">Giao diện tạo trường trống</span>
+      <p>
+        Các URL dưới đây nên được sử dụng bởi các ứng dụng khách khi gửi các yêu
+        cầu Tạo trường trống đến dịch vụ ký:
+      </p>
+      <blockquote
+        style="margin: 0px 0px 0px 40px; border: medium none; padding: 0px"
+      >
+        <table class="Asc_Table_Interfaces">
+          <tbody>
+            <tr>
+              <td>&nbsp;Plain HTTP:</td>
+              <td>&nbsp;http://MachineName:8777/adss/signing/esi</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Server Authentication:</td>
+              <td>&nbsp;https://MachineName:8778/adss/signing/esi</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Mutual Authentication:</td>
+              <td>&nbsp;https://MachineName:8779/adss/signing/esi</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <div>
+        <strong style="color: #008000; font-size: medium" class="Asc_Heading">
+          <p></p>
+          <p></p>
+          <p>
+            <strong
+              class="Asc_Heading"
+              style="color: #008000; font-size: medium"
+            ></strong>
+          </p>
+        </strong>
+      </div>
+      <p><span class="Asc_Heading">Giao diện băm tài liệu</span></p>
+      <p>
+        <span style="background-color: #ffffff"></span>Các URL dưới đây nên được
+        sử dụng bởi các ứng dụng khách khi gửi tài liệu Hashing request đến dịch
+        vụ ký:
+      </p>
+      <blockquote
+        style="margin: 0px 0px 0px 40px; border: medium none; padding: 0px"
+      >
+        <table class="Asc_Table_Interfaces">
+          <tbody>
+            <tr>
+              <td>&nbsp;Plain HTTP:</td>
+              <td>&nbsp;http://MachineName:8777/adss/signing/dhi</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Server Authentication:</td>
+              <td>&nbsp;https://MachineName:8778/adss/signing/dhi</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Mutual Authentication:</td>
+              <td>&nbsp;https://MachineName:8779/adss/signing/dhi</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <p><span class="Asc_Heading">Giao diện lắp ráp tài liệu</span></p>
+      <p>
+        Các URL dưới đây nên được sử dụng bởi các ứng dụng khách khi gửi các yêu cầu Assembly tài liệu đến dịch vụ ký:
+      </p>
+      <blockquote
+        style="margin: 0px 0px 0px 40px; border: medium none; padding: 0px"
+      >
+        <table class="Asc_Table_Interfaces">
+          <tbody>
+            <tr>
+              <td>&nbsp;Plain HTTP:</td>
+              <td>&nbsp;http://MachineName:8777/adss/signing/sai</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Server Authentication:</td>
+              <td>&nbsp;https://MachineName:8778/adss/signing/sai</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Mutual Authentication:</td>
+              <td>&nbsp;https://MachineName:8779/adss/signing/sai</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <p><span class="Asc_Heading">Giao diện xác thực</span></p>
+      <p>
+        Các URL dưới đây nên được sử dụng bởi các ứng dụng khách khi gửi các yêu cầu Xác thực đến dịch vụ ký:
+      </p>
+      <blockquote
+        style="margin: 0px 0px 0px 40px; border: medium none; padding: 0px"
+      >
+        <table class="Asc_Table_Interfaces">
+          <tbody>
+            <tr>
+              <td>&nbsp;Plain HTTP:</td>
+              <td>&nbsp;http://MachineName:8777/adss/signing/auth</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Server Authentication:</td>
+              <td>&nbsp;https://MachineName:8778/adss/signing/auth</td>
+            </tr>
+            <tr>
+              <td>&nbsp;Mutual Authentication:</td>
+              <td>&nbsp;https://MachineName:8779/adss/signing/auth</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <br />
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="pagelist">
+        <span class="Asc_Sibling_Page_List"
+          ><div class="var_Sibling_Page_List">
+            <a href="configuring_the_adss_signing_service3.htm" title=""
+              >Cấu hình dịch vụ ký</a
+            ><br /><a href="step_3_-_pdf_sig_appearances1.htm" title=""
+              >Xuất hiện chữ ký PDF</a
+            ><br /><a href="pdf_signature_locations.htm" title=""
+              >Vị trí chữ ký PDF</a
+            ><br /><a href="signing_service_transaction_log_viewer.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ><br /><a href="authentication_logs.htm" title=""
+              >Nhật ký xác thực</a
+            ><br /><a href="signing_logs_archiving.htm" title=""
+              >Lưu trữ nhật ký</a
+            ><br /><a href="signing_service_alerts.htm" title="">Cảnh báo</a
+            ><br /><a href="signing_management_reporting.htm" title=""
+              >Báo cáo quản lý</a
+            ><br /><a
+              href="optimising_adss_signing_server_performance.htm"
+              title=""
+              >Tối ưu hóa hiệu suất máy chủ ký ADSS</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

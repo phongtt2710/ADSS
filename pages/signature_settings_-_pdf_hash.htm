@@ -1,0 +1,602 @@
+<html>
+  <head>
+    <title>Thuộc tính ký mã băm PDF/PAdES - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('121','Thuộc tính ký mã băm PDF/PAdES');parent.MenuItemSelected('adss_go-sign_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_go-sign_service.htm"
+              title=""
+              >ADSS Go&gt; Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_go-sign_service.htm"
+              title=""
+              >Định cấu hình Di chuyển&gt;Dịch vụ ký tên</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_a_go-sign_profile.htm"
+              title=""
+              >Bước 1 - Tạo Hồ sơ Go-Sign</a
+            >&nbsp;&gt;&nbsp;<a href="document_signing.htm" title=""
+              >Cấu hình ký tài liệu</a
+            >&nbsp;&gt;&nbsp;<a href="signature_settings.htm" title=""
+              >Cài đặt chữ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="signature_settings_-_pdf_hash.htm"
+              title=""
+              >Thuộc tính ký mã băm PDF/PAdES</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Thuộc tính ký mã băm PDF/PAdES</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p>
+        <span
+          style="
+            font-weight: normal;
+            font-family: arial;
+            font-size: 13px;
+            color: #000000;
+          "
+          class="subheading"
+        ></span>
+      </p>
+      <p>
+        Trang này được sử dụng để định cấu hình cài đặt ký PDF/PAdES Hash
+         sẽ được sử dụng bởi tiểu dụng Go Sign.
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/Go-Sign-HashSignAttrb.png"
+          style="width: 840px; height: 665px"
+        /><br />
+        <br />
+        Các mục cấu hình như sau:
+      </p>
+      <div>
+        <table class="Asc_Table">
+          <tbody>
+            <tr>
+              <td>Mục<br /></td>
+              <td>Mô tả</td>
+            </tr>
+            <tr>
+              <td>Loại chữ ký PDF</td>
+              <td>
+                <div style="text-align: justify"></div>
+                <div
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    text-align: justify;
+                  "
+                >
+                Một trường bắt buộc chọn loại chữ ký được
+                được sản xuất bởi hồ sơ Go Sign này. Các loại sau
+                chữ ký được hỗ trợ:<br />
+                  <strong
+                    ><br />
+                    Chữ ký PDF dựa trên ISO 32000-1:<br />
+                  </strong>
+                </div>
+                <ul
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                >
+                  <li>Chữ ký PDF tiêu chuẩn</li>
+                  <li style="text-align: left">
+                    Chữ ký PDF với dấu thời gian được nhúng
+                  </li>
+                  <li style="text-align: justify">
+                    <span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        background-color: #ffffff;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      ></span
+                    ><span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        background-color: #ffffff;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Chữ ký PDF với dấu thời gian được nhúng</span
+                    ><span>&nbsp;</span>và thông tin thu hồi
+                  </li>
+                </ul>
+                <div
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    text-align: justify;
+                  "
+                >
+                  <br />
+                </div>
+                <div
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    text-align: justify;
+                  "
+                >
+                  <strong>Chữ ký PDF nâng cao:</strong>
+                </div>
+                <ul>
+                  <li style="text-align: justify">
+                    PAdES-BES (Phần 3 - PAdES nâng cao)
+                  </li>
+                  <li style="text-align: justify">
+                    PAdES-BES với dấu thời gian nhúng
+                  </li>
+                </ul>
+                <div style="text-align: justify">
+                  <strong style="font-weight: bold"></strong
+                  ><strong
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: -webkit-left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                    "
+                    >Ghi chú:</strong
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: -webkit-left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;Chữ ký PDF dựa trên ISO 32000-1 có thể kiểm chứng được
+                    trong chữ ký Adobe Reader 7+ và PAdES dựa trên ETSI
+                    Tiêu chuẩn có thể kiểm chứng được trong Adobe Reader 10+.</span
+                  ><br
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: -webkit-left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                    "
+                  />
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      background-color: #ffffff;
+                      text-align: left;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Để biết thêm chi tiết</span
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      text-align: justify;
+                      background-color: #ffffff;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >xem phần&nbsp;</span
+                  ><a
+                    href="page.aspx?pageid=types"
+                    style="
+                      text-decoration: none;
+                      color: #2495d2;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-align: justify;
+                      background-color: #ffffff;
+                    "
+                    target="_blank"
+                    >Các loại chữ ký được hỗ trợ</a
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      background-color: #ffffff;
+                      text-align: left;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >.</span
+                  ><span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      text-align: justify;
+                      background-color: #ffffff;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Chữ ký được sản xuất tại</td>
+              <td style="text-align: justify">
+                Điều này xác định nơi chữ ký sẽ được tạo ra. giọt này
+                 xuống sẽ bị tắt theo mặc định đối với giá trị và ký PDF Hash
+                 Client sẽ được chọn mặc định trong đó.
+              </td>
+            </tr>
+            <tr>
+              <td>Chữ ký/Mối quan hệ tài liệu</td>
+              <td>
+                <div style="text-align: justify">
+                    Điều này xác định cách chữ ký và tài liệu tồn tại, tức là một
+                    bên trong cái kia hay chúng tồn tại riêng rẽ. Tiếp theo
+                    các tùy chọn được hỗ trợ cho chữ ký PDF:
+                </div>
+                <ul>
+                  <li style="text-align: justify">bao bọc</li>
+                  <li style="text-align: justify">tách ra</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>thuật toán băm</td>
+              <td>
+                <div style="text-align: justify">
+                    Thuật toán băm đã chọn được sử dụng như một phần của
+                    quá trình tạo chữ ký. Sau đây là những hỗ trợ
+                    thuật toán băm:&nbsp; &nbsp;&nbsp;
+                </div>
+                <ul>
+                  <li style="text-align: justify">SHA1</li>
+                  <li style="text-align: justify">
+                    SHA2 (SHA224, SHA256, SHA384, SHA512)
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Chữ ký EPES</td>
+              <td>
+                <div style="text-align: justify">
+                    Cài đặt chữ ký điện tử dựa trên chính sách rõ ràng (EPES) là
+                    chỉ khả dụng cho các loại Chữ ký PAdES. Bằng cách cho phép
+                    hộp kiểm Thêm mã định danh chính sách chữ ký,
+                    hồ sơ Go Sign có thể được sử dụng để sản xuất (EPES)
+                    chữ ký trong đó chính sách chữ ký OID, URI và thông báo người dùng
+                    được thêm vào trong chữ ký điện tử như quy định dưới đây.
+                </div>
+                <ol>
+                  <li>
+                    <div style="text-align: justify">
+                      <strong>ID đối tượng chính sách chữ ký</strong>
+                    </div>
+                    <div style="text-align: justify">
+                        Cung cấp OID chính sách chữ ký sẽ được thêm cho EPES
+                        chữ ký.
+                    </div>
+                  </li>
+                  <li>
+                    <div style="text-align: justify">
+                      <strong>URI chính sách chữ ký</strong>
+                    </div>
+                    <div style="text-align: justify">
+                        Cung cấp URI chính sách chữ ký sẽ được thêm cho EPES
+                        chữ ký. Nếu không có URI chính sách nào được xác định bên trong
+                        Đăng nhập hồ sơ sau đó cấu hình EPES sẽ được thực hiện
+                        trong tệp chính sách.properties nằm
+                        Tại:<strong>
+                            [Thư mục cài đặt ADSS]/dịch vụ/</strong
+                      >
+                    </div>
+                    <div style="text-align: justify">
+                        Mở tệp này trong bất kỳ trình soạn thảo văn bản nào và nhập chính sách OID và
+                        đường dẫn đến tài liệu chính sách
+                      <strong
+                        >e.g. 1.2.3.4.5 = "F:/Chính sách_Tệp"​<br />
+                        <br />
+                      </strong>
+                    </div>
+                    <span class="TipBubble">
+                      <div style="text-align: justify">
+                        Dịch vụ ADSS Go Sign có thể truy xuất chữ ký
+                         tài liệu chính sách theo một trong các cách sau:
+                      </div>
+                      <div style="text-align: justify"><br /></div>
+                      <div style="text-align: justify">
+                        Sử dụng URI chính sách được xác định trong hồ sơ Go Sign. ADSS
+                         Go Sign Service sẽ sử dụng URI chính sách này để truy xuất
+                         tài liệu chính sách có sẵn trực tuyến và giá trị băm của nó
+                         sẽ được tính toán và nhúng vào các thuộc tính đã ký
+                         của chữ ký.
+                      </div>
+                      <div style="text-align: justify"><br /></div>
+                      <div style="text-align: justify">
+                        Sử dụng tài liệu chính sách chữ ký được cấu hình cục bộ. Các
+                         ADSS Go Sign Service sẽ sử dụng con trỏ tệp văn bản này
+                         để truy xuất tài liệu chính sách đã lưu cục bộ, băm và
+                         nhúng nó vào các thuộc tính đã ký của chữ ký.
+                      </div>
+                    </span>
+                  </li>
+                  <li>
+                    <div style="text-align: justify">
+                      <strong>Chính sách chữ ký Thông báo người dùng</strong>
+                    </div>
+                    <div style="text-align: justify">
+                        Cung cấp thông báo người dùng sẽ được thêm vào EPES
+                        chữ ký.
+                    </div>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p>Nhấp vào nút Tiếp theo sẽ hiển thị trang Cài đặt Lưu trữ Khóa</p>
+      <p>
+        <span
+          style="
+            font-weight: normal;
+            text-align: justify;
+            font-family: arial;
+            font-size: 13px;
+            color: #000000;
+          "
+          class="subheading"
+        ></span>
+      </p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="pdf_signature1.htm" title="">Thuộc tính ký PDF/PAdES</a
+          ><br /><a href="cms_signature1.htm" title=""
+            >Thuộc tính ký CMS/CAdES</a
+          ><br /><a href="xml_signature1.htm" title=""
+            >Thuộc tính ký XML/XAdES</a
+          ><br /><a href="msword_signing_attributes.htm" title=""
+            >Thuộc tính ký MS Office</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

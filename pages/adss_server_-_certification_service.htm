@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <title>Tổng quan về dịch vụ chứng nhận ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('15','ADSS Certification Service Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiếm trúc</a
+            >&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_certification_service.htm"
+              title=""
+              >Tổng quan về dịch vụ chứng nhận ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p style="text-align: justify">
+        <span class="Asc_PageName">Tổng quan về dịch vụ chứng nhận ADSS </span>
+      </p>
+      <p style="text-align: justify">
+        Dịch vụ chứng nhận ADSS cho phép các ứng dụng khách yêu cầu tạo khóa và
+        chứng chỉ thay mặt cho người dùng cuối / khách hàng. Các khóa và chứng
+        chỉ này sau này có thể được sử dụng trong Dịch vụ ký ADSS để ký tài liệu
+        phía máy chủ như đã giải thích trong phần trước. Phần sau minh họa việc
+        sử dụng Dịch vụ chứng nhận ADSS với CA bên ngoài:
+      </p>
+      <div style="text-align: center">
+        <blockquote
+          style="margin: 0px 0px 0px 40px; border: none; padding: 0px"
+        >
+          <div style="text-align: center">
+            <img
+              alt=""
+              src="../images/ADSS Certification Service _1.jpg"
+              style="width: 850px"
+            /><span style="text-align: left"
+              >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp;&nbsp;</span
+            >
+          </div>
+        </blockquote>
+      </div>
+      <ol>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Ứng dụng khách đăng ký người dùng cuối hoặc khách hàng. Các chi tiết
+            của tương tác này nằm ngoài phạm vi của Máy chủ ADSS. Ví dụ, việc
+            xác định và xác thực khách hàng cuối bằng ứng dụng khách có thể dựa
+            trên tên người dùng / mật khẩu đơn giản, thẻ thông minh hoặc mã
+            thông báo mật khẩu dùng một lần (OTP).
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+            Sau khi đăng ký của khách hàng, ứng dụng khách sau đó yêu cầu Máy
+            chủ ADSS tạo khóa thay mặt cho khách hàng và xác nhận khóa công
+            khai. Máy chủ ADSS tạo cặp khóa công khai dựa trên cấu hình chứng
+            nhận đã định cấu hình và lưu cặp khóa này bên trong HSM hoặc cơ sở
+            dữ liệu trong trường hợp chế độ phần mềm
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+          Máy chủ ADSS sau đó yêu cầu chứng nhận khóa công khai từ CA bên ngoài được định cấu hình
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+          CA cung cấp chứng chỉ và Máy chủ ADSS một lần nữa lưu chứng chỉ này trong HSM hoặc cơ sở dữ liệu cùng với khóa riêng (được bảo vệ)
+          </div>
+        </li>
+        <li>
+          <div
+            class="StyleListNumberBefore0ptAfter6pt"
+            style="text-align: justify"
+          >
+          ADSS Server sau đó cung cấp một thông báo phản hồi trở lại ứng dụng khách về sự thành công hay thất bại của hoạt động.
+          </div>
+        </li>
+      </ol>
+      <p style="text-align: justify">
+        Một mô-đun CA nội bộ cũng được cung cấp như một phần của Máy chủ ADSS như một giải pháp thay thế cho việc sử dụng CA bên ngoài.
+      </p>
+      <div class="pagelist">
+        <p class="Asc_See_Also">Xem thêm</p>
+        <div class="pagelist">
+          <span class="Asc_Sibling_Page_List"
+            ><span class="Asc_Sibling_Page_List" style="color: #6085c4"></span
+            ><span class="Asc_Sibling_Page_List" style="color: #6085c4"
+              ><a
+                href="default.aspx#pageid=adss_server_certification_service"
+                target="_blank"
+                >Dịch vụ chứng nhận ADSS</a
+              ></span
+            ><br />
+            <span
+              style="
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                orphans: 2;
+                text-align: -webkit-left;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                font-size: 13px;
+                color: #000000;
+              "
+              ><div class="var_Sibling_Page_List">
+                <a href="introduction4.htm" title=""
+                  >Danh tính đã được chứng minh, niềm tin được cung cấp</a
+                ><br /><a href="adss_server_features_and_benefits.htm" title=""
+                  >Các tính năng và lợi ích của máy chủ ADSS</a
+                ><br /><a href="adss_server_trust_services.htm" title=""
+                  >Dịch vụ tin cậy máy chủ ADSS</a
+                ><br /><a
+                  href="adss_server_architecture_interfaces.htm"
+                  title=""
+                  >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+                ><br /><a href="adss_server_-_signing_service.htm" title=""
+                  >Tổng quan về dịch vụ ký ADSS</a
+                ><br /><a href="adss_server_-_verification_service.htm" title=""
+                  >Tổng quan về dịch vụ xác minh ADSS</a
+                ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS OCSP</a
+                ><br /><a href="adss_server_-_tsa_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS TSA</a
+                ><br /><a href="adss_xkms_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS XKMS</a
+                ><br /><a href="adss_scvp_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS SCVP</a
+                ><br /><a href="adss_ltan_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS LTANS</a
+                ><br /><a href="adss_decryption_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ giải mã ADSS</a
+                ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+                  >Tổng quan về màn hình ADSS CRL</a
+                ><br /></div></span
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

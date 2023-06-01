@@ -1,0 +1,172 @@
+﻿/* Change the style below to customize the default font style for this project  */
+
+.page_body {
+    font-size: 14px;
+    font-family: Verdana;
+    padding: 30px;
+    margin: 0px;
+    font-color: #000000;
+    text-align: justify;
+}
+
+
+/* ------------------ Modify the styles below to add,edit or delete page status entries ---- */
+.TreeNode_status_Pending {
+    background-color: #A0DC2C
+}
+
+.TreeNode_status_Incomplete {
+    background-color: #A0B6FF
+}
+
+.TreeNode_status_Needs_Review {
+    background-color: #FFD016
+}
+
+.GrayedTreeNode {
+    color: #AAA9A9;
+}
+
+.TogglePanel {
+    WIDTH: 100%;
+    BORDER: 1px solid #cccccc;
+}
+
+.TogglePanel_Heading {
+    BACKGROUND-IMAGE: url(images/col.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-POSITION: Left center;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    border-left: 0px solid white;
+    border-top: 0px solid white;
+    vertical-align: top;
+}
+
+.TogglePanel_Body {
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    border-left: 0px solid white;
+    vertical-align: top;
+}
+
+/* ----------- Custom styles added by Ascertia --------------- */
+
+.Asc_Table
+
+/*StyleList*/
+    {
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.Asc_Table tr:first-child td {
+    border-width: 1px !important;
+    padding: 8px !important;
+    border-style: solid !important;
+    border-color: #666666 !important;
+    background-color: #b6d5f2 !important;
+    font-weight: bold;
+}
+
+.Asc_Table td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+    vertical-align: top;
+}
+
+.Asc_Table tr td:first-child {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid border-color: #666666;
+    background-color: lightgray;
+    width: 150pt;
+    vertical-align: top;
+}
+
+.Asc_Table_Interfaces
+
+/*StyleList*/
+    {
+    border-collapse: collapse;
+}
+
+.Asc_Table_Interfaces td {
+    color: blue;
+}
+
+.Asc_Table_Interfaces tr td:first-child {
+    font-weight: bold;
+    color: black;
+    text-align: right;
+}
+
+
+.Asc_PageName
+
+/*StyleList*/
+    {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Asc_Heading
+
+/*StyleList*/
+    {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5281e7;
+}
+
+.Asc_SubHeading
+
+/*StyleList*/
+    {
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.Asc_Properties_Text
+
+/*StyleList*/
+    {
+    font-weight: bold;
+    color: #548dd4;
+}
+
+.Asc_Highlight_Text
+
+/*StyleList*/
+    {
+    font-style: italic;
+    color: red;
+}
+
+.Asc_See_Also
+
+/*StyleList*/
+    {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: orange;
+}
+
+.Asc_Sibling_Page_List
+
+/*StyleList*/
+    {
+    font-size: 13px;
+}

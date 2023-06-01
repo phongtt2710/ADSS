@@ -1,0 +1,1533 @@
+<html>
+  <head>
+    <title>Trình xem nhật ký giao dịch - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('166','Trình xem nhật ký giao dịch');parent.MenuItemSelected('adss_sam_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_sam_service.htm"
+              title=""
+              >Dịch vụ ADSS SAM</a
+            >&nbsp;&gt;&nbsp;<a href="transactions_log_viewer8.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Trình xem nhật ký giao dịch</span></p>
+      <p>
+        Dịch vụ ADSS SAM lưu giữ hồ sơ của mọi yêu cầu và các yêu cầu tương ứng
+         phản hồi được thực hiện cho dịch vụ trong nhật ký giao dịch để kiểm tra
+         mục đích. Mỗi mục trong hình ảnh được mô tả dưới đây:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/SAM TransactionLogs.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi mục trong ảnh chụp màn hình được mô tả bên dưới:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-color: #666666;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border-width: 1px;
+                padding: 8px;
+                background-color: lightgray;
+                font-weight: bold;
+                width: 150pt;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                "
+                >Mục</strong
+              >
+            </td>
+            <td
+              style="
+                font-weight: bold;
+                border-width: 1px !important;
+                padding: 8px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                "
+                >Mô tả</strong
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xóa tìm kiếm</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Sau một<span>&nbsp;</span
+                ><strong>Tìm kiếm<span>&nbsp;</span></strong
+                >cửa sổ này sẽ chỉ hiển thị các bản ghi đã lọc. các <span
+                  >&nbsp;</span
+                ><strong>Xóa tìm kiếm<span>&nbsp;</span></strong
+                nút > được sử dụng để xem toàn bộ các bản ghi.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+              Tìm kiếm
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Thao tác này sẽ mở ra một cửa sổ mới nơi có thể nhập tiêu chí tìm kiếm dựa trên
+            trên mỗi cột của lưới giao dịch.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Tùy chỉnh cột
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Điều này sẽ mở ra một cửa sổ mới để định cấu hình cột nào cần được hiển thị
+            trong lưới và cột nào cần được ẩn đi. &nbsp;Xem bên dưới
+            để biết thêm chi tiết
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+              |&lt; &lt; &gt; &gt;|
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Các nút này dùng để điều hướng các trang khác nhau của
+            nhật ký giao dịch.&nbsp;<br />
+            <br />
+            <strong>Lưu ý:<span>&nbsp;</span></strong
+            >Số lượng bản ghi được hiển thị trên mỗi trang có thể định cấu hình từ bên trong
+            Thiết lập toàn cầu.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Xuất nhật ký
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Xuất nhật ký giao dịch thành tệp CSV được nén ở dạng người
+            định dạng có thể đọc được.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+              Verify Integrity
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Xác minh tính toàn vẹn của bản ghi nhật ký giao dịch dịch vụ SAM.
+            Nó phát hiện các bản ghi bị giả mạo và bị xóa và tạo một báo cáo
+            có thể được xuất sang ổ đĩa vật lý.&nbsp;<br />
+            <br />
+            <strong>Lưu ý:</strong><span>&nbsp;</span>Khi xuất HMAC
+            báo cáo xác minh, nên lưu tệp với
+            Phần mở rộng “.html” để có thể xem báo cáo trên internet
+            trình duyệt.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Hiển thị lưu trữ
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Thao tác này sẽ mở ra một cửa sổ mới nơi bạn có thể nhập và xem trước đó
+            tệp lưu trữ, tức là nhật ký giao dịch được lưu trữ/xuất.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+              Log ID
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Một số sê-ri duy nhất cho bản ghi nhật ký, nó được xác định bởi hệ thống
+            và không phải là một phần của thông báo yêu cầu/phản hồi.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Loại yêu cầu
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Phần tử này xác định loại yêu cầu đã được nhận. Các
+            yêu cầu được chấp nhận là:&nbsp;<br />
+              <ol>
+                <li>
+                    <strong>Dịch vụ người dùng</strong><br />
+                    Đăng ký người dùng, Cập nhật người dùng, Xóa người dùng, Nhận người dùng, Nhận người dùng,
+                    Thay đổi mật khẩu, Xác thực người dùng, Khôi phục mật khẩu, Xác nhận
+                    Khôi phục mật khẩu, Thay đổi email người dùng, Xác nhận thay đổi người dùng
+                    Email, Thay đổi người dùng di động, xác nhận thay đổi người dùng di động, nhận
+                    Cài đặt thiết bị của người dùng.<br />
+                  <br />
+                </li>
+                <li>
+                    <strong>Dịch vụ chứng chỉ</strong><br />
+                    Tạo cặp khóa, xóa cặp khóa, nhận CSR, nhập
+                    Chứng chỉ, Nhận chứng chỉ của người dùng, Nhận chứng chỉ của người dùng
+                    Giấy chứng nhận.<br />
+                  <br />
+                </li>
+                <li>
+                    <strong>Dịch vụ ký kết</strong><br />
+                    Tạo yêu cầu ủy quyền, ký băm, chờ xử lý
+                    Yêu cầu cấp phép, Hủy yêu cầu cấp phép.<br />
+                    <br />
+                </li>
+                <li>
+                    <strong>Dịch vụ thiết bị</strong><br />
+                    Đăng ký thiết bị &amp; Chứng chỉ, Nhận thiết bị đã đăng ký,
+                    Xóa thiết bị, lấy thông tin thiết bị<br />
+                    <br />
+                </li>
+                <li>
+                    <strong>Dịch vụ OTP</strong><br />
+                    Tạo OTP, xác thực OTP<br />
+                  <br />
+                </li>
+                <li>
+                    <strong>Thông tin hệ thống</strong><br />
+                    Nhận thông tin hệ thống<br />
+                  <br />
+                </li>
+                <li>
+                    <strong>Thông tin hồ sơ</strong><br />
+                    Nhận thông tin hồ sơ SAM
+                </li>
+              </ol>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Trạng thái phản hồi
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Điều này cho thấy liệu một “thành công”,&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >“pending”</span
+              >
+              hoặc phản hồi "thất bại" đã được trả lại.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Thời gian yêu cầu
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Ghi lại ngày/giờ khi nhận được yêu cầu.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Thời gian đáp ứng
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Ghi lại ngày/giờ khi phản hồi được gửi.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Yêu cầu/Phản hồi
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Cung cấp một liên kết để xem các thông báo yêu cầu/phản hồi.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            ID khách hàng
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Đây là ID của khách hàng như được tìm thấy trong thông báo yêu cầu. ADSS SAM
+            Dịch vụ xác minh đó là ID khách hàng hợp pháp như đã đăng ký trong
+            Mô-đun Trình quản lý khách hàng trước khi cấp quyền truy cập vào dịch vụ SAM.
+            Để biết thêm chi tiết xem<span>&nbsp;</span
+              ><a
+                href="page.aspx?pageid=Step_1_-_Registering_Client_Applications"
+                style="text-decoration: none; color: #2495d2"
+                >liên kết Đăng ký ứng dụng kinh doanh</a
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Địa chỉ IP
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Ghi lại địa chỉ IP của người yêu cầu.</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+              TLS Cert
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Nhấp vào liên kết “Xem” dưới cột này sẽ hiển thị ứng dụng khách TLS
+            chứng chỉ xác thực. Liên kết “Xem” chỉ xuất hiện khi
+            Xác thực ứng dụng khách TLS đã được sử dụng để gửi yêu cầu tới SAM
+            dịch vụ.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Mã lỗi
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Di chuột qua liên kết "Xem" để hiển thị thông báo lỗi
+            ví dụ. ID người dùng hoặc mật khẩu không hợp lệ, ID người dùng không tồn tại, OTP
+            không hợp lệ hoặc hết hạn, v.v.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Bản ghi giao dịch Dịch vụ SAM có thể được sắp xếp tăng dần hoặc
+         thứ tự giảm dần bằng cách chọn một cột trong bảng từ danh sách thả xuống.
+         Từ trình đơn thả xuống ở màn hình phía trên,&nbsp;chọn<span>&nbsp;</span
+         ><strong>Nhập bản lưu trữ</strong><span>&nbsp;</span>và nhấp vào<span
+           >&nbsp;</span
+         ><strong>Đi&nbsp;</strong>nút.&nbsp;Điều này sẽ hiển thị như sau
+         màn hình:&nbsp;
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        &nbsp;<img
+          alt=""
+          src="../images/1551853020949.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-color: #666666;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border-width: 1px;
+                padding: 8px;
+                background-color: lightgray;
+                font-weight: bold;
+                width: 150pt;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              Mục
+            </td>
+            <td
+              style="
+                font-weight: bold;
+                border-width: 1px !important;
+                padding: 8px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              Mô tả
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Nhập tệp giao dịch đã lưu trữ<br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Sử dụng tùy chọn này để duyệt tệp nhật ký lưu trữ ở định dạng zip từ
+            máy điều hành. Bằng cách sử dụng tùy chọn này, tệp nhật ký được lưu trữ
+            được tải lên trên ADSS Server. Nó có thể là một hoạt động tốn kém
+            nếu tệp có kích thước lớn để người vận hành được phép tải lên
+            một tệp có kích thước tối đa lên tới 25 MB. Sử dụng đường dẫn tệp lưu trữ
+            tùy chọn cho các tệp lớn hơn 25 MB.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+              "
+            >
+            Đường dẫn tệp giao dịch đã lưu trữ<br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+              "
+            >
+            Sử dụng tùy chọn này nếu kích thước tệp lớn hơn 25 MB. Cái này
+            tùy chọn không tải tệp lưu trữ lên máy chủ. đúng hơn là
+            máy chủ đọc tệp từ đường dẫn tệp đã cho trước khi nhập
+            nhanh hơn tùy chọn trên. Bạn có thể chỉ định địa phương
+            đường dẫn hệ thống tệp hoặc đường dẫn mạng.<br />
+              <br />
+              <strong>Lưu ý:</strong><span>&nbsp;</span>Hãy chỉ định tệp đã lưu trữ
+              tên tệp nhật ký trong đường dẫn tệp.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span class="TipBubble"
+          >​<span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >Các tệp lưu trữ đã được tạo ở định dạng CSV cho đến Máy chủ ADSS
+            v4.7.5 nhưng từ v4.7.6 trở đi các tệp lưu trữ được nén thành
+            tiết kiệm không gian đĩa khi lưu trữ. Nếu bạn đang nhập khẩu
+            các tệp lưu trữ được tạo bằng triển khai tiền v4.7.6 cho Máy chủ ADSS
+            v4.7.6 trở lên, sau đó nén chúng trước khi nhập ADSS
+            Máy chủ sẽ không nhận ra chúng là tệp lưu trữ chính xác.</span
+          ></span
+        >
+      </p>
+      <span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >Như đã giải thích ở trên, nhấp vào nút Tìm kiếm trên Giao dịch SAM
+        Log Viewer hiển thị màn hình sau:</span
+      >
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        &nbsp;<img
+          alt=""
+          src="../images/1551852703573.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Điều này giúp định vị một loại giao dịch dịch vụ SAM cụ thể. Các
+      giao dịch có thể được tìm kiếm dựa trên "ID nhật ký", "ID người dùng", "ID khách hàng",
+      "Địa chỉ IP", "Loại yêu cầu", "Trạng thái phản hồi", "Thời gian yêu cầu từ",
+      "Thời gian yêu cầu đến", "Thời gian phản hồi từ" và "Thời gian phản hồi đến". Nếu một
+      tìm kiếm dựa trên nhiều giá trị, sau đó những giá trị này sẽ được kết hợp với nhau
+      sử dụng toán hạng “AND”, và do đó chỉ những bản ghi đáp ứng tất cả các
+      các tiêu chí sẽ được đưa ra.<br />
+        <br />
+        <span class="TipBubble"
+          >​<br />
+          <span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như
+            ký tự đại diện.</span
+          ></span
+        >
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Nhấp vào nút Tùy chỉnh cột trên Trình xem nhật ký giao dịch SAM
+      hiển thị màn hình sau:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        &nbsp;<img
+          alt=""
+          src="../images/1551853297864.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Theo mặc định, một số cột nằm trong danh sách "Cột được chọn". Để
+      ẩn cột di chuyển cột được yêu cầu vào danh sách "Cột có sẵn"
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi bản ghi nhật ký trong cơ sở dữ liệu được bảo vệ bằng một
+      mã hóa&nbsp;tổng kiểm tra HMAC để phát hiện bất kỳ lỗi cố ý hoặc vô tình nào
+      sửa đổi hồ sơ. Nhấp vào&nbsp;<strong
+        >Xác minh tính toàn vẹn<span>&nbsp;</span></strong
+      > nút xác minh tính toàn vẹn của nhật ký bằng cách kiểm tra từng tổng kiểm tra và
+      tạo ra một báo cáo như hình dưới đây:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/03-09-2018 11-57-30 AM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Nhấp vào&nbsp;<strong>Xuất nhật ký</strong>&nbsp;<strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            text-align: justify;
+          "
+        ></strong
+        ><strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            text-align: justify;
+          "
+        ></strong
+        >để xuất yêu cầu/phản hồi sang tệp mạng.&nbsp;<br
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            text-align: justify;
+          "
+        />
+        nhấp vào<strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        >&nbsp;Nút <strong>Sửa lỗi HMAC</strong>&nbsp;sẽ tính toán lại
+        HMAC cho các bản ghi nhật ký giao dịch đã được kiểm duyệt cho mô-đun này.<br
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        />
+        <br
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        />
+        <strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        ><strong>Lưu ý:</strong>&nbsp;Tùy chọn này sẽ không phát hiện
+        các bản ghi bị xóa trái phép nhưng nó sẽ chỉ sửa các bản ghi trái phép
+        các bản ghi sửa đổi và/hoặc không rõ ràng mà giá trị HMAC không phải là
+        hiện tại/không chính xác.<br />
+        <br />
+        <span class="TipBubble"
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >​<br />
+            Tính năng Xác minh Tính toàn vẹn có sẵn cho nhật ký giao dịch của
+             tất cả các dịch vụ trong ADSS Server.</span
+          >​</span
+        >
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Nhấp vào liên kết cho&nbsp;<strong>ID nhật ký</strong>&nbsp;hiển thị chi tiết
+      của giao dịch đã chọn như hình bên dưới:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        &nbsp;<img
+          alt=""
+          src="../images/1551852875798.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      nhấp vào<span>&nbsp;</span
+        ><strong style="text-align: left">View</strong><span>&nbsp;</span>liên kết
+        bên dưới cột yêu cầu/phản hồi hiển thị yêu cầu và phản hồi JSON
+        cho giao dịch SAM đã chọn trong các tab khác nhau:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/03-09-2018 12-02-19 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Nhấp vào <span>&nbsp;</span
+        ><strong>Phản hồi<span>&nbsp;</span></strong
+        >tab hiển thị phản hồi JSON như bên dưới:
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <img
+          alt=""
+          src="../images/03-09-2018 12-02-54 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-weight: 400"
+          >Bạn có thể xuất các tệp JSON yêu cầu/phản hồi vào một ổ đĩa vật lý
+          bằng cách nhấp vào </span có liên quan
+        Nút ><strong>Xuất phản hồi</strong>.
+      </p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_the_sam_service.htm" title=""
+            >Định cấu hình Dịch vụ SAM</a
+            ><br /><a href="registered_users_.htm" title="">Người dùng đã đăng ký </a
+            ><br /><a href="logs_archiving11.htm" title="">Lưu trữ nhật ký</a
+            ><br /><a href="alerts9.htm" title="">Cảnh báo</a><br /><a
+              href="sam_service_interface_urls.htm"
+              tiêu đề = ""
+              >URL giao diện dịch vụ SAM</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

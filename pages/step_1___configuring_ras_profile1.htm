@@ -1,0 +1,4164 @@
+<html>
+  <head>
+    <title>Bước 1 - Định cấu hình Cấu hình RAS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('149','Bước 1 - Định cấu hình Cấu hình RAS');parent.MenuItemSelected('adss_ras_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+            href="adss_ras_service.htm"
+            title=""
+            >Dịch vụ ADSS RAS</a
+          >&nbsp;&gt;&nbsp;<a href="configuring_the_ras_service.htm" title=""
+              >Định cấu hình Dịch vụ RAS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_1___configuring_ras_profile1.htm"
+              title=""
+              >Bước 1 - Định cấu hình Cấu hình RAS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Bước 1 - Định cấu hình Cấu hình RAS</span></p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-weight: 400"
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >Để giúp các ứng dụng kinh doanh yêu cầu quản lý dễ dàng hơn
+            của người dùng, khóa và thiết bị cùng với các thao tác ký, ADSS
+            Dịch vụ RAS sử dụng Cấu hình RAS. Một hồ sơ RAS xác định định dạng và
+            các đặc điểm của cấu hình Dịch vụ SAM (ví dụ: SAM nào
+            Địa chỉ dịch vụ, ID hồ sơ, ID khách hàng sẽ được sử dụng) và xác định
+            đặc điểm của cài đặt xác thực người dùng (ví dụ: Cơ bản hoặc SAML)
+            sẽ được sử dụng khi hồ sơ này được tham chiếu trong khóa người dùng
+            tạo, đăng ký thiết bị và yêu cầu ký từ khách hàng
+            ứng dụng.<br />
+            <br />
+            <span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Để tạo hoặc chỉnh sửa Hồ sơ RAS, nhấp vào&nbsp;</span
+            ><strong
+              style="
+                color: #000000;
+                font-family: Verdana;
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+              "
+              >Hồ sơ RAS</strong
+            ><span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                orphans: 2;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                widows: 2;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >&nbsp;và màn hình sau được hiển thị:</span
+            ><br />
+            <br /> </span
+          ><img
+            alt=""
+            src="../images/1551790531451.png"
+            style="border-width: 1px; border-style: solid"
+          />&nbsp;<br />
+          <br
+            style="
+              color: #000000;
+              font-family: Verdana;
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+            "
+          />
+          <span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+          ></span
+          >Một hồ sơ mới có thể được tạo bằng cách nhấp vào
+          nút&nbsp;<strong>Mới</strong>&nbsp;. một hiện có
+          hồ sơ&nbsp;có thể được chỉnh sửa&nbsp;bằng cách nhấp vào
+          nút&nbsp;<strong>Chỉnh sửa</strong>&nbsp;. Nếu bạn muốn tạo một </span
+        ><strong>mới </strong>hồ sơ bằng cách sao chép phần lớn hồ sơ hiện có
+        hồ sơ rồi nhấp vào<strong style="font-weight: 400"
+          >&nbsp;Tạo bản sao</strong
+        >.&nbsp;Màn hình sau được hiển thị:<span
+          style="
+            font-weight: 400;
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          ><br /> </span
+        ><br />
+        <img
+          alt=""
+          src="../images/RASService-RasProfile-New.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Các mục cấu hình như sau:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-color: #666666;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          orphans: 2;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          widows: 2;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          border-right-style: dashed;
+          border-bottom-style: dashed;
+          line-height: normal;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                font-weight: bold;
+                width: 150pt;
+              "
+            >
+              <strong
+                style="
+                  text-align: left;
+                  color: #000000;
+                  text-transform: none;
+                  line-height: normal;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  widows: 1;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Mục</strong
+              >
+            </td>
+            <td
+              style="
+                vertical-align: top;
+                font-weight: bold;
+                border: 1px solid #666666 !important;
+                padding: 8px !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              <strong
+                style="
+                  text-align: left;
+                  color: #000000;
+                  text-transform: none;
+                  line-height: normal;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  widows: 1;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Mô tả</strong
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Trạng thái</span
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: normal;
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  white-space: normal;
+                  widows: 1;
+                  font-stretch: normal;
+                  -webkit-text-stroke-width: 0px;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Cấu hình SAM có thể được đánh dấu là Hoạt động hoặc Không hoạt động.&nbsp; Lưu ý rằng
+                một hồ sơ không hoạt động sẽ không được sử dụng để xử lý các yêu cầu
+                được tạo bởi ứng dụng khách.</span
+              ><span
+                style="
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: normal;
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  white-space: normal;
+                  widows: 1;
+                  font-stretch: normal;
+                  -webkit-text-stroke-width: 0px;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >ID hồ sơ</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: normal;
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  white-space: normal;
+                  widows: 1;
+                  font-stretch: normal;
+                  -webkit-text-stroke-width: 0px;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Một trường bắt buộc cung cấp một giá trị duy nhất do hệ thống xác định
+                định danh cho hồ sơ này.</span
+              ><span
+                style="
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: normal;
+                  text-align: justify;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  word-spacing: 0px;
+                  white-space: normal;
+                  widows: 1;
+                  font-stretch: normal;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tên hồ sơ</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tên duy nhất bắt buộc được xác định bởi Máy chủ ADSS
+                Quản trị viên để nhận dạng hồ sơ dễ dàng hơn trong
+                Bảng điều khiển vận hành ADSS.</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Mô tả tiểu sử</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Điều này có thể được sử dụng để mô tả hồ sơ chi tiết hơn (ví dụ:
+                hồ sơ RAS này sẽ được sử dụng trong trường hợp nào). Đây là
+                chỉ cho mục đích thông tin.</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: normal;
+                  text-align: left;
+                  text-transform: none;
+                  text-indent: 0px;
+                  letter-spacing: normal;
+                  word-spacing: 0px;
+                  float: none;
+                  white-space: normal;
+                  widows: 1;
+                  font-stretch: normal;
+                  -webkit-text-stroke-width: 0px;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><strong
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: justify;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                  >Cài đặt dịch vụ SAM</strong
+                ></span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Phần này xác định cấu hình cần thiết cho các yêu cầu
+                chuyển tiếp đến Dịch vụ SAM.&nbsp;</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ dịch vụ SAM</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng trường này để thêm (các) địa chỉ dịch vụ SAM.</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Danh sách địa chỉ dịch vụ SAM</span
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  line-height: normal;
+                  font-stretch: normal;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Trường này hiển thị các địa chỉ Dịch vụ SAM có thể được sử dụng để
+                tạo khóa người dùng, đăng ký thiết bị người dùng trong Dịch vụ SAM.
+                Nhiều địa chỉ dịch vụ có thể được thêm vào. Nút Test kiểm tra
+                rằng Dịch vụ ADSS SAM khả dụng. Nút Xóa
+                xóa địa chỉ Dịch vụ SAM đã định cấu hình.</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hồ sơ SAM</span
+              ><br />
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chỉ định cấu hình SAM sẽ được sử dụng cho RAS này
+                hồ sơ.</span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >ID khách hàng</span
+              ><br />
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Cho thấy&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >ID khách hàng&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >của Dịch vụ SAM. Dịch vụ RAS sẽ gửi Client ID này trong khi
+                giao tiếp với dịch vụ SAM. Dịch vụ SAM xác minh rằng điều này
+                là một đăng ký&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >ID khách hàng&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >trong mô-đun Trình quản lý khách hàng trước khi cấp quyền truy cập vào điều này
+                dịch vụ.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+            Giấy chứng nhận ủy quyền
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Trường Giấy chứng nhận ủy quyền<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >hiển thị danh sách các chứng chỉ được định cấu hình với&nbsp;</span
+              ><strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >'Document Signing'<span>&nbsp;</span></strong
+              >mục đích. Dịch vụ RAS sử dụng chứng chỉ này để ký SAD
+              (Dữ liệu kích hoạt chữ ký).&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Thông thường, SAD được ký bởi ứng dụng di động Go&gt;Sign
+                nhưng có những trường hợp SAD có thể được ký bởi Dịch vụ RAS
+                sử dụng giấy chứng nhận ủy quyền này. <br />
+                Những trường hợp này bao gồm:</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ol>
+                <li>
+                  <span
+                    style="
+                      background-color: #ffffff;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: justify;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-thickness: initial;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Khi một IdP bên ngoài được sử dụng để cho phép yêu cầu
+                    thay vì Go&gt;Sign ứng dụng di động.&nbsp;</span
+                  >
+                </li>
+                <li>
+                  <span
+                    style="
+                      background-color: #ffffff;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: justify;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-thickness: initial;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    ><span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: justify;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        background-color: #ffffff;
+                        text-decoration-thickness: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Khi mã PIN/OTP được sử dụng để ủy quyền yêu cầu trong trường hợp
+                      của SCAL1.&nbsp;</span
+                    ><br />
+                  </span>
+                </li>
+                <li>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: justify;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-thickness: initial;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    ><span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: justify;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        text-decoration-thickness: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Trong các trường hợp niêm phong điện tử khi yêu cầu đầu tiên được ủy quyền bởi
+                      người dùng sử dụng ứng dụng di động Go&gt;Sign, một IdP bên ngoài
+                      hoặc một&nbsp;</span
+                    ><span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: justify;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        text-decoration-thickness: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >Mã PIN/OTP&nbsp; và đối với phần còn lại của các yêu cầu của người dùng
+                      sự tham gia là không cần thiết. Dịch vụ RAS được sử dụng đầu tiên
+                      BUỒN&nbsp;</span
+                    ><span
+                      style="
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: justify;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        text-decoration-thickness: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >được gia hạn bởi SAM và ký SAD mới bằng cách sử dụng
+                      giấy chứng nhận ủy quyền. Nó lặp lại tương tự cho lần tiếp theo
+                      loạt yêu cầu.</span
+                    ></span
+                  >
+                </li>
+              </ol>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng Xác thực máy khách TLS</span
+              >
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nếu tùy chọn này được bật thì dịch vụ RAS sẽ giao tiếp
+                với dịch vụ SAM sử dụng xác thực máy khách TLS. Theo mặc định nó
+                bị vô hiệu hóa.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Giấy chứng nhận&nbsp;</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+                <span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  ><span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Chọn Chứng chỉ TLS của Máy khách&nbsp;</span
+                  >tồn tại trước trong&nbsp;</span
+                ><a
+                  href="https://manuals.ascertia.com/ADSS-Admin-Guide/default.aspx#pageid=key_manager6"
+                  target="_blank"
+                  style="
+                    text-decoration: none;
+                    color: #2495d2;
+                    font-family: Verdana, sans-serif;
+                  "
+                  >Trình quản lý khóa</a
+                ><span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >.&nbsp;</span
+                >
+              </div>
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+                <br />
+              </div>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;Cần phải đăng ký CA tổ chức phát hành của
+                    Chứng chỉ TLS của khách hàng trong&nbsp;</span
+                  ><a
+                    href="https://manuals.ascertia.com/ADSS-Admin-Guide/default.aspx#pageid=step_1___identifying_the_ta"
+                    target="_blank"
+                    style="
+                      text-decoration: none;
+                      color: #2495d2;
+                      font-weight: 400;
+                    "
+                    >Quản lý ủy thác</a
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;với&nbsp;</span
+                  ><strong
+                    >CA để xác minh chứng chỉ máy khách TLS&nbsp;<span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >mục đích</span
+                    ></strong
+                  ><span
+                    style="
+                      font-weight: 400;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >.&nbsp;</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Cài đặt xác thực người dùng cho ứng dụng doanh nghiệp</strong
+              ><br />
+            </td>
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Phần này xác định cấu hình cần thiết cho người dùng
+                cơ chế xác thực cho ứng dụng kinh doanh.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác thực cơ bản (ID người dùng và mật khẩu)</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+              Sử dụng Xác thực Cơ bản, người dùng được ủy quyền bằng cách cung cấp
+              UserID và mật khẩu, Dịch vụ RAS sẽ trả về quyền truy cập của người dùng
+              mã thông báo cho ứng dụng khách cho lần tiếp theo
+              giao tiếp.
+              </div>
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+                <br />
+              </div>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span style="font-weight: 400">&nbsp;Theo mặc định nó là</span
+                  ><span style="font-weight: 400">&nbsp;</span
+                  ><strong>disabled</strong
+                  ><span style="font-weight: 400">.</span
+                  ><span style="font-weight: normal; text-align: left"
+                    >&nbsp;</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác thực OAuth2</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Người dùng được xác thực bằng cơ chế OAuth2.0. trong này
+                trường hợp, mã thông báo truy cập được cung cấp bởi dịch vụ RAS có thể được
+                được ứng dụng kinh doanh sử dụng cho các lần tiếp theo
+                giao tiếp.&nbsp;</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Ghi chú:</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;Theo mặc định nó là&nbsp;</span
+              ><strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >disabled.</strong
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác nhận SAML</span
+              >&nbsp;
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+              Sử dụng Xác thực SAML, người dùng được ủy quyền bằng SAML
+              xác nhận được cung cấp bởi một IDP bên ngoài, Dịch vụ RAS sẽ
+              xác thực xác nhận được cung cấp và sẽ trả lại quyền truy cập của người dùng
+              mã thông báo cho ứng dụng khách<span>&nbsp;</span
+                ><span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >cho lần giao tiếp tiếp theo.</span
+                >
+              </div>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify"><br /></div>
+                <strong
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                  "
+                >
+                  <div style="text-align: justify">
+                    <span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      ><strong>Ghi chú:</strong></span
+                    ><span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >&nbsp;Theo mặc định nó là&nbsp;</span
+                    ><strong>disabled</strong
+                    ><span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >.</span
+                    ><span style="font-weight: normal; text-align: left"
+                      >&nbsp;</span
+                    >
+                  </div>
+                </strong></span
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chứng chỉ ký IDP</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: left;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >chỉ định&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >chứng chỉ sử dụng để xác minh Xác nhận SAML.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác định UserID từ Chủ đề</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nếu dịch vụ RAS được bật sẽ nhận ID người dùng từ Phần tử chủ đề của
+                Xác nhận SAML.</span
+              >&nbsp;
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác định UserID từ Thuộc tính</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nếu dịch vụ RAS được bật sẽ nhận UserID từ Thuộc tính trong SAML
+                Quả quyết.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tên thuộc tính</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chỉ định việc sử dụng Tên thuộc tính để lấy ID người dùng từ SAML
+                Khẳng định bởi Dịch vụ RAS.</span
+              >&nbsp;
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Cài đặt ủy quyền thông tin xác thực</strong
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div style="text-align: justify">
+                Phần này xác định cấu hình cần thiết cho thông tin xác thực
+                 cơ chế ủy quyền.
+              </div>
+              <div style="text-align: justify">
+                Một ứng dụng kinh doanh có thể yêu cầu Dịch vụ RAS cung cấp
+                 các phương thức ủy quyền thông tin xác thực được hỗ trợ bằng cách sử dụng API CSC
+                 (thông tin đăng nhập/thông tin) và các cấu hình được thực hiện trong phần này là
+                 kết quả là đã trở lại ứng dụng kinh doanh.
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Implicit</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Ủy quyền ngầm nghĩa là dịch vụ RAS đang sử dụng
+                chăm sóc quá trình ủy quyền một cách tự động, bằng cách tham gia với
+                người dùng mà không có bất kỳ trung gian nào từ doanh nghiệp
+                ứng dụng. Trong trường hợp này, người dùng được yêu cầu cung cấp
+                ủy quyền trên ứng dụng di động Go&gt;Sign.&nbsp;<br /> </span
+              ><br />
+              <strong>Ghi chú: </strong>Khi "Ngầm" sẽ được chọn trong RAS
+              Hồ sơ, chỉ các tùy chọn sau mới được định cấu hình trong SAM
+              Hồ sơ:<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; - SCAL2 nên được chọn cho Sole
+              Cấp đảm bảo kiểm soát<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; - Xác thực người dùng được ủy quyền thông qua
+              IdP bên ngoài không nên được chọn
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                text-align: justify;
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Mã ủy quyền OAuth</span
+              >&nbsp;
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >T</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >ủy quyền cho người dùng truy cập khóa ký sẽ là
+                được thực hiện bởi luồng mã ủy quyền OAuth 2.0</span
+              ><span
+                style="
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  widows: 2;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >. Việc ủy quyền được trả lại dưới hình thức ủy quyền
+                mã mà sau đó ứng dụng sẽ sử dụng để lấy SAD
+                (Dữ liệu kích hoạt chữ ký).<br />
+                <div style="text-align: justify"><br /></div>
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    widows: 2;
+                    background-color: #ffffff;
+                    text-decoration-thickness: initial;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                >
+                  <div style="text-align: justify">
+                    Trong ủy quyền OAuth 2.0, xác thực người dùng có thể
+                     được thực hiện theo nhiều cách. Nó bao gồm 'Người dùng trực tiếp
+                     xác thực qua ứng dụng Go&gt;Sign' và 'Người dùng được ủy quyền
+                     xác thực thông qua IdP bên ngoài'. Cả hai phương pháp này đều
+                     giải thích dưới đây:&nbsp;&nbsp;
+                  </div>
+                </span>
+                <ul
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    color: #000000;
+                    font-family: Verdana;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    widows: 2;
+                    text-decoration-thickness: initial;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                >
+                  <li>
+                    <div style="text-align: justify">
+                      <strong
+                        >Xác thực người dùng trực tiếp qua Ứng dụng Go&gt;Sign:</strong
+                      >&nbsp;Trong kế hoạch này,<span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          font-weight: 400;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: justify;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-thickness: initial;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >yêu cầu ký được ủy quyền trên Go&gt;Sign Mobile
+                        Do đó, ứng dụng</span
+                      >&nbsp;người dùng được xác thực bởi Go&gt;Sign Mobile
+                      Ứng dụng.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </div>
+                    <ul>
+                      <li>
+                        <strong>Văn bản hiển thị:</strong
+                        ><span
+                          >&nbsp;Trong khi xác thực người dùng qua Go&gt;Sign
+                          Ứng dụng di động, một trang web sẽ được hiển thị bởi ADSS RAS
+                          Dịch vụ cho người dùng.&nbsp;</span
+                        >Trường này cho phép người vận hành nhập giá trị mặc định
+                        văn bản dưới dạng hướng dẫn cho người dùng trên trang web. Vì
+                        ví dụ:&nbsp;<br />
+                        "Bạn cần cho phép yêu cầu ký này trên
+                        Đi&gt;Đăng ký ứng dụng dành cho thiết bị di động."
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    color: #000000;
+                    font-family: Verdana;
+                    orphans: 2;
+                    text-indent: 0px;
+                    widows: 2;
+                    text-decoration-thickness: initial;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    text-align: left;
+                  "
+                >
+                  <ul
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                    "
+                  >
+                    <li style="font-weight: 400">
+                      <div style="text-align: justify">
+                        <strong
+                          ><strong
+                            >Xác thực người dùng được ủy quyền thông qua bên ngoài
+                            danh tính</strong
+                          >:</strong
+                        >&nbsp;I<span
+                          style="
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant-ligatures: normal;
+                            font-variant-caps: normal;
+                            font-weight: 400;
+                            letter-spacing: normal;
+                            orphans: 2;
+                            text-align: justify;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            widows: 2;
+                            word-spacing: 0px;
+                            -webkit-text-stroke-width: 0px;
+                            background-color: #ffffff;
+                            text-decoration-thickness: initial;
+                            text-decoration-style: initial;
+                            text-decoration-color: initial;
+                            float: none;
+                            display: inline !important;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                          >n lược đồ này, Dịch vụ ADSS RAS sẽ chuyển hướng
+                          người dùng với một IdP bên ngoài và người dùng sẽ được xác thực
+                          bởi IDP. Ứng dụng Go&gt;Sign dành cho thiết bị di động sẽ không được sử dụng để
+                          ủy quyền yêu cầu trong trường hợp này. IdP sẽ cung cấp
+                          một xác nhận với Dịch vụ RAS.&nbsp;</span
+                        >
+                      </div>
+                      <ul>
+                        <li style="text-align: justify; font-weight: 400">
+                          <strong>IdP bên ngoài:</strong><span>&nbsp;</span>Cái này
+                          trình đơn thả xuống hiển thị danh sách IdP bên ngoài được định cấu hình
+                          trong mô-đun phụ Trình kết nối trong Cài đặt chung. Nó cho phép
+                          nhà điều hành để chọn IdP bên ngoài được yêu cầu từ
+                          danh sách thả xuống.&nbsp;
+                        </li>
+                        <li style="text-align: justify; font-weight: 400">
+                          <strong>Văn bản hiển thị:</strong
+                          ><span
+                            >&nbsp;Trong khi xác thực người dùng thông qua IdP bên ngoài,
+                            một trang web sẽ được hiển thị bởi Dịch vụ ADSS RAS để
+                            người dùng.&nbsp;</span
+                          ><span
+                            style="
+                              font-size: 14px;
+                              font-style: normal;
+                              font-variant-ligatures: normal;
+                              font-variant-caps: normal;
+                              font-weight: 400;
+                              letter-spacing: normal;
+                              orphans: 2;
+                              text-align: left;
+                              text-indent: 0px;
+                              text-transform: none;
+                              white-space: normal;
+                              widows: 2;
+                              word-spacing: 0px;
+                              -webkit-text-stroke-width: 0px;
+                              background-color: #ffffff;
+                              text-decoration-thickness: initial;
+                              text-decoration-style: initial;
+                              text-decoration-color: initial;
+                              float: none;
+                              display: inline !important;
+                              font-family: Verdana;
+                              color: #000000;
+                            "
+                            >Trường này cho phép người vận hành nhập giá trị mặc định
+                            văn bản như một hướng dẫn cho người dùng trên mới
+                            trang</span
+                          >. Ví dụ:<br />
+                          "Bạn cần ủy quyền cho yêu cầu ký này". Nếu như
+                          ứng dụng kinh doanh cung cấp Văn bản hiển thị cho RAS
+                          Dịch vụ thì văn bản đó sẽ được hiển thị cho người dùng
+                          thay vì văn bản trong trường này.&nbsp;
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div style="text-align: justify">
+                    <strong
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        text-decoration-thickness: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                      "
+                      >Ghi chú:<span>&nbsp;</span></strong
+                    ><span
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: 400;
+                        letter-spacing: normal;
+                        orphans: 2;
+                        text-align: left;
+                        text-indent: 0px;
+                        text-transform: none;
+                        white-space: normal;
+                        widows: 2;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        background-color: #ffffff;
+                        text-decoration-thickness: initial;
+                        text-decoration-style: initial;
+                        text-decoration-color: initial;
+                        float: none;
+                        display: inline !important;
+                      "
+                      >Khi tùy chọn này sẽ được chọn trong Cấu hình RAS, SCAL2
+                      nên được chọn trong Hồ sơ SAM.</span
+                    ><br />
+                  </div>
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              Explicit
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+            Trong ủy quyền rõ ràng, người dùng có thể ủy quyền thông tin đăng nhập
+            bằng cách chọn mã PIN hoặc OTP (Mật khẩu dùng một lần). người điều hành
+            có tùy chọn để chọn mã PIN hoặc OTP hoặc cả hai loại
+            ủy quyền. Chi tiết của cả hai cơ chế này được giải thích
+            dưới:&nbsp;<br />
+              <ul>
+                <li>
+                  <strong>Ủy quyền dựa trên mã PIN:</strong> Trong sơ đồ này,
+                  người dùng ủy quyền thông tin đăng nhập bằng cách cung cấp mã PIN. Người dùng
+                  mật khẩu được cung cấp khi đăng ký người dùng trong ADSS
+                  Máy chủ sẽ được sử dụng làm mã PIN tại đây. Người dùng sẽ nhập mã PIN này
+                  trên một màn hình được cung cấp bởi ứng dụng kinh doanh và
+                  đến lượt ứng dụng kinh doanh sẽ gửi mã PIN này đến Dịch vụ RAS
+                  để ủy quyền chứng chỉ.&nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  <ul>
+                    <li>
+                        <strong>Nhãn mã PIN:</strong> Trường này được sử dụng để đặt
+                        nhãn cho trường mã PIN. Lưu ý rằng nhãn này được hiển thị
+                        trên một trang được lưu trữ bởi ứng dụng kinh doanh. Khi kinh doanh
+                        ứng dụng yêu cầu Dịch vụ RAS cho thông tin xác thực
+                        thông tin,&nbsp; trả lại Nhãn PIN này nếu được đặt trong
+                        hồ sơ. Ứng dụng kinh doanh có thể sử dụng nhãn này để
+                        hiển thị đối với trường mã PIN trên trang của nó. Nó là một TÙY CHỌN
+                        trường có tối đa 255 ký tự được phép.&nbsp;
+                      </li>
+                      <li>
+                        <strong>Mô tả mã PIN:</strong> Trường này sẽ được sử dụng
+                        để nhập mô tả mã PIN. Giống như nhãn mã PIN này
+                        thông tin cũng được cung cấp cho ứng dụng kinh doanh. Nó
+                        là một trường TÙY CHỌN với tối đa 255 ký tự
+                        được phép.&nbsp;
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div>
+                <ul
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                  "
+                >
+                  <li style="font-weight: 400">
+                    <strong>Ủy quyền dựa trên OTP:</strong
+                        ><span>&nbsp;</span>Trong sơ đồ này, người dùng cho phép
+                        thông tin đăng nhập bằng cách cung cấp OTP. Máy chủ RAS sẽ gửi một
+                        OTP qua SMS hoặc Email (theo cấu hình) cho người dùng. TRÊN
+                        nhận được OTP, người dùng sẽ nhập nó trên một trang được lưu trữ
+                        bởi ứng dụng kinh doanh của nó. Ứng dụng kinh doanh sẽ
+                        cung cấp OTP này cho Dịch vụ RAS để có thông tin xác thực
+                        ủy quyền.&nbsp;
+                        <ul>
+                          <li style="font-weight: 400">
+                            <strong>Nhãn OTP:</strong><span>&nbsp;</span>Trường này
+                            được sử dụng để đặt nhãn cho trường OTP. nhãn này
+                            cũng sẽ được hiển thị trên trang do doanh nghiệp lưu trữ
+                            ứng dụng. Đây là trường TÙY CHỌN với tối đa 255
+                            các ký tự được phép.&nbsp;
+                          </li>
+                          <li style="font-weight: 400">
+                            <strong>Mô tả OTP:</strong><span>&nbsp;</span>Đây
+                            trường sẽ được sử dụng để nhập mô tả cho OTP.
+                            Đây là trường TÙY CHỌN có tối đa 255 ký tự
+                            cho phép.
+                          </li>
+                          <li>
+                            <strong>Gửi OTP qua: </strong>Đây là trường thả xuống
+                            cho phép người vận hành chọn có gửi OTP hay không
+                            qua SMS hoặc Email.
+                          </li>
+                        </ul>
+                  </li>
+                </ul>
+                <div>
+                    <strong>Lưu ý: </strong>Thông số kỹ thuật CSC cho phép hai loại
+                    OTP tức là 'ngoại tuyến' và 'trực tuyến' nhưng Dịch vụ RAS chỉ hỗ trợ
+                    các OTP 'trực tuyến' được tạo bởi RAS và được gửi đến người dùng
+                    di động hoặc email.<br />
+                  <br />
+                  <strong
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-thickness: initial;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      text-align: left;
+                    "
+                    >Ghi chú:<span>&nbsp;</span></strong
+                  ><span
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-thickness: initial;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      text-align: left;
+                      background-color: #ffffff;
+                      float: none;
+                      display: inline !important;
+                    "
+                    >Khi tùy chọn này sẽ được chọn trong Cấu hình RAS, SCAL1
+                    nên được chọn trong Hồ sơ SAM.</span
+                  ><br />
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Cài đặt xác thực người dùng cho ứng dụng di động</strong
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Phần này xác định cấu hình cần thiết cho người dùng
+                cơ chế xác thực cho ứng dụng di động.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác thực người dùng bằng (các) OTP</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+              Người dùng được xác thực (tại thời điểm đăng nhập và đăng ký thiết bị)
+              sử dụng OTP được gửi đến điện thoại di động của người dùng hoặc
+              e-mail.&nbsp;
+              </div>
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+                <br />
+              </div>
+              <div
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  text-align: justify;
+                "
+              >
+              Bằng cách chọn bất kỳ hộp kiểm nào, người dùng có thể nhận được OTP trên bất kỳ
+              tùy chọn đã chọn.<span style="text-align: left">&nbsp;</span>
+              </div>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác thực người dùng bằng mã QR</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Ứng dụng Go&gt;Sign dành cho thiết bị di động sẽ gửi yêu cầu tới RAS tới
+                xác thực người dùng, nó sẽ thông báo cho ứng dụng di động, người dùng
+                sẽ được xác thực bằng mã QR. Ứng dụng Go&gt;Sign dành cho thiết bị di động
+                sẽ khởi chạy máy ảnh của thiết bị di động để quét Mã QR và hỏi
+                người dùng đăng nhập vào tài khoản Web RA của mình để lấy Mã QR.</span
+              >&nbsp;
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                vertical-align: top;
+                width: 150pt;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Không có chứng thực</span
+              ><br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                vertical-align: top;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Không cần xác thực cho người dùng tại thời điểm đăng nhập và
+                đăng ký thiết bị.</span
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span class="TipBubble" style="font-weight: 400"
+          ><strong>​</strong>Nếu cả Xác thực cơ bản (ID người dùng và Mật khẩu)
+          và Xác nhận SAML không được bật trong cấu hình RAS thì RAS
+          Dịch vụ sẽ xác thực ứng dụng khách với ID ứng dụng khách được cung cấp và
+          Client Secret và trả lại mã thông báo truy cập dịch vụ cho Client
+          Ứng dụng cho các thông tin liên lạc tiếp theo.&nbsp;</span
+        >
+      </p>
+      <p
+        style="
+          font-weight: 400;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >Bảng cấu hình&nbsp;RAS có thể được sắp xếp theo một trong hai</span
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >&nbsp;</span
+          ><strong
+            style="
+              color: #000000;
+              font-family: Verdana;
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+            "
+            >Tăng dần<span>&nbsp;</span></strong
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >hoặc</span
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >&nbsp;</span
+          ><strong
+            style="
+              color: #000000;
+              font-family: Verdana;
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+            "
+            >giảm dần</strong
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >&nbsp;</span
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >thứ tự bằng cách chọn một cột trong bảng từ danh sách thả xuống. Danh sách
+            có thể được sắp xếp theo ID hồ sơ RAS, Tên hồ sơ RAS, được tạo vào thời điểm nào
+            hoặc Trạng thái.&nbsp;</span
+          ></span
+        >
+      </p>
+      <span style="font-weight: 400">
+        <p
+          style="
+            font-weight: 400;
+            color: #000000;
+            font-family: Verdana;
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            text-align: justify;
+          "
+        >
+          <span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >Nhấp vào nút Tìm kiếm trên trang chính của Cấu hình RAS sẽ
+            hiển thị màn hình sau:</span
+          >
+        </p>
+        <img
+          alt=""
+          src="../images/1557387804980.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        <span
+          style="
+            font-weight: 400;
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >Điều này giúp định vị một cấu hình RAS cụ thể, Dịch vụ RAS có thể
+          đã cấu hình. Hồ sơ RAS có thể được tìm kiếm dựa trên "Trạng thái",
+          "ID hồ sơ", "Tên hồ sơ". Nếu tìm kiếm dựa trên nhiều giá trị,
+          sau đó chúng sẽ được kết hợp với nhau bằng cách sử dụng toán hạng “AND”, và do đó
+          chỉ những hồ sơ đáp ứng tất cả các tiêu chí sẽ được trình bày.<br /> </span
+        ><br />
+        <span class="TipBubble"
+          >​<br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như
+           ký tự đại diện.<br /> </span
+        ><br />
+        <span class="TipBubble"
+          >​Hồ sơ trùng lặp sẽ được tạo mà không có Tên và
+          Mô tả về Hồ sơ đã chọn. ID duy nhất tạo ra
+          tự động hoặc ID khả dụng tiếp theo sẽ được gán cho
+          Hồ sơ.</span
+        ></span
+      >
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-style: italic; font-weight: bold; color: orange"
+          >Xem thêm</span
+        >
+      </p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="step_2___registering_business_applications.htm" title=""
+            >Bước 2 - Đăng ký ứng dụng kinh doanh</a
+          ><br /><a
+            href="step_3___configuring_notification_settings1.htm"
+            title=""
+            >Bước 3 - Định cấu hình Cài đặt Thông báo</a
+          ><br /><a href="step_3___using_the_service_manager.htm" title=""
+            >Bước 4 - Sử dụng Trình quản lý dịch vụ</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

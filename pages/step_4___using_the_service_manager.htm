@@ -1,0 +1,471 @@
+<html>
+  <head>
+    <title>Bước 4 - Sử dụng Trình quản lý dịch vụ - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('49','Bước 4 - Sử dụng Trình quản lý dịch vụ');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_certification_service.htm"
+              title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_4___using_the_service_manager.htm"
+              title=""
+              >Bước 4 - Sử dụng Trình quản lý dịch vụ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span class="Asc_PageName">Bước 4 - Sử dụng Trình quản lý dịch vụ</span>
+      </p>
+      <p>
+        Sau khi thực hiện thay đổi cấu hình trong Dịch vụ chứng nhận ADSS, dịch
+        vụ phải được khởi động lại để các thay đổi có hiệu lực. Mô-đun trình
+        quản lý dịch vụ chứng nhận cho phép người vận hành bắt đầu, dừng hoặc
+        khởi động lại dịch vụ chứng nhận và cũng thực hiện các thay đổi đối với
+        các cấu hình liên quan đến dịch vụ. Nhấp vào nút "Trình quản lý dịch vụ"
+        và màn hình này được hiển thị:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/CertServ-ServiceManager.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td>Tên máy chủ</td>
+            <td>
+              Địa chỉ của
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chứng nhận</span
+              >
+              Dịch vụ được kiểm soát từ Trình quản lý dịch vụ này. Đảm bảo địa
+              chỉ trỏ đến URL dịch vụ chính xác, tức là nếu bạn đang chạy dịch
+              vụ trên nhiều máy trong cấu hình cân bằng tải thì hãy kiểm tra xem
+              tên có chính xác cho phiên bản cụ thể cần được khởi động / dừng /
+              khởi động lại hay không. Theo mặc định, nó sẽ là của máy cục bộ.
+            </td>
+          </tr>
+          <tr>
+            <td>Bắt đầu<br /></td>
+            <td>
+              Bắt đầu dịch vụ. Trạng thái sẽ thay đổi thành "Đang chạy" sau khi
+              bắt đầu thành công.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Dừng<br /></td>
+            <td>
+              Dừng dịch vụ. Trạng thái sẽ thay đổi thành "Đã dừng" sau khi dịch
+              vụ bị dừng.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Khởi động lại<br /></td>
+            <td>
+              Dừng và sau đó bắt đầu dịch vụ trong một lần, Trạng thái sẽ thay
+              đổi thành "Đang chạy" sau khi khởi động lại thành công.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Thông báo yêu cầu của khách hàng phải được ký<br /></td>
+            <td>
+              Chọn hộp kiểm này để thực thi yêu cầu rằng thông báo yêu cầu dịch
+              vụ phải được ký bởi ứng dụng kinh doanh.
+              <br />
+              <br />
+              Dịch vụ kiểm tra chữ ký trên thông báo yêu cầu bằng chứng chỉ của
+              khách hàng (được đăng ký trong
+              <strong
+                ><a href="page.aspx?pageid=Client_Manager"
+                  >Quản lý khách hàng</a
+                ></strong
+              >
+              mô-đun) để xác thực ứng dụng khách.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Cài đặt liên quan đến Hộ chiếu điện tử:&nbsp;</strong>
+            </td>
+            <td>
+              Các trường dưới đây được sử dụng trong bối cảnh Hộ chiếu điện tử
+              khi Dịch vụ chứng nhận hoạt động như CVCA hoặc DVCA.
+            </td>
+          </tr>
+          <tr>
+            <td>Nước sở tại</td>
+            <td>
+              Trường này xác định quốc gia cư trú của CVCA hoặc DVCA.&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>Dịch vụ chứng nhận Chứng chỉ khách hàng TLS</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              ></span
+              >Trường này hiển thị chứng chỉ xác thực máy khách TLS của Dịch vụ
+              chứng nhận. Dịch vụ chứng nhận sử dụng chứng chỉ này trong khi
+              liên lạc với SPOC.&nbsp;&nbsp;<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >URL phản hồi của dịch vụ chứng nhận</span
+              >
+            </td>
+            <td>
+              Trường này hiển thị URL dịch vụ chứng nhận của DVCA sẽ được gửi
+              đến SPOC trong nước trong mỗi yêu cầu. Nếu SPOC trong nước đang
+              hoạt động ở chế độ không đồng bộ, nơi các yêu cầu được phê duyệt
+              sau khi kiểm tra thích hợp, nó sẽ cung cấp (các) chứng chỉ được
+              yêu cầu trên URL này sau khi quản trị viên phê duyệt.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Làm việc như Gateway cho dịch vụ NPKD</td>
+            <td>
+              Bật tùy chọn này nếu bạn muốn Dịch vụ chứng nhận hoạt động như
+              cổng cho Dịch vụ NPKD. Tùy chọn này chỉ khả dụng cho phiên bản
+              DVCA nơi hệ thống kiểm tra giao tiếp với DVCA chuyển tiếp các yêu
+              cầu này đến Dịch vụ NPKD để tìm nạp Danh sách chính và
+              CRL.&nbsp;<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Địa chỉ dịch vụ NPKD</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng trường này để thêm (các) địa chỉ dịch vụ NPKD.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Danh sách địa chỉ dịch vụ NPKD</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Trường này hiển thị các địa chỉ Dịch vụ NPKD nơi có thể thêm nhiều địa chỉ dịch vụ. Nút "Kiểm tra" được sử dụng để kiểm tra kết nối với địa chỉ được cung cấp. Nút "Xóa" sẽ xóa địa chỉ Dịch vụ NPKD đã định cấu hình.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Xác thực máy khách TLS</td>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Dịch vụ chứng nhận của DVCA sẽ giao tiếp với Dịch vụ NPKD bằng chứng chỉ Xác thực máy khách TLS này.&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Chọn TLS&nbsp;<span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: 400;
+                      letter-spacing: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      background-color: #ffffff;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Khách hàng&nbsp;</span
+                  >Chứng chỉ&nbsp;</span
+                >tồn tại từ trước trong&nbsp;</span
+              ><a
+                href="default.aspx#pageid=key_manager6"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #2495d2;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  font-family: Verdana, sans-serif;
+                "
+                >Quản lý Khóa</a
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >.&nbsp;</span
+              ><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <span class="TipBubble"
+        ><br />
+        Đảm bảo tất cả các thay đổi được lưu bằng cách nhấp vào Tiết kiệm và khởi động lại dịch vụ để thực hiện các thay đổi có hiệu lực.</span
+      >
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_certification_authorities.htm" title=""
+            >Bước 1 - Cấu hình Tổ chức phát hành chứng nhận</a
+          ><br /><a
+            href="step_3_-_creating_a_certification_profile.htm"
+            title=""
+            >Bước 2 - Tạo hồ sơ</a
+          ><br /><a
+            href="allow_access_to_the_certification_service.htm"
+            title=""
+            >Bước 3 - Đăng ký ứng dụng kinh doanh</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,345 @@
+<html>
+  <head>
+    <title>Tích hợp thư mục - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('50','Tích hợp thư mục');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a href="directory_integration.htm" title=""
+              >Tích hợp thư mục</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Tích hợp thư mục</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p class="MsoNormal">
+        <span
+          style="
+            font-size: 10pt;
+            line-height: 107%;
+            font-family: arial, sans-serif;
+          "
+        ></span>
+      </p>
+      <p class="MsoNormal">
+        Tùy chọn này được sử dụng để tạo chứng chỉ cho người dùng Active
+        Directory. Sau khi cấu hình, có một quá trình tự động đồng bộ hóa nó với
+        Active Directory. Khi người dùng mới được thêm vào Active Directory,
+        ADSS Server sẽ tự động tạo cặp khóa và cấp chứng chỉ cho người dùng. Nếu
+        người dùng bị xóa khỏi Active Directory thì trạng thái chứng chỉ của họ
+        sẽ được thay đổi thành bị thu hồi với một lý do không xác định.
+        <br />
+        <br />
+        Bằng cách nhấp vào Tích hợp thư mục, một danh sách các Thư mục hoạt động
+        được định cấu hình hiện tại được hiển thị:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/Directory Integration.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Các tùy chọn cũng có sẵn để sắp xếp các bảng dựa trên các tiêu chí khác
+        nhau và cũng theo thứ tự tăng dần và giảm dần.<br />
+        <br />
+        Để cấu hình Active Directory mới, hãy nhấp vào nút Mới và màn hình sau
+        được hiển thị:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="../images/DI01.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Nhập tất cả các chi tiết cần thiết và sau đó nhấp vào Lưu. Các mục cấu
+        hình như sau:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Items<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>Trạng thái <br /></td>
+            <td>
+              Một hồ sơ có thể được đánh dấu là Hoạt động hoặc Không hoạt động.
+              Một hồ sơ không hoạt động sẽ bị bỏ qua.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên miền<br /></td>
+            <td>
+              Cung cấp thông tin miền của Active Directory cho Máy chủ ADSS để
+              thiết lập connection.<br />
+              Tên miền phải được nhập là <strong>My_Test.Local</strong>&nbsp;Nếu
+              tên miền là: <strong>DN=My_Test,DN=Local</strong><br />
+            </td>
+          </tr>
+          <tr>
+            <td>Mô tả tên miền<br /></td>
+            <td>
+              Điều này có thể được sử dụng để mô tả thông tin tên miền chi tiết
+              hơn, ví dụ: bộ phận nào thư mục này được cấu hình, v.v.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên máy<br /></td>
+            <td>
+              Tên hoặc địa chỉ IP của hệ thống nơi Active Directory được triển
+              khai.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Sử dụng TLS<br /></td>
+            <td>
+              Bật tùy chọn này để thiết lập kết nối giữa Active Directory và Máy
+              chủ ADSS&nbsp;qua xác thực máy chủ TLS.
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td>Port<br /></td>
+            <td>
+              Đặt cổng giao tiếp cho Active Directory. Cổng mặc định là
+              <strong>389 </strong>cho HTTP và <strong>636 </strong>cho
+              HTTPS.<br />
+              Nhập số cổng chính xác cho Active Directory đang được cấu hình.
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Quản trị viên thư mục<br /></td>
+            <td valign="top">
+              Nhập tên người dùng của quản trị viên Active Directory (Để Máy chủ
+              ADSS có thể đăng nhập và lấy dữ liệu người dùng.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Mật khẩu<br /></td>
+            <td valign="top">
+              Cung cấp mật khẩu cho&nbsp;Thư mục hoạt động&nbsp;quản trị viên.
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Đồng bộ hóa sau mỗi lần<br /></td>
+            <td valign="top">
+              Cung cấp khoảng thời gian tính bằng phút mà Máy chủ ADSS sử dụng
+              để kiểm tra bất kỳ thay đổi nào (bổ sung hoặc xóa).<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Thời gian chờ kết nối<br /></td>
+            <td valign="top">
+              Chỉ định Active Directory&nbsp;Thời gian chờ kết nối tính bằng
+              giây.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Số lần thử lại<br /></td>
+            <td valign="top">Chỉ định số lần thử kết nối.&nbsp; <br /></td>
+          </tr>
+          <tr>
+            <td valign="top">ID khách hàng<br /></td>
+            <td valign="top">
+              Chỉ định ID máy khách sẽ được sử dụng với Máy chủ ADSS.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Hồ sơ chứng nhận<br /></td>
+            <td>
+              Chỉ định Cấu hình Chứng nhận sẽ được sử dụng để tạo chứng chỉ cho
+              người dùng Active Directory.&nbsp; <br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <span class="TipBubble"
+        >Chứng chỉ người dùng Active Directory PHẢI cung cấp mật khẩu người dùng
+        miền của họ trong yêu cầu <strong>Dịch vụ ký kết</strong>để ký tài
+        liệu.</span
+      ><span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >Nhấp vào nút Tìm kiếm trên trang Tích hợp thư mục sẽ hiển thị màn hình
+        sau:</span
+      ><br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+        "
+      />
+      <br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+        "
+      />
+      <img
+        alt=""
+        src="../images/DI Search.png"
+        style="border-width: 1px; border-style: solid"
+      /><br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+        "
+      />
+      <br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+        "
+      />
+      <span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >Điều này giúp xác định vị trí một miền, quản trị viên và ID máy khách
+        cụ thể. Nếu một tìm kiếm dựa trên nhiều giá trị, thì chúng sẽ được kết
+        hợp với nhau bằng cách sử dụng toán hạng "AND" và do đó chỉ các bản ghi
+        đáp ứng tất cả các tiêu chí mới được trình bày.</span
+      ><br />
+      <p><span class="Asc_See_Also">Xem thêm </span></p>
+      <div class="Asc_Sibling_Page_List">
+        <span class="Asc_Sibling_Page_List"
+          ><div class="var_Sibling_Page_List">
+            <a href="configuring_the_certification_service.htm" title=""
+              >Cấu hình dịch vụ chứng nhận</a
+            ><br /><a href="x509_certificates.htm" title=""
+              >Giấy chứng nhận danh tính</a
+            ><br /><a href="attribute_certificates.htm" title=""
+              >Chứng chỉ thuộc tính</a
+            ><br /><a href="cv_certificate.htm" title="">Giấy chứng nhận CV</a
+            ><br /><a href="certificate_templates2.htm" title=""
+              >Mẫu chứng chỉ</a
+            ><br /><a href="cv_certificate_templates.htm" title=""
+              >Mẫu chứng chỉ CV</a
+            ><br /><a href="certification_transactions_log.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ><br /><a href="certification_logs_archiving.htm" title=""
+              >Lưu trữ nhật ký</a
+            ><br /><a href="certification_alerts.htm" title="">Cảnh báo</a
+            ><br /><a href="certification_management_reporting.htm" title=""
+              >Báo cáo quản lý</a
+            ><br /><a
+              href="optimising_adss_certification_server_performance.htm"
+              title=""
+              >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</a
+            ><br /><a href="service_urls1.htm" title=""
+              >URL giao diện dịch vụ chứng nhận</a
+            ><br /></div
+        ></span>
+      </div>
+    </div>
+  </body>
+</html>

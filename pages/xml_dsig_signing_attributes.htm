@@ -1,0 +1,702 @@
+<html>
+  <head>
+    <title>Thuộc tính ký XML/XAdES - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('88','Thuộc tính ký XML/XAdES');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_signing_service3.htm"
+              title=""
+              >Cấu hình dịch vụ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="step_3_-_configuring_a_signing_profile.htm"
+              title=""
+              >Bước 4 - Định cấu hình hồ sơ ký</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_pdf_signing_attributes.htm"
+              title=""
+              >Cài đặt chữ ký</a
+            >&nbsp;&gt;&nbsp;<a href="xml_dsig_signing_attributes.htm" title=""
+              >Thuộc tính ký XML/XAdES</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span class="Asc_PageName" style="font-size: 18px"
+          >Thuộc tính ký XML/XAdES</span
+        >
+      </p>
+      <span
+        style="
+          font-size: small;
+          font-family: tahoma, arial, helvetica, sans-serif;
+        "
+      ></span
+      >Trong cấu hình Hồ sơ Ký, biểu mẫu sau đây được trình bày nếu chữ ký XML
+      Dsig được chọn (mỗi tùy chọn được thảo luận trong bảng dưới đây):<br />
+      <br />
+      <img
+        alt=""
+        src="../images/xml-document-aa.png"
+        style="border-width: 1px; border-style: solid"
+      /><br />
+      <br />
+      <div>
+        <p>Các mục cấu hình như sau:</p>
+        <table class="Asc_Table">
+          <tbody>
+            <tr>
+              <td>
+                <strong
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    text-align: justify;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 1;
+                    word-spacing: 0px;
+                  "
+                  >Bước</strong
+                >
+              </td>
+              <td>
+                <strong
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    text-align: justify;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 1;
+                    word-spacing: 0px;
+                  "
+                  >Mô tả</strong
+                >
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: justify">Cài đặt chữ ký</td>
+              <td>
+                <p style="margin: 0in 0in 0pt; text-align: justify">
+                  <span style="text-align: left"
+                    >Chọn định dạng chữ ký sẽ được tạo. Để biết thêm chi
+                    tiết</span
+                  ><span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Xem phần&nbsp;</span
+                  ><a href="page.aspx?pageid=types" target="_blank"
+                    >Các loại chữ ký được hỗ trợ</a
+                  ><span style="text-align: left">.</span
+                  ><span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>Cài đặt dấu thời gian (TSA)</td>
+              <td>
+                <div style="text-align: justify">
+                  Chọn các cơ quan có dấu thời gian bắt buộc từ danh sách các cơ
+                  quan đăng ký trước. Cấu hình của (các) địa chỉ TSA được mô tả
+                  trong phần này:
+                  <a
+                    href="page.aspx?pageid=Configuring_Time_Stamp_Authorities_%28TSA%29"
+                    target="_blank"
+                    >Cấu hình Time Stamp Authority (TSA)</a
+                  >.
+                </div>
+                <div style="text-align: justify">
+                  <strong style="font-weight: bold">Ghi chú:</strong> Các quy
+                  tắc sau đây được áp dụng:
+                </div>
+                <ul>
+                  <li style="text-align: justify">
+                    Nếu tổ chức phát hành CA của chứng chỉ ký trong Trust
+                    Manager có một hoặc nhiều
+                    <a
+                      href="default.aspx#pageid=step_4_-_advanced_settings"
+                      target="_blank"
+                      >TSA liên quan được cấu hình</a
+                    >
+                    sau đó điều này ghi đè lên bất kỳ TSA nào được xác định
+                    trong hồ sơ ký này
+                  </li>
+                  <li style="text-align: justify">
+                    Nếu tổ chức phát hành CA của chứng chỉ ký trong Trust
+                    Manager chưa
+                    <a
+                      href="default.aspx#pageid=step_4_-_advanced_settings"
+                      target="_blank"
+                      >đã định cấu hình TSA liên quan</a
+                    >
+                    sau đó các TSA được cấu hình trong hồ sơ ký sẽ được sử dụng.
+                  </li>
+                </ul>
+                <ul></ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Nâng cao chữ ký hiện có sang định dạng mở rộng</td>
+              <td>
+                <div style="text-align: justify"></div>
+                <div style="text-align: justify">
+                  Khi dịch vụ ký nhận dữ liệu hoặc hàm băm để ký, tùy chọn này
+                  sẽ bị bỏ qua. Đây là một tùy chọn đặc biệt chỉ được sử dụng
+                  khi ứng dụng kinh doanh gửi dữ liệu có chữ ký cơ bản đến dịch
+                  vụ để mở rộng sang định dạng dài hạn. Cách tiếp cận được
+                  khuyến nghị là sử dụng Dịch vụ xác minh cho việc này để chữ ký
+                  có thể được kiểm tra trước và sau đó được gia hạn.<br />
+                  <br />
+                  Nếu tùy chọn này được sử dụng thì các chữ ký sau có thể được
+                  chuyển đổi như sau:
+                </div>
+                <ul>
+                  <li style="text-align: justify">
+                    XAdES-BES -&gt; XAdES-T, XAdES-C, XAdES-X, XAdES-X, XAdES-A
+                  </li>
+                  <li style="text-align: justify">
+                    XAdES-T -&gt; XAdES-C, XAdES-X, XAdES-X-L, XAdES-A
+                  </li>
+                  <li style="text-align: justify">
+                    XAdES-C -&gt; XAdES-X, XAdES-X-L, XAdES-A
+                  </li>
+                  <li style="text-align: justify">
+                    XAdES-X -&gt; XAdES-X-L, XAdES-A
+                  </li>
+                  <li style="text-align: justify">XAdES-X-L -&gt; XAdES-A</li>
+                  <li style="text-align: justify">
+                    XAdES-A -&gt; XAdES-A&nbsp;
+                  </li>
+                  <li style="text-align: justify">
+                    (Chữ ký XAdES-A hiện có có thể được lưu trữ nhiều lần nếu
+                    cần. Dấu thời gian liên tiếp bảo vệ toàn bộ tài liệu chống
+                    lại các thuật toán băm dễ bị tổn thương hoặc phá vỡ tài liệu
+                    hoặc thuật toán mật mã)
+                  </li>
+                </ul>
+                <div style="text-align: justify">
+                  <strong style="font-weight: bold">Ghi chú:</strong
+                  ><strong>&nbsp;</strong>Chỉ chữ ký đầu tiên trong tài liệu
+                  được chuyển đổi bằng cơ chế này<strong>.</strong>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Thời gian ân hạn chữ ký</td>
+              <td>
+                <div style="text-align: justify"></div>
+                <div style="text-align: justify">
+                  Điều này sẽ xác định khoảng thời gian Máy chủ ADSS sẽ đợi sau
+                  thời gian ký được chỉ định trong chữ ký (theo TSA hoặc theo
+                  giờ địa phương của người ký) trước khi chuyển đổi chữ ký cơ
+                  bản thành chữ ký nâng cao.
+                </div>
+                <div style="text-align: justify"><br /></div>
+                <div style="text-align: justify">
+                  <strong style="font-weight: bold">Ghi chú:</strong> Giá trị
+                  mặc định được đặt thành '0'. Giá trị '0' cho biết rằng không
+                  xem xét thời gian gia hạn chữ ký trong khi chuyển đổi sang
+                  loại chữ ký nâng cao.
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Thông tin trạng thái thu hồi Lỗi không khả dụng</td>
+              <td>
+                <p style="margin: 0in 0in 0pt; text-align: justify">
+                  Nếu một trong các loại chữ ký sau được chọn:
+                </p>
+                <ul>
+                  <li style="text-align: justify">XAdES-C</li>
+                  <li style="text-align: justify">XAdES-X</li>
+                  <li style="text-align: justify">XAdES-X-L</li>
+                  <li style="text-align: justify">XAdES-A</li>
+                </ul>
+                <div style="text-align: justify">
+                  Sau đó, một hộp kiểm bổ sung được cung cấp để quyết định xem
+                  Máy chủ ADSS có trả về lỗi hay không nếu nó không thể nhúng
+                  thông tin thu hồi khi tạo chữ ký dài hạn.
+                </div>
+                <span
+                  style="
+                    line-height: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    widows: 1;
+                    float: none;
+                    background-color: #ffffff;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                >
+                  <div style="text-align: justify"><br /></div>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      widows: 1;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                  >
+                    <div style="text-align: justify">
+                      <span
+                        style="
+                          line-height: normal;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >Những chữ ký như vậy yêu cầu thông tin trạng thái / thu
+                        hồi được nhúng cho chuỗi chứng chỉ của người ký. Điều
+                        này rất hữu ích để ngăn chặn các chữ ký cơ bản được tạo
+                        ra khi lỗi giao tiếp ngăn chặn thông tin thu hồi được từ
+                        các tài nguyên bên ngoài. Nếu hộp kiểm này không được
+                        chọn thì chữ ký sẽ được tạo ra nhưng nó có thể không
+                        chứa thu hồi nhúng nếu điều này không có sẵn tại thời
+                        điểm ký, ví dụ: nếu OCSP có liên quan không phản hồi
+                        hoặc nếu CRL động không khả dụng. Máy chủ ADSS thường
+                        được cấu hình để lưu trữ CRL CA cục bộ và nó cũng có bộ
+                        đệm có tuổi thọ ngắn cho CRL động và phản hồi
+                        OCSP.</span
+                      >
+                    </div>
+                  </span>
+                  <div style="text-align: justify"><br /></div>
+                  <strong
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      letter-spacing: normal;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                    "
+                  >
+                    <div style="text-align: justify">
+                      Ghi chú:<span style="font-weight: normal">
+                        Bạn nên luôn đánh dấu vào ô này.</span
+                      >
+                    </div>
+                  </strong></span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Thuật toán băm</td>
+              <td>
+                <p style="margin: 0in 0in 0pt; text-align: justify">
+                  <span style="widows: 1"
+                    >Chọn thuật toán băm để sử dụng như một phần của quá trình
+                    tạo chữ ký. Các thuật toán sau được hỗ trợ:</span
+                  >
+                </p>
+                <ul style="text-align: start">
+                  <li style="text-align: justify">SHA1</li>
+                  <li style="text-align: justify">
+                    SHA2 (SHA256, SHA384, SHA512)
+                  </li>
+                  <li style="text-align: justify">RipeMD160</li>
+                </ul>
+                <div style="text-align: justify">SHA256 được khuyến nghị</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Mối quan hệ chữ ký/tài liệu</td>
+              <td>
+                <div></div>
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 1;
+                    word-spacing: 0px;
+                    float: none;
+                    background-color: #ffffff;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                >
+                  <div style="text-align: justify">
+                    Điều này xác định cách chữ ký được cung cấp. Chữ ký có thể
+                    được bọc xung quanh dữ liệu hoặc được cung cấp riêng. Các
+                    tùy chọn sau được hỗ trợ:
+                  </div>
+                </span>
+                <ul style="text-align: start">
+                  <li style="text-align: justify">Enveloping</li>
+                  <li style="text-align: justify">Enveloped&nbsp;</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: justify">
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #d3d3d3;
+                    text-decoration-thickness: initial;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Phương pháp chuẩn hóa</span
+                >
+              </td>
+              <td style="text-align: justify">
+                Chọn thuật toán Canonicalization sẽ được sử dụng để chuẩn hóa
+                XML trước khi tính toán hàm băm. Một trong các thuật toán sau có
+                thể được chọn:<br />
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-thickness: initial;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                >
+                  <ul>
+                    <li style="text-align: justify">
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-thickness: initial;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >Bao gồm<strong>&nbsp;</strong></span
+                      ><span
+                        style="
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >(http://www.w3.org/TR/2001/REC-xml-c14n-20010315)</span
+                      >
+                    </li>
+                    <li style="text-align: left">
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: left;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-thickness: initial;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                      ></span
+                      >Độc quyền&nbsp;(http://www.w3.org/2001/10/xml-exc-c14n#)
+                    </li>
+                  </ul>
+                  <div>
+                    <strong>Ghi chú: </strong>Theo mặc định, 'Bao gồm' sẽ được
+                    chọn.<strong>&nbsp;</strong>
+                  </div>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>Ký một phần XML<br /></td>
+              <td>
+                <div style="text-align: justify">
+                  Điều này xác định cách một phần tử cụ thể có thể được ký trong
+                  tài liệu XML. Phần tử có thể được định nghĩa riêng lẻ hoặc
+                  thông qua XPath. Nhiều yếu tố ký cũng có thể được thêm vào.
+                  XPath sử dụng biểu thức đường dẫn để chọn các nút hoặc tập hợp
+                  nút trong tài liệu XML. XPath sử dụng biểu thức đường dẫn để
+                  điều hướng trong tài liệu XML. XPath có thể được thiết lập
+                  theo một số cách. Nếu hộp kiểm được bật và hệ thống không thể
+                  tìm thấy phần tử ký XML đã xác định thì nó sẽ trả về
+                  lỗi.&nbsp;
+                </div>
+                <div style="text-align: justify">
+                  Nếu mối quan hệ chữ ký / tài liệu được bao bọc thì cài đặt ký
+                  phần XML sẽ được bật.
+                </div>
+                <div style="text-align: justify"><br /></div>
+                <strong>
+                  <div style="text-align: justify">
+                    <strong>Ví dụ về Xpath:</strong>
+                  </div>
+                </strong>
+                <div style="text-align: justify">/root/books/author</div>
+                <div style="text-align: justify">//publisher</div>
+              </td>
+            </tr>
+            <tr>
+              <td>EPES Signature</td>
+              <td>
+                <p style="margin: 0in 0in 0pt"></p>
+                <div style="text-align: justify">
+                  Cài đặt chữ ký điện tử dựa trên chính sách rõ ràng (EPES) chỉ
+                  khả dụng cho các loại chữ ký XAdES. Bằng cách bật hộp
+                  kiểm<strong>Thêm mã định danh chính sách chữ ký</strong>, hồ
+                  sơ ký có thể được sử dụng để tạo chữ ký (EPES) trong đó chính
+                  sách chữ ký OID, URI và thông báo người dùng được thêm vào chữ
+                  ký số như được chỉ định bên dưới.
+                </div>
+                <strong>
+                  <div style="text-align: justify">
+                    <strong
+                      ><span style="text-decoration: underline"
+                        >1. ID đối tượng chính sách chữ ký</span
+                      ></strong
+                    >
+                  </div>
+                </strong>
+                <div style="text-align: justify">
+                  Cung cấp OID Chính sách Chữ ký sẽ được thêm vào cho chữ ký
+                  EPES.
+                </div>
+                <div style="text-align: justify"><br /></div>
+                <strong>
+                  <div style="text-align: justify">
+                    <strong
+                      ><span style="text-decoration: underline"
+                        >2. URI chính sách chữ ký</span
+                      ></strong
+                    >
+                  </div>
+                </strong>
+                <div style="text-align: justify">
+                  Cung cấp URI Chính sách Chữ ký sẽ được thêm vào cho chữ ký
+                  EPES.
+                </div>
+                <div style="text-align: justify">
+                  Nếu không có URI chính sách nào được xác định bên trong hồ sơ
+                  ký thì cấu hình EPES phải được thực hiện trong
+                  <strong>policy.properties</strong> Tệp có tại:
+                  <strong>[Thư mục cài đặt ADSS]/service/</strong>
+                </div>
+                <div style="text-align: justify"><br /></div>
+                <div style="text-align: justify">
+                  Mở tệp này trong bất kỳ trình soạn thảo văn bản nào và nhập
+                  OID chính sách và đường dẫn đến tài liệu chính sách&nbsp;
+                </div>
+                <strong>
+                  <div style="text-align: justify">
+                    <strong>e.g. 1.2.3.4.5 = "F:/Policy_File"</strong>
+                  </div>
+                </strong>
+                <br />
+                <span class="TipBubble">
+                  <div style="text-align: justify">
+                    Dịch vụ ký ADSS có thể truy xuất tài liệu chính sách chữ ký
+                    theo một trong các cách sau:
+                  </div>
+                  <div style="text-align: justify">
+                    Sử dụng URI chính sách được xác định trong hồ sơ ký. Dịch vụ
+                    ký ADSS sẽ sử dụng URI chính sách này để truy xuất tài liệu
+                    chính sách có sẵn trực tuyến và giá trị băm của nó sẽ được
+                    tính toán và nhúng vào các thuộc tính đã ký của chữ ký.
+                  </div>
+                  <div style="text-align: justify"><br /></div>
+                  <div style="text-align: justify">
+                    Sử dụng tài liệu chính sách chữ ký được cấu hình cục bộ.
+                    Dịch vụ ký ADSS sẽ sử dụng con trỏ tệp văn bản này để truy
+                    xuất tài liệu chính sách được lưu cục bộ, băm và nhúng nó
+                    vào các thuộc tính đã ký của chữ ký.&nbsp;
+                  </div> </span
+                ><br />
+                <div style="text-align: justify">
+                  <strong
+                    ><span style="text-decoration: underline"
+                      >3. Thông báo người dùng chính sách chữ ký</span
+                    ></strong
+                  >
+                </div>
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 1;
+                    word-spacing: 0px;
+                    float: none;
+                    background-color: #ffffff;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                >
+                  <div style="text-align: justify">
+                    Bạn phải cung cấp thông báo người dùng để được thêm vào chữ ký EPES được tạo ra
+                  </div>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="Asc_See_Also">Xem thêm</p>
+        <div class="pagelist">
+          <span class="Asc_Sibling_Page_List"
+            ><div class="var_Sibling_Page_List">
+              <a href="pdf_signing_attributes2.htm" title=""
+                >Thuộc tính ký PDF/PAdES</a
+              ><br /><a href="pdf_hash_signing_attributes1.htm" title=""
+                >Thuộc tính ký băm PDF/PAdES</a
+              ><br /><a href="ms_office_signing_attributes.htm" title=""
+                >Thuộc tính Ký Microsoft Office</a
+              ><br /><a href="pkcs7_signing_attributes1.htm" title=""
+                >Thuộc tính ký PKCS7</a
+              ><br /><a href="cms_signing_attributes1.htm" title=""
+                >Thuộc tính ký CMS/CAdES</a
+              ><br /><a href="s_mime_signing_attributes1.htm" title=""
+                >Thuộc tính ký S/MIME</a
+              ><br /></div
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

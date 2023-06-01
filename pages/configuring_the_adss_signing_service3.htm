@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <title>Cấu hình dịch vụ ký - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('71','Cấu hình dịch vụ ký');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p style="text-align: justify">
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_signing_service3.htm"
+              title=""
+              >Cấu hình dịch vụ ký</a
+            ></span
+          ></span
+        >&nbsp;<br />
+        <br />
+        <span class="Asc_PageName">Cấu hình dịch vụ ký </span>
+      </p>
+      <p style="text-align: justify">
+        Sau đây là các bước chính cần thực hiện khi định cấu hình Dịch vụ ký
+        ADSS. Thứ tự xác định các bước không quan trọng vì dễ dàng quay lại bước
+        trước đó và cũng có thể thực hiện các thay đổi sau nếu cần.
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>&nbsp;Bước</td>
+            <td>Mô tả <br /></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="step_2_-_generating_keys_certs_through_key_manager.htm"
+                >Bước 1</a
+              >
+            </td>
+            <td>
+              Nếu cần ký phía máy chủ, hãy tạo (hoặc nhập) các khóa và chứng chỉ
+              cần thiết cho hoạt động ký bằng Trình quản lý khóa. Nếu cần ký
+              phía máy khách, hãy cấp cho người dùng cuối Thẻ thông minh, USB
+              hoặc Mã thông báo mềm phù hợp.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;<br />
+              <a href="step_2_-_register_cas_using_trust_manager1.htm"
+                >Bước 2</a
+              >
+            </td>
+            <td>
+              Đăng ký các CA "đáng tin cậy" có liên quan bằng cách sử dụng
+              mô-đun Trình quản lý tin cậy để các chứng chỉ do các CA này cấp có
+              thể được chấp nhận là đáng tin cậy.&nbsp;<br />
+              <strong>Ghi chú: -</strong> Đăng ký CA trung gian có thể rút ngắn
+              quá trình khám phá/xác thực đường dẫn, chi phí và thời gian.<br />
+            </td>
+          </tr>
+          <tr>
+            <td><a href="step_3_-_configuring_crl_monitor.htm">Bước 3</a></td>
+            <td>
+              Đảm bảo ADSS
+              <a href="page.aspx?pageid=CRL_Manager_Service" target="_blank"
+                >Màn hình CRL</a
+              >
+              đang chạy và CRL đang được truy xuất thành công cho các CA đã đăng
+              ký. Ngoài ra, nhập CRL cho các CA đáng tin cậy vào mô-đun Giám sát
+              CRL, để xác định trạng thái thu hồi của CRL được tổ chức cục
+              bộ.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;<br />
+              <a href="step_3_-_configuring_a_signing_profile.htm">Bước 4</a>
+            </td>
+            <td>
+              Cấu hình một hoặc nhiều Hồ sơ Ký sẽ có liên quan đến các hoạt động
+              ký trên PDF, XML hoặc các tệp hoặc đối tượng dữ liệu khác. Ứng
+              dụng khách đề cập đến Hồ sơ ký trong thông báo yêu cầu của chúng
+              được gửi đến Dịch vụ ký ADSS.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;<br />
+              <a href="step_1_-_registering_client_applications.htm">Bước 5</a>
+            </td>
+            <td>
+              Đăng ký một hoặc nhiều ứng dụng khách trong Trình quản lý khách
+              hàng. Giờ đây, chúng có thể được ủy quyền để thực hiện yêu cầu đến
+              một hoặc nhiều Hồ sơ dịch vụ ký.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              &nbsp;<br />
+              <a href="step_4_-_using_the_signing_service_manager.htm"
+                >Bước 6</a
+              >
+            </td>
+            <td>
+              Sử dụng Trình quản lý dịch vụ ký ADSS để bắt đầu / dừng / khởi
+              động lại dịch vụ. Dịch vụ ký ADSS được yêu cầu khởi động lại khi
+              Hồ sơ ký được thêm / cập nhật / xóa.<br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      Mỗi bước này được mô tả trong các phần tiếp theo:<span
+        style="text-align: justify"
+      ></span>
+      <div class="pagelist">
+        <p class="Asc_Sibling_Page_List"></p>
+        <div class="iconpanel">
+          <div align="center">
+            <a
+              href="step_2_-_generating_keys_certs_through_key_manager.htm"
+              title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a
+              href="step_2_-_generating_keys_certs_through_key_manager.htm"
+              title=""
+              >Bước 1 - Tạo khóa và chứng chỉ</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="step_2_-_register_cas_using_trust_manager1.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="step_2_-_register_cas_using_trust_manager1.htm" title=""
+              >Bước 2 - Đăng ký CA
+            </a>
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="step_3_-_configuring_crl_monitor.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="step_3_-_configuring_crl_monitor.htm" title=""
+              >Bước 3 - Cấu hình màn hình CRL</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="step_3_-_configuring_a_signing_profile.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="step_3_-_configuring_a_signing_profile.htm" title=""
+              >Bước 4 - Định cấu hình hồ sơ ký</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="step_1_-_registering_client_applications.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="step_1_-_registering_client_applications.htm" title=""
+              >Bước 5 - Đăng ký ứng dụng kinh doanh</a
+            >
+          </div>
+        </div>
+        <div class="iconpanel">
+          <div align="center">
+            <a href="step_4_-_using_the_signing_service_manager.htm" title=""
+              ><img src="../images/default_pageicon.png" border="0"
+            /></a>
+          </div>
+          <div align="center">
+            <a href="step_4_-_using_the_signing_service_manager.htm" title=""
+              >Bước 6 - Sử dụng Trình quản lý dịch vụ</a
+            >
+          </div>
+        </div>
+        <div style="clear: both"></div>
+        <p></p>
+        <p
+          class="Asc_See_Also"
+          style="
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            color: orange;
+            font-family: Verdana;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            orphans: 2;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-align: left;
+          "
+        >
+          Xem thêm
+        </p>
+        <p></p>
+        <div
+          class="pagelist"
+          style="
+            color: #000000;
+            font-family: Verdana;
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            orphans: 2;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-align: left;
+          "
+        >
+          <span style="text-align: justify; font-size: 13px"
+            ><div class="var_Sibling_Page_List">
+              <a href="step_3_-_pdf_sig_appearances1.htm" title=""
+                >Xuất hiện chữ ký PDF</a
+              ><br /><a href="pdf_signature_locations.htm" title=""
+                >Vị trí chữ ký PDF</a
+              ><br /><a
+                href="signing_service_transaction_log_viewer.htm"
+                title=""
+                >Trình xem nhật ký giao dịch</a
+              ><br /><a href="authentication_logs.htm" title=""
+                >Nhật ký xác thực</a
+              ><br /><a href="signing_logs_archiving.htm" title=""
+                >Lưu trữ nhật ký</a
+              ><br /><a href="signing_service_alerts.htm" title="">Cảnh báo</a
+              ><br /><a href="signing_management_reporting.htm" title=""
+                >Báo cáo quản lý</a
+              ><br /><a
+                href="optimising_adss_signing_server_performance.htm"
+                title=""
+                >Tối ưu hóa hiệu suất máy chủ ký ADSS</a
+              ><br /><a href="service_urls.htm" title=""
+                >Ký URL giao diện dịch vụ</a
+              ><br /></div
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

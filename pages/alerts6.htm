@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <title>Cảnh báo - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('39','Alerts');parent.MenuItemSelected('adss_ra_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_ra_service.htm"
+              title=""
+              >Dịch vụ ADSS RA</a
+            >&nbsp;&gt;&nbsp;<a href="alerts6.htm" title="">Cảnh báo</a></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Cảnh báo</p>
+      <p>
+        <span class="heading" style="font-family: arial; font-size: 18px">
+        </span>
+      </p>
+      <p>
+        Dịch vụ ADSS RA có thể được cấu hình để tạo cảnh báo chung dựa trên
+        email, SMS và / hoặc SNMP khi các sự kiện sau xảy ra:
+      </p>
+      <ul>
+        <li>
+          <span style="text-align: left">Không tạo được Chứng chỉ</span>
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Không thể liên lạc với Máy chủ CA</span
+          >
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Đã xảy ra lỗi nội bộ (Lý do bao gồm cơ sở dữ liệu hoặc không gian
+            không khả dụng, v.v.)</span
+          >
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Không thể sử dụng khóa ký nhật ký tại thời điểm lưu trữ tự
+            động</span
+          >
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Khi lưu trữ được hoàn thành thành công</span
+          >
+        </li>
+      </ul>
+      <div class="Bullet-dot" style="text-align: justify">
+        <div>
+          Các nhà khai thác hệ thống sẽ nhận được các cảnh báo chung này có thể
+          được xác định trong GUI dịch vụ.&nbsp; &nbsp;
+        </div>
+        <div><br /></div>
+      </div>
+      <div class="Bullet-dot" style="text-align: justify">
+        Dịch vụ ADSS RA cũng có thể được cấu hình để tạo các cảnh báo cơ sở hồ
+        sơ được đề cập bên dưới chỉ cho những cảnh báo đó&nbsp;Vận
+        hành&nbsp;những người được liên kết với hồ sơ RA.
+      </div>
+      <p style="text-align: justify">
+        &nbsp;<img
+          alt=""
+          src="../images/1536150919825.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="text-align: justify">Các mục cấu hình như sau:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>Không thể</td>
+            tạo chứng chỉ<br />
+            <td>
+              Dịch vụ ADSS RA gửi cảnh báo qua email cho các nhà khai thác có
+              liên quan khi không tạo được chứng chỉ vì bất kỳ lý do gì.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Không thể liên lạc với Máy chủ CA</td>
+            <td>
+              <span
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                "
+                >Dịch vụ ADSS RA gửi cảnh báo qua email đến các nhà khai thác có
+                liên quan khi không liên lạc được với Máy chủ CA.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Đã xảy ra lỗi nội bộ (Lý do: cơ sở dữ liệu không thể truy cập,
+              v.v.)<br />
+            </td>
+            <td>
+              Khi được bật, một cảnh báo sẽ được gửi bất cứ khi nào xảy ra lỗi
+              nội bộ trong quá trình xử lý yêu cầu (ví dụ: cơ sở dữ liệu không
+              thể truy cập được).<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Không thể sử dụng Khóa ký nhật ký tại thời điểm lưu trữ tự động<br />
+            </td>
+            <td>
+              Khi được bật, một cảnh báo sẽ được gửi bất cứ khi nào không thể sử
+              dụng Khóa ký nhật ký tại thời điểm lưu trữ tự động. Lưu ý rằng
+              Khóa Ký Nhật ký được cấu hình trong Cài đặt chung &gt;&gt; Phần
+              Chứng chỉ hệ thống<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Khi lưu trữ được thực hiện<br /></td>
+            <td>
+              Khi được bật, dịch vụ sẽ gửi cảnh báo bất cứ khi nào tự động lưu
+              trữ được thực hiện.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Không thể giao tiếp</td>
+            với CA Server<br />
+            <td>
+              Khi được bật, dịch vụ sẽ gửi cảnh báo đến các nhà khai thác có
+              liên quan bất cứ khi nào nó không liên lạc được với CA Server.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>&gt;&gt; và &lt;&lt;<br /></td>
+            <td>
+              Các nút này được sử dụng để chọn và bỏ chọn các nhà khai thác hệ
+              thống mà cảnh báo được gửi đến.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gửi thông báo hết hạn Chứng chỉ vài ngày trước khi chứng chỉ hết
+              hạn&nbsp;<br />
+            </td>
+            <td>
+              Khi được bật, dịch vụ sẽ gửi cảnh báo đến các nhà khai thác có
+              liên quan số ngày trước ngày hết hạn chứng chỉ.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gửi cảnh báo đến thực thể cuối khi yêu cầu chứng chỉ đang chờ xử
+              lý được chấp thuận<br />
+            </td>
+            <td>
+              Khi được bật, dịch vụ sẽ gửi cảnh báo đến thực thể cuối khi yêu
+              cầu chứng chỉ đang chờ xử lý được chấp thuận.&nbsp;<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Đã nhận được yêu cầu tạo chứng chỉ người dùng cuối<br /></td>
+            <td>
+              Khi sử dụng giao diện không đồng bộ, yêu cầu chứng chỉ được thêm
+              vào hàng đợi phê duyệt đang chờ xử lý trong dịch vụ ADSS RA. Sau
+              khi được phê duyệt và chứng chỉ được cấp, một cảnh báo sẽ được gửi
+              đến người dùng cuối khi tùy chọn này được bật.&nbsp;
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Bấm <strong>Lưu </strong>để các thay đổi có hiệu lực</p>
+      <p class="Asc_See_Also">Xem thêm</p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_the_ra_service1.htm" title=""
+            >Cấu hình dịch vụ RA</a
+          ><br /><a href="device_certificates.htm" title=""
+            >Chứng chỉ thiết bị</a
+          ><br /><a href="end-user_certificates.htm" title=""
+            >Chứng chỉ người dùng cuối</a
+          ><br /><a href="transactions_log_viewer5.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          ><br /><a href="logs_archiving9.htm" title="">Lưu trữ nhật ký</a
+          ><br /><a href="ra_service_interface_urls.htm" title=""
+            >URL giao diện dịch vụ RA</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

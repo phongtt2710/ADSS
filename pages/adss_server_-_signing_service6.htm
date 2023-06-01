@@ -1,0 +1,262 @@
+<html>
+  <head>
+    <title>Dịch vụ ký ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('70','Dịch vụ ký ADSS');parent.MenuItemSelected('adss_server_-_signing_service6');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_signing_service6.htm"
+              title=""
+              >Dịch vụ ký ADSS</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Dịch vụ ký ADSS</p>
+      <p>
+        ADSS Signing Service cung cấp dịch vụ ký dữ liệu và tài liệu tuân thủ
+        OASIS DSS cho các ứng dụng khách. Một loạt các loại dữ liệu và tài liệu,
+        tiêu chuẩn và định dạng chữ ký được hỗ trợ bao gồm PDF, PDF / A, Office
+        Word 2016, ETSI (PAdES, CAdES, XAdES), PKCS1, PKCS7, CMS và S / MIME.
+      </p>
+      <p>
+        Có bốn cách khác nhau mà Dịch vụ ký ADSS có thể được sử dụng để ký tài
+        liệu:
+      </p>
+      <ul>
+        <li>
+          <p class="Bullet-dot">
+            Ký tài liệu phía máy chủ bằng cách sử dụng khóa / chứng chỉ ký 'công
+            ty' được giữ trên máy chủ trong phần mềm, HSM hoặc thẻ thông minh
+            hoặc mã thông báo USB.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            Ký tài liệu phía máy khách bằng khóa và chứng chỉ do người dùng nắm
+            giữ thông qua trình duyệt web, sử dụng ADSS Go Sign Desktop /
+            Applet. Khóa / chứng chỉ có thể nằm trên thẻ thông minh, mã thông
+            báo USB hoặc kho khóa phần mềm trình duyệt. Ngoài ra, thông tin xác
+            thực chuyển vùng được quản lý bởi Máy chủ ADSS có thể được sử dụng
+            với Máy tính để bàn / Applet ADSS Go Sign.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            Ký tài liệu phía máy chủ bằng cách sử dụng khóa / chứng chỉ ký của
+            người dùng cuối được giữ trên máy chủ trong phần mềm, HSM hoặc thẻ
+            thông minh hoặc mã thông báo USB.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            Ký tài liệu phía máy chủ được ủy quyền bằng cách sử dụng khóa /
+            chứng chỉ ký 'công ty' được giữ trên máy chủ trong phần mềm, HSM
+            hoặc thẻ thông minh hoặc mã thông báo USB, trong đó hồ sơ ủy quyền
+            đã được xác định sao cho một hoặc nhiều tài liệu chỉ được ký nếu yêu
+            cầu chữ ký đã được ký và xác minh thành công bởi một hoặc nhiều
+            người dùng được ủy quyền (xem
+            <a target="_blank" href="authorisation_profiles.htm"
+              >Hồ sơ Autorisation</a
+            >
+            để biết thêm chi tiết).
+          </p>
+        </li>
+      </ul>
+      <p>
+        Các phương thức ký được mô tả trong
+        <a target="_blank" href="adss_server_-_signing_service.htm"
+          >Khái niệm và kiến trúc, Dịch vụ ký kết</a
+        >&nbsp;của tài liệu này. Các phần còn lại của phần này giải thích cách
+        cấu hình Dịch vụ ký cho các chế độ hoạt động khác nhau này. Yêu cầu chữ
+        ký được gửi đến ADSS Server bằng cách:
+      </p>
+      <ul>
+        <li>
+          <p class="Bullet-dot">
+            <strong>Dịch vụ Web -&nbsp;</strong>Tạo các dịch vụ web OASIS DSS
+            bằng cách sử dụng các định nghĩa WSDL được cung cấp với Máy chủ
+            ADSS.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            <strong>API JAVA hoặc .NET cấp cao</strong>&nbsp;- ADSS Client SDK,
+            một thư viện máy khách phức tạp xử lý nhiều kịch bản, định dạng dữ
+            liệu và loại chữ ký, đồng thời giúp tích hợp với các ứng dụng khác
+            nhau rất dễ dàng, thường thêm từ 5 đến 20 dòng mã.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            <strong>Chế độ thư mục xem ADSS AFP</strong>&nbsp;- Ứng dụng khách
+            ADSS Auto File Processor (AFP) có sẵn dưới dạng tùy chọn được cấp
+            phép giám sát các thư mục đầu vào và yêu cầu ký các tài liệu đầu vào
+            thông qua một hoặc nhiều Máy chủ ADSS. Các tệp đã ký được ghi vào
+            một thư mục đầu ra được xác định.
+          </p>
+        </li>
+        <li>
+          <p class="Bullet-dot">
+            <strong>Máy chủ email an toàn -&nbsp;</strong>Ứng dụng khách ADSS
+            Secure Email Server (SES) có sẵn dưới dạng tùy chọn được cấp phép
+            hoạt động như một MTA email đầy đủ để chặn email và ký email hoặc
+            tệp đính kèm của nó bằng cách tuân theo một bộ quy tắc đã xác định.
+            SES cũng có thể xác minh chữ ký trên các email đã nhận.
+          </p>
+        </li>
+      </ul>
+      <p>
+        Hình ảnh sau đây hiển thị các mô-đun con Dịch vụ ký kết, chi tiết được đưa ra trong các phần tiếp theo:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/Signing Screen.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Các phần sau đây mô tả cách cấu hình Dịch vụ ký ADSS.
+      </p>
+      <p>
+        <span
+          style="font-size: 10pt; background-color: #ffffff; font-family: arial"
+        >
+        </span>
+      </p>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="configuring_the_adss_signing_service3.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="configuring_the_adss_signing_service3.htm" title=""
+            >Cấu hình dịch vụ ký</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="step_3_-_pdf_sig_appearances1.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="step_3_-_pdf_sig_appearances1.htm" title=""
+            >Xuất hiện chữ ký PDF</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="pdf_signature_locations.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="pdf_signature_locations.htm" title=""
+            >Vị trí chữ ký PDF</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="signing_service_transaction_log_viewer.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="signing_service_transaction_log_viewer.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="authentication_logs.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="authentication_logs.htm" title="">Nhật ký xác thực</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="signing_logs_archiving.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="signing_logs_archiving.htm" title="">Lưu trữ nhật ký</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="signing_service_alerts.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="signing_service_alerts.htm" title="">Cảnh báo</a>
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="signing_management_reporting.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="signing_management_reporting.htm" title=""
+            >Báo cáo quản lý</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="optimising_adss_signing_server_performance.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="optimising_adss_signing_server_performance.htm" title=""
+            >Tối ưu hóa hiệu suất máy chủ ký ADSS</a
+          >
+        </div>
+      </div>
+      <div class="iconpanel">
+        <div align="center">
+          <a href="service_urls.htm" title=""
+            ><img src="../images/default_pageicon.png" border="0"
+          /></a>
+        </div>
+        <div align="center">
+          <a href="service_urls.htm" title="">Ký URL giao diện dịch vụ</a>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <br />
+      <br />
+      <p></p>
+    </div>
+  </body>
+</html>

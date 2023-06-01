@@ -1,0 +1,274 @@
+﻿.skin_body {
+  background-color: #1d5384;
+  margin: 0px
+}
+
+.skin_detailwrapper {
+  width: 100%
+}
+
+.skin_separator {
+  width: 4px;
+  cursor: e-resize;
+}
+
+.skin_contentswrapper {
+  width: 350px;
+}
+
+.skin_pagewrapper {}
+
+.skin_container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.skin_header {}
+
+.skin_footer {}
+
+.skin_contentsheader {
+  background-color: #dddddd;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.skin_contents {
+  text-align: left;
+  background-color: #e9eef0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.skin_contentsfooter {}
+
+.skin_pageheader {
+  background-color: #dddddd;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px
+}
+
+.skin_pageleft {
+  display: none
+}
+
+.skin_page {
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.skin_pageright {
+  display: none
+}
+
+.skin_pagefooter {}
+
+.skin_footer {
+  xheight: 22px !important
+}
+
+.TreeView {
+  padding-left: 20px;
+}
+
+.TreeNode {
+  color: #0a355c;
+}
+
+.static_tree TD {
+  color: #0a355c;
+}
+
+.static_tree A {
+  text-decoration: none;
+}
+
+.rtIn {
+  color: #0a355c;
+}
+
+.ContentsLabel {
+  font-size: 11pt;
+  color: #1d5384
+}
+
+.IndexLabel {
+  font-size: 11pt;
+  color: #1d5384
+}
+
+.SearchResultsLabel {
+  font-size: 11pt;
+  color: #1d5384
+}
+
+.CloseContentsIcon {}
+
+
+
+.index_button {
+  color: #333333;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 29px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-image: url(images_Indigo/index.png);
+  background-position: center left;
+  background-repeat: no-repeat
+}
+
+.bookmark_button {
+  color: #333333;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 29px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-image: url(images_Indigo/bookmark.png);
+  background-position: center left;
+  background-repeat: no-repeat
+}
+
+.print_button {
+  color: #333333;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 29px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-image: url(images_Indigo/print.png);
+  background-position: center left;
+  background-repeat: no-repeat
+}
+
+.link_button {
+  color: #333333;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 29px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-image: url(images_Indigo/link.gif);
+  background-position: center left;
+  background-repeat: no-repeat
+}
+
+.search_container {
+  width: 100%
+}
+
+.search_textbox_cell {
+  height: 25px;
+  background-color: #dddddd;
+  border-top: 1px solid #204256;
+  border-bottom: 1px solid #204256
+}
+
+.search_button_cell {
+  background-image: url(images_indigo/searchbutton.png);
+  width: 26px;
+}
+
+.search_advbutton_cell {
+  display: none
+}
+
+.search_textbox {
+  padding-left: 3px;
+  width: 213px;
+  height: 23px;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.seealso_list A:link {
+  text-decoration: none;
+  color: #164587;
+  background-image: url(images_Indigo/pagelist_icon.gif);
+  background-repeat: no-repeat;
+  padding-left: 12px;
+}
+
+.seealso_list A:active {
+  text-decoration: none;
+  color: #164587;
+  background-image: url(images_Indigo/pagelist_icon.gif);
+  background-repeat: no-repeat;
+  padding-left: 12px;
+}
+
+.seealso_list A:visited {
+  text-decoration: none;
+  color: #164587;
+  background-image: url(images_Indigo/pagelist_icon.gif);
+  background-repeat: no-repeat;
+  padding-left: 12px;
+}
+
+.seealso_list A:hover {
+  text-decoration: underline;
+}
+
+.login_link {
+  font-size: 9pt;
+  color: white;
+  background-color: #4e4e4e;
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block
+}
+
+.login_link:link {
+  text-decoration: none;
+  color: white
+}
+
+.login_link:active {
+  text-decoration: none;
+  color: white
+}
+
+.login_link:visited {
+  text-decoration: none;
+  color: white
+}
+
+.login_link:hover {
+  background-color: #e91212;
+  color: white
+}
+
+.welcome_username {
+  color: #4e4e4e;
+  font-size: 13px;
+}
+
+.RadTreeView .rtIn,
+.RadTreeView .rtImg {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.RadTreeView .rtImg {
+  vertical-align: top !important;
+  margin-top: 5px;
+}
+
+.RadTreeView .rtIn {
+  max-width: 75%;
+}
+
+.RadTreeView_Metro .rtHover .rtIn,
+.RadTreeView_Metro .rtSelected .rtIn {
+  font-weight: bold !important;
+  border-color: transparent !important;
+  color: #160b08 !important;
+  background-color: transparent !important;
+}

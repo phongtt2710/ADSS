@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Tìm kiếm</title>
+    <link href="style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="AppStyles.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body
+    id="body"
+    class="StaticSearchBody"
+    style="background-color: transparent; padding: 20px"
+  >
+    <script language="JavaScript" src="searchEngine.js"></script>
+    <script language="JavaScript" src="searchIndex.js"></script>
+
+    <form name="searchForm">
+      <div style="display: inline-block">
+        <input
+          type="text"
+          id="searchField"
+          name="searchField"
+          style="width: 170px"
+        />
+        <input type="Submit" name="Submit" value="Search" />
+      </div>
+      <div style="display: inline-block">
+        <input
+          type="radio"
+          name="srcriteria"
+          value="any"
+          checked="checked"
+        />any&nbsp;words &nbsp;&nbsp;<input
+          type="radio"
+          name="srcriteria"
+          value="all"
+        />all&nbsp;words &nbsp;&nbsp;<input
+          type="radio"
+          name="srcriteria"
+          value="phrase"
+        />exact&nbsp;phrase
+      </div>
+      <div style="display: inline-block">
+        &nbsp;&nbsp;<input
+          type="checkbox"
+          id="chkpreview"
+          name="chkpreview"
+        />preview
+      </div>
+      <br />
+      <br />
+
+      <script type="text/javascript">
+        //If a search was already performed, populate the search text field
+        document.getElementById("searchField").value =
+          getQueryString("searchField");
+        //get the previously selected condition or the default condition (defined in project properties)
+        var condition = getQueryString("srcriteria");
+        if (condition == "") {
+          condition = "phrase";
+        }
+
+        //select the appropriate condition
+        if (condition == "any") {
+          document.searchForm.srcriteria[0].checked = true;
+        } else if (condition == "all") {
+          document.searchForm.srcriteria[1].checked = true;
+        } else if (condition == "phrase") {
+          document.searchForm.srcriteria[2].checked = true;
+        }
+
+        //check preview checkbox?
+        if (getQueryString("chkpreview") == "on") {
+          document.getElementById("chkpreview").checked = true;
+        }
+
+        //if the search text is not blank, perform the search
+        if (getQueryString("searchField") != "") {
+          doSearch();
+        }
+      </script>
+      <div class="StaticSearchMatchesFound">
+        <strong>Search Results</strong><br />
+      </div>
+      <dl class="searchresults"></dl>
+    </form>
+  </body>
+</html>

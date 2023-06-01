@@ -1,0 +1,1713 @@
+<html>
+  <head>
+    <title>Trình xem nhật ký giao dịch - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('153','Trình xem nhật ký giao dịch');parent.MenuItemSelected('adss_ras_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: Arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_ras_service.htm"
+              title=""
+              >Dịch vụ ADSS RAS </a
+            >&nbsp;&gt;&nbsp;<a href="transactions_log_viewer9.htm" title=""
+              >Trình xem nhật ký giao dịch</a
+            ></span
+          ></span
+        >
+      </p>
+      <p><span class="Asc_PageName">Trình xem nhật ký giao dịch</span></p>
+      <p>
+        Dịch vụ RAS lưu giữ hồ sơ kiểm toán an toàn cho mọi yêu cầu&nbsp;<span
+          style="
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >thực hiện và mọi&nbsp;</span
+        >phản hồi được đưa ra trong cơ sở dữ liệu Máy chủ ADSS. Các bản ghi này có thể được
+        được xem bằng cách sử dụng trình xem nhật ký giao dịch.&nbsp;<br />
+        <br />
+        <img
+          alt=""
+          src="../images/Ras-Service-Trans-Log-View.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi mục trong ảnh chụp màn hình được mô tả bên dưới:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                font-weight: bold;
+                width: 150pt;
+                text-align: left;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-size: 14px;
+                  font-family: Verdana;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  text-align: left;
+                  letter-spacing: normal;
+                "
+                >Mục</strong
+              >
+            </td>
+            <td
+              style="
+                font-weight: bold;
+                text-align: left;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              <strong
+                style="
+                  color: #000000;
+                  font-size: 14px;
+                  font-family: Verdana;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  text-align: left;
+                  letter-spacing: normal;
+                "
+                >Mô tả</strong
+              >
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              Xóa tìm kiếm
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Khi Tìm kiếm được thực hiện, cửa sổ này chỉ hiển thị thông tin đã lọc
+            Hồ sơ. Nút Xóa Tìm kiếm được sử dụng để xem toàn bộ
+            Hồ sơ.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              Tìm kiếm
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Thao tác này sẽ mở ra một cửa sổ mới nơi có thể nhập tiêu chí tìm kiếm dựa trên
+            trên mỗi cột của lưới giao dịch.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Tùy chỉnh cột<br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Điều này sẽ mở ra một cửa sổ bật lên để định cấu hình cột nào sẽ hiển thị/
+            ẩn trong lưới. Xem dưới đây để biết thêm chi tiết.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              |&lt; &lt; &gt; &gt;|<br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Các nút này dùng để điều hướng các trang khác nhau của
+            nhật ký giao dịch.<br />
+            Lưu ý: Số lượng bản ghi được hiển thị trên mỗi trang có thể định cấu hình từ
+            trong Cài đặt chung.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Xuất nhật ký
+        </td>
+        <td
+          phong cách="
+            đường viền: 1px liền #666666;
+            phần đệm: 8px;
+            màu nền: #ffffff;
+            căn chỉnh văn bản: bên trái;
+          "
+        >
+          Nút này xuất nhật ký giao dịch thành tệp CSV được nén ở định dạng
+          định dạng con người có thể đọc được.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Xác minh tính toàn vẹn
+        </td>
+        <td
+          phong cách="
+            đường viền: 1px liền #666666;
+            phần đệm: 8px;
+            màu nền: #ffffff;
+            căn chỉnh văn bản: bên trái;
+          "
+        >
+          Nút này xác minh tính toàn vẹn của giao dịch dịch vụ RAS
+          bản ghi nhật ký. Nó phát hiện các bản ghi bị giả mạo hoặc bị xóa và tạo
+          một báo cáo có thể được xuất sang một ổ đĩa vật lý. &nbsp;<br />
+          <br />
+          <strong>Lưu ý:</strong><span>&nbsp;</span>Khi xuất HMAC
+          báo cáo xác minh, hãy lưu tệp với phần mở rộng “.html” để
+          rằng báo cáo có thể được xem trong một trình duyệt internet.
+        </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            ID nhật ký
+             </td>
+             <td
+               phong cách="
+                 đường viền: 1px liền #666666;
+                 phần đệm: 8px;
+                 màu nền: #ffffff;
+                 căn chỉnh văn bản: bên trái;
+               "
+             >
+               Hiển thị một số sê-ri duy nhất cho mỗi bản ghi nhật ký, đó là
+               do hệ thống xác định và không phải là một phần của thông báo yêu cầu/phản hồi.
+             </td>
+           </tr>
+           <tr style="break-inside: tránh">
+             <td
+               phong cách="
+                 đường viền: 1px liền #666666;
+                 phần đệm: 8px;
+                 màu nền: xám nhạt;
+                 chiều rộng: 150pt;
+                 căn chỉnh văn bản: bên trái;
+               "
+             >
+               Loại yêu cầu
+             </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Xác định loại của từng yêu cầu đã nhận được, ví dụ:
+            Đăng ký người dùng, Tạo khóa người dùng, Gia hạn giao dịch, Gửi OTP,
+            Tạo CSR,
+            < nhịp
+              phong cách="
+                cỡ chữ: 14px;
+                kiểu chữ: bình thường;
+                phông chữ biến thể-chữ ghép: bình thường;
+                font-biến thể-caps: bình thường;
+                trọng lượng phông chữ: bình thường;
+                khoảng cách chữ cái: bình thường;
+                căn chỉnh văn bản: bên trái;
+                thụt lề văn bản: 0px;
+                chuyển đổi văn bản: không có;
+                khoảng trắng: bình thường;
+                khoảng cách từ: 0px;
+                -webkit-text-stroke-width: 0px;
+                màu nền: #ffffff;
+                văn bản-trang trí-phong cách: ban đầu;
+                văn bản-trang trí-màu sắc: ban đầu;
+                nổi: không có;
+                hiển thị: nội tuyến !quan trọng;
+                họ phông chữ: Verdana;
+                màu: #000000;
+              "
+              >Ký hàm băm, v.v.</span
+            >.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Trạng thái phản hồi
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Điều này cho biết&nbsp;phản hồi nào đã được trả lại.&nbsp;Có thể
+                các giá trị là:&nbsp;</span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              />
+              <ul
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+              >
+              <li>Thành công</li>
+              <li>Không thành công</li>
+              <li>Đang chờ xử lý</li>
+              <li>Bị từ chối</li>
+              <li>Lỗi Máy khách</li>
+              <li>Lỗi máy chủ</li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Thời gian yêu cầu
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+               >Hiển thị</span
+               >&nbsp;ngày/giờ nhận được từng yêu cầu.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Thời gian đáp ứng
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hiển thị <span class="Apple-converted-space"
+                >&nbsp;</span
+              ></span
+            > ngày/giờ khi phản hồi được gửi.
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Yêu cầu/Phản hồi
+        </td>
+        <td
+          phong cách="
+            đường viền: 1px liền #666666;
+            phần đệm: 8px;
+            màu nền: #ffffff;
+            căn chỉnh văn bản: bên trái;
+          "
+        >
+          Hiển thị liên kết để xem từng thông báo Yêu cầu/Phản hồi.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              Remote&nbsp;<span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Request/Response</span
+              >
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Nó chứa thông tin yêu cầu và phản hồi của
+            giao tiếp được thực hiện với Máy chủ RAS từ xa. Nó sẽ giúp các
+            Quản trị để quan sát những thông tin đã được trao đổi với điều khiển từ xa
+            máy chủ.<br />
+          </td>
+        </tr>
+        <tr style="break-inside: tránh">
+          <td
+            phong cách="
+              đường viền: 1px liền #666666;
+              phần đệm: 8px;
+              màu nền: xám nhạt;
+              chiều rộng: 150pt;
+              căn chỉnh văn bản: bên trái;
+            "
+          >
+            ID người dùng<br />
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Hiển thị ID người dùng được tìm thấy trong thông báo yêu cầu. Dịch vụ RAS
+                xác minh xem đây có phải là ID người dùng đã đăng ký hay không trước khi cấp
+                quyền truy cập.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: tránh">
+            <td
+              phong cách="
+                đường viền: 1px liền #666666;
+                phần đệm: 8px;
+                màu nền: xám nhạt;
+                chiều rộng: 150pt;
+                căn chỉnh văn bản: bên trái;
+              "
+            >
+              ID khách hàng
+            </td>
+            <td
+              phong cách="
+                đường viền: 1px liền #666666;
+                phần đệm: 8px;
+                màu nền: #ffffff;
+                căn chỉnh văn bản: bên trái;
+              "
+            >
+              Hiển thị ID khách hàng được tìm thấy trong thông báo yêu cầu. Dịch vụ RAS
+              xác minh rằng đây là ID khách hàng đã đăng ký trong Máy khách
+              mô-đun trình quản lý trước khi cấp quyền truy cập vào dịch vụ này.&nbsp;<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              TLS Cert
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Bấm vào đây&nbsp;</span
+              ><strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Xem</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;liên kết dưới cột này hiển thị ứng dụng khách TLS
+                chứng chỉ xác thực. Các&nbsp;</span
+              ><strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                "
+                >Xem</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >liên kết chỉ xuất hiện khi&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >TLS&nbsp;</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >xác thực ứng dụng khách đã được sử dụng để gửi yêu cầu đến RAS
+                dịch vụ.</span
+              ><br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+              Mã lỗi
+            </td>
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: #ffffff;
+                text-align: left;
+              "
+            >
+            Di chuột qua liên kết "Xem" hiển thị thông báo lỗi (nếu
+            bất kỳ) cho mỗi yêu cầu, &nbsp;e.g. lỗi nội bộ, Dịch vụ RAS
+            Vô hiệu hóa, v.v.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Bản ghi giao dịch Dịch vụ RAS có thể được sắp xếp tăng dần/
+      thứ tự giảm dần theo yêu cầu, bằng cách chọn một cột trong bảng từ danh sách thả xuống
+      danh sách xuống.<span>&nbsp;</span><br />
+      <br />
+      Từ trình đơn thả xuống ở màn hình phía trên,&nbsp;chọn<span>&nbsp;</span
+      ><strong>Nhập bản lưu trữ</strong><span>&nbsp;</span>và nhấp vào
+      nút&nbsp;<strong>Đi&nbsp;</strong>.&nbsp;Điều này sẽ hiển thị
+      màn hình sau:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/03-09-2018 4-39-43 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi mục trong ảnh chụp màn hình được mô tả bên dưới:
+      </p>
+      <table
+        class="Asc_Table"
+        style="
+          border-width: 1px;
+          border-right-style: dashed;
+          border-color: #666666;
+          border-bottom-style: dashed;
+          border-collapse: collapse;
+          text-align: left;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      >
+        <tbody>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                padding: 8px;
+                border-width: 1px;
+                background-color: lightgray;
+                font-weight: bold;
+                width: 150pt;
+                text-align: left;
+                border-style: solid !important;
+                border-color: #666666 !important;
+              "
+            >
+              Mục
+            </td>
+            <td
+              style="
+                font-weight: bold;
+                text-align: left;
+                padding: 8px !important;
+                border-width: 1px !important;
+                border-style: solid !important;
+                border-color: #666666 !important;
+                background-color: #b6d5f2 !important;
+              "
+            >
+              Mô tả
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Nhập tệp giao dịch đã lưu trữ<br />
+        </td>
+        <td
+          phong cách="
+            đường viền: 1px liền #666666;
+            phần đệm: 8px;
+            màu nền: #ffffff;
+            căn chỉnh văn bản: bên trái;
+          "
+        >
+          Sử dụng tùy chọn này để duyệt tệp nhật ký lưu trữ ở định dạng zip từ
+          máy điều hành. Bằng cách sử dụng tùy chọn này, tệp nhật ký được lưu trữ
+          được tải lên trên ADSS Server. Để giữ cho hoạt động này được tối ưu hóa,
+          một nhà điều hành bị hạn chế tải lên tệp có kích thước tối đa 25 MB. Sử dụng
+          tùy chọn đường dẫn tệp lưu trữ cho các tệp lớn hơn 25 MB.<br />
+            </td>
+          </tr>
+          <tr style="break-inside: avoid">
+            <td
+              style="
+                border: 1px solid #666666;
+                padding: 8px;
+                background-color: lightgray;
+                width: 150pt;
+                text-align: left;
+              "
+            >
+            Đường dẫn tệp giao dịch đã lưu trữ<br />
+        </td>
+        <td
+          phong cách="
+            đường viền: 1px liền #666666;
+            phần đệm: 8px;
+            màu nền: #ffffff;
+            căn chỉnh văn bản: bên trái;
+          "
+        >
+          Sử dụng tùy chọn này nếu kích thước tệp lớn hơn 25 MB. Cái này
+          tùy chọn không tải tệp lưu trữ lên máy chủ ADSS.
+          Thay vào đó, máy chủ đọc tệp từ đường dẫn tệp đã chỉ định
+          (vị trí) trước khi nhập nhanh hơn tùy chọn trên.
+          Bạn có thể chỉ định đường dẫn hệ thống tệp cục bộ hoặc mạng
+          con đường.<br />
+          <br />
+          <strong>Lưu ý:</strong><span>&nbsp;</span>Hãy chỉ định tệp đã lưu trữ
+          tên tệp nhật ký trong đường dẫn tệp.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      />
+      <span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >Bấm vào đây&nbsp;</span
+      ><strong
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+        >Tìm kiếm</strong
+      ><span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >&nbsp;nút trên trang Trình xem nhật ký giao dịch SAM hiển thị như sau
+        màn hình:&nbsp;</span
+      ><br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      />
+      <br />
+      <img
+        alt=""
+        src="../images/1553259278328.png"
+        style="border-width: 1px; border-style: solid"
+      /><br />
+      &nbsp;<br
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+        "
+      />
+      <span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >Điều này giúp xác định vị trí một giao dịch Dịch vụ SAM cụ thể. Các
+        các giao dịch có thể được tìm kiếm dựa trên "ID nhật ký", "ID người dùng", "Khách hàng
+        ID", "Loại yêu cầu", "Trạng thái phản hồi", "Thời gian yêu cầu từ", "Yêu cầu
+        Thời gian đến", "Thời gian phản hồi từ" và "Thời gian phản hồi đến".&nbsp;</span
+      ><span
+        style="
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          float: none;
+          display: inline !important;
+          font-family: Verdana;
+          color: #000000;
+        "
+        >Nếu một tìm kiếm dựa trên nhiều giá trị, thì những giá trị này sẽ được kết hợp
+        cùng nhau bằng cách sử dụng toán hạng “AND”, và do đó chỉ những bản ghi đáp ứng tất cả
+        các tiêu chí sẽ được trình bày.<br />
+        <br />
+        <span class="TipBubble"
+          >​<br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như
+          ký tự đại diện.<br /> </span
+      ></span>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          ><br />
+          nhấp vào</span
+        ><span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          ><strong><span>&nbsp;</span>Tùy chỉnh cột</strong></span
+        ><span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >&nbsp;nút trên Trình xem nhật ký giao dịch hiển thị như sau
+          màn hình:<br /> </span
+        ><br />
+        <img
+          alt=""
+          src="../images/AdmG-03.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Theo mặc định, một số cột đã được thêm vào "Cột được chọn"
+         danh sách. &nbsp;Để xóa một cột, hãy di chuyển cột được yêu cầu thành "Có sẵn
+         Danh sách cột".
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Mỗi bản ghi nhật ký trong cơ sở dữ liệu được bảo vệ bởi một
+      mã hóa&nbsp;tổng kiểm tra HMAC để phát hiện bất kỳ lỗi cố ý hoặc vô tình nào
+      sửa đổi hồ sơ. Nhấp vào&nbsp;<strong
+        >Xác minh tính toàn vẹn<span>&nbsp;</span></strong
+      > nút xác minh tính toàn vẹn của nhật ký bằng cách kiểm tra từng tổng kiểm tra và
+      tạo ra một báo cáo như hình dưới đây:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/03-09-2018 4-46-44 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: 400;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+      Nhấp vào nút&nbsp;<strong>Xuất&nbsp;</strong>để xuất Xác minh
+      Báo cáo về tính toàn vẹn cho hệ thống tệp.&nbsp;Nhấp vào<strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        >&nbsp;<strong>Nút Sửa lỗi HMAC</strong>&nbsp;sẽ tính toán lại
+        HMAC cho các bản ghi giao dịch được kiểm duyệt cho mô-đun này.<br
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        />
+        <br
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        />
+        <strong
+          style="
+            color: #000000;
+            font-size: 10.6667px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+          "
+        ></strong
+        ><strong>Lưu ý:</strong>&nbsp;Tùy chọn này sẽ không phát hiện
+        các bản ghi bị xóa trái phép nhưng nó sẽ chỉ sửa các bản ghi trái phép
+        các bản ghi sửa đổi và/hoặc không rõ ràng mà giá trị HMAC không phải là
+        hiện tại/không chính xác.<br />
+        <br />
+        <span class="TipBubble"
+          >​<br />
+          <span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >​Tính năng Xác minh tính toàn vẹn của nhật ký giao dịch&nbsp;</span
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >có sẵn&nbsp;</span
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              background-color: #f0fff0;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >trong tất cả các dịch vụ của ADSS Server.</span
+          ><br /> </span
+        ><br />
+        Nhấp vào liên kết cho&nbsp;<strong>ID nhật ký</strong>&nbsp;hiển thị chi tiết
+         của giao dịch đã chọn như hình bên dưới:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/1553259448538.png"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Clicking the&nbsp;<strong style="text-align: left">View</strong
+        ><span>&nbsp;</span>link under the request/response column shows the
+        JSON request and response for the selected RAS transaction in different
+        tabs:<br />
+        &nbsp;<br />
+        <img
+          alt=""
+          src="../images/03-09-2018 4-49-49 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Clicking the<span>&nbsp;</span
+        ><strong>Response<span>&nbsp;</span></strong
+        >tab shows the JSON response as below:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/03-09-2018 4-50-49 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >Bạn có thể xuất các tệp yêu cầu/phản hồi sang ổ đĩa vật lý bằng cách
+          nhấp vào liên quan&nbsp;</span
+        ><span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          ><strong>Xuất phản hồi</strong></span
+        ><span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >&nbsp;Nút.</span
+        >
+      </p>
+      <p>
+        <span style="font-style: italic; font-weight: bold; color: orange"
+          >Xem thêm</span
+        >
+      </p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_the_ras_service.htm" title=""
+            >Định cấu hình Dịch vụ RAS</a
+          ><br /><a href="logs_archiving12.htm" title="">Lưu trữ nhật ký</a
+          ><br /><a href="alerts10.htm" title="">cảnh báo</a><br /><a
+            href="ras_service_interface_urls.htm"
+            title=""
+            >URL giao diện dịch vụ RAS</a
+          ><br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

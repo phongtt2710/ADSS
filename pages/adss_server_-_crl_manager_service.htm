@@ -1,0 +1,352 @@
+<html>
+  <head>
+    <title>Tổng quan về màn hình ADSS CRL - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('22','ADSS CRL Monitor Overview');parent.MenuItemSelected('adss_server_-_concepts___architecture');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_concepts___architecture.htm"
+              title=""
+              >Khái niệm và Kiến trúc</a
+            >&nbsp;&gt;&nbsp;<a
+              href="adss_server_-_crl_manager_service.htm"
+              title=""
+              >Tổng quan về màn hình ADSS CRL</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span class="Asc_PageName">Tổng quan về màn hình ADSS CRL </span
+        ><strong
+          ><span style="font-size: 18px"><br /> </span
+        ></strong>
+      </p>
+      <p>
+        ADSS CRL Monitor chịu trách nhiệm truy xuất CRL từ CA. Các CRL này sau
+        đó có thể được sử dụng bởi Dịch vụ Xác minh ADSS, OCSP, SCVP và XKMS để
+        xác định trạng thái thu hồi chứng chỉ.
+      </p>
+      <p>
+        CRL Monitor trích xuất và giữ lại trong cơ sở dữ liệu của mình tất cả
+        thông tin thu hồi từ mỗi CRL mà nó đã truy xuất và xác minh thành công.
+        Do đó, nó có khả năng xác định tình trạng lịch sử của chứng chỉ, ví dụ:
+        chứng chỉ của John Smith có hiệu lực vào ngày 14 tháng 8 năm 2011, lúc
+        10:00 sáng không? &nbsp;Đây là một cơ sở thiết yếu để cung cấp dịch vụ
+        xác minh chữ ký lịch sử.
+      </p>
+      <p>
+        Màn hình CRL chứa một bộ lập lịch thăm dò các địa chỉ CRL được xác định
+        tại các khoảng thời gian được cấu hình. Khung thời gian dựa trên thời
+        gian hết hạn của CRL trước đó hoặc khoảng thời gian được định cấu hình
+        trước, ví dụ: cứ sau 15 phút. Mỗi CA được đăng ký trên Máy chủ ADSS có
+        thể có chính sách bỏ phiếu CRL riêng.
+      </p>
+      <div style="text-align: center">
+        <img alt="" src="../images/ADSS CRL Monitor.jpg" style="width: 850px" />
+      </div>
+      <br />
+      <span class="Asc_Heading"> Hoạt động của màn hình CRL</span>
+      <p>
+        CRL Monitor chạy khi dịch vụ được khởi động sau khi cài đặt ADSS
+        Server.&nbsp;Ban đầu, vì không có CA nào được đăng ký, CRL Monitor vẫn ở
+        "chế độ ngủ".&nbsp;Tuy nhiên, khi CA được đăng ký thông qua ADSS Trust
+        Manager và các cấu hình bỏ phiếu CRL có liên quan được thực hiện, CRL
+        Monitor có thể được khởi động. &nbsp;Nếu chi tiết bỏ phiếu được đặt thì
+        CRL Monitor sẽ đợi thời gian bỏ phiếu được chỉ định đến. Nếu không, nó
+        sẽ truy xuất CRL vào thời điểm cập nhật tiếp theo.&nbsp;
+      </p>
+      <p>
+        Lưu ý rằng một số địa chỉ CRL thay thế có thể được định cấu hình cho một
+        CA cụ thể.&nbsp;CRL Monitor sẽ cố gắng sử dụng chúng theo trình tự để
+        truy xuất CRL mới hoặc cập nhật cho CA nếu địa chỉ chính không thành
+        công.
+      </p>
+      <p>
+        Khi CRL được tải xuống, chữ ký trên CRL được xác minh bằng khóa công
+        khai của CA hoặc sử dụng khóa của nhà phát hành CRL gián tiếp đã xác
+        định (tức là CRL gián tiếp là CRL được cấp bởi&nbsp;một cơ quan không
+        phải là Cơ quan cấp giấy chứng nhận có trạng thái đang được kiểm tra).
+        Sau khi CRL được xác minh, CRL Monitor sẽ kiểm tra xem CRL đã tải xuống
+        có gần đây hơn CRL đã tải xuống trước đó hay không. Nếu đó không phải là
+        CRL cập nhật thì tệp đã tải xuống sẽ bị loại bỏ và việc bỏ phiếu sẽ bắt
+        đầu lại dựa trên cài đặt bỏ phiếu CRL, tức là thời gian bỏ phiếu hoặc
+        khi CRL hết hạn hiện tại. Nếu tệp đã tải xuống là CRL mới thì CRL
+        Monitor sẽ cập nhật các bảng cơ sở dữ liệu ADSS có liên quan với dữ liệu
+        trạng thái chứng chỉ trong CRL.
+      </p>
+      <span class="Asc_Heading"> Lưu trữ CRL </span>
+      <p>CRL Monitor lưu trữ CRL theo hai cách:</p>
+      <ul>
+        <li>CRL được lưu trữ trong nhỏ gọn ban đầu của nó&nbsp;dạng</li>
+        <li>
+          CRL được giải nén và các mục nhập bị thu hồi riêng lẻ được lưu trữ
+          trong cơ sở dữ liệu ADSS (được gọi là biểu mẫu chi tiết hoặc mở rộng)
+        </li>
+      </ul>
+      <p>
+        CRL đã ký ban đầu được lưu trữ ở dạng nhỏ gọn để sử dụng trong tương lai
+        và để cung cấp bằng chứng rõ ràng rằng CRL thực sự đã được truy xuất, có
+        thể được tin cậy như đã ký bởi tổ chức phát hành và nó hợp lệ. Các mục
+        bị thu hồi CRL được lưu trữ ở dạng mở rộng trong cơ sở dữ liệu để tối ưu
+        hóa hiệu suất khi trạng thái thu hồi chứng chỉ được yêu cầu kiểm tra bởi
+        các dịch vụ ADSS khác nhau.&nbsp;
+      </p>
+      <p>
+        Đối với lịch sử&nbsp;chứng chỉ&nbsp;kiểm tra trạng thái, ADSS Server sẽ
+        truy xuất CRL gốc trong nhỏ gọn của nó&nbsp;hình thức từ&nbsp;lưu trữ
+        cục bộ và sử dụng đó.&nbsp;Điều này mất nhiều thời gian hơn vì mất nhiều
+        thời gian hơn để giải nén và kiểm tra các giá trị bị thu hồi từ CRL nhỏ
+        gọn, nhưng dự kiến các xác nhận lịch sử sẽ là&nbsp;Thực hiện&nbsp;ít
+        thường xuyên hơn so với kiểm tra hiện tại, cộng với Máy chủ ADSS sử dụng
+        công nghệ phát trực tuyến CRL nhanh để tăng tốc quá trình này.
+      </p>
+      <div class="pagelist">
+        <span class="Asc_See_Also">
+          <p
+            class="Asc_See_Also"
+            style="
+              font-size: 14px;
+              font-weight: bold;
+              font-style: italic;
+              color: orange;
+              font-family: Verdana;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              orphans: 2;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-align: left;
+            "
+          >
+           Xem thêm
+          </p>
+          <div
+            class="Asc_Sibling_Page_List"
+            style="
+              font-size: 13px;
+              font-family: Verdana;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              orphans: 2;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              color: #000000;
+              font-style: normal;
+              font-weight: normal;
+              text-align: left;
+            "
+          >
+            <span class="Asc_Sibling_Page_List" style="font-size: 13px"
+              ><a
+                href="default.aspx#pageid=tsa_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=adss_xkms_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=adss_scvp_service1"
+                class="Asc_Sibling_Page_List"
+                target="_blank"
+                style="
+                  font-size: 13px;
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=adss_ltan_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=adss_decryption_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              ></a
+              ><a
+                href="default.aspx#pageid=crl_manager_service"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #164587;
+                  font-family: Verdana;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  orphans: 2;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Màn hình ADSS CRL</a
+              ><br />
+              <div class="var_Sibling_Page_List">
+                <a href="introduction4.htm" title=""
+                  >Danh tính đã được chứng minh, niềm tin được cung cấp</a
+                ><br /><a href="adss_server_features_and_benefits.htm" title=""
+                  >Các tính năng và lợi ích của máy chủ ADSS</a
+                ><br /><a href="adss_server_trust_services.htm" title=""
+                  >Dịch vụ tin cậy máy chủ ADSS</a
+                ><br /><a
+                  href="adss_server_architecture_interfaces.htm"
+                  title=""
+                  >Kiến trúc máy chủ ADSS &amp; Giao diện</a
+                ><br /><a href="adss_server_-_signing_service.htm" title=""
+                  >Tổng quan về dịch vụ ký ADSS</a
+                ><br /><a href="adss_server_-_verification_service.htm" title=""
+                  >Tổng quan về dịch vụ xác minh ADSS</a
+                ><br /><a href="adss_server_-_ocsp_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS OCSP</a
+                ><br /><a href="adss_server_-_tsa_service.htm" title=""
+                  >Tổng quan về dịch vụ ADSS TSA</a
+                ><br /><a href="adss_xkms_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS XKMS</a
+                ><br /><a href="adss_scvp_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS SCVP</a
+                ><br /><a href="adss_ltan_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ ADSS LTANS</a
+                ><br /><a href="adss_decryption_service_overview.htm" title=""
+                  >Tổng quan về dịch vụ giải mã ADSS</a
+                ><br /><a href="adss_server_-_crl_manager_service.htm" title=""
+                  >Tổng quan về màn hình ADSS CRL</a
+                ><br /></div
+            ></span>
+          </div>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

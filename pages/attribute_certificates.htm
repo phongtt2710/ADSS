@@ -1,0 +1,303 @@
+<html>
+  <head>
+    <title>Chứng chỉ thuộc tính - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('54','Chứng chỉ thuộc tính');parent.MenuItemSelected('adss_server_certification_service');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="adss_server_certification_service.htm"
+              title=""
+              >Dịch vụ chứng nhận ADSS</a
+            >&nbsp;&gt;&nbsp;<a href="attribute_certificates.htm" title=""
+              >Chứng chỉ thuộc tính</a
+            ></span
+          ></span
+        >
+      </p>
+      <p class="Asc_PageName">Chứng chỉ thuộc tính</p>
+      <p>
+        Giấy chứng nhận thuộc tính do Dịch vụ chứng nhận cấp được hiển thị tại
+        đây. Chúng cũng có thể được xem trong dịch vụ Manage CA (s) so với AA
+        được cấu hình cụ thể bằng cách nhấp vào nút Attribute Certificates.
+        Các<strong>Thuộc tính </strong><strong>Giấy chứng nhận</strong> nút điều
+        hướng trong Dịch vụ chứng nhận ADSS cho phép bạn xem tất cả các chứng
+        chỉ được tạo thông qua giao diện dịch vụ:<br />
+        <br />
+        <img
+          alt=""
+          src="../images/Attribute Certs Main.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p>Mỗi mục trong ảnh chụp màn hình được mô tả bên dưới:</p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Item<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>Bí danh chứng chỉ<br /></td>
+            <td>
+              Mã định danh duy nhất cho chứng chỉ thuộc tính (như được cung cấp
+              bởi ứng dụng khách trong thông báo yêu cầu).<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Tên cơ quan thuộc tính<br /></td>
+            <td>
+              Tên (tức là bí danh) của Tên cơ quan thuộc tính đã cấp chứng chỉ
+              thuộc tính.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>ID khách hàng<br /></td>
+            <td>
+              Đây là ID khách hàng như được tìm thấy trong thông báo yêu cầu.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Hồ sơ thuộc tính&nbsp; <br /></td>
+            <td>
+              Hồ sơ thuộc tính được sử dụng để tạo chứng chỉ thuộc tính này.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Có giá trị từ<br /></td>
+            <td>
+              Ngày "hợp lệ từ" của chứng chỉ thuộc tính (lấy từ chính chứng
+              chỉ).<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Có giá trị đến<br /></td>
+            <td>
+              Ngày "hợp lệ" của chứng chỉ thuộc tính (lấy từ chính chứng
+              chỉ).<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Trạng thái<br /></td>
+            <td valign="top">
+              Chứng chỉ thuộc tính có được gắn nhãn là "hoạt động" hay "bị thu
+              hồi" hoặc "NotYetValid" trong cơ sở dữ liệu hay không.<br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <p></p>
+      Bạn có thể chọn một chứng chỉ, và sau đó một trong hai
+      <strong style="text-align: justify">Xem</strong> hoặc
+      <strong style="text-align: justify">Thu hồi </strong>hoặc<strong
+        style="text-align: justify"
+      >
+        Phục hồi </strong
+      >hoặc<strong style="text-align: justify"> Xóa</strong>&nbsp;nó. Nhấp vào
+      nút Thu hồi sẽ hiển thị màn hình sau nơi ngày không hợp lệ, thu
+      hồi&nbsp;Mã và giữ mã hướng dẫn&nbsp;Có thể được cung cấp trước khi thu
+      hồi chứng chỉ:
+      <p>
+        <img
+          alt=""
+          style="border-width: 1px; border-style: solid"
+          src="../images/ADSS-Certification-Attribute-Certificates-Revoke1.png"
+        />
+      </p>
+      <p style="text-align: justify">
+        Chứng chỉ bị thu hồi với mã lệnh certificateHold có thể được kích hoạt
+        sau này bằng cách sử dụng <strong>Nút </strong>Kích hoạt. Khi chứng chỉ
+        bị thu hồi hoặc kích hoạt, mục thu hồi ngay lập tức sẽ được thực hiện
+        vào cơ sở dữ liệu thay vì cấp CRL khẩn cấp cho mỗi lần thu hồi. Xuất bản
+        CRL rất tốn kém nếu chúng được xuất bản quá thường xuyên. Để giảm chi
+        phí tài nguyên, ý tưởng thu hồi ngay lập tức được đưa ra. Nó chỉ hoạt
+        động cho (các) AA được cấu hình cục bộ. Các hệ thống bên ngoài đang bỏ
+        phiếu cho CRL do CA được quản lý của Máy chủ ADSS phát hành phải tải
+        xuống CRL để nhận thông tin thu hồi mới nhất.
+      </p>
+      <p style="text-align: justify">
+        Bảng dưới đây mô tả các lý do thu hồi có thể được chọn:
+      </p>
+      <p style="text-align: left">
+        Mỗi mục trong ảnh chụp màn hình được mô tả bên dưới:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Items<br /></td>
+            <td>Mô tả<br /></td>
+          </tr>
+          <tr>
+            <td>unspecified<br /></td>
+            <td>Lý do này chỉ ra rằng<br /></td>
+          </tr>
+          <tr>
+            <td>keyCompromise <br /></td>
+            <td>
+              Lý do này chỉ ra rằng người ta đã biết hoặc nghi ngờ rằng khóa
+              riêng của chủ thể chứng chỉ đã bị xâm phạm.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>cACompromise<br /></td>
+            <td>
+              Lý do này chỉ ra rằng người ta đã biết hoặc nghi ngờ rằng khóa
+              riêng của chủ thể chứng chỉ đã bị xâm phạm.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>affiliationChanged<br /></td>
+            <td>
+              Lý do này chỉ ra rằng tên của đối tượng hoặc thông tin khác đã
+              thay đổi.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>superseded<br /></td>
+            <td>
+              Lý do này chỉ ra rằng chứng chỉ đã được thay thế, &nbsp;một chứng
+              chỉ mới đang thay thế một chứng chỉ hiện có.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>sessationOfOperation<br /></td>
+            <td>
+              Lý do này chỉ ra rằng chứng chỉ không còn cần thiết nữa.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">certificateHold<br /></td>
+            <td valign="top">
+              Lý do này cho thấy chứng chỉ đã bị tạm dừng (Thu hồi tạm thời).
+              Cần cung cấp một trong các hướng dẫn giữ sau:<br />
+              <ul>
+                <li>id-holdinstruction-none</li>
+                <li>id-holdinstruction-callissuer</li>
+                <li>id-holdinstruction-reject</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">removeFromCRL<br /></td>
+            <td valign="top">
+              Lý do này chỉ ra rằng chứng chỉ đã bị giữ trước đó và nên được xóa
+              khỏi CRL.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>privilageWithdrawn<br /></td>
+            <td>
+              Lý do này chỉ ra rằng các đặc quyền được cấp cho chủ thể của chứng
+              chỉ đã bị thu hồi.<br />
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">aACompromise<br /></td>
+            <td valign="top">
+              Lý do này chỉ ra rằng người ta đã biết hoặc nghi ngờ rằng khóa
+              riêng của chủ thể chứng chỉ đã bị xâm phạm.<br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        cellspacing="0"
+        cellpadding="0"
+        border="0"
+        style="border-collapse: collapse"
+      >
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+      <p>
+        Danh sách các chứng chỉ đã cấp có thể được sắp xếp theo một trong
+        hai&nbsp;<strong>Tăng dần </strong>hoặc <strong>Giảm dần</strong> Sắp
+        xếp bằng cách chọn một cột bảng từ danh sách thả xuống.
+      </p>
+      <p class="Basictable" style="margin: 3pt 0in">
+        Nhấp vào nút Tìm kiếm trên trang chính&gt;&gt; Chứng chỉ thuộc tính dịch
+        vụ chứng nhận sẽ hiển thị màn hình sau:
+        <br />
+        <br />
+        <img
+          alt=""
+          src="../images/Attribute Certs Search.jpg"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p class="Basictable" style="margin: 3pt 0in">&nbsp;</p>
+      <p class="Basictable" style="margin: 3pt 0in">
+        Điều này giúp xác định chứng chỉ mà Dịch vụ chứng nhận có thể đã cấp.
+        Chứng chỉ có thể được tìm kiếm dựa trên&nbsp; tổ chức phát hành, bí danh
+        chứng chỉ, trạng thái, thời hạn hiệu lực hoặc&nbsp;ID khách
+        hàng.&nbsp;&nbsp;Nếu một tìm kiếm dựa trên nhiều giá trị, thì chúng sẽ
+        được kết hợp với nhau bằng cách sử dụng toán hạng "AND" và do đó chỉ các
+        bản ghi đáp ứng tất cả các tiêu chí mới được trình bày.
+      </p>
+      <p>
+        <span class="TipBubble"
+          ><br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký tự đại diện.</span
+        >
+      </p>
+      <p></p>
+      <div class="Asc_Sibling_Page_List"><div style="clear: both"></div></div>
+      <div class="Asc_See_Also">
+        <br />
+        Xem thêm
+      </div>
+      <div class="Asc_Sibling_Page_List">
+        <br />
+        <div class="var_Sibling_Page_List">
+          <a href="configuring_the_certification_service.htm" title=""
+            >Cấu hình dịch vụ chứng nhận</a
+          ><br /><a href="directory_integration.htm" title=""
+            >Tích hợp thư mục</a
+          ><br /><a href="x509_certificates.htm" title=""
+            >Giấy chứng nhận danh tính</a
+          ><br /><a href="cv_certificate.htm" title="">Giấy chứng nhận CV</a
+          ><br /><a href="certificate_templates2.htm" title=""
+            >Mẫu chứng chỉ</a
+          ><br /><a href="cv_certificate_templates.htm" title=""
+            >Mẫu chứng chỉ CV</a
+          ><br /><a href="certification_transactions_log.htm" title=""
+            >Trình xem nhật ký giao dịch</a
+          ><br /><a href="certification_logs_archiving.htm" title=""
+            >Lưu trữ nhật ký</a
+          ><br /><a href="certification_alerts.htm" title="">Cảnh báo</a><br /><a
+            href="certification_management_reporting.htm"
+            title=""
+            >Báo cáo quản lý</a
+          ><br /><a
+            href="optimising_adss_certification_server_performance.htm"
+            title=""
+            >Tối ưu hóa hiệu suất máy chủ chứng nhận ADSS</a
+          ><br /><a href="service_urls1.htm" title=""
+            >URL giao diện dịch vụ chứng nhận</a
+          ><br />
+        </div>
+        &nbsp;
+      </div>
+    </div>
+  </body>
+</html>
