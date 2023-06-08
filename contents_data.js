@@ -1099,192 +1099,203 @@ docAux = insDoc(
 );
 xadss_csp_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;CSP&nbsp;Service&nbsp;", "adss_csp_service.htm")
+  gFld("&nbsp;Dịch vụ&nbsp;ADSS&nbsp;CSP&nbsp;", "pages/adss_csp_service.htm")
 );
 xconfiguring_the_csp_service = insFld(
   xadss_csp_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;CSP&nbsp;Service&nbsp;",
-    "configuring_the_csp_service.htm"
+    "&nbsp;Định cấu hình&nbsp;dịch vụ&nbsp;CSP&nbsp;",
+    "pages/configuring_the_csp_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_csp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Configuring&nbsp;Hardware&nbsp;Crypto&nbsp;Source&nbsp;",
-    "configuring_hardware_crypto_source.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Định cấu hình&nbsp;nguồn tiền&nbsp;điện tử&nbsp;phần cứng&nbsp;",
+    "pages/configuring_hardware_crypto_source.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_csp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configuring&nbsp;Notification&nbsp;Settings&nbsp;",
-    "step_2___configuring_notification_settings.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Định cấu hình&nbsp;cài đặt&nbsp;thông báo&nbsp;",
+    "pages/step_2___configuring_notification_settings.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_csp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Configuring&nbsp;CSP&nbsp;Profile&nbsp;",
-    "step_3___configuring_csp_profile.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Định cấu hình&nbsp;Cấu hình&nbsp;CSP&nbsp;",
+    "pages/step_3___configuring_csp_profile.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_csp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Application&nbsp;",
-    "step_4___registering_business_application.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Đăng ký&nbsp;Ứng dụng&nbsp;Kinh doanh&nbsp;",
+    "pages/step_4___registering_business_application.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_csp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;Using&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_5___using_service_manager.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Sử dụng&nbsp;trình quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/step_5___using_service_manager.htm"
   )
-);
-docAux = insDoc(
-  xadss_csp_service,
-  gLnk("R", "&nbsp;Registered&nbsp;Users&nbsp;", "registered_users1.htm")
 );
 docAux = insDoc(
   xadss_csp_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer10.htm"
+    "&nbsp;Người dùng&nbsp;đã đăng ký&nbsp;",
+    "pages/registered_users1.htm"
   )
-);
-docAux = insDoc(
-  xadss_csp_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving13.htm")
-);
-docAux = insDoc(
-  xadss_csp_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "alerts11.htm")
 );
 docAux = insDoc(
   xadss_csp_service,
   gLnk(
     "R",
-    "&nbsp;CSP&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "csp_service_interface_urls.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer10.htm"
+  )
+);
+docAux = insDoc(
+  xadss_csp_service,
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving13.htm")
+);
+docAux = insDoc(
+  xadss_csp_service,
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts11.htm")
+);
+docAux = insDoc(
+  xadss_csp_service,
+  gLnk(
+    "R",
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;CSP&nbsp;",
+    "pages/csp_service_interface_urls.htm"
   )
 );
 xuse_cases = insFld(
   xadss_csp_service,
-  gFld("&nbsp;Use&nbsp;Cases&nbsp;", "use_cases.htm")
+  gFld("&nbsp;Trường hợp&nbsp;sử dụng&nbsp;", "pages/use_cases.htm")
 );
 docAux = insDoc(
   xuse_cases,
   gLnk(
     "R",
-    "&nbsp;Authenticating&nbsp;CSP&nbsp;Users&nbsp;",
-    "authenticating_csp_users.htm"
+    "&nbsp;Xác thực&nbsp;người dùng&nbsp;CSP&nbsp;",
+    "pages/authenticating_csp_users.htm"
   )
 );
 xtsa_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;TSA&nbsp;Service&nbsp;", "tsa_service.htm")
+  gFld("&nbsp;Dịch vụ&nbsp;ADSS&nbsp;TSA&nbsp;", "pages/tsa_service.htm")
 );
 xconfiguring_the_tsa_service = insFld(
   xtsa_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;TSA&nbsp;Service&nbsp;",
-    "configuring_the_tsa_service.htm"
+    "&nbsp;Định cấu hình&nbsp;dịch&nbsp;vụ&nbsp;TSA&nbsp;",
+    "pages/configuring_the_tsa_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_tsa_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generating&nbsp;Key&nbsp;and&nbsp;Certificate&nbsp;",
-    "generate_keys_and_certificate.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/generate_keys_and_certificate.htm"
   )
 );
 xstep_2___configuring_a_profile_to_use_local__external_tsa = insFld(
   xconfiguring_the_tsa_service,
   gFld(
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configuring&nbsp;TSA&nbsp;Profile&nbsp;",
-    "step_2___configuring_a_profile_to_use_local__external_tsa.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Định cấu hình&nbsp;hồ sơ&nbsp;TSA&nbsp;",
+    "pages/step_2___configuring_a_profile_to_use_local__external_tsa.htm"
   )
 );
 docAux = insDoc(
   xstep_2___configuring_a_profile_to_use_local__external_tsa,
   gLnk(
     "R",
-    "&nbsp;Publicly&nbsp;Available&nbsp;TSAs&nbsp;",
-    "publicly_available_time_stamp_authorities.htm"
+    "&nbsp;TSA&nbsp;có sẵn&nbsp;công khai&nbsp;",
+    "pages/publicly_available_time_stamp_authorities.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_tsa_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_3___using_service_manager.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/step_3___using_service_manager.htm"
   )
 );
 docAux = insDoc(
   xtsa_service,
-  gLnk("R", "&nbsp;Access&nbsp;Control&nbsp;", "access_control.htm")
+  gLnk("R", "&nbsp;Kiểm soát&nbsp;truy cập&nbsp;", "pages/access_control.htm")
 );
 docAux = insDoc(
   xtsa_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer6.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer6.htm"
   )
 );
 docAux = insDoc(
   xtsa_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving.htm")
 );
-docAux = insDoc(xtsa_service, gLnk("R", "&nbsp;Alerts&nbsp;", "alerts.htm"));
+docAux = insDoc(
+  xtsa_service,
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts.htm")
+);
 xmanagement_reporting = insFld(
   xtsa_service,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "management_reporting.htm")
+  gFld("&nbsp;Báo cáo&nbsp;quản lý&nbsp;", "pages/management_reporting.htm")
 );
 docAux = insDoc(
   xmanagement_reporting,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_report5.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_report5.htm")
 );
 docAux = insDoc(
   xmanagement_reporting,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report6.htm")
-);
-docAux = insDoc(
-  xmanagement_reporting,
-  gLnk("R", "&nbsp;TSA&nbsp;Profiles&nbsp;Report&nbsp;", "profiles_report.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report6.htm")
 );
 docAux = insDoc(
   xmanagement_reporting,
   gLnk(
     "R",
-    "&nbsp;Service&nbsp;Statistical&nbsp;Report&nbsp;",
-    "service_statistical_report1.htm"
+    "&nbsp;Báo cáo&nbsp;hồ sơ&nbsp;TSA&nbsp;",
+    "pages/profiles_report.htm"
+  )
+);
+docAux = insDoc(
+  xmanagement_reporting,
+  gLnk(
+    "R",
+    "&nbsp;Báo cáo&nbsp;thống kê&nbsp;dịch vụ&nbsp;",
+    "pages/service_statistical_report1.htm"
   )
 );
 docAux = insDoc(
   xtsa_service,
   gLnk(
     "R",
-    "&nbsp;Timestamp&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "service_urls4.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;dấu thời gian&nbsp;",
+    "pages/service_urls4.htm"
   )
 );
 docAux = insDoc(
   xtsa_service,
   gLnk(
     "R",
-    "&nbsp;Optimising&nbsp;ADSS&nbsp;TSA&nbsp;Server&nbsp;Performance&nbsp;",
-    "optimising_adss_tsa_server_.htm"
+    "&nbsp;Tối ưu hóa&nbsp;hiệu suất&nbsp;máy chủ&nbsp;ADSS&nbsp;TSA&nbsp;",
+    "pages/optimising_adss_tsa_server_.htm"
   )
 );
 xadss_server___verification_service4 = insFld(
