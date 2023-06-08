@@ -1301,8 +1301,8 @@ docAux = insDoc(
 xadss_server___verification_service4 = insFld(
   foldersTree,
   gFld(
-    "&nbsp;ADSS&nbsp;Verification&nbsp;Service&nbsp;",
-    "adss_server_-_verification_service4.htm"
+    "&nbsp;Dịch vụ&nbsp;xác minh&nbsp;ADSS&nbsp;",
+    "pages/adss_server_-_verification_service4.htm"
   )
 );
 xconfiguring_the_verification_service2 = insFld(
