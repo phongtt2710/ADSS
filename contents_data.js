@@ -51,7 +51,7 @@ docAux = insDoc(
 xadss_server___concepts___architecture = insFld(
   foldersTree,
   gFld(
-    "&nbsp;Khái niệm&nbsp;và Kiếm trúc&nbsp",
+    "&nbsp;Khái niệm&nbsp;và Kiến trúc&nbsp",
     "pages/adss_server_-_concepts___architecture.htm"
   )
 );
@@ -1540,22 +1540,22 @@ docAux = insDoc(
 );
 xocsp_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;OCSP&nbsp;Service&nbsp;", "ocsp_service.htm")
+  gFld("&nbsp;Dịch vụ&nbsp;ADSS&nbsp;OCSP&nbsp;", "pages/ocsp_service.htm")
 );
 docAux = insDoc(
   xocsp_service,
   gLnk(
     "R",
-    "&nbsp;Support&nbsp;for&nbsp;Multiple&nbsp;Trust&nbsp;Models&nbsp;",
-    "support_for_multiple_trust_models.htm"
+    "&nbsp;Hỗ trợ&nbsp;cho&nbsp;nhiều&nbsp;mô hình&nbsp;tin cậy&nbsp;",
+    "pages/support_for_multiple_trust_models.htm"
   )
 );
 docAux = insDoc(
   xocsp_service,
   gLnk(
     "R",
-    "&nbsp;Multiple&nbsp;CA&nbsp;and&nbsp;Unique&nbsp;Certificate&nbsp;Validation&nbsp;Policies&nbsp;",
-    "multiple_ca_and_unique_certificate_validation_policies.htm"
+    "&nbsp;Chính sách&nbsp;xác thực&nbsp;nhiều CA&nbsp;và&nbsp;chứng chỉ&nbsp;duy&nbsp;nhất&nbsp;",
+    "pages/multiple_ca_and_unique_certificate_validation_policies.htm"
   )
 );
 xconfiguring_the_ocsp_service = insFld(
