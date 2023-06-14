@@ -3501,11 +3501,11 @@ docAux = insDoc(
 );
 xadvanced_configuration = insFld(
   foldersTree,
-  gFld("&nbsp;Advanced&nbsp;Configuration&nbsp;", "advanced_configuration.htm")
+  gFld("&nbsp;Advanced&nbsp;Configuration&nbsp;", "pages/advanced_configuration.htm")
 );
 xadss_server_logging = insFld(
   xadvanced_configuration,
-  gFld("&nbsp;ADSS&nbsp;Server&nbsp;Logging&nbsp;", "adss_server_logging.htm")
+  gFld("&nbsp;Đăng ký&nbsp;Dịch vụ&nbsp;ADSS&nbsp;", "pages/adss_server_logging.htm")
 );
 docAux = insDoc(
   xadss_server_logging,
