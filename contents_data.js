@@ -1496,43 +1496,46 @@ docAux = insDoc(
 );
 docAux = insDoc(
   xocsp_monitor,
-  gLnk("R", "&nbsp;Test&nbsp;Scenarios&nbsp;", "test_scenarios.htm")
+  gLnk("R", "&nbsp;Kịch bản&nbsp;thử nghiệm&nbsp;", "pages/test_scenarios.htm")
 );
 docAux = insDoc(
   xocsp_monitor,
-  gLnk("R", "&nbsp;Live&nbsp;Report&nbsp;", "live_report.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;trực tiếp&nbsp;", "pages/live_report.htm")
 );
 docAux = insDoc(
   xocsp_monitor,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer2.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer2.htm"
   )
 );
 docAux = insDoc(
   xocsp_monitor,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving4.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving4.htm")
 );
-docAux = insDoc(xocsp_monitor, gLnk("R", "&nbsp;Alerts&nbsp;", "alerts4.htm"));
+docAux = insDoc(
+  xocsp_monitor,
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts4.htm")
+);
 xmanagement_reporting4 = insFld(
   xocsp_monitor,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "management_reporting4.htm")
+  gFld("&nbsp;Báo cáo&nbsp;quản lý&nbsp;", "pages/management_reporting4.htm")
 );
 docAux = insDoc(
   xmanagement_reporting4,
   gLnk(
     "R",
-    "&nbsp;Latest&nbsp;Warning&nbsp;Report&nbsp;",
-    "last_warning_report.htm"
+    "&nbsp;Báo cáo&nbsp;cảnh báo&nbsp;mới nhất&nbsp;",
+    "pages/last_warning_report.htm"
   )
 );
 docAux = insDoc(
   xmanagement_reporting4,
   gLnk(
     "R",
-    "&nbsp;Latest&nbsp;Scenario&nbsp;Summary&nbsp;Report&nbsp;",
-    "last_daily_summary_report.htm"
+    "&nbsp;Báo cáo&nbsp;tóm tắt&nbsp;kịch bản&nbsp;mới nhất&nbsp;",
+    "pages/last_daily_summary_report.htm"
   )
 );
 xocsp_service = insFld(
