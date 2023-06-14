@@ -1,0 +1,471 @@
+<html>
+
+<head>
+    <title>Báo cáo quản lý về dữ liệu trực tiếp - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+</head>
+
+<body
+    onload="HighlightSearchText();HighlightPage('576','Managing ADSS Server Logs');parent.MenuItemSelected('advanced_configuration');"
+    class="page_body" data-new-gr-c-s-check-loaded="14.1112.0" data-gr-ext-installed="">
+    <div id="divPageinHeader">
+        <p><span class="breadcrumbs" style="font-family: arial; font-size: 10px; color: #cbc9ba;"><span
+                    class="var_breadcrumbs"><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+                        href="advanced_configuration.htm" title="">Cấu hình nâng cao</a>&nbsp;&gt;&nbsp;<a
+                        href="adss_server_logging.htm" title="">Nhật ký máy chủ ADSS</a>&nbsp;&gt;&nbsp;<a
+                        href="managing_adss_server_logs.htm" title="">Quản lý nhật ký của máy chủ ADSS</a></span></span>
+        </p>
+        <p class="Asc_PageName">Quản lý nhật ký của máy chủ ADSS</p>
+        <p style="text-align: justify;"><span style="text-align: left;"></span></p>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            <span style="text-align: left;">Máy chủ ADSS sử dụng Tomcat log4j để quản lý các tệp nhật ký Trace/Debug.
+                Tomcat log4j cho phép bạn cấu hình các khía cạnh khác nhau của việc tạo ra nhật ký như đường dẫn tệp
+                nhật ký, tên tệp nhật ký, kích thước tệp nhật ký, cấp độ nhật ký, số lượng nhật ký được duy trì, ngày
+                tạo nhật ký, v.v. Tomcat log4j được mô tả tại đây
+                :&nbsp;<a href="http://logging.apache.org/log4j" target="_blank"
+                    style="text-decoration: none; color: #2495d2;">http://logging.apache.org/log4j</a>.&nbsp;</span>
+        </p>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Mặc định, máy chủ ADSS tạo một tệp nhật ký mới hàng ngày cho mỗi nhật ký được quản lý, và không có hạn chế
+            về
+            số lượng nhật ký được duy trì hay kích thước tệp nhật ký. Tên của một tệp nhật ký bắt đầu bằng tên dịch
+            vụ/module tạo ra nhật ký đó, ví dụ: signing.log. Khi một tệp nhật ký mới được tạo (trong một ngày mới), tên
+            tệp nhật ký cũ sẽ được thay đổi để bao gồm ngày được đính kèm với tên tệp, ví dụ: signing.log.2011-03-01, và
+            tên tệp mới trở thành signing.log.&nbsp;</p>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Dưới đây là một bản trích dẫn từ tệp nhật ký thông thường:<br>
+            <br>
+            <img alt="" src="https://manuals.ascertia.com/ADSS-Admin-Guide/images/06-02-2018%205-09-06%20PM.png"
+                style="border-width: 1px; border-style: solid;">
+        </p>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Tệp nhật ký được phân tách bằng tab và chứa các thông tin sau:<br>
+            <br>
+            <strong>Ngày:</strong><span>&nbsp;</span>Ngày dưới dạng mô tả<br>
+            <strong>Tên luồng:</strong><span>&nbsp;</span>Một tên luồng duy nhất được định nghĩa bởi Hệ điều hành được
+            gán cho mỗi phiên người dùng<br>
+            <strong>Cấp độ nhật ký:</strong><span>&nbsp;</span>Xác định cấp độ của nhật ký, ví dụ: DEBUG, INFO,
+            ERROR<br>
+            <strong>Tên lớp:</strong><span>&nbsp;</span>Tên lớp của mã nguồn đã tạo ra bản ghi nhật ký này<br>
+            <strong>Thông điệp:</strong><span>&nbsp;</span>Thông điệp được tạo bởi chương trình tại một thời điểm cụ thể
+        </p>
+        <span
+            style="font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; font-family: Verdana; color: #000000;">
+            Cấp độ chi tiết được ghi trong tệp nhật ký có thể được thay đổi bằng cách chỉnh sửa các thiết lập này bên
+            trong thành phần ADSS Server tương ứng, ví dụ:</span>
+        <ul
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+            <li><span style="text-align: left;">[ADSS Server Home]/core/log.xml</span></li>
+            <li>[ADSS Server Home]/console/log.xml</li>
+            <li>[ADSS Server Home]/service/log.xml</li>
+        </ul>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Dưới đây là một phần của tệp
+            <span>&nbsp;</span><strong>log.xml</strong><span>&nbsp;</span>với một số giải thích bên dưới:<br>
+            <br>
+            <img alt="" src="./images/Doc-1.jpg" style="border-width: 1px; border-style: solid;"><br>
+            <br>
+            <span
+                style="font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; font-family: Verdana; color: #000000;">Each
+                Mỗi mục trong ảnh chụp màn hình được mô tả như sau:</span>
+        </p>
+        <table class="Asc_Table"
+            style="text-align: justify; border-width: 1px; border-right-style: dashed; border-color: #666666; border-bottom-style: dashed; border-collapse: collapse; color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+            <tbody>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="padding: 8px; border-width: 1px; background-color: lightgray; vertical-align: top; font-weight: bold; width: 150pt; border-style: solid !important; border-color: #666666 !important;">
+                        Mục</td>
+                    <td
+                        style="vertical-align: top; font-weight: bold; padding: 8px !important; border-width: 1px !important; border-style: solid !important; border-color: #666666 !important; background-color: #b6d5f2 !important;">
+                        Bộ ghi nhật ký chi tiết</td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;"><span
+                                style="font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #d3d3d3; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; color: #000000;">Log4j
+                                a</span>ppender type</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <span style="font-size: 11pt;"></span>
+                        <p><strong>type = RollingFile&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">RollingFileAppender là một OutputStreamAppender được sử dụng để
+                            ghi vào tệp được đặt tên trong tham số fileName và thực hiện việc chuyển đổi tệp dựa trên
+                            TriggeringPolicy và RolloverPolicy</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;"><span
+                                style="font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #d3d3d3; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; color: #000000;">Log4j
+                                a</span>ppender name</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>name = signing&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">Định nghĩa tên của appender.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log file name</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>fileName = %ADSS_INSTALLATION_DIR%/logs/service/signing.log&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">Xác định tên của tệp để ghi dữ liệu vào. Nếu tệp hoặc bất kỳ thư
+                            mục cha nào không tồn tại, chúng sẽ được tạo ra.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log file pattern</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: left;"><strong>filePattern =
+                                %ADSS_INSTALLATION_DIR%/logs/service/signing/signing.%d{yyyy-MM-dd}-%i.log</strong></p>
+                        <span style="font-size: 11pt;">Xác định mẫu tên tệp của tệp nhật ký được lưu trữ. Định dạng của
+                            mẫu này phụ thuộc vào RolloverPolicy được sử dụng. DefaultRolloverPolicy sẽ chấp nhận cả một
+                            mẫu ngày/giờ tương thích với SimpleDateFormat và/hoặc một %i đại diện cho một bộ đếm số
+                            nguyên. Mẫu cũng hỗ trợ việc tương tác trong thời gian chạy, vì vậy bất kỳ Lookups nào (như
+                            DateLookup) có thể được bao gồm trong mẫu.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Logging layout</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>type = PatternLayout&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">Tên của lớp do log4j cung cấp, nó sẽ quản lý thứ tự và định dạng của tệp nhật ký</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log file content</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>pattern = %d{dd MMM yyyy HH:mm:ss} [%t] %-5p %c - %m%n&nbsp;</strong></p>
+                        <p>Xác định nội dung thực tế của tệp nhật ký. Các chi tiết bao gồm:&nbsp;</p>
+                        <ul>
+                            <li>=%d{dd MMM yyyy HH:mm:ss}: Đây hiển thị ngày khi bản ghi nhật ký được tạo. Điều này có thể được thay đổi theo yêu cầu v.d. =%d{MMM yy HH:mm:ss}<br>
+                                <br>
+                            </li>
+                            <li>[%t]: Hiển thị tên luồng được đề cập của hệ điều hành<br>
+                                <br>
+                            </li>
+                            <li>%-5p: Xác định mức độ nhật ký. Mức độ nhật ký được thiết lập theo chương trình khi đặt một thông báo<br>
+                                <br>
+                            </li>
+                            <li>%c –: Tên của lớp ADSS tạo ra thông báo nhật ký<br>
+                                <br>
+                            </li>
+                            <li>%m: Thông báo nhật ký được báo cáo bởi lớp đó<br>
+                                <br>
+                            </li>
+                            <li>%n: Một ký tự xuống dòng mới ở cuối bản ghi nhật ký</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <strong>Daily Rolling File Appender</strong>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        DailyRollingFileAppender mở rộng FileAppender để tệp gốc được cuộn qua theo tần suất do người dùng chọn.&nbsp;<br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log4j appender policy</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>type = Policies&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">Định nghĩa các chính sách cho bộ ghi log4j.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log4j appender policy type</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>time.type = TimeBasedTriggeringPolicy&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">The TimeBasedTriggeringPolicy causes a rollover once the
+                            date/time pattern no longer applies to the active file. This policy accepts an increment
+                            attribute which indicates how frequently the rollover should occur based on the time pattern
+                            and a modulate boolean attribute.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log4j appender policy interval</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>interval = 1&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">How often a rollover should occur based on the most specific time
+                            unit in the date pattern. For example, with a date pattern with hours as the most specific
+                            item and increment of 4 rollovers would occur every 4 hours. The default value is 1
+                            day.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log4j appender policy modulate</span>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>modulate = true&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">Indicates whether the interval should be adjusted to cause the
+                            next rollover to occur on the interval boundary. For example, if the item is hours, the
+                            current hour is 3 am and the interval is 4 then then the first rollover will occur at 4 am
+                            and then next ones will occur at 8 am, noon, 4pm, etc.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Log4j appender strategy</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>type = DefaultRolloverStrategy&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">The default rollover strategy accepts both a date/time pattern
+                            and an integer from the filePattern attribute specified on the RollingFileAppender itself.
+                            If the date/time pattern is present it will be replaced with the current date and time
+                            values. If the pattern contains an integer it will be incremented on each
+                            rollover.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span
+                            style="font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #d3d3d3; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; color: #000000;">Log4j
+                            appender strategy fileIndex</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <strong>fileIndex = nomax&nbsp;</strong><br>
+                        <br>
+                        If set to "max" (the default), files with a higher index will be newer than files with a smaller
+                        index. If set to "min", file renaming, and the counter will follow the Fixed Window strategy
+                        described above.<br>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: justify; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span
+                            style="font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #d3d3d3; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; color: #000000;">Log4j
+                            appender strategy action</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <div style="text-align: justify;"><strong>type = Delete&nbsp;</strong></div>
+                        <div style="text-align: justify;"><br>
+                        </div>
+                        <div style="text-align: justify;">Defines the action that gives users more control over what
+                            files are deleted at rollover time than what was possible with the DefaultRolloverStrategy
+                            max attribute. The Delete action lets users configure one or more conditions that select the
+                            files to delete relative to a base directory.</div>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: justify; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span
+                            style="font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #d3d3d3; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; color: #000000;">Base
+                            path to delete log files</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <div style="text-align: justify;"><strong>basepath =
+                                %ADSS_INSTALLATION_DIR%/logs/service&nbsp;</strong></div>
+                        <div style="text-align: justify;"><br>
+                        </div>
+                        <div style="text-align: justify;">Defines the base path from where to start scanning for files
+                            to delete. It is Required attribute.</div>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Condition to delete log files</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>type = IfFileName&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Accepts files whose path
+                                    (relative to the base path) matches a regular expression or a glob.</span><span
+                                    style="font-size: 14px;">&nbsp;</span></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Condition expression to delete log
+                            files</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>glob = service.*</strong>&nbsp;</p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">If regex not specified.
+                                    Matches the relative path (relative to the base path) using a limited pattern
+                                    language that resembles regular expressions but with a simpler syntax. It is
+                                    required parameter.</span><span style="font-size: 14px;">&nbsp;</span></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Nested condition to delete log
+                            files</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>type = IfLastModified&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">An optional set of nested
+                                    PathConditions. If any nested conditions exist, they all need to accept the file
+                                    before it is deleted. Nested conditions are only evaluated if the outer condition
+                                    accepts a file (if the path name matches).</span><span
+                                    style="font-size: 14px;">&nbsp;</span></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Nested condition age to delete log
+                            files</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>age = P30D</strong></p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Defines the duration. The
+                                    condition accepts files that are as old or older than the specified
+                                    duration.</span><span style="font-size: 14px;">&nbsp;</span></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <strong><span style="font-size: 11pt;">Log4 logger</span><span>&nbsp;</span></strong><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>name = com.ascertia.adss.service.signing&nbsp;</strong>
+                        </p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">A logger is a component
+                                    which will take your logging request and log it. Each class in a project can have an
+                                    individual logger, or they can all use a common logger. The logger element must have
+                                    a name attribute specified. Defines the java package that creates this log
+                                    file.</span><span style="font-size: 14px;">&nbsp;</span></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Logger level</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>level = info&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Defines the log level. If
+                                    the log level is set to DEBUG the log file will contain all logs records with log
+                                    levels DEBUG, INFO and ERROR. If this is set to INFO then only INFO and ERROR log
+                                    records are created. If set to ERROR only ERROR related log records are generated.
+                                    The Log Level is followed by the name of the log marker.</span><span
+                                    style="font-size: 14px;">&nbsp;</span></div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Logger additivity</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p style="text-align: justify;"><strong>additivity = false&nbsp;</strong></p>
+                        <span style="font-size: 11pt;">
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Appender additivity is a
+                                    property of loggers to inherit their parent's appenders. By default, all loggers
+                                    have appender additivity enabled.</span><span style="font-size: 14px;">&nbsp;</span>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+                <tr style="break-inside: avoid;">
+                    <td
+                        style="text-align: left; border: 1px solid #666666; padding: 8px; background-color: lightgray; vertical-align: top; width: 150pt;">
+                        <span style="font-size: 11pt;">Logger appender reference</span><span>&nbsp;</span><br>
+                    </td>
+                    <td
+                        style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
+                        <p><strong>ref = signing</strong>&nbsp;</p>
+                        <span style="font-size: 11pt;">Defines the reference to the appender name i.e. logs generated
+                            would be write in which file.</span><span>&nbsp;</span><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- Display tip bubble with icon and colored background. -->
+        <div class="TipBubble"><span
+                style="font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #f0fff0; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; font-family: Verdana; color: #4f8a10;">log4j
+                can also be used to create logs on other systems. For more information read the log4j documentation
+                at:&nbsp;</span><a href="http://logging.apache.org/log4j" target="_blank"
+                style="text-decoration: none; color: #2495d2; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; line-height: normal; text-align: left;">http://logging.apache.org/log4j</a>
+        </div>
+        <p
+            style="color: #000000; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            The following settings show how to create settings to limit logs to 10 files, each of 1 MB each. Old log
+            files will be deleted.</p>
+        <img alt="" src="images/Doc-2.jpg" style="border-width: 1px; border-style: solid;">
+    </div>
+    <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div>
+</body>
+
+</html>

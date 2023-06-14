@@ -3511,8 +3511,8 @@ docAux = insDoc(
   xadss_server_logging,
   gLnk(
     "R",
-    "&nbsp;Managing&nbsp;ADSS&nbsp;Server&nbsp;Logs&nbsp;",
-    "managing_adss_server_logs.htm"
+    "&nbsp;Quản lý nhật ký của máy chủ ADSS&nbsp;",
+    "pages/managing_adss_server_logs.htm"
   )
 );
 xlocalization = insFld(
