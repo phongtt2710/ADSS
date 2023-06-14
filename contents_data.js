@@ -3501,7 +3501,7 @@ docAux = insDoc(
 );
 xadvanced_configuration = insFld(
   foldersTree,
-  gFld("&nbsp;Advanced&nbsp;Configuration&nbsp;", "pages/advanced_configuration.htm")
+  gFld("&nbsp;Cấu hình&nbsp;nâng cao&nbsp;", "pages/advanced_configuration.htm")
 );
 xadss_server_logging = insFld(
   xadvanced_configuration,
