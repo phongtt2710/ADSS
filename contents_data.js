@@ -3505,7 +3505,10 @@ xadvanced_configuration = insFld(
 );
 xadss_server_logging = insFld(
   xadvanced_configuration,
-  gFld("&nbsp;Đăng ký&nbsp;Dịch vụ&nbsp;ADSS&nbsp;", "pages/adss_server_logging.htm")
+  gFld(
+    "&nbsp;Đăng ký&nbsp;Dịch vụ&nbsp;ADSS&nbsp;",
+    "pages/adss_server_logging.htm"
+  )
 );
 docAux = insDoc(
   xadss_server_logging,
