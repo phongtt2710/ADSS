@@ -1308,179 +1308,191 @@ xadss_server___verification_service4 = insFld(
 xconfiguring_the_verification_service2 = insFld(
   xadss_server___verification_service4,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;Verification&nbsp;Service&nbsp;",
-    "configuring_the_verification_service2.htm"
+    "&nbsp;Định cấu hình&nbsp;dịch&nbsp;vụ&nbsp;xác minh&nbsp;",
+    "pages/configuring_the_verification_service2.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_verification_service2,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generating&nbsp;Keys&nbsp;and&nbsp;Certificates&nbsp;",
-    "step_1_-_generating_keys_certificates_using_the_key_manager.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/step_1_-_generating_keys_certificates_using_the_key_manager.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_verification_service2,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Registering&nbsp;CAs&nbsp;",
-    "step_2_-_registering_cas_using_the_trust_manager.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Đăng ký&nbsp;CAs&nbsp;",
+    "pages/step_2_-_registering_cas_using_the_trust_manager.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_verification_service2,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Configuring&nbsp;CRL&nbsp;Monitor&nbsp;",
-    "step_3_-_check_the_crl_manager_service_is_running.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Định cấu hình&nbsp;màn hình&nbsp;CRL&nbsp;",
+    "pages/step_3_-_check_the_crl_manager_service_is_running.htm"
   )
 );
 xverification_profiles = insFld(
   xconfiguring_the_verification_service2,
   gFld(
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Configuring&nbsp;Verification&nbsp;Profile&nbsp;",
-    "verification_profiles.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Định cấu hình&nbsp;hồ sơ&nbsp;xác minh&nbsp;",
+    "pages/verification_profiles.htm"
   )
 );
 docAux = insDoc(
   xverification_profiles,
-  gLnk("R", "&nbsp;General&nbsp;Settings&nbsp;", "general_settings2.htm")
+  gLnk("R", "&nbsp;Cài đặt&nbsp;chung&nbsp;", "pages/general_settings2.htm")
 );
 docAux = insDoc(
   xverification_profiles,
   gLnk(
     "R",
-    "&nbsp;Trust&nbsp;Anchor&nbsp;Settings&nbsp;",
-    "step_1a_-_trust_anchor_settings.htm"
-  )
-);
-docAux = insDoc(
-  xverification_profiles,
-  gLnk(
-    "R",
-    "&nbsp;Signature&nbsp;Settings&nbsp;",
-    "step_1b_-_signature_settings.htm"
-  )
-);
-docAux = insDoc(
-  xverification_profiles,
-  gLnk("R", "&nbsp;Algorithms&nbsp;Settings&nbsp;", "algorithms_settings.htm")
-);
-docAux = insDoc(
-  xverification_profiles,
-  gLnk(
-    "R",
-    "&nbsp;Path&nbsp;Discovery&nbsp;Settings&nbsp;",
-    "step_1c_-_path_discovery_settings.htm"
+    "&nbsp;Cài đặt&nbsp;tin cậy&nbsp;Anchor&nbsp;",
+    "pages/step_1a_-_trust_anchor_settings.htm"
   )
 );
 docAux = insDoc(
   xverification_profiles,
   gLnk(
     "R",
-    "&nbsp;Path&nbsp;Validation&nbsp;Settings&nbsp;",
-    "step_1d_-_path_validation_settings.htm"
+    "&nbsp;Cài đặt&nbsp;chữ ký&nbsp;",
+    "pages/step_1b_-_signature_settings.htm"
   )
 );
 docAux = insDoc(
   xverification_profiles,
   gLnk(
     "R",
-    "&nbsp;Advanced&nbsp;Settings&nbsp;",
-    "step_1e_-_advanced_settings.htm"
+    "&nbsp;Cài đặt&nbsp;thuật toán&nbsp;",
+    "pages/algorithms_settings.htm"
+  )
+);
+docAux = insDoc(
+  xverification_profiles,
+  gLnk(
+    "R",
+    "&nbsp;Cài đặt&nbsp;khám phá&nbsp;đường dẫn&nbsp;",
+    "pages/step_1c_-_path_discovery_settings.htm"
+  )
+);
+docAux = insDoc(
+  xverification_profiles,
+  gLnk(
+    "R",
+    "&nbsp;Cài đặt&nbsp;xác thực&nbsp;đường dẫn&nbsp;",
+    "pages/step_1d_-_path_validation_settings.htm"
+  )
+);
+docAux = insDoc(
+  xverification_profiles,
+  gLnk(
+    "R",
+    "&nbsp;Cài đặt&nbsp;nâng cao&nbsp;",
+    "pages/step_1e_-_advanced_settings.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_verification_service2,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;Configuring&nbsp;Signature&nbsp;Quality&nbsp;&nbsp;",
-    "signature_quality_configuration.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Định cấu hình&nbsp;chất lượng&nbsp;chữ ký&nbsp;&nbsp;",
+    "pages/signature_quality_configuration.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_verification_service2,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;6&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Application&nbsp;",
-    "step_4_-_registering_business_application.htm"
+    "&nbsp;Bước&nbsp;6&nbsp;-&nbsp;Đăng ký&nbsp;ứng dụng&nbsp;kinh doanh&nbsp;",
+    "pages/step_4_-_registering_business_application.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_verification_service2,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;7&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "using_verification_service_manager.htm"
+    "&nbsp;Bước&nbsp;7&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/using_verification_service_manager.htm"
   )
 );
 docAux = insDoc(
   xadss_server___verification_service4,
   gLnk(
     "R",
-    "&nbsp;Validating&nbsp;and&nbsp;Enhancing&nbsp;Existing&nbsp;Signatures&nbsp;",
-    "validating_and_enhancing_existing_signatures.htm"
+    "&nbsp;Xác thực&nbsp;và&nbsp;tăng cường&nbsp;chữ ký&nbsp;hiện có&nbsp;",
+    "pages/validating_and_enhancing_existing_signatures.htm"
   )
 );
 docAux = insDoc(
   xadss_server___verification_service4,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "verification_transactions_log.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/verification_transactions_log.htm"
   )
 );
 docAux = insDoc(
   xadss_server___verification_service4,
   gLnk(
     "R",
-    "&nbsp;Logs&nbsp;Archiving&nbsp;",
-    "verification_logs_archiving.htm"
+    "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;",
+    "pages/verification_logs_archiving.htm"
   )
 );
 docAux = insDoc(
   xadss_server___verification_service4,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "verification_alerts.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/verification_alerts.htm")
 );
 xverification_management_reporting = insFld(
   xadss_server___verification_service4,
   gFld(
-    "&nbsp;Verification&nbsp;Management&nbsp;Reporting&nbsp;",
-    "verification_management_reporting.htm"
+    "&nbsp;Báo cáo&nbsp;quản lý&nbsp;xác minh&nbsp;",
+    "pages/verification_management_reporting.htm"
   )
 );
 docAux = insDoc(
   xverification_management_reporting,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_separate.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_separate.htm")
 );
 docAux = insDoc(
   xverification_management_reporting,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report3.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report3.htm")
 );
 docAux = insDoc(
   xverification_management_reporting,
-  gLnk("R", "&nbsp;Target&nbsp;CA&nbsp;Report&nbsp;", "target_ca_report.htm")
+  gLnk(
+    "R",
+    "&nbsp;Báo cáo&nbsp;CA&nbsp;mục tiêu&nbsp;",
+    "pages/target_ca_report.htm"
+  )
 );
 docAux = insDoc(
   xadss_server___verification_service4,
   gLnk(
     "R",
-    "&nbsp;Verification&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "service_urls2.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;xác minh&nbsp;",
+    "pages/service_urls2.htm"
   )
 );
 xocsp_monitor = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;OCSP&nbsp;Monitor&nbsp;", "ocsp_monitor.htm")
+  gFld("&nbsp;Màn hình&nbsp;ADSS&nbsp;OCSP&nbsp;", "pages/ocsp_monitor.htm")
 );
 docAux = insDoc(
   xocsp_monitor,
-  gLnk("R", "&nbsp;Service&nbsp;Manager&nbsp;", "sevice_manager.htm")
+  gLnk("R", "&nbsp;Quản lý&nbsp;dịch vụ&nbsp;", "pages/sevice_manager.htm")
 );
 docAux = insDoc(
   xocsp_monitor,
-  gLnk("R", "&nbsp;Test&nbsp;Cases&nbsp;", "test_cases.htm")
+  gLnk(
+    "R",
+    "&nbsp;Các trường hợp&nbsp;thử nghiệm&nbsp;",
+    "pages/test_cases.htm"
+  )
 );
 docAux = insDoc(
   xocsp_monitor,
