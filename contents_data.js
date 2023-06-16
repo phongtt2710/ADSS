@@ -1561,68 +1561,68 @@ docAux = insDoc(
 xconfiguring_the_ocsp_service = insFld(
   xocsp_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;OCSP&nbsp;Service&nbsp;",
-    "configuring_the_ocsp_service.htm"
+    "&nbsp;Định cấu hình&nbsp;dịch&nbsp;vụ&nbsp;OCSP&nbsp;",
+    "pages/configuring_the_ocsp_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ocsp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1-&nbsp;Generating&nbsp;Keys&nbsp;and&nbsp;Certificates&nbsp;",
-    "step_1-_generating_keys_certificates.htm"
+    "&nbsp;Bước&nbsp;1-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/step_1-_generating_keys_certificates.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ocsp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Registering&nbsp;CAs&nbsp;",
-    "step_2_-_registering_cas_in_trust_manager.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Đăng ký&nbsp;CA&nbsp;",
+    "pages/step_2_-_registering_cas_in_trust_manager.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ocsp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Registering&nbsp;Trusted&nbsp;CAs&nbsp;for&nbsp;OCSP&nbsp;Service&nbsp;",
-    "step_3_-_register_trusted_cas_for_ocsp_service.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Đăng ký&nbsp;CA&nbsp;đáng tin cậy&nbsp;cho&nbsp;dịch vụ&nbsp;OCSP&nbsp;",
+    "pages/step_3_-_register_trusted_cas_for_ocsp_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ocsp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Configuring&nbsp;CRL&nbsp;Monitor&nbsp;",
-    "step_4___check_the_crl_manager_service_is_running.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Cấu hình&nbsp;màn hình&nbsp;CLR&nbsp;",
+    "pages/step_4___check_the_crl_manager_service_is_running.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ocsp_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "using_ocsp_service_manager.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/using_ocsp_service_manager.htm"
   )
 );
 xadvanced_settings = insFld(
   xocsp_service,
-  gFld("&nbsp;Advanced&nbsp;Settings&nbsp;", "advanced_settings.htm")
+  gFld("&nbsp;Cài đặt&nbsp;nâng cao&nbsp;", "pages/advanced_settings.htm")
 );
 docAux = insDoc(
   xadvanced_settings,
   gLnk(
     "R",
-    "&nbsp;OCSP&nbsp;Request&nbsp;Handling&nbsp;",
-    "ocsp_request_handling.htm"
+    "&nbsp;Xử lý&nbsp;yêu cầu&nbsp;OCSP&nbsp;",
+    "pages/ocsp_request_handling.htm"
   )
 );
 docAux = insDoc(
   xadvanced_settings,
   gLnk(
     "R",
-    "&nbsp;Default&nbsp;OCSP&nbsp;Policy&nbsp;",
-    "default_ocsp_policy2.htm"
+    "&nbsp;Chính sách&nbsp;OCSP&nbsp;mặc định&nbsp;",
+    "pages/default_ocsp_policy2.htm"
   )
 );
 docAux = insDoc(
