@@ -1627,82 +1627,93 @@ docAux = insDoc(
 );
 docAux = insDoc(
   xocsp_service,
-  gLnk("R", "&nbsp;Forwarding&nbsp;Modes&nbsp;", "manual_routing.htm")
-);
-docAux = insDoc(
-  xocsp_service,
-  gLnk("R", "&nbsp;Access&nbsp;Control&nbsp;", "ocsp_access_control.htm")
+  gLnk("R", "&nbsp;Chế độ&nbsp;chuyển tiếp&nbsp;", "pages/manual_routing.htm")
 );
 docAux = insDoc(
   xocsp_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "reviewing_ocsp_tranasaction_logs.htm"
+    "&nbsp;Kiểm soát&nbsp;truy cập&nbsp;",
+    "pages/ocsp_access_control.htm"
   )
 );
 docAux = insDoc(
   xocsp_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "ocsp_logs_archiving.htm")
+  gLnk(
+    "R",
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/reviewing_ocsp_tranasaction_logs.htm"
+  )
 );
 docAux = insDoc(
   xocsp_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "ocsp_alerts.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/ocsp_logs_archiving.htm")
+);
+docAux = insDoc(
+  xocsp_service,
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/ocsp_alerts.htm")
 );
 xocsp_management_reporting = insFld(
   xocsp_service,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "ocsp_management_reporting.htm")
+  gFld(
+    "&nbsp;Báo cáo&nbsp;quản lý&nbsp;",
+    "pages/ocsp_management_reporting.htm"
+  )
 );
 docAux = insDoc(
   xocsp_management_reporting,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_report4.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_report4.htm")
 );
 docAux = insDoc(
   xocsp_management_reporting,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report5.htm")
-);
-docAux = insDoc(
-  xocsp_management_reporting,
-  gLnk("R", "&nbsp;Target&nbsp;CA&nbsp;Report&nbsp;", "target_ca_report4.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report5.htm")
 );
 docAux = insDoc(
   xocsp_management_reporting,
   gLnk(
     "R",
-    "&nbsp;Daily&nbsp;Request&nbsp;Report&nbsp;",
-    "daily_request_report.htm"
+    "&nbsp;Báo cáo&nbsp;CA&nbsp;mục tiêu&nbsp;",
+    "pages/target_ca_report4.htm"
   )
 );
 docAux = insDoc(
   xocsp_management_reporting,
   gLnk(
     "R",
-    "&nbsp;Service&nbsp;Statistical&nbsp;Report&nbsp;&nbsp;",
-    "service_statistical_report_.htm"
+    "&nbsp;Báo cáo&nbsp;yêu cầu&nbsp;hàng ngày&nbsp;",
+    "pages/daily_request_report.htm"
   )
 );
 docAux = insDoc(
-  xocsp_service,
+  xocsp_management_reporting,
   gLnk(
     "R",
-    "&nbsp;Optimising&nbsp;ADSS&nbsp;OCSP&nbsp;Server&nbsp;Performance&nbsp;",
-    "configuring_adss_server_for_high_speed_ocsp_responses.htm"
-  )
-);
-docAux = insDoc(
-  xocsp_service,
-  gLnk(
-    "R",
-    "&nbsp;Operating&nbsp;OCSP&nbsp;Service&nbsp;in&nbsp;FIPS&nbsp;201&nbsp;Compliant&nbsp;Mode&nbsp;",
-    "operating_the_ocsp_service_in_fips_201_compliant_mode.htm"
+    "&nbsp;Báo cáo&nbsp;thống kê&nbsp;dịch vụ&nbsp;&nbsp;",
+    "pages/service_statistical_report_.htm"
   )
 );
 docAux = insDoc(
   xocsp_service,
   gLnk(
     "R",
-    "&nbsp;OCSP&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "service_urls3.htm"
+    "&nbsp;Tối ưu hóa&nbsp;hiệu suất&nbsp;máy chủ&nbsp;ADSS&nbsp;OCSP&nbsp;",
+    "pages/configuring_adss_server_for_high_speed_ocsp_responses.htm"
+  )
+);
+docAux = insDoc(
+  xocsp_service,
+  gLnk(
+    "R",
+    "&nbsp;Vận hành&nbsp;dịch vụ&nbsp;OCSP&nbsp;ở&nbsp;Chế độ&nbsp;tuân thủ&nbsp;FIPS&nbsp;201&nbsp;",
+    "pages/operating_the_ocsp_service_in_fips_201_compliant_mode.htm"
+  )
+);
+docAux = insDoc(
+  xocsp_service,
+  gLnk(
+    "R",
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;OCSP&nbsp;",
+    "pages/service_urls3.htm"
   )
 );
 xadss_scvp_service1 = insFld(
