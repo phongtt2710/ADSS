@@ -1718,136 +1718,139 @@ docAux = insDoc(
 );
 xadss_scvp_service1 = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;SCVP&nbsp;Service&nbsp;", "adss_scvp_service1.htm")
+  gFld(
+    "&nbsp;Dịch vụ&nbsp;ADSS&nbsp;SCVP&nbsp;",
+    "pages/adss_scvp_service1.htm"
+  )
 );
 xconfiguring_the_scvp_service1 = insFld(
   xadss_scvp_service1,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;SCVP&nbsp;Service&nbsp;",
-    "configuring_the_scvp_service1.htm"
+    "&nbsp;Định&nbsp;cấu hình&nbsp;Dịch vụ&nbsp;SCVP&nbsp;",
+    "pages/configuring_the_scvp_service1.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generate&nbsp;Key&nbsp;and&nbsp;Certificate&nbsp;",
-    "step_1_-_generate_key_and_certificate1.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/step_1_-_generate_key_and_certificate1.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Register&nbsp;CAs&nbsp;Using&nbsp;Trust&nbsp;Manager&nbsp;",
-    "step_2_-_register_cas_using_trust_manager.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Đăng ký&nbsp;CAs&nbsp;bằng&nbsp;trình quản lý&nbsp;tin cậy&nbsp;",
+    "pages/step_2_-_register_cas_using_trust_manager.htm"
   )
 );
 xstep_2___configuring_scvp_validation_policy_ = insFld(
   xconfiguring_the_scvp_service1,
   gFld(
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Configure&nbsp;an&nbsp;SCVP&nbsp;Validation&nbsp;Policy&nbsp;&nbsp;",
-    "step_2_-_configuring_scvp_validation_policy_.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Định&nbsp;cấu hình&nbsp;chính sách&nbsp;xác thực&nbsp;SCVP&nbsp;&nbsp;",
+    "pages/step_2_-_configuring_scvp_validation_policy_.htm"
   )
 );
 docAux = insDoc(
   xstep_2___configuring_scvp_validation_policy_,
-  gLnk("R", "&nbsp;General&nbsp;Settings&nbsp;", "general_settings1.htm")
+  gLnk("R", "&nbsp;Cài đặt&nbsp;chung&nbsp;", "pages/general_settings1.htm")
 );
 docAux = insDoc(
   xstep_2___configuring_scvp_validation_policy_,
   gLnk(
     "R",
-    "&nbsp;Trust&nbsp;Anchor&nbsp;Settings&nbsp;",
-    "trust_anchor_settings.htm"
-  )
-);
-docAux = insDoc(
-  xstep_2___configuring_scvp_validation_policy_,
-  gLnk(
-    "R",
-    "&nbsp;Path&nbsp;Discovery&nbsp;Settings&nbsp;",
-    "path_discovery_settings.htm"
+    "&nbsp;Cài đặt&nbsp;Trust&nbsp;Anchor&nbsp;",
+    "pages/trust_anchor_settings.htm"
   )
 );
 docAux = insDoc(
   xstep_2___configuring_scvp_validation_policy_,
   gLnk(
     "R",
-    "&nbsp;Path&nbsp;Validation&nbsp;Settings&nbsp;",
-    "path_validation_settings.htm"
+    "&nbsp;Cài đặt&nbsp;khám phá&nbsp;đường dẫn&nbsp;",
+    "pages/path_discovery_settings.htm"
   )
 );
 docAux = insDoc(
   xstep_2___configuring_scvp_validation_policy_,
-  gLnk("R", "&nbsp;Advanced&nbsp;Settings&nbsp;", "advanced_settings3.htm")
+  gLnk(
+    "R",
+    "&nbsp;Cài đặt&nbsp;xác thực&nbsp;đường dẫn&nbsp;",
+    "pages/path_validation_settings.htm"
+  )
+);
+docAux = insDoc(
+  xstep_2___configuring_scvp_validation_policy_,
+  gLnk("R", "&nbsp;Cài đặt&nbsp;nâng cao&nbsp;", "pages/advanced_settings3.htm")
 );
 docAux = insDoc(
   xconfiguring_the_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Configure&nbsp;CRL&nbsp;Monitor&nbsp;",
-    "crl_monitor1.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Định cấu hình&nbsp;màn hình&nbsp;CRL&nbsp;",
+    "pages/crl_monitor1.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;SCVP&nbsp;Service&nbsp;Manager&nbsp;Settings&nbsp;",
-    "using_scvp_service_manager_.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Cài đặt&nbsp;trình quản lý&nbsp;dịch vụ&nbsp;SCVP&nbsp;",
+    "pages/using_scvp_service_manager_.htm"
   )
 );
 docAux = insDoc(
   xadss_scvp_service1,
-  gLnk("R", "&nbsp;Access&nbsp;Control&nbsp;", "access_control4.htm")
+  gLnk("R", "&nbsp;Kiểm soát&nbsp;truy cập&nbsp;", "pages/access_control4.htm")
 );
 docAux = insDoc(
   xadss_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer3.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer3.htm"
   )
 );
 docAux = insDoc(
   xadss_scvp_service1,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving6.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving6.htm")
 );
 docAux = insDoc(
   xadss_scvp_service1,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "alerts2.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts2.htm")
 );
 xmanagement_reporting1 = insFld(
   xadss_scvp_service1,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "management_reporting1.htm")
+  gFld("&nbsp;Báo cáo&nbsp;quản lý&nbsp;", "pages/management_reporting1.htm")
 );
 docAux = insDoc(
   xmanagement_reporting1,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_report1.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_report1.htm")
 );
 docAux = insDoc(
   xmanagement_reporting1,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report1.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report1.htm")
 );
 docAux = insDoc(
   xmanagement_reporting1,
-  gLnk("R", "&nbsp;Target&nbsp;CAs&nbsp;", "target_cas.htm")
+  gLnk("R", "&nbsp;CA&nbsp;mục tiêu&nbsp;", "pages/target_cas.htm")
 );
 docAux = insDoc(
   xadss_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;Operating&nbsp;the&nbsp;SCVP&nbsp;Service&nbsp;in&nbsp;FIPS&nbsp;201&nbsp;Compliant&nbsp;Mode&nbsp;",
-    "operating_the_scvp_service_in_fips_201_compliant_mode.htm"
+    "&nbsp;Vận hành&nbsp;dịch vụ&nbsp;SCVP&nbsp;ở&nbsp;chế độ&nbsp;tuân&nbsp;thủ&nbsp;FIPS&nbsp;201&nbsp;",
+    "pages/operating_the_scvp_service_in_fips_201_compliant_mode.htm"
   )
 );
 docAux = insDoc(
   xadss_scvp_service1,
   gLnk(
     "R",
-    "&nbsp;SCVP&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "scvp_service_interface_urls.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;SCVP&nbsp;",
+    "pages/scvp_service_interface_urls.htm"
   )
 );
 xadss_xkms_service = insFld(
