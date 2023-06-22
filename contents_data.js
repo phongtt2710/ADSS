@@ -1855,136 +1855,136 @@ docAux = insDoc(
 );
 xadss_xkms_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;XKMS&nbsp;Service&nbsp;", "adss_xkms_service.htm")
+  gFld("&nbsp;Dịch vụ&nbsp;ADSS&nbsp;XKMS&nbsp;", "pages/adss_xkms_service.htm")
 );
 xconfiguring_the_xkms_service3 = insFld(
   xadss_xkms_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;XKMS&nbsp;Service&nbsp;",
-    "configuring_the_xkms_service3.htm"
+    "&nbsp;Định&nbsp;cấu hình&nbsp;dịch vụ&nbsp;XKMS&nbsp;",
+    "pages/configuring_the_xkms_service3.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_xkms_service3,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generate&nbsp;Key&nbsp;and&nbsp;Certificate&nbsp;",
-    "step_1_-_generate_key_and_certificate.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/step_1_-_generate_key_and_certificate.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_xkms_service3,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Registering&nbsp;CAs&nbsp;",
-    "step_2_-_register_cas_in_trust_manager.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Đăng ký&nbsp;CA&nbsp;",
+    "pages/step_2_-_register_cas_in_trust_manager.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_xkms_service3,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Configure&nbsp;CRL&nbsp;Monitor&nbsp;",
-    "step_4_-_configuring_crl_monitor_and_or_ocsp_service.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Định cấu hình&nbsp;màn hình&nbsp;CRL&nbsp;",
+    "pages/step_4_-_configuring_crl_monitor_and_or_ocsp_service.htm"
   )
 );
 xstep_3___configuring_xkms_profile = insFld(
   xconfiguring_the_xkms_service3,
   gFld(
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Configuring&nbsp;XKMS&nbsp;Profile&nbsp;",
-    "step_3_-_configuring_xkms_profile.htm"
+    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Định cấu hình&nbsp;cấu hình&nbsp;XKMS&nbsp;",
+    "pages/step_3_-_configuring_xkms_profile.htm"
   )
 );
 docAux = insDoc(
   xstep_3___configuring_xkms_profile,
-  gLnk("R", "&nbsp;General&nbsp;Settings&nbsp;", "general_settings3.htm")
+  gLnk("R", "&nbsp;Cài đặt&nbsp;chung&nbsp;", "pages/general_settings3.htm")
 );
 docAux = insDoc(
   xstep_3___configuring_xkms_profile,
   gLnk(
     "R",
-    "&nbsp;Trust&nbsp;Anchor&nbsp;Settings&nbsp;",
-    "step_3a_-_trust_anchor_settings1.htm"
-  )
-);
-docAux = insDoc(
-  xstep_3___configuring_xkms_profile,
-  gLnk(
-    "R",
-    "&nbsp;Path&nbsp;Discovery&nbsp;Settings&nbsp;",
-    "step_3b_-_path_discovery_settings1.htm"
+    "&nbsp;Cài đặt&nbsp;Trust&nbsp;Anchor&nbsp;",
+    "pages/step_3a_-_trust_anchor_settings1.htm"
   )
 );
 docAux = insDoc(
   xstep_3___configuring_xkms_profile,
   gLnk(
     "R",
-    "&nbsp;Path&nbsp;Validation&nbsp;Settings&nbsp;",
-    "step_3c_-_certificate_validation_settings1.htm"
+    "&nbsp;Cài đặt&nbsp;khám phá&nbsp;đường dẫn&nbsp;",
+    "pages/step_3b_-_path_discovery_settings1.htm"
   )
 );
 docAux = insDoc(
   xstep_3___configuring_xkms_profile,
   gLnk(
     "R",
-    "&nbsp;Advanced&nbsp;Settings&nbsp;",
-    "step_3d_-_advanced_settings1.htm"
+    "&nbsp;Cài đặt&nbsp;xác thực&nbsp;đường dẫn&nbsp;",
+    "pages/step_3c_-_certificate_validation_settings1.htm"
+  )
+);
+docAux = insDoc(
+  xstep_3___configuring_xkms_profile,
+  gLnk(
+    "R",
+    "&nbsp;Cài đặt&nbsp;nâng cao&nbsp;",
+    "pages/step_3d_-_advanced_settings1.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_xkms_service3,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Applications&nbsp;",
-    "a.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Đăng ký&nbsp;ứng dụng&nbsp;kinh doanh&nbsp;",
+    "pages/a.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_xkms_service3,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;6&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_3_-_using_xkms_service_manager.htm"
+    "&nbsp;Bước&nbsp;6&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/step_3_-_using_xkms_service_manager.htm"
   )
 );
 docAux = insDoc(
   xadss_xkms_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer.htm"
   )
 );
 docAux = insDoc(
   xadss_xkms_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving1.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving1.htm")
 );
 docAux = insDoc(
   xadss_xkms_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "xkms_alerts.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/xkms_alerts.htm")
 );
 xmanagement_reporting3 = insFld(
   xadss_xkms_service,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "management_reporting3.htm")
+  gFld("&nbsp;Báo cáo&nbsp;quản lý&nbsp;", "pages/management_reporting3.htm")
 );
 docAux = insDoc(
   xmanagement_reporting3,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_report7.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_report7.htm")
 );
 docAux = insDoc(
   xmanagement_reporting3,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report8.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report8.htm")
 );
 docAux = insDoc(
   xmanagement_reporting3,
-  gLnk("R", "&nbsp;Target&nbsp;CAs&nbsp;", "target_cas1.htm")
+  gLnk("R", "&nbsp;CA&nbsp;mục tiêu&nbsp;", "pages/target_cas1.htm")
 );
 docAux = insDoc(
   xadss_xkms_service,
   gLnk(
     "R",
-    "&nbsp;XKMS&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "service_urls5.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;XKMS&nbsp;",
+    "pages/service_urls5.htm"
   )
 );
 xadss_ltan_service = insFld(
