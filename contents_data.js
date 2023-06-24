@@ -3554,31 +3554,31 @@ docAux = insDoc(
   xlocalization,
   gLnk(
     "R",
-    "&nbsp;Replacing&nbsp;the&nbsp;ADSS&nbsp;Server&nbsp;Welcome&nbsp;Page&nbsp;",
-    "replacing_adss_welcome_page.htm"
+    "&nbsp;Thay thế trang chào mừng của ADSS Server&nbsp;",
+    "pages/replacing_adss_welcome_page.htm"
   )
 );
 docAux = insDoc(
   xadvanced_configuration,
   gLnk(
     "R",
-    "&nbsp;ADSS&nbsp;Service&nbsp;Interface&nbsp;Error&nbsp;Codes&nbsp;",
-    "error_codes.htm"
+    "&nbsp;Các mã lỗi giao diện dịch vụ ADSS&nbsp;",
+    "pages/error_codes.htm"
   )
 );
 docAux = insDoc(
   xadvanced_configuration,
   gLnk(
     "R",
-    "&nbsp;Changing&nbsp;ADSS&nbsp;Default&nbsp;&nbsp;Service&nbsp;URL&nbsp;",
-    "changing_adss_default__service_url.htm"
+    "&nbsp;Thay đổi URL dịch vụ mặc định của ADSS&nbsp;",
+    "pages/changing_adss_default__service_url.htm"
   )
 );
 docAux = insDoc(
   xadvanced_configuration,
   gLnk(
     "R",
-    "&nbsp;Configuring&nbsp;Tomcat&nbsp;for&nbsp;TLS&nbsp;Authentication&nbsp;Using&nbsp;HSM&nbsp;Devices&nbsp;",
-    "configuring_tomcat_for_ssl_authentication_using_hsm_devices.htm"
+    "&nbsp;Cấu hình Tomcat để sử dụng xác thực TLS bằng thiết bị HSM (Hardware Security Module)&nbsp;",
+    "pages/configuring_tomcat_for_ssl_authentication_using_hsm_devices.htm"
   )
 );

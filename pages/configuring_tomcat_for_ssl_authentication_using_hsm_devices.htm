@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title>Báo cáo quản lý về dữ liệu trực tiếp - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+</head>
+
+<body
+    onload="HighlightSearchText();HighlightPage('587','Configuring Tomcat for TLS Authentication Using HSM Devices');parent.MenuItemSelected('advanced_configuration');"
+    class="page_body" data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+    <div id="divPageinHeader">
+        <p><span style="font-family: arial; font-size: 10px; color: #cbc9ba;"><span class="var_breadcrumbs"><a
+                        href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a href="advanced_configuration.htm"
+                        title="">Cấu hình nâng cao</a>&nbsp;&gt;&nbsp;<a
+                        href="configuring_tomcat_for_ssl_authentication_using_hsm_devices.htm" title="">Cấu hình Tomcat
+                        để sử dụng xác thực TLS bằng thiết bị HSM (Hardware Security Module)</a></span></span></p>
+        <p><span class="Asc_PageName">Cấu hình Tomcat để sử dụng xác thực TLS bằng thiết bị HSM (Hardware Security
+                Module)</span></p>
+        <p>Để cấu hình Tomcat trong ADSS Server để sử dụng Xác thực Máy chủ TLS được lưu trữ trong thiết bị PKCS#11 (ví
+            dụ: PCI-e hoặc HSM mạng), bạn cần thực hiện các cấu hình bằng tay sau đây:</p>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            <strong><span style="color: #c00000;">Ghi chú:&nbsp;</span></strong>Trên các hệ điều hành 64 bit, thiết bị
+            PKCS#11 không thể chứa chứng chỉ Xác thực Máy chủ TLS vì điều này không được hỗ trợ bởi Java. Khi Java hỗ
+            trợ chức năng này, Ascertia sẽ bao gồm phiên bản Java mới nhất có hỗ trợ Xác thực Máy chủ TLS sử dụng thiết
+            bị PKCS#11.
+        </p>
+        <ol
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+            <li>
+                Mở bảng điều khiển ADSS Server và điều hướng đến mô-đun Quản lý Khóa (Key Manager).</li>
+            <li>Tạo một cặp khóa mới bằng cách sử dụng Mẫu Xác thực Máy chủ TLS mặc định và chọn một hồ sơ mã hóa dựa
+                trên PKCS#11 để lưu trữ khóa. Hồ sơ mã hóa nên được thiết lập để nhập chứng chỉ được tạo ra vào thiết bị
+                PKCS#11.</li>
+            <li>Trên trang chứng chỉ, tạo một chứng chỉ mới cho khóa công khai của Máy chủ TLS bằng cách sử dụng (a) CA
+                cục bộ hoặc (b) bằng cách tạo một yêu cầu PKCS#10 sử dụng tùy chọn CA bên ngoài, sau đó xác nhận bằng
+                một CA bên ngoài và nhập chứng chỉ đã cấp.</li>
+            <li>Điều hướng đến trang <strong>Global Setting</strong> > <strong>System Certificates</strong> và thay thế
+                chứng chỉ Xác thực Máy chủ TLS hiện có bằng chứng chỉ được tạo trong bước 3.</li>
+            <li>Bây giờ dừng các Dịch vụ ADSS Server Windows (Core, Console và Service) hoặc các tiến trình Unix.</li>
+            <li>Điều hướng đến địa chỉ:<span>&nbsp;</span><strong>[ADSS Server
+                    Home]/service/server/conf/<span>&nbsp;</span></strong> và tạo bản sao lưu của
+                tệp<span>&nbsp;</span><strong>server.xml</strong><span>&nbsp;</span>file.&nbsp;</li>
+            <li>Mở tệp&nbsp;<strong>server.xml</strong><span>&nbsp;</span>trong trình soạn thảo văn bản.</li>
+            <li>Đối với mỗi cổng <strong>8778</strong> và <strong>8779</strong>, đã xác định một cặp thẻ connector. Tìm
+                các trường hợp của thẻ connector
+                có cổng <strong>8778</strong> và <strong>8779</strong> hiện đang được bật (không được ghi chú) và ghi
+                chú chúng lại để ngừng sử dụng. Bây
+                giờ hãy gỡ bỏ ghi chú của các trường hợp khác của thẻ connector có cổng <strong>8778</strong> và
+                <strong>8779</strong> đã bị tắt (được ghi
+                chú) để sử dụng chúng.
+            </li>
+            <li>Trong thẻ connector không được ghi chú (tức là <strong>8778</strong>), tìm thuộc tính
+                <strong>keyAlias</strong> và cung cấp tên bí danh
+                (key alias) cho chứng chỉ Xác thực Máy chủ TLS, như được hiển thị trên phần mềm của nhà cung cấp
+                PKCS#11. Để lấy tên bí danh (key alias) tương ứng từ thiết bị PKCS#11, làm theo hướng dẫn sau:
+                <ol>
+                    <li>Đến địa chỉ:<span>&nbsp;</span><strong>[ADSS Server Home]/util/bin&nbsp;</strong>và sao chép
+                        đường dẫn</li>
+                    <li>Khởi chạy cửa sổ Command Prompt và thay đổi thư mục làm việc đến vị trí được đề cập ở trên.</li>
+                    <li>Thực thi lệnh <strong>pkcs11_ssl_key.bat</strong> hoặc đơn giản là nhấp đúp vào tệp
+                        <strong>pkcs11_ssl_key.bat</strong>.
+                    </li>
+                    <li>Điều này hiển thị keyAlias cho khóa TLS Server Authentication đã được cấu hình như được hiển thị
+                        dưới đây:<br>
+                        <img alt="" src="https://manuals.ascertia.com/ADSS-Admin-Guide/images/AC-40-1.jpg"
+                            style="border-width: 1px; border-style: solid; width: 724px; height: 106px;">
+                    </li>
+                </ol>
+            </li>
+            <li>Bây giờ cũng thêm keyAlias giống như trong tag connector <strong>8779</strong> đã bỏ chú thích.
+            </li>
+            <li>Đối với cả hai connector, tức là <strong>8778</strong> và <strong>8779</strong>, sửa giá trị cho phần tử
+                <strong>keystorePass</strong> và đặt nó là PIN của thiết bị PKCS#11, sau đó lưu file server.xml.
+            </li>
+            <li>Lặp lại các bước 6 đến 9 và 11 cho file <strong>server.xml</strong> tại đường dẫn: <strong>[ADSS Server
+                    Home]/console/server/conf/.</strong> Lưu ý rằng cổng TLS trong file <strong>server.xml</strong> của
+                <strong>console/server/conf</strong> là 8774.
+                Key alias cho chứng chỉ xác thực máy chủ TLS chỉ cần cấu hình cho cổng này. Không cần chạy tiện ích lại
+                vì bạn đã biết key alias từ thiết bị HSM.</li>
+            <li>Hãy đi đến đường dẫn: <strong>[ADSS Server Home]/jdk/jre/lib/security/</strong> và mở file java.security trong một trình
+                soạn thảo văn bản. Tìm thuộc tính <strong>#security.provider.10=sun.security.pkcs11.SunPKCS11 [ADSS Server
+                Home]/conf/pkcs11.properties</strong>. Dòng này nên được bỏ chú thích và phần tử được hiển thị là <strong>[ADSS Server
+                Home]</strong> nên được thay thế bằng đường dẫn tuyệt đối cho thư mục cài đặt ADSS Server. Sau đó, lưu lại tệp
+                này.
+            </li>
+            <li>Khởi động các dịch vụ ADSS Server trên Windows (hoặc các tiến trình UNIX).</li>
+        </ol>
+        <p class="Asc_See_Also"
+            style="font-size: 14px; font-weight: bold; font-style: italic; color: orange; font-family: Verdana; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Xem thêm</p>
+        <div class="Asc_Sibling_Page_List"
+            style="font-size: 13px; color: #000000; font-family: Verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            <div class="var_Sibling_Page_List"><a href="adss_server_logging.htm" title="">Ghi nhật ký ADSS Server</a><br><a
+                    href="localization.htm" title="">Địa phương hóa</a><br><a href="error_codes.htm" title="">Mã lối giao diện ADSS Service
+                    </a><br><a href="changing_adss_default__service_url.htm" title="">Thay đổi URL dịch vụ mặc định của ADSS </a><br></div>
+        </div>
+    </div>
+    <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div>
+</body>
+
+</html>

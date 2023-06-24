@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Báo cáo quản lý về dữ liệu trực tiếp - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+</head>
+
+<body
+    onload="HighlightSearchText();HighlightPage('586','Changing ADSS Default  Service URL');parent.MenuItemSelected('advanced_configuration');"
+    class="page_body" data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+    <div id="divPageinHeader">
+        <p><span class="breadcrumbs" style="font-family: arial; font-size: 10px; color: #cbc9ba;"><span
+                    class="var_breadcrumbs"><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+                        href="advanced_configuration.htm" title="">Cấu hình nâng cao</a>&nbsp;&gt;&nbsp;<a
+                        href="changing_adss_default__service_url.htm" title="">Thay đổi URL dịch vụ mặc định của
+                        ADSS</a></span></span></p>
+        <p class="Asc_PageName">Thay đổi URL dịch vụ mặc định của ADSS</p>
+        <p>Các kết nối đến các dịch vụ của ADSS Server được thiết lập bằng cách cung cấp một URI đường dẫn dịch vụ trong
+            địa chỉ http(s) của dịch vụ, ví dụ: <strong>http://localhost:8777/adss/tsa</strong>. Tuy nhiên, cũng có thể
+            cấu hình một dịch
+            vụ duy nhất làm mặc định, và do đó không cần thêm URI dịch vụ cho dịch vụ cụ thể đó, ví dụ:
+            <strong>http://localhost:8777</strong>. Mặc định, dịch vụ OCSP được xử lý theo cách này, nhưng điều này có
+            thể được thay đổi
+            thành dịch vụ khác nếu cần thiết.
+        </p>
+        <p>Quản trị viên có thể cấu hình bất kỳ địa chỉ dịch vụ nào là dịch vụ mặc định bằng cách thay đổi tệp web.xml
+            nằm tại [ADSS Server Home]\service\server\webapps\service-map\WEB-INF. Thay đổi giá trị của tham số
+            DEFAULT_SERVICE_URI thành tên dịch vụ mong muốn; các giá trị có thể là::&nbsp;</p>
+        <ul>
+            <li>tsa</li>
+            <li>scvp</li>
+            <li>xkms</li>
+            <li>ocsp</li>
+            <li>ltan</li>
+            <li>decryption</li>
+        </ul>
+        <p>Dưới đây là một ví dụ về cấu hình:</p>
+        <p>
+        </p>
+        <div class="reCodeBlock" style="border: 1px solid #7f9db9; overflow-y: auto;">
+            <div style="background-color: #ffffff;"><span style="margin-left: 0px !important;"><code
+                        style="color: #000000;">&lt;</code><code
+                        style="color: #006699; font-weight: bold;">init-param</code><code
+                        style="color: #000000;">&gt;</code></span></div>
+            <div style="background-color: #f8f8f8;"><span><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><span
+                        style="margin-left: 24px !important;"><code style="color: #000000;">&lt;</code><code
+                            style="color: #006699; font-weight: bold;">param-name</code><code
+                            style="color: #000000;">&gt;DEFAULT_SERVICE_URI&lt;/</code><code
+                            style="color: #006699; font-weight: bold;">param-name</code><code
+                            style="color: #000000;">&gt;</code></span></span></div>
+            <div style="background-color: #ffffff;"><span><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><span
+                        style="margin-left: 24px !important;"><code style="color: #000000;">&lt;</code><code
+                            style="color: #006699; font-weight: bold;">param-value</code><code
+                            style="color: #000000;">&gt;/scvp&lt;/</code><code
+                            style="color: #006699; font-weight: bold;">param-value</code><code
+                            style="color: #000000;">&gt;</code></span></span></div>
+            <div style="background-color: #f8f8f8;"><span style="margin-left: 0px !important;"><code
+                        style="color: #000000;">&lt;/</code><code
+                        style="color: #006699; font-weight: bold;">init-param</code><code
+                        style="color: #000000;">&gt;</code></span></div>
+        </div>
+        <p>&nbsp;</p>
+        <span class="TipBubble">
+            Khi thay đổi các tệp cấu hình, hãy nhớ khởi động lại Dịch vụ ADSS trên Windows hoặc daemon UNIX để các thay đổi có hiệu lực.</span>
+        <p><strong class="Asc_See_Also">Xem thêm</strong></p>
+        <div class="Asc_Sibling_Page_List">
+            <div class="var_Sibling_Page_List"><a href="adss_server_logging.htm" title="">Ghi nhật ký ADSS Server</a><br><a
+                    href="localization.htm" title="">Địa phương hóa</a><br><a href="error_codes.htm" title="">Mã lỗi giao diện ADSS Service
+                    </a><br><a
+                    href="configuring_tomcat_for_ssl_authentication_using_hsm_devices.htm" title="">Cấu hình Tomcat để sử dụng xác thực TLS bằng thiết bị HSM (Hardware Security Module)</a><br></div>
+        </div>
+    </div>
+    <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div>
+</body>
+
+</html>
