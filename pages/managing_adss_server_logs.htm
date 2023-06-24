@@ -158,7 +158,8 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>type = PatternLayout&nbsp;</strong></p>
-                        <span style="font-size: 11pt;">Tên của lớp do log4j cung cấp, nó sẽ quản lý thứ tự và định dạng của tệp nhật ký</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Tên của lớp do log4j cung cấp, nó sẽ quản lý thứ tự và định dạng
+                            của tệp nhật ký</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -171,13 +172,15 @@
                         <p><strong>pattern = %d{dd MMM yyyy HH:mm:ss} [%t] %-5p %c - %m%n&nbsp;</strong></p>
                         <p>Xác định nội dung thực tế của tệp nhật ký. Các chi tiết bao gồm:&nbsp;</p>
                         <ul>
-                            <li>=%d{dd MMM yyyy HH:mm:ss}: Đây hiển thị ngày khi bản ghi nhật ký được tạo. Điều này có thể được thay đổi theo yêu cầu v.d. =%d{MMM yy HH:mm:ss}<br>
+                            <li>=%d{dd MMM yyyy HH:mm:ss}: Đây hiển thị ngày khi bản ghi nhật ký được tạo. Điều này có
+                                thể được thay đổi theo yêu cầu v.d. =%d{MMM yy HH:mm:ss}<br>
                                 <br>
                             </li>
                             <li>[%t]: Hiển thị tên luồng được đề cập của hệ điều hành<br>
                                 <br>
                             </li>
-                            <li>%-5p: Xác định mức độ nhật ký. Mức độ nhật ký được thiết lập theo chương trình khi đặt một thông báo<br>
+                            <li>%-5p: Xác định mức độ nhật ký. Mức độ nhật ký được thiết lập theo chương trình khi đặt
+                                một thông báo<br>
                                 <br>
                             </li>
                             <li>%c –: Tên của lớp ADSS tạo ra thông báo nhật ký<br>
@@ -197,7 +200,8 @@
                     </td>
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
-                        DailyRollingFileAppender mở rộng FileAppender để tệp gốc được cuộn qua theo tần suất do người dùng chọn.&nbsp;<br>
+                        DailyRollingFileAppender mở rộng FileAppender để tệp gốc được cuộn qua theo tần suất do người
+                        dùng chọn.&nbsp;<br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -208,7 +212,8 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>type = Policies&nbsp;</strong></p>
-                        <span style="font-size: 11pt;">Định nghĩa các chính sách cho bộ ghi log4j.</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Định nghĩa các chính sách cho bộ ghi
+                            log4j.</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -219,10 +224,10 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>time.type = TimeBasedTriggeringPolicy&nbsp;</strong></p>
-                        <span style="font-size: 11pt;">The TimeBasedTriggeringPolicy causes a rollover once the
-                            date/time pattern no longer applies to the active file. This policy accepts an increment
-                            attribute which indicates how frequently the rollover should occur based on the time pattern
-                            and a modulate boolean attribute.</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Chính sách TimeBasedTriggeringPolicy gây ra việc chuyển file khi
+                            mẫu ngày/giờ không còn áp dụng cho file hoạt động. Chính sách này chấp nhận một thuộc tính
+                            increment chỉ ra tần suất chuyển file xảy ra dựa trên mẫu thời gian và một thuộc tính
+                            boolean modulate.</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -233,10 +238,10 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>interval = 1&nbsp;</strong></p>
-                        <span style="font-size: 11pt;">How often a rollover should occur based on the most specific time
-                            unit in the date pattern. For example, with a date pattern with hours as the most specific
-                            item and increment of 4 rollovers would occur every 4 hours. The default value is 1
-                            day.</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Chu kỳ chuyển file xảy ra có tần suất như sau, dựa trên đơn vị
+                            thời gian cụ thể nhất trong mẫu ngày/giờ. Ví dụ, với một mẫu ngày/giờ có giờ là mục cụ thể
+                            nhất và increment là 4, việc chuyển file sẽ xảy ra mỗi 4 giờ. Giá trị mặc định là 1
+                            ngày.</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -247,10 +252,11 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>modulate = true&nbsp;</strong></p>
-                        <span style="font-size: 11pt;">Indicates whether the interval should be adjusted to cause the
-                            next rollover to occur on the interval boundary. For example, if the item is hours, the
-                            current hour is 3 am and the interval is 4 then then the first rollover will occur at 4 am
-                            and then next ones will occur at 8 am, noon, 4pm, etc.</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Chỉ định liệu khoảng thời gian có nên được điều chỉnh để chuyển
+                            file tiếp theo xảy ra tại ranh giới khoảng thời gian. Ví dụ, nếu mục là giờ, giờ hiện tại là
+                            3 giờ sáng và khoảng thời gian là 4, thì việc chuyển file đầu tiên sẽ xảy ra lúc 4 giờ sáng
+                            và các chuyển file tiếp theo sẽ xảy ra lúc 8 giờ sáng, trưa, 4 giờ chiều,
+                            v.v.</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -261,11 +267,10 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>type = DefaultRolloverStrategy&nbsp;</strong></p>
-                        <span style="font-size: 11pt;">The default rollover strategy accepts both a date/time pattern
-                            and an integer from the filePattern attribute specified on the RollingFileAppender itself.
-                            If the date/time pattern is present it will be replaced with the current date and time
-                            values. If the pattern contains an integer it will be incremented on each
-                            rollover.</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Chiến lược chuyển file mặc định chấp nhận cả mẫu ngày/giờ và một
+                            số nguyên từ thuộc tính filePattern được chỉ định trên RollingFileAppender. Nếu mẫu ngày/giờ
+                            hiện diện, nó sẽ được thay thế bằng các giá trị ngày và giờ hiện tại. Nếu mẫu chứa một số
+                            nguyên, nó sẽ được tăng lên sau mỗi lần chuyển file.</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -279,9 +284,9 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <strong>fileIndex = nomax&nbsp;</strong><br>
                         <br>
-                        If set to "max" (the default), files with a higher index will be newer than files with a smaller
-                        index. If set to "min", file renaming, and the counter will follow the Fixed Window strategy
-                        described above.<br>
+                        Nếu được đặt thành "max" (mặc định), các file với chỉ số cao hơn sẽ mới hơn các file có chỉ số
+                        nhỏ hơn. Nếu được đặt thành "min", việc đổi tên file và bộ đếm sẽ tuân theo chiến lược Fixed
+                        Window được mô tả ở trên.<br>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -296,10 +301,10 @@
                         <div style="text-align: justify;"><strong>type = Delete&nbsp;</strong></div>
                         <div style="text-align: justify;"><br>
                         </div>
-                        <div style="text-align: justify;">Defines the action that gives users more control over what
-                            files are deleted at rollover time than what was possible with the DefaultRolloverStrategy
-                            max attribute. The Delete action lets users configure one or more conditions that select the
-                            files to delete relative to a base directory.</div>
+                        <div style="text-align: justify;">Xác định hành động này cho phép người dùng có nhiều quyền kiểm
+                            soát hơn về việc xóa file tại thời điểm chuyển file hơn là chỉ dựa trên thuộc tính max của
+                            DefaultRolloverStrategy. Hành động Xóa cho phép người dùng cấu hình một hoặc nhiều điều kiện
+                            để chọn các file cần xóa liên quan đến một thư mục cơ sở.</div>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -315,8 +320,8 @@
                                 %ADSS_INSTALLATION_DIR%/logs/service&nbsp;</strong></div>
                         <div style="text-align: justify;"><br>
                         </div>
-                        <div style="text-align: justify;">Defines the base path from where to start scanning for files
-                            to delete. It is Required attribute.</div>
+                        <div style="text-align: justify;">
+                            Xác định đường dẫn cơ sở để bắt đầu quét các file cần xóa. Đây là thuộc tính bắt buộc.</div>
                     </td>
                 </tr>
                 <tr style="break-inside: avoid;">
@@ -328,9 +333,9 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p style="text-align: justify;"><strong>type = IfFileName&nbsp;</strong></p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">Accepts files whose path
-                                    (relative to the base path) matches a regular expression or a glob.</span><span
-                                    style="font-size: 14px;">&nbsp;</span></div>
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Chấp nhận các file có đường
+                                    dẫn (tương đối đối với đường dẫn cơ sở) phù hợp với một biểu thức chính quy hoặc một
+                                    glob.</span><span style="font-size: 14px;">&nbsp;</span></div>
                         </span>
                     </td>
                 </tr>
@@ -344,10 +349,10 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p style="text-align: justify;"><strong>glob = service.*</strong>&nbsp;</p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">If regex not specified.
-                                    Matches the relative path (relative to the base path) using a limited pattern
-                                    language that resembles regular expressions but with a simpler syntax. It is
-                                    required parameter.</span><span style="font-size: 14px;">&nbsp;</span></div>
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Nếu không chỉ định regex,
+                                    nó sẽ so khớp với đường dẫn tương đối (đối với đường dẫn cơ sở) bằng cách sử dụng
+                                    một ngôn ngữ mẫu hạn chế tương tự biểu thức chính quy nhưng có cú pháp đơn giản hơn.
+                                    Đây là tham số bắt buộc.</span><span style="font-size: 14px;">&nbsp;</span></div>
                         </span>
                     </td>
                 </tr>
@@ -361,10 +366,7 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p style="text-align: justify;"><strong>type = IfLastModified&nbsp;</strong></p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">An optional set of nested
-                                    PathConditions. If any nested conditions exist, they all need to accept the file
-                                    before it is deleted. Nested conditions are only evaluated if the outer condition
-                                    accepts a file (if the path name matches).</span><span
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Một tập hợp tùy chọn các PathConditions lồng nhau. Nếu có bất kỳ điều kiện lồng nhau nào tồn tại, tất cả các điều kiện đó cần chấp nhận file trước khi nó được xóa. Các điều kiện lồng nhau chỉ được đánh giá nếu điều kiện bên ngoài chấp nhận một file (nếu tên đường dẫn khớp).</span><span
                                     style="font-size: 14px;">&nbsp;</span></div>
                         </span>
                     </td>
@@ -379,9 +381,7 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p style="text-align: justify;"><strong>age = P30D</strong></p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">Defines the duration. The
-                                    condition accepts files that are as old or older than the specified
-                                    duration.</span><span style="font-size: 14px;">&nbsp;</span></div>
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Xác định khoảng thời gian. Điều kiện này chấp nhận các file có tuổi là bằng hoặc lớn hơn khoảng thời gian được chỉ định.</span><span style="font-size: 14px;">&nbsp;</span></div>
                         </span>
                     </td>
                 </tr>
@@ -395,11 +395,7 @@
                         <p style="text-align: justify;"><strong>name = com.ascertia.adss.service.signing&nbsp;</strong>
                         </p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">A logger is a component
-                                    which will take your logging request and log it. Each class in a project can have an
-                                    individual logger, or they can all use a common logger. The logger element must have
-                                    a name attribute specified. Defines the java package that creates this log
-                                    file.</span><span style="font-size: 14px;">&nbsp;</span></div>
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Một logger là một thành phần sẽ nhận yêu cầu ghi log của bạn và ghi nó lại. Mỗi class trong một dự án có thể có một logger riêng biệt, hoặc tất cả chúng có thể sử dụng một logger chung. Phần tử logger phải có một thuộc tính name được chỉ định. Định nghĩa package Java tạo ra file log này.</span><span style="font-size: 14px;">&nbsp;</span></div>
                         </span>
                     </td>
                 </tr>
@@ -412,11 +408,7 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p style="text-align: justify;"><strong>level = info&nbsp;</strong></p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">Defines the log level. If
-                                    the log level is set to DEBUG the log file will contain all logs records with log
-                                    levels DEBUG, INFO and ERROR. If this is set to INFO then only INFO and ERROR log
-                                    records are created. If set to ERROR only ERROR related log records are generated.
-                                    The Log Level is followed by the name of the log marker.</span><span
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Xác định cấp độ log. Nếu cấp độ log được đặt là DEBUG, file log sẽ chứa tất cả các bản ghi log với cấp độ log DEBUG, INFO và ERROR. Nếu được đặt là INFO, chỉ có các bản ghi log INFO và ERROR được tạo ra. Nếu được đặt là ERROR, chỉ có các bản ghi log liên quan đến ERROR được tạo ra. Cấp độ log được theo sau bởi tên của đánh dấu log.</span><span
                                     style="font-size: 14px;">&nbsp;</span></div>
                         </span>
                     </td>
@@ -430,9 +422,7 @@
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p style="text-align: justify;"><strong>additivity = false&nbsp;</strong></p>
                         <span style="font-size: 11pt;">
-                            <div style="text-align: justify;"><span style="font-size: 11pt;">Appender additivity is a
-                                    property of loggers to inherit their parent's appenders. By default, all loggers
-                                    have appender additivity enabled.</span><span style="font-size: 14px;">&nbsp;</span>
+                            <div style="text-align: justify;"><span style="font-size: 11pt;">Appender additivity là một thuộc tính của logger để kế thừa các appender của bậc cha. Mặc định, tất cả các logger đều có appender additivity được kích hoạt.</span><span style="font-size: 14px;">&nbsp;</span>
                             </div>
                         </span>
                     </td>
@@ -445,8 +435,7 @@
                     <td
                         style="border: 1px solid #666666; padding: 8px; background-color: #ffffff; vertical-align: top;">
                         <p><strong>ref = signing</strong>&nbsp;</p>
-                        <span style="font-size: 11pt;">Defines the reference to the appender name i.e. logs generated
-                            would be write in which file.</span><span>&nbsp;</span><br>
+                        <span style="font-size: 11pt;">Xác định tham chiếu đến tên appender, tức là logs được tạo ra sẽ được ghi vào file nào.</span><span>&nbsp;</span><br>
                     </td>
                 </tr>
             </tbody>
@@ -454,15 +443,13 @@
         <br>
         <!-- Display tip bubble with icon and colored background. -->
         <div class="TipBubble"><span
-                style="font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #f0fff0; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; font-family: Verdana; color: #4f8a10;">log4j
-                can also be used to create logs on other systems. For more information read the log4j documentation
-                at:&nbsp;</span><a href="http://logging.apache.org/log4j" target="_blank"
+                style="font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #f0fff0; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important; font-family: Verdana; color: #4f8a10;">
+                log4j cũng có thể được sử dụng để tạo log trên các hệ thống khác. Để biết thêm thông tin, hãy đọc tài liệu log4j tại:&nbsp;</span><a href="http://logging.apache.org/log4j" target="_blank"
                 style="text-decoration: none; color: #2495d2; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; line-height: normal; text-align: left;">http://logging.apache.org/log4j</a>
         </div>
         <p
             style="color: #000000; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
-            The following settings show how to create settings to limit logs to 10 files, each of 1 MB each. Old log
-            files will be deleted.</p>
+            Các cài đặt sau đây cho thấy cách tạo cài đặt để giới hạn log thành 10 file, mỗi file có kích thước 1 MB. Các file log cũ sẽ bị xóa.</p>
         <img alt="" src="images/Doc-2.jpg" style="border-width: 1px; border-style: solid;">
     </div>
     <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div>

@@ -3517,37 +3517,37 @@ docAux = insDoc(
 );
 xlocalization = insFld(
   xadvanced_configuration,
-  gFld("&nbsp;Localisation&nbsp;", "localization.htm")
+  gFld("&nbsp;Địa phương hóa&nbsp;", "pages/localization.htm")
 );
 xchanging_notification__alerts__messages = insFld(
   xlocalization,
   gFld(
-    "&nbsp;Changing&nbsp;Notification&nbsp;(Alert)&nbsp;Messages&nbsp;",
-    "changing_notification_(alerts)_messages.htm"
+    "&nbsp;Thay đổi thông báo (cảnh báo)&nbsp;",
+    "pages/changing_notification_(alerts)_messages.htm"
   )
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;Email&nbsp;Notifications&nbsp;", "email_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo Email&nbsp;", "pages/email_notifications.htm")
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;SMS&nbsp;Notifications&nbsp;", "sms_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo SMS&nbsp&nbsp;", "pages/sms_notifications.htm")
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;SNMP&nbsp;Notifications&nbsp;", "snmp_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo SNMP&nbsp&nbsp;", "pages/snmp_notifications.htm")
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;Syslog&nbsp;Notifications&nbsp;", "syslog_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo Syslog&nbsp;", "pages/syslog_notifications.htm")
 );
 docAux = insDoc(
   xlocalization,
   gLnk(
     "R",
-    "&nbsp;Changing&nbsp;System&nbsp;Messages&nbsp;",
-    "changing_system_messages.htm"
+    "&nbsp;Thay đổi hệ thống thông báo&nbsp;",
+    "pages/changing_system_messages.htm"
   )
 );
 docAux = insDoc(
