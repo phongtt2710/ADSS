@@ -2051,90 +2051,93 @@ docAux = insDoc(
 );
 docAux = insDoc(
   xadss_ltan_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving2.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving2.htm")
 );
 docAux = insDoc(
   xadss_ltan_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "ltan_alerts.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/ltan_alerts.htm")
 );
 xmanagement_reporting2 = insFld(
   xadss_ltan_service,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "management_reporting2.htm")
+  gFld("&nbsp;Báo cáo&nbsp;quản lý&nbsp;", "pages/management_reporting2.htm")
 );
 docAux = insDoc(
   xmanagement_reporting2,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_report6.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_report6.htm")
 );
 docAux = insDoc(
   xmanagement_reporting2,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report7.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report7.htm")
 );
 docAux = insDoc(
   xmanagement_reporting2,
   gLnk(
     "R",
-    "&nbsp;LTANS&nbsp;Profile&nbsp;Report&nbsp;",
-    "ltans_profile_report.htm"
+    "&nbsp;Báo cáo&nbsp;hồ sơ&nbsp;LTANS&nbsp;",
+    "pages/ltans_profile_report.htm"
   )
 );
 docAux = insDoc(
   xadss_ltan_service,
   gLnk(
     "R",
-    "&nbsp;LTANS&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "service_urls6.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;LTANS&nbsp;",
+    "pages/service_urls6.htm"
   )
 );
 xadss_hmac_service2 = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;HMAC&nbsp;Service&nbsp;", "adss_hmac_service2.htm")
+  gFld(
+    "&nbsp;Dịch vụ&nbsp;ADSS&nbsp;HMAC&nbsp;",
+    "pages/adss_hmac_service2.htm"
+  )
 );
 xconfiguring_the_hmac_service = insFld(
   xadss_hmac_service2,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;HMAC&nbsp;Service&nbsp;",
-    "configuring_the_hmac_service.htm"
+    "&nbsp;Định&nbsp;cấu hình&nbsp;dịch vụ&nbsp;HMAC&nbsp;",
+    "pages/configuring_the_hmac_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_hmac_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generating&nbsp;HMAC&nbsp;Keys&nbsp;",
-    "step_1___generating_key_and_certificate.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;HMAC&nbsp;",
+    "pages/step_1___generating_key_and_certificate.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_hmac_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configuring&nbsp;HMAC&nbsp;Profile&nbsp;",
-    "step_2___configuring_hmac_profile.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Định cấu hình&nbsp;hồ sơ&nbsp;HMAC&nbsp;",
+    "pages/step_2___configuring_hmac_profile.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_hmac_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_3___using_the_service_manager1.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/step_3___using_the_service_manager1.htm"
   )
 );
 docAux = insDoc(
   xadss_hmac_service2,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer11.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer11.htm"
   )
 );
 docAux = insDoc(
   xadss_hmac_service2,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving14.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving14.htm")
 );
 docAux = insDoc(
   xadss_hmac_service2,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "alerts12.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts12.htm")
 );
 xadss_decryption_service = insFld(
   foldersTree,
