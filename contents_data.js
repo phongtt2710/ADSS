@@ -1989,57 +1989,64 @@ docAux = insDoc(
 );
 xadss_ltan_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;LTANS&nbsp;Service&nbsp;", "adss_ltan_service.htm")
+  gFld(
+    "&nbsp;Dịch vụ&nbsp;ADSS&nbsp;LTANS&nbsp;",
+    "pages/adss_ltan_service.htm"
+  )
 );
 xconfiguring_the_ltan_service1 = insFld(
   xadss_ltan_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;LTANS&nbsp;Service&nbsp;",
-    "configuring_the_ltan_service1.htm"
+    "&nbsp;Định&nbsp;cấu hình&nbsp;dịch vụ&nbsp;LTANS&nbsp;",
+    "pages/configuring_the_ltan_service1.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ltan_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Registering&nbsp;Timestamping&nbsp;Authorities&nbsp;",
-    "step_2_-_registering_timestamping_authorities.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Đăng ký&nbsp;cơ quan&nbsp;cấp dấu thời gian&nbsp;",
+    "pages/step_2_-_registering_timestamping_authorities.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ltan_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configuring&nbsp;LTANS&nbsp;Profile&nbsp;",
-    "step_3_-_configuring_ltan_profile(s).htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Định cấu hình&nbsp;hồ sơ&nbsp;LTANS&nbsp;",
+    "pages/step_3_-_configuring_ltan_profile(s).htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ltan_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Applications&nbsp;",
-    "step_1_-_register_client_applications.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Đăng ký&nbsp;ứng dụng&nbsp;kinh doanh&nbsp;",
+    "pages/step_1_-_register_client_applications.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_ltan_service1,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Using&nbsp;LTANS&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_4_-_using_ltan_service_manager.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Sử dụng&nbsp;trình quản lý&nbsp;dịch vụ&nbsp;LTANS&nbsp;",
+    "pages/step_4_-_using_ltan_service_manager.htm"
   )
-);
-docAux = insDoc(
-  xadss_ltan_service,
-  gLnk("R", "&nbsp;Archive&nbsp;Data&nbsp;Log&nbsp;", "archive_data.htm")
 );
 docAux = insDoc(
   xadss_ltan_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer1.htm"
+    "&nbsp;Nhật ký&nbsp;lưu trữ&nbsp;dữ liệu&nbsp;",
+    "pages/archive_data.htm"
+  )
+);
+docAux = insDoc(
+  xadss_ltan_service,
+  gLnk(
+    "R",
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer1.htm"
   )
 );
 docAux = insDoc(
