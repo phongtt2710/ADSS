@@ -2142,71 +2142,71 @@ docAux = insDoc(
 xadss_decryption_service = insFld(
   foldersTree,
   gFld(
-    "&nbsp;ADSS&nbsp;Decryption&nbsp;Service&nbsp;",
-    "adss_decryption_service.htm"
+    "&nbsp;Dịch vụ&nbsp;giải mã&nbsp;ADSS&nbsp;",
+    "pages/adss_decryption_service.htm"
   )
 );
 xconfiguring_the_decryption_service = insFld(
   xadss_decryption_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;Decryption&nbsp;Service&nbsp;",
-    "configuring_the_decryption_service.htm"
+    "&nbsp;Cấu hình&nbsp;dịch&nbsp;vụ&nbsp;giải mã&nbsp;",
+    "pages/configuring_the_decryption_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_decryption_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generating&nbsp;Keys&nbsp;and&nbsp;Certificates&nbsp;",
-    "generating_keys_and_certificate.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/generating_keys_and_certificate.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_decryption_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configuring&nbsp;Decryption&nbsp;Profile&nbsp;",
-    "step_2_-_configuring_decryption_profile(s).htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Cấu hình&nbsp;hồ sơ&nbsp;giải mã&nbsp;",
+    "pages/step_2_-_configuring_decryption_profile(s).htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_decryption_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Applications&nbsp;",
-    "step_1_-_registering_business_application.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Đăng ký&nbsp;ứng dụng&nbsp;kinh doanh&nbsp;",
+    "pages/step_1_-_registering_business_application.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_decryption_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "steps_3_-_using_decryption_service.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/steps_3_-_using_decryption_service.htm"
   )
 );
 docAux = insDoc(
   xadss_decryption_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transaction_log_viewer.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transaction_log_viewer.htm"
   )
 );
 docAux = insDoc(
   xadss_decryption_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving3.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving3.htm")
 );
 docAux = insDoc(
   xadss_decryption_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "decryption_alerts.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/decryption_alerts.htm")
 );
 docAux = insDoc(
   xadss_decryption_service,
   gLnk(
     "R",
-    "&nbsp;Decryption&nbsp;Interface&nbsp;URLs&nbsp;",
-    "decryption_interface_urls.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;giải mã&nbsp;",
+    "pages/decryption_interface_urls.htm"
   )
 );
 xadss_ocsp_repeater_service = insFld(
