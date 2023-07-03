@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Báo cáo quản lý về dữ liệu trực tiếp - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+</head>
+
+<body
+    onload="HighlightSearchText();HighlightPage('578','Changing Notification (Alert) Messages');parent.MenuItemSelected('advanced_configuration');"
+    class="page_body" data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+    <div id="divPageinHeader">
+        <p><span class="breadcrumbs" style="font-family: arial; font-size: 10px; color: #cbc9ba;"><span
+                    class="var_breadcrumbs"><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+                        href="advanced_configuration.htm" title="">Cấu hình nâng cao</a>&nbsp;&gt;&nbsp;<a
+                        href="localization.htm" title="">Địa phương hóa</a>&nbsp;&gt;&nbsp;<a
+                        href="changing_notification_(alerts)_messages.htm" title="">Thay đổi thông báo (cảnh
+                        báo)</a></span></span></p>
+        <p class="Asc_PageName">Thay đổi thông báo (cảnh báo)</p>
+        <p>
+            ADSS Server tạo ra các thông báo (cảnh báo) sau khi xảy ra một số sự kiện hệ thống và dịch vụ cụ thể. Các
+            thông báo (cảnh báo) này sẽ được gửi qua email đến các nhà điều hành ADSS Server đã được cấu hình. Ngoài ra
+            hoặc thay vào đó, chúng cũng có thể được gửi đến các máy chủ SMS hoặc SNMP. Để biết chi tiết về cách thiết
+            lập địa chỉ cho các máy chủ Email, SMS và SNMP, hãy tham khảo <a
+                href="https://manuals.ascertia.com/adss-admin-guide/alert_settings.htm" target="_blank">Cài đặt thông
+                báo</a>. Để biết chi tiết về cách
+            cấu hình địa chỉ email cảnh báo cho từng dịch vụ, ví dụ như <a
+                href="https://manuals.ascertia.com/adss-admin-guide/signing_service_alerts.htm">Cấu hình Cảnh báo Dịch
+                vụ Ký
+            </a>, vui lòng tham khảo
+            từng phần trong mục Dịch vụ.
+        </p>
+        <p
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Nội dung của các thông báo (cảnh báo) được xác định trong tệp notification.properties nằm trong thư mục
+            sau:<span>&nbsp;</span><strong>[ADSS Server
+                Home]/conf/notifications/notifications.properties</strong>.</p>
+        <p class="Asc_Sibling_Page_List"
+            style="font-size: 13px; color: #000000; font-family: Verdana; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+        </p>
+        <div class="iconpanel">
+            <div align="center"><a href="email_notifications.htm" title=""><img src="/images/default_pageicon.png"
+                        border="0"></a></div>
+            <div align="center"><a href="email_notifications.htm" title="">Thông báo Email</a></div>
+        </div>
+        <div class="iconpanel">
+            <div align="center"><a href="sms_notifications.htm" title=""><img src="/images/default_pageicon.png"
+                        border="0"></a></div>
+            <div align="center"><a href="sms_notifications.htm" title="">Thông báo SMS</a></div>
+        </div>
+        <div class="iconpanel">
+            <div align="center"><a href="snmp_notifications.htm" title=""><img src="/images/default_pageicon.png"
+                        border="0"></a></div>
+            <div align="center"><a href="snmp_notifications.htm" title="">Thông báo SNMP</a></div>
+        </div>
+        <div class="iconpanel">
+            <div align="center"><a href="syslog_notifications.htm" title=""><img src="/images/default_pageicon.png"
+                        border="0"></a></div>
+            <div align="center"><a href="syslog_notifications.htm" title="">Thông báo Syslog</a></div>
+        </div>
+        <div style="clear:both;"></div>
+        <p></p>
+        <p class="Asc_See_Also"
+            style="font-size: 14px; font-weight: bold; font-style: italic; color: orange; font-family: Verdana; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            Xem thêm</p>
+        <div class="pagelist"
+            style="color: #000000; font-family: Verdana; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; text-align: justify;">
+            <span class="Asc_Sibling_Page_List" style="font-size: 13px;">
+                <div class="var_Sibling_Page_List"><a href="changing_system_messages.htm" title="">Thay đổi các thông
+                        báo hệ thống</a><br><a href="replacing_adss_welcome_page.htm" title="">Thay thế trang chào mừng của ADSS Server</a><br></div>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

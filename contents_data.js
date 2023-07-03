@@ -3544,68 +3544,68 @@ docAux = insDoc(
 );
 xlocalization = insFld(
   xadvanced_configuration,
-  gFld("&nbsp;Localisation&nbsp;", "localization.htm")
+  gFld("&nbsp;Địa phương hóa&nbsp;", "pages/localization.htm")
 );
 xchanging_notification__alerts__messages = insFld(
   xlocalization,
   gFld(
-    "&nbsp;Changing&nbsp;Notification&nbsp;(Alert)&nbsp;Messages&nbsp;",
-    "changing_notification_(alerts)_messages.htm"
+    "&nbsp;Thay đổi thông báo (cảnh báo)&nbsp;",
+    "pages/changing_notification_(alerts)_messages.htm"
   )
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;Email&nbsp;Notifications&nbsp;", "email_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo Email&nbsp;", "pages/email_notifications.htm")
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;SMS&nbsp;Notifications&nbsp;", "sms_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo SMS&nbsp&nbsp;", "pages/sms_notifications.htm")
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;SNMP&nbsp;Notifications&nbsp;", "snmp_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo SNMP&nbsp&nbsp;", "pages/snmp_notifications.htm")
 );
 docAux = insDoc(
   xchanging_notification__alerts__messages,
-  gLnk("R", "&nbsp;Syslog&nbsp;Notifications&nbsp;", "syslog_notifications.htm")
+  gLnk("R", "&nbsp;Thông báo Syslog&nbsp;", "pages/syslog_notifications.htm")
 );
 docAux = insDoc(
   xlocalization,
   gLnk(
     "R",
-    "&nbsp;Changing&nbsp;System&nbsp;Messages&nbsp;",
-    "changing_system_messages.htm"
+    "&nbsp;Thay đổi hệ thống thông báo&nbsp;",
+    "pages/changing_system_messages.htm"
   )
 );
 docAux = insDoc(
   xlocalization,
   gLnk(
     "R",
-    "&nbsp;Replacing&nbsp;the&nbsp;ADSS&nbsp;Server&nbsp;Welcome&nbsp;Page&nbsp;",
-    "replacing_adss_welcome_page.htm"
+    "&nbsp;Thay thế trang chào mừng của ADSS Server&nbsp;",
+    "pages/replacing_adss_welcome_page.htm"
   )
 );
 docAux = insDoc(
   xadvanced_configuration,
   gLnk(
     "R",
-    "&nbsp;ADSS&nbsp;Service&nbsp;Interface&nbsp;Error&nbsp;Codes&nbsp;",
-    "error_codes.htm"
+    "&nbsp;Các mã lỗi giao diện dịch vụ ADSS&nbsp;",
+    "pages/error_codes.htm"
   )
 );
 docAux = insDoc(
   xadvanced_configuration,
   gLnk(
     "R",
-    "&nbsp;Changing&nbsp;ADSS&nbsp;Default&nbsp;&nbsp;Service&nbsp;URL&nbsp;",
-    "changing_adss_default__service_url.htm"
+    "&nbsp;Thay đổi URL dịch vụ mặc định của ADSS&nbsp;",
+    "pages/changing_adss_default__service_url.htm"
   )
 );
 docAux = insDoc(
   xadvanced_configuration,
   gLnk(
     "R",
-    "&nbsp;Configuring&nbsp;Tomcat&nbsp;for&nbsp;TLS&nbsp;Authentication&nbsp;Using&nbsp;HSM&nbsp;Devices&nbsp;",
-    "configuring_tomcat_for_ssl_authentication_using_hsm_devices.htm"
+    "&nbsp;Cấu hình Tomcat để sử dụng xác thực TLS bằng thiết bị HSM (Hardware Security Module)&nbsp;",
+    "pages/configuring_tomcat_for_ssl_authentication_using_hsm_devices.htm"
   )
 );
