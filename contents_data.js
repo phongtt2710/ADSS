@@ -2212,111 +2212,115 @@ docAux = insDoc(
 xadss_ocsp_repeater_service = insFld(
   foldersTree,
   gFld(
-    "&nbsp;ADSS&nbsp;OCSP&nbsp;Repeater&nbsp;Service&nbsp;",
-    "adss_ocsp_repeater_service.htm"
+    "&nbsp;Dịch vụ&nbsp;bộ lặp&nbsp;ADSS&nbsp;OCSP&nbsp;",
+    "pages/adss_ocsp_repeater_service.htm"
   )
 );
 xconfiguring_ocsp_repeater = insFld(
   xadss_ocsp_repeater_service,
   gFld(
-    "&nbsp;Configuring&nbsp;an&nbsp;OCSP&nbsp;Repeater&nbsp;",
-    "configuring_ocsp_repeater.htm"
+    "&nbsp;Định cấu hình&nbsp;bộ&nbsp;lặp&nbsp;OCSP&nbsp;",
+    "pages/configuring_ocsp_repeater.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_ocsp_repeater,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1&nbsp;-&nbsp;Generating&nbsp;Keys&nbsp;and&nbsp;Certificates&nbsp;",
-    "step_1___generating_keys_and_certificates.htm"
+    "&nbsp;Bước&nbsp;1&nbsp;-&nbsp;Tạo&nbsp;khóa&nbsp;và&nbsp;chứng chỉ&nbsp;",
+    "pages/step_1___generating_keys_and_certificates.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_ocsp_repeater,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Registering&nbsp;CAs&nbsp;",
-    "step_2___registering_cas.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Đăng ký&nbsp;CA&nbsp;",
+    "pages/step_2___registering_cas.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_ocsp_repeater,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Configuring&nbsp;CRL&nbsp;Monitor&nbsp;",
-    "step_5___configuring_crl_monitor.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Định cấu hình&nbsp;màn hình&nbsp;CRL&nbsp;",
+    "pages/step_5___configuring_crl_monitor.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_ocsp_repeater,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Configuring&nbsp;OCSP&nbsp;Repeater&nbsp;Service&nbsp;",
-    "step_3___configuring_d_ocsp_service.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Định cấu hình&nbsp;dịch vụ&nbsp;bộ lặp&nbsp;OCSP&nbsp;",
+    "pages/step_3___configuring_d_ocsp_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_ocsp_repeater,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;Registering&nbsp;Trusted&nbsp;CAs&nbsp;for&nbsp;OCSP&nbsp;Repeater&nbsp;Service&nbsp;",
-    "step_4___registering_trusted_cas_for_ocsp_repeater_service.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Đăng ký&nbsp;CA&nbsp;đáng tin cậy&nbsp;cho&nbsp;dịch vụ&nbsp;bộ lặp&nbsp;OCSP&nbsp;",
+    "pages/step_4___registering_trusted_cas_for_ocsp_repeater_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_ocsp_repeater,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;6&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_6___using_the_service_manager.htm"
+    "&nbsp;Bước&nbsp;6&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/step_6___using_the_service_manager.htm"
   )
 );
 docAux = insDoc(
   xadss_ocsp_repeater_service,
   gLnk(
     "R",
-    "&nbsp;OCSP&nbsp;Repeater&nbsp;Access&nbsp;Control&nbsp;",
-    "ocsp_repeater_access_control.htm"
+    "&nbsp;Kiểm soát&nbsp;truy cập&nbsp;bộ lặp&nbsp;OCSP&nbsp;",
+    "pages/ocsp_repeater_access_control.htm"
   )
 );
 docAux = insDoc(
   xadss_ocsp_repeater_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer7.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer7.htm"
   )
 );
 docAux = insDoc(
   xadss_ocsp_repeater_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving7.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving7.htm")
 );
 docAux = insDoc(
   xadss_ocsp_repeater_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "alerts7.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts7.htm")
 );
 xmanagement_reporting5 = insFld(
   xadss_ocsp_repeater_service,
-  gFld("&nbsp;Management&nbsp;Reporting&nbsp;", "management_reporting5.htm")
+  gFld("&nbsp;Báo cáo&nbsp;quản lý&nbsp;", "pages/management_reporting5.htm")
 );
 docAux = insDoc(
   xmanagement_reporting5,
-  gLnk("R", "&nbsp;Service&nbsp;Report&nbsp;", "service_report8.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;dịch vụ&nbsp;", "pages/service_report8.htm")
 );
 docAux = insDoc(
   xmanagement_reporting5,
-  gLnk("R", "&nbsp;Usage&nbsp;Report&nbsp;", "usage_report9.htm")
+  gLnk("R", "&nbsp;Báo cáo&nbsp;sử dụng&nbsp;", "pages/usage_report9.htm")
 );
 docAux = insDoc(
   xmanagement_reporting5,
-  gLnk("R", "&nbsp;Target&nbsp;CA&nbsp;Report&nbsp;", "target_ca_report1.htm")
+  gLnk(
+    "R",
+    "&nbsp;Báo cáo&nbsp;CA&nbsp;mục tiêu&nbsp;",
+    "pages/target_ca_report1.htm"
+  )
 );
 docAux = insDoc(
   xadss_ocsp_repeater_service,
   gLnk(
     "R",
-    "&nbsp;OCSP&nbsp;Repeater&nbsp;Service&nbsp;Interface&nbsp;URLs&nbsp;",
-    "ocsp_repeater_service_interface_urls.htm"
+    "&nbsp;URL&nbsp;giao diện&nbsp;dịch vụ&nbsp;bộ lặp&nbsp;OCSP&nbsp;",
+    "pages/ocsp_repeater_service_interface_urls.htm"
   )
 );
 xadss_npkd_service = insFld(
