@@ -2325,106 +2325,106 @@ docAux = insDoc(
 );
 xadss_npkd_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;NPKD&nbsp;Service&nbsp;", "adss_npkd_service.htm")
+  gFld("&nbsp;Dịch vụ&nbsp;ADSS&nbsp;NPKD&nbsp;", "pages/adss_npkd_service.htm")
 );
 xconfiguring_the_npkd_service = insFld(
   xadss_npkd_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;NPKD&nbsp;Service&nbsp;",
-    "configuring_the_npkd_service.htm"
+    "&nbsp;Định cấu hình&nbsp;dịch&nbsp;vụ&nbsp;NPKD&nbsp;",
+    "pages/configuring_the_npkd_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_npkd_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1-&nbsp;Configuring&nbsp;ICAO&nbsp;PKD&nbsp;Upload&nbsp;Settings&nbsp;",
-    "step_1__configuring_icao_pkd_upload_settings.htm"
+    "&nbsp;Bước&nbsp;1-&nbsp;Định cấu hình&nbsp;cài đặt&nbsp;tải lên&nbsp;ICAO&nbsp;PKD&nbsp;",
+    "pages/step_1__configuring_icao_pkd_upload_settings.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_npkd_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configuring&nbsp;ICAO&nbsp;PKD&nbsp;Download&nbsp;Settings&nbsp;",
-    "step_2___configuring_icao_pkd_download_settings.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Định cấu hình&nbsp;cài đặt&nbsp;tải xuống&nbsp;ICAO&nbsp;PKD&nbsp;",
+    "pages/step_2___configuring_icao_pkd_download_settings.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_npkd_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Application&nbsp;",
-    "step_3___registering_business_application.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Đăng ký&nbsp;ứng dụng&nbsp;kinh doanh&nbsp;",
+    "pages/step_3___registering_business_application.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_npkd_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "step_3___using_the_service_manager2.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/step_3___using_the_service_manager2.htm"
   )
 );
 docAux = insDoc(
   xadss_npkd_service,
-  gLnk("R", "&nbsp;Manual&nbsp;Download&nbsp;", "manual_download.htm")
+  gLnk("R", "&nbsp;Tải xuống&nbsp;thủ công&nbsp;", "pages/manual_download.htm")
 );
 xmanage_certificates = insFld(
   xadss_npkd_service,
-  gFld("&nbsp;Manage&nbsp;Certificates&nbsp;", "manage_certificates.htm")
+  gFld("&nbsp;Quản lý&nbsp;chứng chỉ&nbsp;", "pages/manage_certificates.htm")
 );
 docAux = insDoc(
   xmanage_certificates,
-  gLnk("R", "&nbsp;CSCA&nbsp;Certificates&nbsp;", "csca_certificates.htm")
+  gLnk("R", "&nbsp;Chứng chỉ&nbsp;CSCA&nbsp;", "pages/csca_certificates.htm")
 );
 docAux = insDoc(
   xmanage_certificates,
-  gLnk("R", "&nbsp;DS&nbsp;Certificates&nbsp;", "ds_certificates.htm")
+  gLnk("R", "&nbsp;Giấy chứng nhận&nbsp;DS&nbsp;", "pages/ds_certificates.htm")
 );
 docAux = insDoc(
   xadss_npkd_service,
-  gLnk("R", "&nbsp;Manage&nbsp;CRLs&nbsp;", "manage_crls.htm")
+  gLnk("R", "&nbsp;Quản lý&nbsp;CRLs&nbsp;", "pages/manage_crls.htm")
 );
 xmaster_lists = insFld(
   xadss_npkd_service,
-  gFld("&nbsp;Master&nbsp;Lists&nbsp;", "master_lists.htm")
+  gFld("&nbsp;Danh sách&nbsp;chính&nbsp;", "pages/master_lists.htm")
 );
 docAux = insDoc(
   xmaster_lists,
   gLnk(
     "R",
-    "&nbsp;Domestic&nbsp;Master&nbsp;Lists&nbsp;",
-    "domestic_master_lists.htm"
+    "&nbsp;Danh sách&nbsp;chủ&nbsp;quốc gia&nbsp;",
+    "pages/domestic_master_lists.htm"
   )
 );
 docAux = insDoc(
   xmaster_lists,
   gLnk(
     "R",
-    "&nbsp;Foreign&nbsp;Master&nbsp;Lists&nbsp;",
-    "foreign_master_lists.htm"
+    "&nbsp;Danh sách&nbsp;chủ&nbsp;nước ngoài&nbsp;",
+    "pages/foreign_master_lists.htm"
   )
 );
 docAux = insDoc(
   xmaster_lists,
-  gLnk("R", "&nbsp;Signing&nbsp;Settings&nbsp;", "signing_settings.htm")
+  gLnk("R", "&nbsp;Cài đặt&nbsp;ký&nbsp;", "pages/signing_settings.htm")
 );
 docAux = insDoc(
   xadss_npkd_service,
   gLnk(
     "R",
-    "&nbsp;Transaction&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transaction_log_viewer1.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transaction_log_viewer1.htm"
   )
 );
 docAux = insDoc(
   xadss_npkd_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving10.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving10.htm")
 );
 docAux = insDoc(
   xadss_npkd_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "alerts8.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts8.htm")
 );
 xadss_spoc_service = insFld(
   foldersTree,
