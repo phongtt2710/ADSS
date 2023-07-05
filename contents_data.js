@@ -2428,105 +2428,113 @@ docAux = insDoc(
 );
 xadss_spoc_service = insFld(
   foldersTree,
-  gFld("&nbsp;ADSS&nbsp;SPOC&nbsp;Service&nbsp;", "adss_spoc_service.htm")
+  gFld("&nbsp;Dịch vụ&nbsp;ADSS&nbsp;SPOC&nbsp;", "pages/adss_spoc_service.htm")
 );
 xconfiguring_the_spoc_service = insFld(
   xadss_spoc_service,
   gFld(
-    "&nbsp;Configuring&nbsp;the&nbsp;SPOC&nbsp;Service&nbsp;",
-    "configuring_the_spoc_service.htm"
+    "&nbsp;Định cấu hình&nbsp;dịch&nbsp;vụ&nbsp;SPOC&nbsp;",
+    "pages/configuring_the_spoc_service.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_spoc_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;1-&nbsp;Using&nbsp;the&nbsp;Service&nbsp;Manager&nbsp;",
-    "configuring_service_manager.htm"
+    "&nbsp;Bước&nbsp;1-&nbsp;Sử dụng&nbsp;trình&nbsp;quản lý&nbsp;dịch vụ&nbsp;",
+    "pages/configuring_service_manager.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_spoc_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;2&nbsp;-&nbsp;Configure&nbsp;CVCA&nbsp;",
-    "step_1____configure_cvca1.htm"
+    "&nbsp;Bước&nbsp;2&nbsp;-&nbsp;Định cấu hình&nbsp;CVCA&nbsp;",
+    "pages/step_1____configure_cvca1.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_spoc_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;3&nbsp;-&nbsp;Configure&nbsp;Foreign&nbsp;SPOC&nbsp;",
-    "step_3___configure_foreign_spoc.htm"
+    "&nbsp;Bước&nbsp;3&nbsp;-&nbsp;Định cấu hình&nbsp;Foreign&nbsp;SPOC&nbsp;",
+    "pages/step_3___configure_foreign_spoc.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_spoc_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;4&nbsp;-&nbsp;Configuring&nbsp;SPOC&nbsp;Profile&nbsp;",
-    "configuring_spoc_profile.htm"
+    "&nbsp;Bước&nbsp;4&nbsp;-&nbsp;Định cấu hình&nbsp;hồ sơ&nbsp;SPOC&nbsp;",
+    "pages/configuring_spoc_profile.htm"
   )
 );
 docAux = insDoc(
   xconfiguring_the_spoc_service,
   gLnk(
     "R",
-    "&nbsp;Step&nbsp;5&nbsp;-&nbsp;Registering&nbsp;Business&nbsp;Application&nbsp;",
-    "step_3___registering_business_application1.htm"
+    "&nbsp;Bước&nbsp;5&nbsp;-&nbsp;Đăng ký&nbsp;ứng dụng&nbsp;kinh doanh&nbsp;",
+    "pages/step_3___registering_business_application1.htm"
   )
 );
 xmanage_requests = insFld(
   xadss_spoc_service,
-  gFld("&nbsp;Manage&nbsp;Requests&nbsp;", "manage_requests.htm")
+  gFld("&nbsp;Quản lý&nbsp;yêu cầu&nbsp;", "pages/manage_requests.htm")
 );
 docAux = insDoc(
   xmanage_requests,
-  gLnk("R", "&nbsp;Domestic&nbsp;Requests&nbsp;", "domestic_request.htm")
+  gLnk("R", "&nbsp;Yêu cầu&nbsp;trong nước&nbsp;", "pages/domestic_request.htm")
 );
 docAux = insDoc(
   xmanage_requests,
-  gLnk("R", "&nbsp;Foreign&nbsp;Requests&nbsp;", "foreign_requests.htm")
+  gLnk("R", "&nbsp;Yêu cầu&nbsp;quốc tế&nbsp;", "pages/foreign_requests.htm")
 );
 docAux = insDoc(
   xmanage_requests,
-  gLnk("R", "&nbsp;Declined&nbsp;Requests&nbsp;", "declined_requests3.htm")
+  gLnk(
+    "R",
+    "&nbsp;Yêu cầu&nbsp;bị từ chối&nbsp;",
+    "pages/declined_requests3.htm"
+  )
 );
 xmanage_certificates1 = insFld(
   xadss_spoc_service,
-  gFld("&nbsp;Manage&nbsp;Certificates&nbsp;", "manage_certificates1.htm")
+  gFld("&nbsp;Quản lý&nbsp;chứng chỉ&nbsp;", "pages/manage_certificates1.htm")
 );
 docAux = insDoc(
   xmanage_certificates1,
   gLnk(
     "R",
-    "&nbsp;Domestic&nbsp;Certificates&nbsp;",
-    "domestic_certificates.htm"
+    "&nbsp;Chứng chỉ&nbsp;trong nước&nbsp;",
+    "pages/domestic_certificates.htm"
   )
 );
 docAux = insDoc(
   xmanage_certificates1,
-  gLnk("R", "&nbsp;Foreign&nbsp;Certificates&nbsp;", "foreign_certificates.htm")
+  gLnk(
+    "R",
+    "&nbsp;Chứng chỉ&nbsp;nước ngoài&nbsp;",
+    "pages/foreign_certificates.htm"
+  )
 );
 xgeneral_messages = insFld(
   xadss_spoc_service,
-  gFld("&nbsp;General&nbsp;Messages&nbsp;", "general_messages.htm")
+  gFld("&nbsp;Tin nhắn&nbsp;chung&nbsp;", "pages/general_messages.htm")
 );
 docAux = insDoc(
   xgeneral_messages,
-  gLnk("R", "&nbsp;Received&nbsp;Messages&nbsp;", "received_messages.htm")
+  gLnk("R", "&nbsp;Tin nhắn&nbsp;đã nhận&nbsp;", "pages/received_messages.htm")
 );
 docAux = insDoc(
   xgeneral_messages,
-  gLnk("R", "&nbsp;Sent&nbsp;Messages&nbsp;", "sent_messages.htm")
+  gLnk("R", "&nbsp;Gửi&nbsp;tin nhắn&nbsp;", "pages/sent_messages.htm")
 );
 docAux = insDoc(
   xadss_spoc_service,
   gLnk(
     "R",
-    "&nbsp;Transactions&nbsp;Log&nbsp;Viewer&nbsp;",
-    "transactions_log_viewer12.htm"
+    "&nbsp;Trình xem&nbsp;nhật ký&nbsp;giao dịch&nbsp;",
+    "pages/transactions_log_viewer12.htm"
   )
 );
 docAux = insDoc(
