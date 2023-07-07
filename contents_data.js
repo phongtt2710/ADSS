@@ -2539,11 +2539,11 @@ docAux = insDoc(
 );
 docAux = insDoc(
   xadss_spoc_service,
-  gLnk("R", "&nbsp;Logs&nbsp;Archiving&nbsp;", "logs_archiving15.htm")
+  gLnk("R", "&nbsp;Lưu trữ&nbsp;nhật ký&nbsp;", "pages/logs_archiving15.htm")
 );
 docAux = insDoc(
   xadss_spoc_service,
-  gLnk("R", "&nbsp;Alerts&nbsp;", "alerts13.htm")
+  gLnk("R", "&nbsp;Cảnh báo&nbsp;", "pages/alerts13.htm")
 );
 xmanage_cas = insFld(
   foldersTree,
