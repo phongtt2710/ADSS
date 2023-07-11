@@ -1,0 +1,4330 @@
+<html>
+  <head>
+    <title>Logs Archiving - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+    <style>
+      @-webkit-keyframes swal2-show {
+        0% {
+          -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes swal2-show {
+        0% {
+          -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes swal2-hide {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-hide {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes swal2-animate-success-line-tip {
+        0% {
+          top: 1.1875em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 1.0625em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 2.1875em;
+          left: -0.375em;
+          width: 3.125em;
+        }
+        84% {
+          top: 3em;
+          left: 1.3125em;
+          width: 1.0625em;
+        }
+        100% {
+          top: 2.8125em;
+          left: 0.875em;
+          width: 1.5625em;
+        }
+      }
+      @keyframes swal2-animate-success-line-tip {
+        0% {
+          top: 1.1875em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 1.0625em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 2.1875em;
+          left: -0.375em;
+          width: 3.125em;
+        }
+        84% {
+          top: 3em;
+          left: 1.3125em;
+          width: 1.0625em;
+        }
+        100% {
+          top: 2.8125em;
+          left: 0.875em;
+          width: 1.5625em;
+        }
+      }
+      @-webkit-keyframes swal2-animate-success-line-long {
+        0% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        65% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        84% {
+          top: 2.1875em;
+          right: 0;
+          width: 3.4375em;
+        }
+        100% {
+          top: 2.375em;
+          right: 0.5em;
+          width: 2.9375em;
+        }
+      }
+      @keyframes swal2-animate-success-line-long {
+        0% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        65% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        84% {
+          top: 2.1875em;
+          right: 0;
+          width: 3.4375em;
+        }
+        100% {
+          top: 2.375em;
+          right: 0.5em;
+          width: 2.9375em;
+        }
+      }
+      @-webkit-keyframes swal2-rotate-success-circular-line {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        100% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes swal2-rotate-success-circular-line {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        100% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes swal2-animate-error-x-mark {
+        0% {
+          margin-top: 1.625em;
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        50% {
+          margin-top: 1.625em;
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        80% {
+          margin-top: -0.375em;
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+        }
+        100% {
+          margin-top: 0;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-animate-error-x-mark {
+        0% {
+          margin-top: 1.625em;
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        50% {
+          margin-top: 1.625em;
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        80% {
+          margin-top: -0.375em;
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+        }
+        100% {
+          margin-top: 0;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes swal2-animate-error-icon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-animate-error-icon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+          opacity: 1;
+        }
+      }
+      body.swal2-toast-shown .swal2-container {
+        background-color: transparent;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-shown {
+        background-color: transparent;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-end,
+      body.swal2-toast-shown .swal2-container.swal2-top-right {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-left,
+      body.swal2-toast-shown .swal2-container.swal2-top-start {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-left,
+      body.swal2-toast-shown .swal2-container.swal2-center-start {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-end,
+      body.swal2-toast-shown .swal2-container.swal2-center-right {
+        top: 50%;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-left,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-start {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom {
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+      }
+      body.swal2-toast-column .swal2-toast {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      body.swal2-toast-column .swal2-toast .swal2-actions {
+        flex: 1;
+        align-self: stretch;
+        height: 2.2em;
+        margin-top: 0.3125em;
+      }
+      body.swal2-toast-column .swal2-toast .swal2-loading {
+        justify-content: center;
+      }
+      body.swal2-toast-column .swal2-toast .swal2-input {
+        height: 2em;
+        margin: 0.3125em auto;
+        font-size: 1em;
+      }
+      body.swal2-toast-column .swal2-toast .swal2-validation-message {
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        padding: 0.625em;
+        box-shadow: 0 0 0.625em #d9d9d9;
+        overflow-y: hidden;
+      }
+      .swal2-popup.swal2-toast .swal2-header {
+        flex-direction: row;
+      }
+      .swal2-popup.swal2-toast .swal2-title {
+        flex-grow: 1;
+        justify-content: flex-start;
+        margin: 0 0.6em;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-footer {
+        margin: 0.5em 0 0;
+        padding: 0.5em 0 0;
+        font-size: 0.8em;
+      }
+      .swal2-popup.swal2-toast .swal2-close {
+        position: initial;
+        width: 0.8em;
+        height: 0.8em;
+        line-height: 0.8;
+      }
+      .swal2-popup.swal2-toast .swal2-content {
+        justify-content: flex-start;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-icon {
+        width: 2em;
+        min-width: 2em;
+        height: 2em;
+        margin: 0;
+      }
+      .swal2-popup.swal2-toast .swal2-icon-text {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"] {
+        top: 0.875em;
+        width: 1.375em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="left"] {
+        left: 0.3125em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="right"] {
+        right: 0.3125em;
+      }
+      .swal2-popup.swal2-toast .swal2-actions {
+        height: auto;
+        margin: 0 0.3125em;
+      }
+      .swal2-popup.swal2-toast .swal2-styled {
+        margin: 0 0.3125em;
+        padding: 0.3125em 0.625em;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-styled:focus {
+        box-shadow: 0 0 0 0.0625em #fff, 0 0 0 0.125em rgba(50, 100, 150, 0.4);
+      }
+      .swal2-popup.swal2-toast .swal2-success {
+        border-color: #a5dc86;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 2em;
+        height: 2.8125em;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.25em;
+        left: -0.9375em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 2em 2em;
+        transform-origin: 2em 2em;
+        border-radius: 4em 0 0 4em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.25em;
+        left: 0.9375em;
+        -webkit-transform-origin: 0 2em;
+        transform-origin: 0 2em;
+        border-radius: 0 4em 4em 0;
+      }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+        top: 0;
+        left: 0.4375em;
+        width: 0.4375em;
+        height: 2.6875em;
+      }
+      .swal2-popup.swal2-toast .swal2-success [class^="swal2-success-line"] {
+        height: 0.3125em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-line"][class$="tip"] {
+        top: 1.125em;
+        left: 0.1875em;
+        width: 0.75em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-line"][class$="long"] {
+        top: 0.9375em;
+        right: 0.1875em;
+        width: 1.375em;
+      }
+      .swal2-popup.swal2-toast.swal2-show {
+        -webkit-animation: showSweetToast 0.5s;
+        animation: showSweetToast 0.5s;
+      }
+      .swal2-popup.swal2-toast.swal2-hide {
+        -webkit-animation: hideSweetToast 0.2s forwards;
+        animation: hideSweetToast 0.2s forwards;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-animate-success-icon
+        .swal2-success-line-tip {
+        -webkit-animation: animate-toast-success-tip 0.75s;
+        animation: animate-toast-success-tip 0.75s;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-animate-success-icon
+        .swal2-success-line-long {
+        -webkit-animation: animate-toast-success-long 0.75s;
+        animation: animate-toast-success-long 0.75s;
+      }
+      @-webkit-keyframes showSweetToast {
+        0% {
+          -webkit-transform: translateY(-0.625em) rotateZ(2deg);
+          transform: translateY(-0.625em) rotateZ(2deg);
+          opacity: 0;
+        }
+        33% {
+          -webkit-transform: translateY(0) rotateZ(-2deg);
+          transform: translateY(0) rotateZ(-2deg);
+          opacity: 0.5;
+        }
+        66% {
+          -webkit-transform: translateY(0.3125em) rotateZ(2deg);
+          transform: translateY(0.3125em) rotateZ(2deg);
+          opacity: 0.7;
+        }
+        100% {
+          -webkit-transform: translateY(0) rotateZ(0);
+          transform: translateY(0) rotateZ(0);
+          opacity: 1;
+        }
+      }
+      @keyframes showSweetToast {
+        0% {
+          -webkit-transform: translateY(-0.625em) rotateZ(2deg);
+          transform: translateY(-0.625em) rotateZ(2deg);
+          opacity: 0;
+        }
+        33% {
+          -webkit-transform: translateY(0) rotateZ(-2deg);
+          transform: translateY(0) rotateZ(-2deg);
+          opacity: 0.5;
+        }
+        66% {
+          -webkit-transform: translateY(0.3125em) rotateZ(2deg);
+          transform: translateY(0.3125em) rotateZ(2deg);
+          opacity: 0.7;
+        }
+        100% {
+          -webkit-transform: translateY(0) rotateZ(0);
+          transform: translateY(0) rotateZ(0);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes hideSweetToast {
+        0% {
+          opacity: 1;
+        }
+        33% {
+          opacity: 0.5;
+        }
+        100% {
+          -webkit-transform: rotateZ(1deg);
+          transform: rotateZ(1deg);
+          opacity: 0;
+        }
+      }
+      @keyframes hideSweetToast {
+        0% {
+          opacity: 1;
+        }
+        33% {
+          opacity: 0.5;
+        }
+        100% {
+          -webkit-transform: rotateZ(1deg);
+          transform: rotateZ(1deg);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes animate-toast-success-tip {
+        0% {
+          top: 0.5625em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 0.125em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 0.625em;
+          left: -0.25em;
+          width: 1.625em;
+        }
+        84% {
+          top: 1.0625em;
+          left: 0.75em;
+          width: 0.5em;
+        }
+        100% {
+          top: 1.125em;
+          left: 0.1875em;
+          width: 0.75em;
+        }
+      }
+      @keyframes animate-toast-success-tip {
+        0% {
+          top: 0.5625em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 0.125em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 0.625em;
+          left: -0.25em;
+          width: 1.625em;
+        }
+        84% {
+          top: 1.0625em;
+          left: 0.75em;
+          width: 0.5em;
+        }
+        100% {
+          top: 1.125em;
+          left: 0.1875em;
+          width: 0.75em;
+        }
+      }
+      @-webkit-keyframes animate-toast-success-long {
+        0% {
+          top: 1.625em;
+          right: 1.375em;
+          width: 0;
+        }
+        65% {
+          top: 1.25em;
+          right: 0.9375em;
+          width: 0;
+        }
+        84% {
+          top: 0.9375em;
+          right: 0;
+          width: 1.125em;
+        }
+        100% {
+          top: 0.9375em;
+          right: 0.1875em;
+          width: 1.375em;
+        }
+      }
+      @keyframes animate-toast-success-long {
+        0% {
+          top: 1.625em;
+          right: 1.375em;
+          width: 0;
+        }
+        65% {
+          top: 1.25em;
+          right: 0.9375em;
+          width: 0;
+        }
+        84% {
+          top: 0.9375em;
+          right: 0;
+          width: 1.125em;
+        }
+        100% {
+          top: 0.9375em;
+          right: 0.1875em;
+          width: 1.375em;
+        }
+      }
+      body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+        overflow: hidden;
+      }
+      body.swal2-height-auto {
+        height: auto !important;
+      }
+      body.swal2-no-backdrop .swal2-shown {
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        background-color: transparent;
+      }
+      body.swal2-no-backdrop .swal2-shown > .swal2-modal {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-top {
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-top-left,
+      body.swal2-no-backdrop .swal2-shown.swal2-top-start {
+        top: 0;
+        left: 0;
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-top-end,
+      body.swal2-no-backdrop .swal2-shown.swal2-top-right {
+        top: 0;
+        right: 0;
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-center {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-center-left,
+      body.swal2-no-backdrop .swal2-shown.swal2-center-start {
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-center-end,
+      body.swal2-no-backdrop .swal2-shown.swal2-center-right {
+        top: 50%;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-bottom {
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-bottom-left,
+      body.swal2-no-backdrop .swal2-shown.swal2-bottom-start {
+        bottom: 0;
+        left: 0;
+      }
+      body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,
+      body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
+        right: 0;
+        bottom: 0;
+      }
+      .swal2-container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: transparent;
+        z-index: 1060;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+      .swal2-container.swal2-top {
+        align-items: flex-start;
+      }
+      .swal2-container.swal2-top-left,
+      .swal2-container.swal2-top-start {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .swal2-container.swal2-top-end,
+      .swal2-container.swal2-top-right {
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+      .swal2-container.swal2-center {
+        align-items: center;
+      }
+      .swal2-container.swal2-center-left,
+      .swal2-container.swal2-center-start {
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .swal2-container.swal2-center-end,
+      .swal2-container.swal2-center-right {
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .swal2-container.swal2-bottom {
+        align-items: flex-end;
+      }
+      .swal2-container.swal2-bottom-left,
+      .swal2-container.swal2-bottom-start {
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+      .swal2-container.swal2-bottom-end,
+      .swal2-container.swal2-bottom-right {
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      .swal2-container.swal2-grow-fullscreen > .swal2-modal {
+        display: flex !important;
+        flex: 1;
+        align-self: stretch;
+        justify-content: center;
+      }
+      .swal2-container.swal2-grow-row > .swal2-modal {
+        display: flex !important;
+        flex: 1;
+        align-content: center;
+        justify-content: center;
+      }
+      .swal2-container.swal2-grow-column {
+        flex: 1;
+        flex-direction: column;
+      }
+      .swal2-container.swal2-grow-column.swal2-bottom,
+      .swal2-container.swal2-grow-column.swal2-center,
+      .swal2-container.swal2-grow-column.swal2-top {
+        align-items: center;
+      }
+      .swal2-container.swal2-grow-column.swal2-bottom-left,
+      .swal2-container.swal2-grow-column.swal2-bottom-start,
+      .swal2-container.swal2-grow-column.swal2-center-left,
+      .swal2-container.swal2-grow-column.swal2-center-start,
+      .swal2-container.swal2-grow-column.swal2-top-left,
+      .swal2-container.swal2-grow-column.swal2-top-start {
+        align-items: flex-start;
+      }
+      .swal2-container.swal2-grow-column.swal2-bottom-end,
+      .swal2-container.swal2-grow-column.swal2-bottom-right,
+      .swal2-container.swal2-grow-column.swal2-center-end,
+      .swal2-container.swal2-grow-column.swal2-center-right,
+      .swal2-container.swal2-grow-column.swal2-top-end,
+      .swal2-container.swal2-grow-column.swal2-top-right {
+        align-items: flex-end;
+      }
+      .swal2-container.swal2-grow-column > .swal2-modal {
+        display: flex !important;
+        flex: 1;
+        align-content: center;
+        justify-content: center;
+      }
+      .swal2-container:not(.swal2-top):not(.swal2-top-start):not(
+          .swal2-top-end
+        ):not(.swal2-top-left):not(.swal2-top-right):not(
+          .swal2-center-start
+        ):not(.swal2-center-end):not(.swal2-center-left):not(
+          .swal2-center-right
+        ):not(.swal2-bottom):not(.swal2-bottom-start):not(
+          .swal2-bottom-end
+        ):not(.swal2-bottom-left):not(.swal2-bottom-right):not(
+          .swal2-grow-fullscreen
+        )
+        > .swal2-modal {
+        margin: auto;
+      }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .swal2-container .swal2-modal {
+          margin: 0 !important;
+        }
+      }
+      .swal2-container.swal2-fade {
+        transition: background-color 0.1s;
+      }
+      .swal2-container.swal2-shown {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .swal2-popup {
+        display: none;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        width: 32em;
+        max-width: 100%;
+        padding: 1.25em;
+        border-radius: 0.3125em;
+        background: #fff;
+        font-family: inherit;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      .swal2-popup:focus {
+        outline: 0;
+      }
+      .swal2-popup.swal2-loading {
+        overflow-y: hidden;
+      }
+      .swal2-popup .swal2-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .swal2-popup .swal2-title {
+        display: block;
+        position: relative;
+        max-width: 100%;
+        margin: 0 0 0.4em;
+        padding: 0;
+        color: #595959;
+        font-size: 1.875em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: none;
+        word-wrap: break-word;
+      }
+      .swal2-popup .swal2-actions {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 1.25em auto 0;
+        z-index: 1;
+      }
+      .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+        opacity: 0.4;
+      }
+      .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1)
+        );
+      }
+      .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        );
+      }
+      .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm {
+        width: 2.5em;
+        height: 2.5em;
+        margin: 0.46875em;
+        padding: 0;
+        border: 0.25em solid transparent;
+        border-radius: 100%;
+        border-color: transparent;
+        background-color: transparent !important;
+        color: transparent;
+        cursor: default;
+        box-sizing: border-box;
+        -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-cancel {
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+      .swal2-popup
+        .swal2-actions.swal2-loading
+        :not(.swal2-styled).swal2-confirm::after {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        border: 3px solid #999;
+        border-radius: 50%;
+        border-right-color: transparent;
+        box-shadow: 1px 1px 1px #fff;
+        content: "";
+        -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+      }
+      .swal2-popup .swal2-styled {
+        margin: 0.3125em;
+        padding: 0.625em 2em;
+        font-weight: 500;
+        box-shadow: none;
+      }
+      .swal2-popup .swal2-styled:not([disabled]) {
+        cursor: pointer;
+      }
+      .swal2-popup .swal2-styled.swal2-confirm {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #3085d6;
+        color: #fff;
+        font-size: 1.0625em;
+      }
+      .swal2-popup .swal2-styled.swal2-cancel {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #aaa;
+        color: #fff;
+        font-size: 1.0625em;
+      }
+      .swal2-popup .swal2-styled:focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4);
+      }
+      .swal2-popup .swal2-styled::-moz-focus-inner {
+        border: 0;
+      }
+      .swal2-popup .swal2-footer {
+        justify-content: center;
+        margin: 1.25em 0 0;
+        padding: 1em 0 0;
+        border-top: 1px solid #eee;
+        color: #545454;
+        font-size: 1em;
+      }
+      .swal2-popup .swal2-image {
+        max-width: 100%;
+        margin: 1.25em auto;
+      }
+      .swal2-popup .swal2-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        width: 1.2em;
+        height: 1.2em;
+        padding: 0;
+        transition: color 0.1s ease-out;
+        border: none;
+        border-radius: 0;
+        outline: initial;
+        background: 0 0;
+        color: #ccc;
+        font-family: serif;
+        font-size: 2.5em;
+        line-height: 1.2;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .swal2-popup .swal2-close:hover {
+        -webkit-transform: none;
+        transform: none;
+        color: #f27474;
+      }
+      .swal2-popup > .swal2-checkbox,
+      .swal2-popup > .swal2-file,
+      .swal2-popup > .swal2-input,
+      .swal2-popup > .swal2-radio,
+      .swal2-popup > .swal2-select,
+      .swal2-popup > .swal2-textarea {
+        display: none;
+      }
+      .swal2-popup .swal2-content {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        color: #545454;
+        font-size: 1.125em;
+        font-weight: 300;
+        line-height: normal;
+        z-index: 1;
+        word-wrap: break-word;
+      }
+      .swal2-popup #swal2-content {
+        text-align: center;
+      }
+      .swal2-popup .swal2-checkbox,
+      .swal2-popup .swal2-file,
+      .swal2-popup .swal2-input,
+      .swal2-popup .swal2-radio,
+      .swal2-popup .swal2-select,
+      .swal2-popup .swal2-textarea {
+        margin: 1em auto;
+      }
+      .swal2-popup .swal2-file,
+      .swal2-popup .swal2-input,
+      .swal2-popup .swal2-textarea {
+        width: 100%;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.1875em;
+        font-size: 1.125em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+        box-sizing: border-box;
+      }
+      .swal2-popup .swal2-file.swal2-inputerror,
+      .swal2-popup .swal2-input.swal2-inputerror,
+      .swal2-popup .swal2-textarea.swal2-inputerror {
+        border-color: #f27474 !important;
+        box-shadow: 0 0 2px #f27474 !important;
+      }
+      .swal2-popup .swal2-file:focus,
+      .swal2-popup .swal2-input:focus,
+      .swal2-popup .swal2-textarea:focus {
+        border: 1px solid #b4dbed;
+        outline: 0;
+        box-shadow: 0 0 3px #c4e6f5;
+      }
+      .swal2-popup .swal2-file::-webkit-input-placeholder,
+      .swal2-popup .swal2-input::-webkit-input-placeholder,
+      .swal2-popup .swal2-textarea::-webkit-input-placeholder {
+        color: #ccc;
+      }
+      .swal2-popup .swal2-file:-ms-input-placeholder,
+      .swal2-popup .swal2-input:-ms-input-placeholder,
+      .swal2-popup .swal2-textarea:-ms-input-placeholder {
+        color: #ccc;
+      }
+      .swal2-popup .swal2-file::-ms-input-placeholder,
+      .swal2-popup .swal2-input::-ms-input-placeholder,
+      .swal2-popup .swal2-textarea::-ms-input-placeholder {
+        color: #ccc;
+      }
+      .swal2-popup .swal2-file::placeholder,
+      .swal2-popup .swal2-input::placeholder,
+      .swal2-popup .swal2-textarea::placeholder {
+        color: #ccc;
+      }
+      .swal2-popup .swal2-range input {
+        width: 80%;
+      }
+      .swal2-popup .swal2-range output {
+        width: 20%;
+        font-weight: 600;
+        text-align: center;
+      }
+      .swal2-popup .swal2-range input,
+      .swal2-popup .swal2-range output {
+        height: 2.625em;
+        margin: 1em auto;
+        padding: 0;
+        font-size: 1.125em;
+        line-height: 2.625em;
+      }
+      .swal2-popup .swal2-input {
+        height: 2.625em;
+        padding: 0 0.75em;
+      }
+      .swal2-popup .swal2-input[type="number"] {
+        max-width: 10em;
+      }
+      .swal2-popup .swal2-file {
+        font-size: 1.125em;
+      }
+      .swal2-popup .swal2-textarea {
+        height: 6.75em;
+        padding: 0.75em;
+      }
+      .swal2-popup .swal2-select {
+        min-width: 50%;
+        max-width: 100%;
+        padding: 0.375em 0.625em;
+        color: #545454;
+        font-size: 1.125em;
+      }
+      .swal2-popup .swal2-checkbox,
+      .swal2-popup .swal2-radio {
+        align-items: center;
+        justify-content: center;
+      }
+      .swal2-popup .swal2-checkbox label,
+      .swal2-popup .swal2-radio label {
+        margin: 0 0.6em;
+        font-size: 1.125em;
+      }
+      .swal2-popup .swal2-checkbox input,
+      .swal2-popup .swal2-radio input {
+        margin: 0 0.4em;
+      }
+      .swal2-popup .swal2-validation-message {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0.625em;
+        background: #f0f0f0;
+        color: #666;
+        font-size: 1em;
+        font-weight: 300;
+        overflow: hidden;
+      }
+      .swal2-popup .swal2-validation-message::before {
+        display: inline-block;
+        width: 1.5em;
+        min-width: 1.5em;
+        height: 1.5em;
+        margin: 0 0.625em;
+        border-radius: 50%;
+        background-color: #f27474;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-align: center;
+        content: "!";
+        zoom: normal;
+      }
+      @supports (-ms-accelerator: true) {
+        .swal2-range input {
+          width: 100% !important;
+        }
+        .swal2-range output {
+          display: none;
+        }
+      }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        .swal2-range input {
+          width: 100% !important;
+        }
+        .swal2-range output {
+          display: none;
+        }
+      }
+      @-moz-document url-prefix() {
+        .swal2-close:focus {
+          outline: 2px solid rgba(50, 100, 150, 0.4);
+        }
+      }
+      .swal2-icon {
+        position: relative;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        margin: 1.25em auto 1.875em;
+        border: 0.25em solid transparent;
+        border-radius: 50%;
+        line-height: 5em;
+        cursor: default;
+        box-sizing: content-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        zoom: normal;
+      }
+      .swal2-icon-text {
+        font-size: 3.75em;
+      }
+      .swal2-icon.swal2-error {
+        border-color: #f27474;
+      }
+      .swal2-icon.swal2-error .swal2-x-mark {
+        position: relative;
+        flex-grow: 1;
+      }
+      .swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
+        display: block;
+        position: absolute;
+        top: 2.3125em;
+        width: 2.9375em;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #f27474;
+      }
+      .swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="left"] {
+        left: 1.0625em;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="right"] {
+        right: 1em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal2-icon.swal2-warning {
+        border-color: #facea8;
+        color: #f8bb86;
+      }
+      .swal2-icon.swal2-info {
+        border-color: #9de0f6;
+        color: #3fc3ee;
+      }
+      .swal2-icon.swal2-question {
+        border-color: #c9dae1;
+        color: #87adbd;
+      }
+      .swal2-icon.swal2-success {
+        border-color: #a5dc86;
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 3.75em;
+        height: 7.5em;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+      .swal2-icon.swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.4375em;
+        left: -2.0635em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 3.75em 3.75em;
+        transform-origin: 3.75em 3.75em;
+        border-radius: 7.5em 0 0 7.5em;
+      }
+      .swal2-icon.swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.6875em;
+        left: 1.875em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 3.75em;
+        transform-origin: 0 3.75em;
+        border-radius: 0 7.5em 7.5em 0;
+      }
+      .swal2-icon.swal2-success .swal2-success-ring {
+        position: absolute;
+        top: -0.25em;
+        left: -0.25em;
+        width: 100%;
+        height: 100%;
+        border: 0.25em solid rgba(165, 220, 134, 0.3);
+        border-radius: 50%;
+        z-index: 2;
+        box-sizing: content-box;
+      }
+      .swal2-icon.swal2-success .swal2-success-fix {
+        position: absolute;
+        top: 0.5em;
+        left: 1.625em;
+        width: 0.4375em;
+        height: 5.625em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        z-index: 1;
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-line"] {
+        display: block;
+        position: absolute;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #a5dc86;
+        z-index: 2;
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-line"][class$="tip"] {
+        top: 2.875em;
+        left: 0.875em;
+        width: 1.5625em;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal2-icon.swal2-success [class^="swal2-success-line"][class$="long"] {
+        top: 2.375em;
+        right: 0.5em;
+        width: 2.9375em;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal2-progresssteps {
+        align-items: center;
+        margin: 0 0 1.25em;
+        padding: 0;
+        font-weight: 600;
+      }
+      .swal2-progresssteps li {
+        display: inline-block;
+        position: relative;
+      }
+      .swal2-progresssteps .swal2-progresscircle {
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        background: #3085d6;
+        color: #fff;
+        line-height: 2em;
+        text-align: center;
+        z-index: 20;
+      }
+      .swal2-progresssteps .swal2-progresscircle:first-child {
+        margin-left: 0;
+      }
+      .swal2-progresssteps .swal2-progresscircle:last-child {
+        margin-right: 0;
+      }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+        background: #3085d6;
+      }
+      .swal2-progresssteps
+        .swal2-progresscircle.swal2-activeprogressstep
+        ~ .swal2-progresscircle {
+        background: #add8e6;
+      }
+      .swal2-progresssteps
+        .swal2-progresscircle.swal2-activeprogressstep
+        ~ .swal2-progressline {
+        background: #add8e6;
+      }
+      .swal2-progresssteps .swal2-progressline {
+        width: 2.5em;
+        height: 0.4em;
+        margin: 0 -1px;
+        background: #3085d6;
+        z-index: 10;
+      }
+      [class^="swal2"] {
+        -webkit-tap-highlight-color: transparent;
+      }
+      .swal2-show {
+        -webkit-animation: swal2-show 0.3s;
+        animation: swal2-show 0.3s;
+      }
+      .swal2-show.swal2-noanimation {
+        -webkit-animation: none;
+        animation: none;
+      }
+      .swal2-hide {
+        -webkit-animation: swal2-hide 0.15s forwards;
+        animation: swal2-hide 0.15s forwards;
+      }
+      .swal2-hide.swal2-noanimation {
+        -webkit-animation: none;
+        animation: none;
+      }
+      .swal2-rtl .swal2-close {
+        right: auto;
+        left: 0;
+      }
+      .swal2-animate-success-icon .swal2-success-line-tip {
+        -webkit-animation: swal2-animate-success-line-tip 0.75s;
+        animation: swal2-animate-success-line-tip 0.75s;
+      }
+      .swal2-animate-success-icon .swal2-success-line-long {
+        -webkit-animation: swal2-animate-success-line-long 0.75s;
+        animation: swal2-animate-success-line-long 0.75s;
+      }
+      .swal2-animate-success-icon .swal2-success-circular-line-right {
+        -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
+        animation: swal2-rotate-success-circular-line 4.25s ease-in;
+      }
+      .swal2-animate-error-icon {
+        -webkit-animation: swal2-animate-error-icon 0.5s;
+        animation: swal2-animate-error-icon 0.5s;
+      }
+      .swal2-animate-error-icon .swal2-x-mark {
+        -webkit-animation: swal2-animate-error-x-mark 0.5s;
+        animation: swal2-animate-error-x-mark 0.5s;
+      }
+      @-webkit-keyframes swal2-rotate-loading {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes swal2-rotate-loading {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @media print {
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+          overflow-y: scroll !important;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
+          > [aria-hidden="true"] {
+          display: none;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
+          .swal2-container {
+          position: initial !important;
+        }
+      }
+    </style>
+    <style>
+      .ejoy-sub-active {
+        color: #1296ba !important;
+      }
+
+      .ejoy-sub-hovered {
+        color: #1296ba !important;
+      }
+      .ejoy-sub-clzz {
+        cursor: pointer;
+        line-height: 1.2;
+        font-size: 28px;
+        color: #ffcc00;
+        background: rgba(17, 17, 17, 0.7);
+      }
+      .ejoy-sub-clzz:hover {
+        color: #1296ba !important;
+      }
+      .ej-trans-sub {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999999;
+        cursor: move;
+      }
+      .ej-trans-sub > span {
+        color: #3cf9ed;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 16px;
+        line-height: 1.5;
+        background: rgba(32, 26, 25, 0.8);
+        text-shadow: 0px 1px 4px black;
+        padding: 0 8px;
+        line-height: 1.2;
+        font-size: 16px;
+        color: #0cb1c7;
+        background: rgba(67, 65, 65, 0.7);
+      }
+      .ej-full-screen-video {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999999;
+        cursor: pointer;
+      }
+      .ej-main-sub {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999999;
+        cursor: move;
+        padding: 0 8px;
+      }
+      .ej-main-sub > span {
+        color: white;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        background: rgba(32, 26, 25, 0.8);
+        padding: 2px 8px;
+        line-height: 1.2;
+        font-size: 28px;
+        color: #ffcc00;
+        background: rgba(17, 17, 17, 0.7);
+      }
+
+      .ej-main-sub .ejoy-sub-clzz {
+        background: transparent !important;
+      }
+
+      .tran-subtitle > span {
+        cursor: pointer;
+        padding-left: 10px;
+        top: 2px;
+        position: relative;
+      }
+
+      .tran-subtitle > span > span {
+        position: absolute;
+        top: -170%;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 13px;
+        line-height: 20px;
+        padding: 2px 8px;
+        color: white;
+        display: none;
+        border-radius: 4px;
+        white-space: nowrap;
+        left: -50%;
+        font-weight: normal;
+      }
+
+      .viewPopupPro {
+        z-index: 2147483647;
+        cursor: auto;
+        position: absolute;
+        z-index: 2147483647;
+        background: #111111;
+        transition: opacity 1s;
+        width: 172px;
+        height: 66px;
+        opacity: 1;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .titlePopupPro {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #e5e5e5;
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+      }
+
+      .viewGoPro {
+        background: #ffcc00;
+        border-radius: 72.6257px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+        padding-left: 10px;
+        cursor: pointer;
+      }
+
+      .viewGoPro svg {
+        pointer-events: none;
+      }
+
+      .textGoPro {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        pointer-events: none;
+        text-align: center;
+        color: #ffffff;
+        padding: 4px 14px 4px 4px;
+      }
+
+      .viewPopupPro {
+        top: auto !important;
+        bottom: 15px !important;
+      }
+
+      .view-icon-copy-main-sub:hover > span,
+      .view-icon-edit-sub:hover > span,
+      .view-icon-exit-full-sub:hover > span,
+      .view-icon-full-sub:hover > span,
+      .iconCrownGoPro:hover > span,
+      .view-icon-copy-tran-sub:hover > span {
+        display: block;
+      }
+
+      .iconCrownGoPro {
+        padding-left: 0px !important;
+        padding-right: 8px !important;
+      }
+      .iconCrownGoPro svg {
+        width: 17px;
+        height: 17px;
+      }
+      .view-icon-full-sub,
+      .view-icon-exit-full-sub {
+        display: flex;
+      }
+
+      .view-icon-full-sub > svg,
+      .view-icon-exit-full-sub > svg {
+        pointer-events: none;
+      }
+
+      .tran-subtitle > span > svg {
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+        display: inline-flex !important;
+        vertical-align: baseline !important;
+      }
+
+      .view-icon-copy-main-sub > svg {
+        pointer-events: none;
+        color: #ffcc00;
+      }
+
+      .iconCrownGoPro {
+        padding-left: 0 !important;
+        padding-right: 8px !important;
+      }
+      .view-icon-copy-tran-sub > svg {
+        pointer-events: none;
+        color: #0cb1c7;
+      }
+    </style>
+  </head>
+  <body
+    onload="HighlightSearchText();HighlightPage('395','Local CAs');parent.MenuItemSelected('manage_cas');"
+    class="page_body"
+  >
+    <div id="divPageinHeader">
+      <p>
+        <span
+          class="breadcrumbs"
+          style="font-family: arial; font-size: 10px; color: #cbc9ba"
+          ><span class="var_breadcrumbs"
+            ><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+              href="manage_cas.htm"
+              title=""
+              >Quản lý CA</a
+            >&nbsp;&gt;&nbsp;<a
+              href="configuring_the_adss_ca_module.htm"
+              title=""
+              >Các tổ chức chứng thực cục bộ</a
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        <span class="Asc_PageName">Các tổ chức chứng thực cục bộ</span
+        ><span><br /> </span>
+      </p>
+      <p style="text-align: justify">
+        <span style="font-size: 16px; color: #008000"
+          ><strong class="Asc_Heading">Định cấu hình CA</strong></span
+        >
+      </p>
+      <strong> </strong>
+      <p>
+        Các CA cục bộ được định cấu hình trong mô-đun Quản lý CA có thể tự động
+        chứng nhận các khóa do dịch vụ chứng nhận tạo ra. Các CA cục bộ cũng có
+        thể chứng nhận các khóa được tạo thủ công bởi các nhà khai thác Máy chủ
+        ADSS bằng cách sử dụng mô-đun
+        <a href="default.aspx#pageid=generating_new_keys" target="_blank"
+          >Trình quản lý khóa</a
+        >
+        ADSS.
+      </p>
+      <p style="text-align: justify">
+        Sơ đồ sau đây minh họa việc sử dụng mô-đun CA cục bộ trong cả hai trường
+        hợp:
+      </p>
+      <div style="text-align: center">
+        <img
+          alt=""
+          style="text-align: left"
+          src="/images/Certification-2.JPG"
+        />
+      </div>
+      <p>&nbsp;</p>
+      <p style="text-align: justify">
+        Lưu ý rằng khi
+        <span style="background-color: #ffffff"
+          >ứng dụng khách doanh nghiệp yêu cầu dịch vụ chứng nhận,&nbsp;giả định
+          rằng có người dùng cuối đang tương tác với ứng dụng. Kịch bản dự kiến
+          là khi người dùng đăng ký sử dụng ứng dụng kinh doanh lần đầu tiên,
+          ứng dụng sau đó sẽ yêu cầu tạo khóa và chứng chỉ cho người dùng cuối
+          này để họ có thể, ví dụ, trong tương lai ký dữ liệu giao dịch hoặc tài
+          liệu tóm tắt, v.v. Sự tương tác giữa người dùng cuối và ứng dụng kinh
+          doanh là vấn đề của ứng dụng và do đó nằm ngoài phạm vi của&nbsp;dịch
+          vụ ADSS. Ứng dụng có thể sử dụng nhiều phương tiện khác nhau để xác
+          thực người dùng, ví dụ: tên người dùng/mật khẩu, điện thoại di động,
+          mật khẩu một lần, mã thông báo hai yếu tố, thậm chí cả chứng chỉ
+          TLS.<br />
+          <br />
+          <span class="TipBubble">
+            Nếu bắt buộc phải tạo chứng chỉ theo Nguyên tắc của Diễn đàn CA/B và
+            WebTrust, thì hãy bật các thuộc tính sau trong
+            <a href="default.aspx#pageid=general" target="_blank"
+              >Cài đặt chung &gt; Cài đặt nâng cao &gt; Trang</a
+            >&nbsp;chung:<br />
+            &nbsp;<strong><span style="font-size: 16px">.&nbsp;</span></strong
+            >Bật kiểm tra xác thực CA<br />
+            &nbsp;<strong><span style="font-size: 16px">.</span></strong> Khóa
+            yếu Debian&nbsp;</span
+          >
+          <span class="TipBubble"
+            >​Hướng dẫn dành cho nhà phát triển máy chủ ADSS giải thích lược đồ
+            XML được sử dụng cho cả thông báo yêu cầu dịch vụ chứng nhận và
+            thông báo phản hồi dịch vụ chứng nhận.&nbsp;Nó cũng mô tả các API
+            Java và .Net có thể được sử dụng để xây dựng ứng dụng khách.</span
+          >Để định cấu hình CA cục bộ Máy chủ ADSS, trước tiên hãy tạo (hoặc
+          nhập) một cặp khóa để sử dụng làm 'CA cục bộ'. Cặp khóa phải được chỉ
+          định cho mục đích <strong>Ký chứng chỉ/CRL</strong>&nbsp;trong mô-đun
+          Trình quản lý khóa ADSS. Khi đó, khóa công khai của CA cục bộ sẽ cần
+          được chứng nhận bằng cách sử dụng chứng chỉ tự ký hoặc chứng chỉ do CA
+          cấp cao hơn cấp. Sau đó, CA cục bộ này có thể được định cấu hình để
+          chứng nhận trực tuyến bằng cách sử dụng mô-đun Quản lý CA. Sau đây là
+          màn hình nơi bạn có thể định cấu hình các CA.</span
+        >
+      </p>
+      <p style="text-align: justify">
+        <img
+          alt=""
+          src="/images/Mng-LclCA.png"
+          style="
+            width: 1020px;
+            height: 183px;
+            border-width: 1px;
+            border-style: solid;
+          "
+        /><br />
+        <span style="background-color: #ffffff"> </span>
+      </p>
+      <p style="text-align: justify">
+        Bằng cách nhấp vào nút <strong>Mới/Chỉnh sửa</strong>, màn hình sau sẽ
+        hiển thị nơi bạn có thể định cấu hình CA cục bộ của mình:<br />
+        <br />
+        <img
+          alt=""
+          src="/images/ManageCA-LocalCAs-New.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        Các mục trong màn hình trên được mô tả bên dưới:
+      </p>
+      <table class="Asc_Table">
+        <tbody>
+          <tr>
+            <td>Mục</td>
+            <td>Mô tả</td>
+          </tr>
+          <tr>
+            <td><strong>Thông tin chứng chỉ CA:&nbsp;</strong></td>
+            <td style="text-align: justify">Định nghĩa như sau:&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Trạng thái</td>
+            <td style="text-align: justify">
+              Một CA có thể được đánh dấu là Hoạt động hoặc Không hoạt
+              động.&nbsp;Như tên gọi của nó gợi ý, một CA Không hoạt động sẽ
+              không được sử dụng để cấp/gia hạn/thu hồi chứng chỉ cho đến khi
+              trạng thái của nó sau đó được thay đổi thành Hoạt động.
+            </td>
+          </tr>
+          <tr>
+            <td>Đánh dấu nó là CA mặc định</td>
+            <td style="text-align: justify">
+              Nếu được chọn, điều này xác định CA cục bộ này là mặc định được sử
+              dụng để tạo chứng chỉ trong Máy chủ ADSS.
+            </td>
+          </tr>
+          <tr>
+            <td>Tên thân thiện với CA</td>
+            <td style="text-align: justify">
+              Một tên duy nhất do nhà điều hành xác định để dễ dàng quản lý các
+              cơ quan cấp chứng chỉ trong Máy chủ ADSS. Điều này chỉ dành cho
+              mục đích nhận dạng con người và không được sử dụng trong các thông
+              báo yêu cầu/phản hồi chứng nhận.
+            </td>
+          </tr>
+          <tr>
+            <td>Mô tả</td>
+            <td style="text-align: justify">
+              Điều này có thể được sử dụng để mô tả CA chi tiết hơn (ví dụ: CA
+              này sẽ được sử dụng trong trường hợp nào). Đây là chỉ cho mục đích
+              thông tin.
+            </td>
+          </tr>
+          <tr>
+            <td>Chứng chỉ CA</td>
+            <td>
+              <div style="text-align: justify">
+                Trình đơn thả xuống sẽ chỉ hiển thị các chứng chỉ trong Trình
+                quản lý khóa ADSS có phần mở rộng sử dụng khóa được đánh dấu để
+                <strong>ký Chứng chỉ/CRL</strong> (tức là Sử dụng khóa =
+                cRLSign, keyCertSign).&nbsp;Các chứng chỉ này là chứng chỉ cho
+                các khóa được cung cấp cho mục đích Ký chứng chỉ/CRL khi chúng
+                được Trình quản lý khóa tạo.
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <div style="text-align: justify">
+                Chọn chứng chỉ mà bạn muốn định cấu hình làm CA. CA này sẽ được
+                sử dụng làm tổ chức phát hành Chứng chỉ và CRL.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><strong>Cài đặt hiệu lực của chứng chỉ:</strong></span
+              ><br />
+            </td>
+            <td>
+              <div style="text-align: justify">
+                Tùy chọn này được sử dụng để xác định quy trình ngày/giờ có hiệu
+                lực của chứng chỉ theo ngày/thời gian có hiệu lực của chứng chỉ
+                của tổ chức phát hành. Các giá trị có thể là:
+              </div>
+              <ul style="text-align: left; text-indent: 0px">
+                <li>
+                  <div
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-align: justify;
+                    "
+                  >
+                    <strong>Cấp giấy chứng nhận</strong>
+                  </div>
+                  <div
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-align: justify;
+                    "
+                  >
+                    Chọn tùy chọn này nếu bạn muốn cấp chứng chỉ mục tiêu sau
+                    ngày hết hạn của CA.
+                  </div>
+                  <div style="text-align: justify"><br /></div>
+                </li>
+                <li>
+                  <div
+                    style="
+                      color: #000000;
+                      font-family: Verdana;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-align: justify;
+                    "
+                  >
+                    <strong>Sử dụng Ngày/Thời gian hết hạn của CA</strong>
+                  </div>
+                  <span
+                    style="
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                  >
+                    <div
+                      style="
+                        color: #000000;
+                        font-family: Verdana;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-variant-ligatures: normal;
+                        font-variant-caps: normal;
+                        font-weight: normal;
+                        letter-spacing: normal;
+                        text-transform: none;
+                        white-space: normal;
+                        word-spacing: 0px;
+                        -webkit-text-stroke-width: 0px;
+                        text-align: justify;
+                      "
+                    >
+                      Bằng cách chọn tùy chọn này, Máy chủ ADSS sẽ âm thầm đặt
+                      ngày hết hạn của CA (Hợp lệ cho) trong chứng chỉ mục tiêu
+                      (Hợp lệ cho) nếu người dùng cung cấp thời hạn hiệu lực của
+                      chứng chỉ mục tiêu sau ngày hết hạn của CA.
+                    </div>
+                    <div style="text-align: justify"><br /></div>
+                  </span>
+                </li>
+                <li
+                  style="
+                    color: #000000;
+                    font-family: Verdana;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                  "
+                >
+                  <div style="text-align: justify">
+                    <strong>Trả lại lỗi</strong>
+                  </div>
+                  <span
+                    style="
+                      font-size: 14px;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      font-weight: normal;
+                      letter-spacing: normal;
+                      line-height: normal;
+                      text-align: left;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      float: none;
+                      background-color: #ffffff;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                  >
+                    <div style="text-align: justify">
+                      Khi tùy chọn này được chọn thì một thông báo lỗi sẽ được
+                      trả về cho người dùng nếu người dùng đã cung cấp ngày hết
+                      hạn của chứng chỉ đích vượt quá ngày hết hạn của CA.
+                    </div>
+                  </span>
+                </li>
+              </ul>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              >
+                <div style="text-align: justify">
+                  <strong>Ghi chú:</strong
+                  ><span
+                    style="
+                      font-weight: normal;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    ><span class="Apple-converted-space">&nbsp;N</span>ếu người
+                    dùng cung cấp khoảng thời gian cho chứng chỉ đích không vượt
+                    quá ngày/giờ hết hạn của CA thì chứng chỉ đích sẽ được tạo
+                    bằng cách sử dụng ngày/giờ do người dùng cung cấp bất kể tùy
+                    chọn nào được chọn.</span
+                  >
+                </div>
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Tiện ích mở rộng chứng chỉ:</strong
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >&nbsp;</span
+              >
+            </td>
+            <td>
+              <div style="text-align: justify">Định nghĩa như sau:&nbsp;</div>
+              <div style="text-align: justify"><br /></div>
+              <!-- Display tip bubble with icon and colored background. -->
+              <div class="TipBubble" style="text-align: justify">
+                Nếu&nbsp;<a href="default.aspx#pageid=general" target="_blank"
+                  >Nếu các hướng dẫn của diễn đàn CA/B và WebTrust</a
+                >
+                được bật trong Máy chủ ADSS thì hãy nhấp
+                <a
+                  href="https://faqs.ascertia.com/display/ADSS/Properties+Management#PropertiesManagement-HowtoconfigureallowedpoliciesforaconfiguredLocalCAwhenthecertificatesareissuedagainsttheCA/BforumandWebTrustguidelines?"
+                  target="_blank"
+                  >vào đây</a
+                >
+                để được hướng dẫn định cấu hình các chính sách được phép cho các
+                CA.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ CDP (HTTP)</span
+              ><br />
+            </td>
+            <td>
+              <div style="text-align: justify">
+                Địa chỉ được định cấu hình tại đây sẽ được sử dụng trong trường
+                phần mở rộng CDP của chứng chỉ do CA này cấp.
+              </div>
+              <span
+                style="
+                  text-align: left;
+                  text-indent: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify"><br /></div> </span
+              ><!-- Display tip bubble with icon and colored background. -->
+              <div class="TipBubble" style="text-align: justify">
+                Hiện tại, nhà điều hành chỉ có thể định cấu hình một địa chỉ CDP
+                cho một CA, nhấp
+                <a
+                  href="https://faqs.ascertia.com/display/ADSS/Properties+Management#PropertiesManagement-HowtoconfiguremultipleCRLDistributionpointsforaconfiguredLocalCA?"
+                  target="_blank"
+                  >vào đây</a
+                >
+                để biết thêm chi tiết về cách định cấu hình nhiều Địa chỉ CDP
+                cho một CA.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ CDP (LDAP)</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ được định cấu hình tại đây sẽ được sử dụng trong trường
+                phần mở rộng CDP của chứng chỉ do CA này cấp.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ AIA (OCSP)</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ được định cấu hình tại đây sẽ được đặt trong trường
+                phần mở rộng AIA của chứng chỉ do CA này cấp và có thể được sử
+                dụng để kiểm tra trạng thái thu hồi chứng chỉ qua OCSP. Có thể
+                thêm nhiều địa chỉ bằng cách nhấp vào nút '+'.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ AIA (Tổ chức phát hành CA)</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Địa chỉ được định cấu hình tại đây sẽ được đặt trong trường
+                phần mở rộng AIA của chứng chỉ do CA này cấp. &nbsp;Nó có thể
+                được sử dụng để truy cập các chứng chỉ đã được cấp cho CA này và
+                thông tin khác về CA này (ví dụ: dịch vụ xác thực trực tuyến và
+                dữ liệu Chính sách CA). Có thể thêm nhiều địa chỉ&nbsp;<span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >bằng cách nhấp vào nút '+'.</span
+                ></span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tổ chức phát hành Tên thay thế OID (tên khác)</span
+              >
+            </td>
+            <td style="text-align: justify">
+              <div style="text-align: justify">
+                <span style="text-align: left"
+                  >Trường này được sử dụng để xác định Tên Thay thế Tổ chức Phát
+                  hành của loại otherName. Chỉ định OID trong trường đầu tiên và
+                  giá trị của nó trong trường (Giá trị) thứ hai.</span
+                >
+              </div>
+              <div style="text-align: justify">
+                <br />
+                <!-- Display tip bubble with icon and colored background. -->
+                <div class="TipBubble">
+                  Đảm bảo rằng hộp kiểm Tên Thay thế Tổ chức Phát hành được chọn
+                  trong mẫu chứng chỉ tương ứng để đặt tiện ích mở rộng này vào
+                  chứng chỉ đã phát hành.
+                </div>
+              </div>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify">
+                  Có nhiều tình huống mà chúng tôi có thể xác định Tên thay thế
+                  của tổ chức phát hành của loại otherName. Đây là như
+                  sau:&nbsp;<br />
+                  <ol>
+                    <li>
+                      <span
+                        ><span
+                          style="
+                            font-size: 14px;
+                            font-style: normal;
+                            font-variant-ligatures: normal;
+                            font-variant-caps: normal;
+                            letter-spacing: normal;
+                            orphans: 2;
+                            text-align: justify;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            widows: 2;
+                            word-spacing: 0px;
+                            -webkit-text-stroke-width: 0px;
+                            background-color: #ffffff;
+                            text-decoration-thickness: initial;
+                            text-decoration-style: initial;
+                            text-decoration-color: initial;
+                            float: none;
+                            display: inline !important;
+                            font-family: Verdana;
+                            color: #000000;
+                          "
+                          >Nếu tên thay thế của tổ chức phát hành OID được định
+                          cấu hình trong Quản lý CA và cũng được bật trong mẫu
+                          chứng chỉ, thì:</span
+                        ><br />
+                      </span>
+                      <ul>
+                        <li>
+                          <span
+                            style="
+                              font-size: 14px;
+                              font-style: normal;
+                              font-variant-ligatures: normal;
+                              font-variant-caps: normal;
+                              letter-spacing: normal;
+                              orphans: 2;
+                              text-align: justify;
+                              text-indent: 0px;
+                              text-transform: none;
+                              white-space: normal;
+                              widows: 2;
+                              word-spacing: 0px;
+                              -webkit-text-stroke-width: 0px;
+                              background-color: #ffffff;
+                              text-decoration-thickness: initial;
+                              text-decoration-style: initial;
+                              text-decoration-color: initial;
+                              float: none;
+                              display: inline !important;
+                              font-family: Verdana;
+                              color: #000000;
+                            "
+                            >Chúng tôi có thể thêm Quản lý CA OID đã định cấu
+                            hình trong SAN của nhà phát hành (các giá trị SAN
+                            khác được giữ lại) và đặt nó làm IAN trong chứng chỉ
+                            thực thể cuối.&nbsp;</span
+                          >
+                        </li>
+                        <li>
+                          <span
+                            style="
+                              font-size: 14px;
+                              font-style: normal;
+                              font-variant-ligatures: normal;
+                              font-variant-caps: normal;
+                              letter-spacing: normal;
+                              orphans: 2;
+                              text-align: justify;
+                              text-indent: 0px;
+                              text-transform: none;
+                              white-space: normal;
+                              widows: 2;
+                              word-spacing: 0px;
+                              -webkit-text-stroke-width: 0px;
+                              background-color: #ffffff;
+                              text-decoration-thickness: initial;
+                              text-decoration-style: initial;
+                              text-decoration-color: initial;
+                              float: none;
+                              display: inline !important;
+                              font-family: Verdana;
+                              color: #000000;
+                            "
+                            >Chúng tôi có thể đặt OID và giá trị được định cấu
+                            hình trong Quản lý CA dưới dạng IAN trong chứng chỉ
+                            tổ chức cuối trong trường hợp không có SAN và IAN
+                            trong chứng chỉ tổ chức phát hành.</span
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span
+                        style="
+                          font-size: 14px;
+                          font-style: normal;
+                          font-variant-ligatures: normal;
+                          font-variant-caps: normal;
+                          letter-spacing: normal;
+                          orphans: 2;
+                          text-align: justify;
+                          text-indent: 0px;
+                          text-transform: none;
+                          white-space: normal;
+                          widows: 2;
+                          word-spacing: 0px;
+                          -webkit-text-stroke-width: 0px;
+                          background-color: #ffffff;
+                          text-decoration-thickness: initial;
+                          text-decoration-style: initial;
+                          text-decoration-color: initial;
+                          float: none;
+                          display: inline !important;
+                          font-family: Verdana;
+                          color: #000000;
+                        "
+                        >Nếu tên thay thế của nhà phát hành OID không được định
+                        cấu hình trong Quản lý CA, thì chúng tôi có thể thêm SAN
+                        của nhà phát hành làm IAN trong chứng chỉ thực thể cuối
+                        theo tiêu chuẩn.</span
+                      >
+                    </li>
+                  </ol>
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Cài đặt báo cáo phát hành chứng chỉ:</strong
+              ><br />
+            </td>
+            <td>
+              <div style="text-align: justify">
+                ADSS Server có thể báo cáo về việc cấp và thu hồi chứng
+                chỉ.&nbsp;Khi CA cục bộ của Máy chủ ADSS kết nối với một CA bên
+                ngoài, ví dụ: GlobalSign CA thì tùy chọn này cho phép mỗi chứng
+                chỉ đã cấp và bị thu hồi được báo cáo cho CA bên ngoài, ví dụ:
+                GlobalSign Cert Dịch vụ an toàn.
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  line-height: normal;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify">
+                  Khi tùy chọn này được chọn, các mục sau đây cũng được hiển
+                  thị:
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tên tài khoản<span class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Tên tài khoản được cấp cho CA này.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >URL dịch vụ<span class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >URL CA của Tổ chức phát hành tức là URL An toàn với Chứng
+                chỉ.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Xác thực ứng dụng khách TLS</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Cần có Chứng chỉ ứng dụng
+                <span
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    background-color: #ffffff;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >khách TLS</span
+                >&nbsp;để xác thực với URL CA của Nhà phát hành, tức là URL dịch
+                vụ An toàn cho chứng chỉ.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+                >Cài đặt minh bạch chứng chỉ:</strong
+              ><br />
+            </td>
+            <td>
+              <div style="text-align: justify">
+                Tính minh bạch của chứng chỉ giúp xác định các chứng chỉ Máy chủ
+                TLS do cơ quan cấp chứng chỉ cấp nhầm hoặc có được một cách ác ý
+                từ cơ quan chứng nhận không thể nghi ngờ. Cách tiếp cận này yêu
+                cầu CA công bố công khai thông tin về chứng chỉ đã cấp của họ để
+                bất kỳ ai cũng có thể kiểm tra xem chứng chỉ đã được cấp đúng
+                cách hay chưa. Tính minh bạch của chứng chỉ (CT) không ngăn chặn
+                việc tạo các chứng chỉ gian lận mà còn cho phép phát hiện chúng
+                một cách nhanh chóng và dễ dàng. Khi tùy chọn kiểm soát giấy
+                phép này được bật cho CA, nó sẽ quản lý việc phát hành chứng chỉ
+                Máy chủ TLS và tương tác với các máy chủ nhật ký minh bạch chứng
+                chỉ.
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  line-height: normal;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify">
+                  Khi tùy chọn này được chọn, các mục sau đây cũng được hiển
+                  thị:
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Đăng nhập địa chỉ máy chủ</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Điều này chỉ định địa chỉ của một máy chủ nhật ký. Máy chủ nhật
+                ký được sử dụng để lưu trữ thông tin về Chứng chỉ máy chủ TLS đã
+                cấp bởi một CA cụ thể. Chúng chấp nhận chứng chỉ chưa được cấp
+                từ CA và trả lại SCT (Dấu thời gian chứng chỉ đã ký); một bằng
+                chứng rằng chứng chỉ đã được nhận bởi Máy chủ Nhật ký.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Đăng nhập khóa công khai của máy chủ</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >(Các) Máy chủ nhật ký tạo Dấu thời gian chứng chỉ đã ký (SCT)
+                theo yêu cầu CA và khóa công khai của máy chủ nhật ký được sử
+                dụng để xác minh.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Danh sách máy chủ nhật ký được định cấu hình</span
+              ><br />
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Đặt thứ tự cho các địa chỉ của máy chủ nhật ký nơi<span
+                  class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  line-height: normal;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Chứng chỉ máy chủ TLS</span
+              ><span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><span class="Apple-converted-space">&nbsp;</span>sẽ được lưu
+                trữ.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Số thuế TTĐB phải nộp</span
+              ><br />
+            </td>
+            <td>
+              <div style="text-align: justify">
+                Điều này xác định số lượng máy chủ nhật ký cần thiết để phê
+                duyệt yêu cầu. Tổng số máy chủ nhật ký có thể bằng hoặc lớn hơn
+                con số này. Con số này không thể bằng 0 vì cần có ít nhất một
+                máy chủ nhật ký.&nbsp;
+              </div>
+              <span
+                style="
+                  text-align: left;
+                  text-indent: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify"><br /></div>
+                <div style="text-align: justify">
+                  Trong trường hợp số này là 2 hoặc lớn hơn, thì ít nhất hai máy
+                  chủ nhật ký phải cung cấp SCT.
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Sử dụng một CA khác<span class="Apple-converted-space"
+                  >&nbsp;</span
+                ></span
+              ><br
+                style="
+                  color: #000000;
+                  font-family: Verdana;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                "
+              />
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #d3d3d3;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >để ký trước chứng chỉ</span
+              ><br />
+            </td>
+            <td>
+              <div style="text-align: justify">
+                <span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Bằng cách bật tùy chọn này, bạn có thể chọn chứng chỉ ký
+                  trước từ trình đơn thả xuống.<span
+                    class="Apple-converted-space"
+                    >&nbsp;</span
+                  ></span
+                ><span
+                  style="
+                    line-height: normal;
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >Trình đơn thả xuống sẽ chỉ hiển thị các chứng chỉ trong Trình
+                  quản lý khóa ADSS có độ trong suốt của<span
+                    class="Apple-converted-space"
+                    >&nbsp;</span
+                  ><span
+                    style="
+                      line-height: normal;
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >chứng chỉ trong chứng chỉ EKU (</span
+                  >Tiện ích mở rộng sử dụng khóa mở rộng).</span
+                ><span
+                  style="
+                    float: none;
+                    display: inline !important;
+                    font-family: Verdana;
+                    color: #000000;
+                  "
+                  >&nbsp;</span
+                >
+              </div>
+              <span
+                style="
+                  text-align: left;
+                  text-indent: 0px;
+                  background-color: #ffffff;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify"><br /></div>
+                <div style="text-align: justify">
+                  <span
+                    style="
+                      float: none;
+                      display: inline !important;
+                      font-family: Verdana;
+                      color: #000000;
+                    "
+                    >Giấy chứng nhận trước được xây dựng từ giấy chứng nhận sẽ
+                    được cấp bằng cách thêm phần mở rộng chất độc đặc biệt.
+                    Chứng chỉ trước được gửi tới máy chủ nhật ký để nhận SCT
+                    được nhúng trong chứng chỉ thực.</span
+                  >&nbsp;
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Ủy quyền quy trình ghi nhật ký trước chứng chỉ cho các thực thể
+              khác
+            </td>
+            <td>
+              <div style="text-align: justify">
+                Bằng cách bật tùy chọn này, Máy chủ ADSS CA ủy quyền cho ứng
+                dụng khách tương tác với máy chủ nhật ký thay vì tương tác trực
+                tiếp với máy chủ nhật ký. Khi nhận được yêu cầu Chứng chỉ máy
+                chủ TLS từ ứng dụng khách, Máy chủ ADSS CA tạo chứng chỉ trước
+                và trả lại chứng chỉ trước này và chuỗi của nó cùng với thông
+                tin máy chủ nhật ký cho khách hàng để nhận SCT (Dấu thời gian
+                chứng chỉ đã ký) bắt buộc từ đăng nhập máy chủ. Ứng dụng khách
+                sẽ ghi nhật ký chuỗi này với máy chủ nhật ký để lấy SCT và cung
+                cấp cho ADSS Server. Máy chủ này sẽ nhúng nó vào chứng chỉ gốc
+                và trả lại chứng chỉ này cho ứng dụng khách.&nbsp;
+              </div>
+              <div style="text-align: justify"><br /></div>
+              <div style="text-align: justify">
+                <strong style="font-weight: bold">Ghi chú: </strong>Tùy chọn này
+                hữu ích khi Máy chủ ADSS CA đang hoạt động trong môi trường bảo
+                mật cao và không có quyền truy cập vào các máy chủ bên
+                ngoài.&nbsp;
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Cài đặt CRL:&nbsp;</strong></td>
+            <td style="text-align: justify">Định nghĩa như sau:&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="text-align: justify">Thời hạn hiệu lực của CRL</td>
+            <td style="text-align: justify">
+              Chỉ định thời gian tính bằng phút để tính thời hạn hiệu lực của
+              CRL (Cập nhật tiếp theo).
+            </td>
+          </tr>
+          <tr>
+            <td>Tạo và xuất bản CRL tự động</td>
+            <td style="text-align: justify">
+              Chỉ định thời gian tính bằng phút sau đó CRL sẽ được xuất bản.
+              Thời gian này phải nhỏ hơn giá trị được chỉ định trong trường
+              "Thời hạn hiệu lực CRL".&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>Xuất bản CRL khẩn cấp<br /></td>
+            <td style="text-align: justify">
+              CRL khẩn cấp được xuất bản ngay lập tức khi sự kiện thu hồi/khôi
+              phục xảy ra thay vì đợi CRL được lên lịch tiếp theo,&nbsp;ví dụ:
+              khi chứng chỉ bị thu hồi, CRL khẩn cấp sẽ được xuất bản để thông
+              tin mới nhất có sẵn cho những người phản hồi CRL và OCSP. Dịch vụ
+              ADSS OCSP có thể tự động nhận các CRL khẩn cấp và cung cấp thông
+              tin trạng thái chứng chỉ theo thời gian thực.
+            </td>
+          </tr>
+          <tr>
+            <td>thuật toán Hashing</td>
+            <td>
+              Chọn Thuật toán Hashing sẽ được sử dụng như một phần của việc ký
+              CRL.
+            </td>
+          </tr>
+          <tr>
+            <td>Đường dẫn tệp xuất bản CRL</td>
+            <td>
+              Đây là đường dẫn đến vị trí nơi các CRL đã xuất bản sẽ được lưu
+              trữ. Đây là trường bắt buộc nếu một trong các hộp kiểm ở trên được
+              chọn vì bạn phải chỉ định địa chỉ trong hệ thống tệp mà bạn muốn
+              xuất bản CRL. Nếu không, trường này là tùy chọn.
+            </td>
+          </tr>
+          <tr>
+            <td>Giữ các chứng chỉ đã hết hạn bị thu hồi trong CRL từ</td>
+            <td style="text-align: justify">
+              Nếu tùy chọn này được bật và thời gian được chỉ định, CA sẽ giữ
+              tất cả các chứng chỉ bị thu hồi trong CRL đã hết hạn vào thời điểm
+              chính xác (như đã chỉ định) hoặc sau thời điểm đó. <br />
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+            <td>
+              <br />
+              <div class="TipBubble">
+                <div style="text-align: justify">
+                  ADSS hỗ trợ các phần mở rộng sau trong CRL:&nbsp;
+                </div>
+                <ol>
+                  <li style="text-align: justify">
+                    <strong>Số CRL: </strong>Nó được bao gồm trong CRL theo mặc
+                    định.&nbsp;
+                  </li>
+                  <li style="text-align: justify">
+                    <strong>AKI (Mã định danh khóa chính quyền): </strong>Nó
+                    được bao gồm trong CRL theo mặc định.&nbsp;
+                  </li>
+                  <li style="text-align: justify">
+                    <strong>IAN (Tên thay thế của tổ chức phát hành): </strong
+                    >Nếu CA phát hành có phần mở rộng Tên thay thế chủ đề (SAN),
+                    thì SAN đó sẽ được thêm làm Tên thay thế của nhà phát hành
+                    trong CRL.&nbsp;
+                  </li>
+                  <li style="text-align: justify">
+                    <strong>Hết hạn CertsOnCRL: </strong>Nó được bao gồm khi hộp
+                    kiểm 'Giữ chứng chỉ đã hết hạn bị thu hồi trong CRL từ' được
+                    bật trong Cài đặt CRL.&nbsp;
+                  </li>
+                </ol>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Cài đặt xuất bản LDAP:</strong><br /></td>
+            <td>
+              <div style="text-align: justify">Định nghĩa như sau:&nbsp;</div>
+              <span
+                style="
+                  text-align: left;
+                  text-indent: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+              >
+                <div style="text-align: justify"><br /></div>
+                <strong
+                  style="
+                    font-size: 14px;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    white-space: normal;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                  "
+                >
+                  <div style="text-align: justify">
+                    <span
+                      style="
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      ><strong>Ghi chú:</strong></span
+                    ><span
+                      style="
+                        font-weight: 400;
+                        float: none;
+                        display: inline !important;
+                        font-family: Verdana;
+                        color: #000000;
+                      "
+                      >&nbsp;OpenLDAP và Apache DS v2.0.0.AM25 đã được thử
+                      nghiệm.&nbsp;</span
+                    >
+                  </div>
+                </strong></span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Xuất bản CRL trong LDAP</td>
+            <td style="text-align: justify">
+              Bật tính năng này nếu cần xuất bản CRL trên Máy chủ LDAP.
+            </td>
+          </tr>
+          <tr>
+            <td>Xuất bản chứng chỉ đã cấp trong LDAP</td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  background-color: #ffffff;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Bật tính năng này nếu bắt buộc phải xuất bản Chứng chỉ đã cấp
+                trên Máy chủ LDAP.</span
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>Máy chủ LDAP xuất bản CRL</td>
+            <td>
+              <div style="text-align: justify">
+                Đặt URL Máy chủ LDAP, ví dụ:
+              </div>
+              <ul>
+                <li style="text-align: justify">localhost</li>
+                <li style="text-align: justify">192.168.3.170</li>
+                <li style="text-align: justify">dc1.main.domain.com</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Cổng<br /></td>
+            <td style="text-align: justify">
+              Đặt số cổng của máy chủ LDAP - cổng mặc định là 10389.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Ràng buộc DN/Người dùng<br /></td>
+            <td style="text-align: justify">
+              Đặt tên người dùng hoặc Tên phân biệt (DN) sẽ được sử dụng để đăng
+              nhập vào máy chủ LDAP.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>Mật khẩu<br /></td>
+            <td style="text-align: justify">
+              Đặt mật khẩu sẽ được sử dụng để xác thực người dùng với máy chủ
+              LDAP.<br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  background-color: #d3d3d3;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                ><strong
+                  >[NÚT] <br />
+                  Xuất bản CRL</strong
+                ></span
+              >
+            </td>
+            <td style="text-align: justify">
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: left;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  background-color: #ffffff;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nút này cung cấp tùy chọn để ngay lập tức xuất bản CRL theo
+                cách thủ công lên đường dẫn tệp được định cấu hình.&nbsp;</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      Các cài đặt này có thể được lưu bằng cách nhấp vào nút
+      <strong>Lưu</strong>.<br />
+      <p style="text-align: justify">
+        Như đã nêu trước đó, chứng chỉ ADSS Local CA có thể là chứng chỉ tự ký
+        (nghĩa là trong trường hợp này ADSS Local CA là Root CA) hoặc chứng chỉ
+        được ủy quyền do một số CA bên ngoài cấp (nghĩa là trong trường hợp này
+        ADSS Local CA là CA gốc) CA cấp dưới. Có thể xem chứng chỉ CA đã định
+        cấu hình bằng cách chọn CA và sau đó nhấp vào nút
+        <strong>Xem chứng chỉ</strong>. Chứng chỉ CA đã định cấu hình có thể
+        được thay đổi trong chế độ chỉnh sửa thành bất kỳ chứng chỉ CA nào khác
+        có chữ ký
+        <strong
+          style="
+            color: #000000;
+            font-family: Verdana;
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+          "
+          >Chứng chỉ Mục đích/CRL chính</strong
+        >.
+      </p>
+      <p style="text-align: justify">
+        <span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: bold;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            font-size: 16px;
+            color: #008080;
+          "
+        ></span>
+      </p>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-align: justify;
+        "
+      >
+        <span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: bold;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            font-size: 16px;
+            color: #008080;
+          "
+          >Định cấu hình Vị trí xuất bản CRL bằng Tomcat</span
+        >
+      </p>
+      <p>
+        Nếu bạn muốn tạo một vị trí xuất bản CRL và ngay lập tức truy cập vào vị
+        trí này trong các&nbsp;dịch vụ Máy chủ ADSS khác nhau thì điều này có
+        thể được thực hiện bằng cách sử dụng Tomcat.&nbsp; Điều này chỉ được
+        khuyến nghị cho mục đích thử nghiệm.&nbsp; Đối với các hệ thống sản
+        xuất, nên sử dụng thư mục có thể truy cập web bên ngoài.
+      </p>
+      <blockquote
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: justify;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+        "
+      >
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">
+          1. Tạo một thư mục cho các CRL&nbsp;tại vị
+          trí&nbsp;sau&nbsp;trong&nbsp;khu vực&nbsp;cài đặt Máy chủ ADSS:
+        </p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">
+          &nbsp;&nbsp;&nbsp;&nbsp;{drive}:\\{installation
+          path}\console\server\webapps\console\crls
+        </p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">&nbsp;</p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">
+          2. Định cấu hình đường dẫn này trong cài đặt Xuất bản CRL cho CA cục
+          bộ:
+        </p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">
+          &nbsp;&nbsp;&nbsp;&nbsp;{drive}:\\{installation
+          path}\console\server\webapps\console\crls\CAname1.crl
+        </p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">&nbsp;</p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">
+          3. Định cấu hình&nbsp;địa chỉ&nbsp;sau cho CDP trong Cài đặt xuất bản
+          CRL cho CA cục bộ:
+        </p>
+        <p style="margin: 0cm 0cm 0pt; text-align: justify">
+          &nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="http://hostname:8773/adss/console/crls/CAname1.crl"
+            title="blocked::http://hostname:8777/adss/console/crls/CAname1.crl"
+            style="text-decoration: none; color: #2495d2"
+            >http://hostname:8773/adss/console/crls/CAname1.crl</a
+          >
+        </p>
+      </blockquote>
+      <blockquote>
+        <span class="046563110-15012009">
+          <p style="margin: 0cm 0cm 0pt; text-align: justify">
+            <span
+              ><a
+                title="blocked::http://hostname:8777/adss/console/crls/CAname1.crl"
+                href="http://hostname:8773/adss/console/crls/CAname1.crl"
+              ></a
+            ></span>
+          </p>
+        </span>
+      </blockquote>
+      <strong></strong
+      ><span class="Asc_Heading"
+        >Điều kiện tiên quyết để xuất bản Chứng chỉ trong Danh mục LDAP</span
+      ><br />
+      <ul>
+        <li>
+          <strong>Phân vùng tùy chỉnh trong LDAP: </strong>Các phân vùng trong
+          thư mục LDAP phải chứa một mục nhập/hệ thống phân cấp tương tự như Cấu
+          trúc RDN của Chứng chỉ.
+        </li>
+        <li>
+          <strong> Tổ chức phát hành Giấy chứng nhận DN: </strong> Để xuất bản
+          Chứng chỉ thuộc tính với BaseCertID, Chứng chỉ tổ chức phát hành/CRL
+          phải được xuất bản trên phân vùng RDN của Thư mục LDAP.&nbsp;
+        </li>
+        <li>
+          <strong> Lớp đối tượng mở rộng: </strong>Lớp đối tượng này được định
+          nghĩa trong RFC 2252 để cho phép thêm và sửa đổi các thuộc tính trên
+          Máy chủ LDAP một cách linh hoạt. Lớp đối tượng extensibleObject phải
+          là một phần của lược đồ LDAP của Máy chủ LDAP. ObjectClass
+          (extensibleObject) tùy ý giữ tất cả các Loại thuộc tính được hỗ trợ
+          được xác định trong lược đồ LDAP của Máy chủ LDAP. Lớp
+          ExtensibleObject theo mặc định được hỗ trợ trong bản phát hành LDAP
+          3.&nbsp;
+        </li>
+        <li>
+          <strong>thuộc tính_cert_pmi Lược đồ: </strong> Máy chủ LDAP không hỗ
+          trợ một số thuộc tính và lớp đối tượng, lược đồ attribute_cert_pmi xác
+          định loại thuộc tính "attributeCertificate" được yêu cầu để xuất bản
+          Chứng chỉ thuộc tính trên Danh mục LDAP. Để nhập tệp lược đồ/ldif
+          trong Máy chủ LDAP đã định cấu hình, hãy tải tệp zip
+          "attribute_cert_pmi" từ đường dẫn bên dưới,
+          [ADSS-Server-Installation-Dir]\support\attribute_cert_pmi.zip
+        </li>
+      </ul>
+      <div>
+        <span class="TipBubble"
+          >​<span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              float: none;
+              background-color: #f0fff0;
+              display: inline !important;
+              font-family: Verdana;
+              color: #4f8a10;
+            "
+            >​Vì "Tên phân biệt" sẽ được trích xuất tự động từ chứng chỉ AA nên
+            người dùng sẽ không cung cấp. Chứng chỉ nhận dạng/thuộc tính sẽ được
+            xuất bản nếu cấu trúc DN này có trong Danh mục LDAP.</span
+          ></span
+        ><span class="TipBubble"
+          >​<br />
+          OpenLDAP và Apache DS.</span
+        ><br />
+        <span style="font-weight: bold; font-size: 16px; color: #008080"
+          >Giấy chứng nhận đã cấp</span
+        ><span style="font-size: 16px; color: #008000"
+          ><strong class="Asc_Heading">&nbsp;</strong></span
+        >
+      </div>
+      <p>
+        Bằng cách nhấp vào nút Chứng chỉ đã cấp sau khi chọn CA, màn hình sau sẽ
+        hiển thị trong đó hiển thị tất cả các chứng chỉ do CA này cấp:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="/images/2019-06-21_17-39-06.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify"><span></span></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify"><span></span></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify"><span></span></p>
+      <p style="margin: 0cm 0cm 0pt; text-align: justify">
+        <span style="text-align: left"
+          ><span class="TipBubble"
+            >​<span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                float: none;
+                background-color: #f0fff0;
+                display: inline !important;
+                font-family: Verdana;
+                color: #4f8a10;
+              "
+              >​Màn hình này hiển thị các chứng chỉ do Trình quản lý khóa, Dịch
+              vụ chứng nhận và Chứng nhận thủ công cấp trong khi mô-đun phụ
+              Chứng chỉ đã cấp của Dịch vụ chứng nhận chỉ hiển thị các chứng chỉ
+              do Dịch vụ chứng nhận cấp.</span
+            ></span
+          >Bạn có thể chọn một chứng chỉ, rồi </span
+        ><strong style="text-align: left">Xem,&nbsp;</strong
+        ><strong style="text-align: left">Thu hồi </strong
+        ><span style="text-align: left">hoặc</span
+        ><strong style="text-align: left"> Xóa</strong
+        ><span style="text-align: left">
+          chứng chỉ. Chứng chỉ bị thu hồi bằng mã hướng dẫn giữ chứng chỉ có thể
+          được kích hoạt sau này bằng cách sử dụng nút </span
+        ><strong style="text-align: left">Khôi phục</strong
+        ><span style="text-align: left"
+          >. Sau khi chứng chỉ bị thu hồi, một mục thu hồi ngay lập tức sẽ được
+          tạo trong cơ sở dữ liệu thay vì cấp CRL khẩn cấp cho mỗi lần thu hồi.
+          Xuất bản CRL tốn kém nếu chúng được xuất bản quá thường xuyên. Để giảm
+          chi phí tài nguyên, ý tưởng thu hồi ngay lập tức được giới thiệu. Nó
+          chỉ hoạt động&nbsp; cho (các) CA được cấu hình cục bộ. Các hệ thống
+          đang bỏ phiếu bên ngoài Máy chủ ADSS, nhưng sử dụng các CA được định
+          cấu hình trong Máy chủ ADSS, phải tải xuống CRL để nhận thông tin thu
+          hồi mới nhất.<br />
+          <br />
+          <span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >Nếu chứng chỉ được gia hạn thì chứng chỉ cũ sẽ được đánh dấu là đã
+            thu hồi và chứng chỉ mới sẽ được tạo, </span
+          ><span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >để kiểm tra các chứng chỉ mới nhất và đã bị thu hồi đối với một bí
+            danh cụ thể, chỉ cần mở rộng chứng chỉ bằng cách nhấp vào nút '+',
+            sau đó tất cả các chứng chỉ cũ đã bị thu hồi sẽ được hiển thị dưới
+            dạng con.</span
+          ><br />
+          <br />
+          <span class="TipBubble"
+            >​<span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                background-color: #f0fff0;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #4f8a10;
+              "
+              >​Nếu chứng chỉ đã cấp được yêu cầu xóa và bí danh chứng chỉ tương
+              tự được yêu cầu sử dụng cho chứng chỉ mới thì người vận hành cần
+              khởi động lại các phiên bản ADSS Core, Console và Service từ bảng
+              điều khiển Dịch vụ Windows NT hoặc trình nền UNIX.</span
+            ></span
+          ></span
+        >
+      </p>
+      <p>
+        Bạn có thể chọn một chứng chỉ, rồi<strong
+          >&nbsp;Xem,&nbsp;Thu hồi</strong
+        >
+        hoặc <strong>Xóa</strong>&nbsp;chứng chỉ. Nhấp vào nút Thu hồi sẽ hiển
+        thị màn hình sau nơi ngày hết hiệu lực, mã thu hồi&nbsp;và mã hướng dẫn
+        giữ&nbsp;có thể được cung cấp trước khi thu hồi chứng chỉ:
+      </p>
+      <p>
+        <img
+          alt=""
+          src="/images/1555599855588.png"
+          style="border-width: 1px; border-style: solid"
+        />
+      </p>
+      <p>
+        Bằng cách nhấp vào nút <strong>Tìm kiếm </strong>trên trang chính Chứng
+        chỉ đã cấp sẽ hiển thị màn hình sau:
+      </p>
+      <p>
+        <strong
+          style="font-size: 17px; color: #1f497d; font-family: arial"
+        ></strong>
+      </p>
+      <img
+        alt=""
+        src="/images/1555598488351.png"
+        style="border-width: 1px; border-style: solid"
+      /><br />
+      <p>
+        <span class="TipBubble"
+          ><br />
+          Nếu ký tự "_" được sử dụng trong tìm kiếm thì ký tự này sẽ đóng vai
+          trò là ký tự đại diện.</span
+        >
+      </p>
+      <p class="Asc_Heading">
+        <span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            font-family: Verdana;
+            font-size: 16px;
+            color: #008080;
+          "
+        >
+        </span>
+      </p>
+      <div
+        style="
+          font-weight: 400;
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-weight: bold; font-size: 16px; color: #008080"
+          >Giấy chứng nhận nhập khẩu</span
+        ><span style="font-size: 16px; color: #008000"
+          ><strong
+            class="Asc_Heading"
+            style="font-size: 16px; font-weight: bold; color: teal"
+            >&nbsp;</strong
+          ></span
+        >
+      </div>
+      <p
+        style="
+          color: #000000;
+          font-family: Verdana;
+          font-size: 14px;
+          font-style: normal;
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          letter-spacing: normal;
+          text-indent: 0px;
+          text-transform: none;
+          white-space: normal;
+          word-spacing: 0px;
+          -webkit-text-stroke-width: 0px;
+          text-decoration-style: initial;
+          text-decoration-color: initial;
+          text-align: justify;
+        "
+      >
+        <span style="font-weight: 400"
+          >Bằng cách nhấp vào nút Nhập chứng chỉ, màn hình sau sẽ được hiển thị
+          nơi người dùng có thể duyệt đến tệp chi tiết (các) chứng chỉ đã cấp
+          hoặc tệp zip (các) chứng chỉ do CA cục bộ đã chọn cấp:</span
+        >
+      </p>
+      <p>
+        <img
+          alt=""
+          src="/images/06-Feb-18 5-00-311 PM.jpg"
+          style="border-width: 1px; border-style: solid"
+        /><br />
+        <br />
+        <span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          ><a
+            href="https://faqs.ascertia.com/display/ADSS/Manage+CAs#ManageCAs-HowtoimportaCAanditsissuedcertificatesintoADSSServer?"
+            target="_blank"
+            >Nhấp vào đây</a
+          >
+          để biết hướng dẫn chi tiết&nbsp;</span
+        ><span
+          style="
+            font-size: 14px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            color: #000000;
+          "
+          >về cách nhập CA (dưới dạng CA cục bộ) và các chứng chỉ đã cấp của nó
+          vào Máy chủ ADSS cùng với cấu trúc bắt buộc của tệp Chi tiết chứng chỉ
+          và tệp ZIP chứng chỉ:</span
+        ><br />
+        <br />
+        <span
+          style="
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 700;
+            letter-spacing: normal;
+            text-align: justify;
+            text-indent: 0px;
+            text-transform: none;
+            white-space: normal;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+            float: none;
+            display: inline !important;
+            font-family: Verdana;
+            font-size: 16px;
+            color: #008080;
+          "
+          ><br />
+          Thuộc tính hệ thống</span
+        >
+      </p>
+      <strong> </strong>
+      <p style="text-align: left">
+        Nhấp vào nút Xóa trên trang chính Chứng chỉ đã cấp sẽ tạo ra các tình
+        huống sau:
+      </p>
+      <p></p>
+      <ol>
+        <li style="text-align: left">
+          Để xóa các chứng chỉ hợp lệ, tức là có trạng thái (Hợp lệ, Đã thu hồi,
+          Chưa hợp lệ), một thuộc tính mới
+          &nbsp;<strong>ENABLE_VALID_CERTIFICATE_DELETION</strong>&nbsp;được
+          giới thiệu trong
+          <strong>Cài đặt chung &gt; Cài đặt nâng cao &gt; Chung</strong>.
+          <span
+            style="
+              font-size: 14px;
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: normal;
+              letter-spacing: normal;
+              line-height: normal;
+              text-align: justify;
+              text-indent: 0px;
+              text-transform: none;
+              white-space: normal;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              float: none;
+              display: inline !important;
+              font-family: Verdana;
+              color: #000000;
+            "
+            >Khi thuộc tính này được đặt thành true, Máy chủ ADSS sẽ xóa mọi
+            chứng chỉ bất kể trạng thái của nó.&nbsp;<span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Nếu thuộc tính này được đặt thành FALSE, thì chỉ những chứng chỉ
+              hết hạn mới bị xóa và nó cũng phục vụ khả năng tương thích
+              ngược.&nbsp;</span
+            ></span
+          >Giá trị mặc định của thuộc tính này là TRUE.<br />
+          <br />
+          <span class="TipBubble"
+            >​Nếu có yêu cầu xóa chứng chỉ thông qua giao diện dịch vụ chứng
+            nhận, thì Máy chủ ADSS sẽ kiểm tra thuộc tính
+            ENABLE_VALID_CERTIFICATE_DELETION trước và quyết định thực hiện hành
+            động theo giá trị của thuộc tính.&nbsp;</span
+          >
+        </li>
+        <li>
+          <span style="text-align: left"
+            >Để xóa cặp khóa và chứng chỉ khỏi HSM, thuộc tính
+            <strong>ENABLE_PKCS11_KEY_DELETION</strong>&nbsp;được giới thiệu
+            trong </span
+          ><span style="text-align: left"
+            ><strong
+              >Cài đặt chung &gt; Cài đặt nâng cao &gt; Chứng nhận</strong
+            ></span
+          ><span style="text-align: left"
+            >.
+            <span
+              style="
+                font-size: 14px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: normal;
+                text-align: justify;
+                text-indent: 0px;
+                text-transform: none;
+                white-space: normal;
+                word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;
+                float: none;
+                display: inline !important;
+                font-family: Verdana;
+                color: #000000;
+              "
+              >Nếu thuộc tính này được đặt thành TRUE, cặp khóa và chứng chỉ có
+              liên quan sẽ bị xóa khỏi HSM.
+              <span
+                style="
+                  font-size: 14px;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: normal;
+                  letter-spacing: normal;
+                  line-height: normal;
+                  text-align: justify;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  float: none;
+                  display: inline !important;
+                  font-family: Verdana;
+                  color: #000000;
+                "
+                >Nếu thuộc tính này được đặt thành FALSE, cặp khóa và chứng chỉ
+                sẽ chỉ bị xóa khỏi cơ sở dữ liệu Máy chủ ADSS chứ không bị xóa
+                khỏi HSM.&nbsp;</span
+              ></span
+            >Giá trị mặc định cho thuộc tính này là TRUE.<br />
+          </span>
+        </li>
+      </ol>
+      <p>
+        <span style="font-size: 17px; font-family: arial; color: #1f497d"
+          ><strong></strong></span
+        ><span class="Asc_See_Also">Xem thêm</span>&nbsp;
+      </p>
+      <div class="Asc_Sibling_Page_List">
+        <div class="var_Sibling_Page_List">
+          <a href="view_crls.htm" title="">Xem CRL</a><br /><a
+            href="configuring_an_external_ca.htm"
+            title=""
+            >External CAs</a
+          ><br /><a href="configured_local_aas.htm" title="">AAs cục bộ</a
+          ><br /><a href="local_cvca_s.htm" title="">CVCAs cục bộ</a><br /><a
+            href="local_dvca_sss.htm"
+            title=""
+            >DVCAs cục bộ</a
+          ><br /><a href="manual_certification.htm" title=""
+            >Chứng nhận thủ công</a
+          ><br /><a href="certificate_templates.htm" title="">Mẫu chứng chỉ</a
+          ><br /><a href="cv_certificate_template1.htm" title=""
+            >Mẫu giấy chứng nhận sơ yếu lý lịch</a
+          ><br /><a href="alerts1.htm" title="">Cảnh báo</a><br />
+        </div>
+      </div>
+    </div>
+    <div
+      id="eJOY__extension_root"
+      class="eJOY__extension_root_class"
+      style="all: unset"
+    ></div>
+  </body>
+</html>

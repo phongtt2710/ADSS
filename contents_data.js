@@ -2547,31 +2547,35 @@ docAux = insDoc(
 );
 xmanage_cas = insFld(
   foldersTree,
-  gFld("&nbsp;Manage&nbsp;CAs&nbsp;", "manage_cas.htm")
+  gFld("&nbsp;Quản lý&nbsp;CA&nbsp;", "pages/manage_cas.htm")
 );
 docAux = insDoc(
   xmanage_cas,
-  gLnk("R", "&nbsp;Local&nbsp;CAs&nbsp;", "configuring_the_adss_ca_module.htm")
+  gLnk(
+    "R",
+    "&nbsp;Các tổ chức chứng thực&nbsp;cục bộ&nbsp;",
+    "pages/configuring_the_adss_ca_module.htm"
+  )
 );
 xview_crls = insFld(
   xmanage_cas,
-  gFld("&nbsp;View&nbsp;CRLs&nbsp;", "view_crls.htm")
+  gFld("&nbsp;Xem&nbsp;CRLs&nbsp;", "pages/view_crls.htm")
 );
 docAux = insDoc(
   xview_crls,
   gLnk(
     "R",
-    "&nbsp;View&nbsp;CRL&nbsp;Latest&nbsp;Contents&nbsp;",
-    "view_crl_latest_contents.htm"
+    "&nbsp;Xem&nbsp;nội dung&nbsp;mới nhất của&nbsp;CRL&nbsp;",
+    "pages/view_crl_latest_contents.htm"
   )
 );
 xconfiguring_an_external_ca = insFld(
   xmanage_cas,
-  gFld("&nbsp;External&nbsp;CAs&nbsp;", "configuring_an_external_ca.htm")
+  gFld("&nbsp;CAs&nbsp;bên ngoài&nbsp;", "pages/configuring_an_external_ca.htm")
 );
 docAux = insDoc(
   xconfiguring_an_external_ca,
-  gLnk("R", "&nbsp;ADSS&nbsp;CA&nbsp;Server&nbsp;", "adss_server_ca.htm")
+  gLnk("R", "&nbsp;Máy chủ&nbsp;ADSS&nbsp;CA&nbsp;", "pages/adss_server_ca.htm")
 );
 docAux = insDoc(
   xconfiguring_an_external_ca,

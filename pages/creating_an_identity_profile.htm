@@ -87,7 +87,10 @@
         Ngoài Hồ sơ chứng nhận chung, nhà điều hành cũng có thể định cấu hình Hồ
         sơ chứng nhận sẽ được sử dụng để tạo cặp khóa thông qua Dịch vụ RAS của
         Máy chủ ADSS. Trong cấu hình như vậy, hồ sơ này sẽ được Dịch vụ RA truy
-        cập để đăng ký chứng chỉ của người dùng đã đăng ký.&nbsp;Dịch vụ chứng nhận tương tác với Dịch vụ RAS bằng cách thực hiện hai cuộc gọi, cặp khóa và tạo CSR. Các chi tiết về cấu hình của nó được đưa ra dưới đây.<br />
+        cập để đăng ký chứng chỉ của người dùng đã đăng ký.&nbsp;Dịch vụ chứng
+        nhận tương tác với Dịch vụ RAS bằng cách thực hiện hai cuộc gọi, cặp
+        khóa và tạo CSR. Các chi tiết về cấu hình của nó được đưa ra dưới
+        đây.<br />
         <br />
         Các mục cấu hình như sau:
       </p>
@@ -100,25 +103,35 @@
           <tr>
             <td>Trạng thái</td>
             <td>
-                Hồ sơ chứng nhận có thể được đánh dấu là Hoạt động hoặc Không hoạt động. Lưu ý: hồ sơ chứng nhận không hoạt động sẽ không được sử dụng để xử lý các yêu cầu chứng nhận.<br />
+              Hồ sơ chứng nhận có thể được đánh dấu là Hoạt động hoặc Không hoạt
+              động. Lưu ý: hồ sơ chứng nhận không hoạt động sẽ không được sử
+              dụng để xử lý các yêu cầu chứng nhận.<br />
             </td>
           </tr>
           <tr>
             <td>ID hồ sơ</td>
             <td valign="top">
-                Mã định danh duy nhất do hệ thống xác định cho cấu hình này. Điều này phải được tham chiếu trong các yêu cầu dịch vụ chứng nhận nếu hồ sơ chứng nhận này được sử dụng bởi ứng dụng của khách hàng.<br />
+              Mã định danh duy nhất do hệ thống xác định cho cấu hình này. Điều
+              này phải được tham chiếu trong các yêu cầu dịch vụ chứng nhận nếu
+              hồ sơ chứng nhận này được sử dụng bởi ứng dụng của khách hàng.<br />
             </td>
           </tr>
           <tr>
             <td>Tên hồ sơ</td>
             <td valign="top">
-                Tên duy nhất do Toán tử xác định để dễ dàng nhận dạng con người hơn trong Bảng điều khiển vận hành ADSS. Điều này có thể được tham chiếu thay vì ID hồ sơ trong các yêu cầu dịch vụ chứng nhận nếu hồ sơ chứng nhận này được ứng dụng khách sử dụng.<br />
+              Tên duy nhất do Toán tử xác định để dễ dàng nhận dạng con người
+              hơn trong Bảng điều khiển vận hành ADSS. Điều này có thể được tham
+              chiếu thay vì ID hồ sơ trong các yêu cầu dịch vụ chứng nhận nếu hồ
+              sơ chứng nhận này được ứng dụng khách sử dụng.<br />
             </td>
           </tr>
           <tr>
             <td>Mô tả hồ sơ</td>
             <td valign="top">
-                Điều này có thể được sử dụng để mô tả hồ sơ chứng nhận chi tiết hơn (ví dụ: trong trường hợp nào hồ sơ chứng nhận này sẽ được sử dụng và / hoặc loại cài đặt hồ sơ chứng nhận giữ, v.v.). Điều này chỉ dành cho mục đích thông tin.<br />
+              Điều này có thể được sử dụng để mô tả hồ sơ chứng nhận chi tiết
+              hơn (ví dụ: trong trường hợp nào hồ sơ chứng nhận này sẽ được sử
+              dụng và / hoặc loại cài đặt hồ sơ chứng nhận giữ, v.v.). Điều này
+              chỉ dành cho mục đích thông tin.<br />
             </td>
           </tr>
           <tr>
@@ -143,7 +156,8 @@
                   display: inline !important;
                   color: #000000;
                 "
-                >Bỏ chọn tùy chọn này nếu bạn muốn tạo chứng chỉ ở chế độ không đồng bộ, tức là&nbsp;</span
+                >Bỏ chọn tùy chọn này nếu bạn muốn tạo chứng chỉ ở chế độ không
+                đồng bộ, tức là&nbsp;</span
               ><span
                 >CSR được tạo và hiển thị trong Đang chờ xử lý.&nbsp;<span
                   style="
@@ -187,13 +201,16 @@
                 >
                   <li style="font-family: Verdana">
                     <span
-                      >Từ CA được định cấu hình cục bộ hoặc bên ngoài bằng nút "Tạo chứng chỉ"</span
+                      >Từ CA được định cấu hình cục bộ hoặc bên ngoài bằng nút
+                      "Tạo chứng chỉ"</span
                     >
                   </li>
                   <li style="font-family: Verdana">
                     <span></span
                     ><span
-                      >Xuất CSR và được chứng nhận thủ công bằng cách sử dụng CA cục bộ, bên ngoài hoặc ngoại tuyến và nhập chứng chỉ trở lại dịch vụ chứng nhận</span
+                      >Xuất CSR và được chứng nhận thủ công bằng cách sử dụng CA
+                      cục bộ, bên ngoài hoặc ngoại tuyến và nhập chứng chỉ trở
+                      lại dịch vụ chứng nhận</span
                     >
                   </li>
                 </ul>
@@ -255,7 +272,8 @@
                     color: #000000;
                   "
                   >Xa&nbsp;</span
-                >Tính năng Ký ủy quyền trong hồ sơ chứng nhận đã chọn. Xem phần bên dưới để biết thêm chi tiết.</span
+                >Tính năng Ký ủy quyền trong hồ sơ chứng nhận đã chọn. Xem phần
+                bên dưới để biết thêm chi tiết.</span
               ><br />
             </td>
           </tr>
@@ -291,16 +309,20 @@
             </td>
           </tr>
           <tr>
-            <td>Sử dụng CA địa phương&nbsp;</td>
+            <td>Sử dụng Các tổ chức chứng thực cục bộ&nbsp;</td>
             <td valign="top">
-                Hộp kiểm này được chọn theo mặc định. Chọn nút radio này, nếu mô-đun Quản lý CA ADSS nội bộ được sử dụng, sẽ bật cấu hình sau:<br />
+              Hộp kiểm này được chọn theo mặc định. Chọn nút radio này, nếu
+              mô-đun Quản lý CA ADSS nội bộ được sử dụng, sẽ bật cấu hình
+              sau:<br />
               <br />
               <span style="text-decoration: underline"
                 ><strong>Mẫu chứng nhận</strong></span
               ><br />
-              Chọn mẫu cho các chứng chỉ được cấp bằng cách sử dụng hồ sơ chứng nhận này, ví dụ: mẫu được tạo cho Ký tài liệu, Ký nhật ký, v.v.<br />
+              Chọn mẫu cho các chứng chỉ được cấp bằng cách sử dụng hồ sơ chứng
+              nhận này, ví dụ: mẫu được tạo cho Ký tài liệu, Ký nhật ký, v.v.<br />
               <br />
-              <strong>Ghi:</strong> Danh sách mẫu chứng chỉ được lấy từ những người được xác định trong
+              <strong>Ghi:</strong> Danh sách mẫu chứng chỉ được lấy từ những
+              người được xác định trong
               <a href="certificate_templates1.htm" target="_blank"
                 >Quản lý chủ chốt
               </a>
@@ -313,11 +335,14 @@
                   Chứng chỉ CA</strong
                 ></span
               ><br />
-              Chọn một CA nội bộ được cấu hình để phục vụ các yêu cầu chứng nhận từ Dịch vụ chứng nhận ADSS. Dịch vụ chứng nhận ADSS sẽ gửi thông báo yêu cầu chứng chỉ PKCS10 đến CA nội bộ này. <br />
+              Chọn một CA nội bộ được cấu hình để phục vụ các yêu cầu chứng nhận
+              từ Dịch vụ chứng nhận ADSS. Dịch vụ chứng nhận ADSS sẽ gửi thông
+              báo yêu cầu chứng chỉ PKCS10 đến CA nội bộ này. <br />
               <br />
-              <strong>Ghi:</strong> Menu thả xuống sẽ chỉ hiển thị những CA nội bộ đã được định cấu hình (xem
+              <strong>Ghi:</strong> Menu thả xuống sẽ chỉ hiển thị những CA nội
+              bộ đã được định cấu hình (xem
               <a href="configuring_the_adss_ca_module.htm" target="_blank"
-                >CA địa phương</a
+                >Các tổ chức chứng thực cục bộ</a
               >
               để biết thêm chi tiết).&nbsp; &nbsp;<br />
             </td>
@@ -326,7 +351,9 @@
             <td>CA bên ngoài</td>
             <td valign="top">
               <div style="text-align: justify">
-                Chọn nút radio này để sử dụng CA trực tuyến bên ngoài được định cấu hình&nbsp;để phục vụ các yêu cầu chứng nhận từ Dịch vụ chứng nhận ADSS. Dịch vụ chứng nhận ADSS sẽ gửi
+                Chọn nút radio này để sử dụng CA trực tuyến bên ngoài được định
+                cấu hình&nbsp;để phục vụ các yêu cầu chứng nhận từ Dịch vụ chứng
+                nhận ADSS. Dịch vụ chứng nhận ADSS sẽ gửi
                 <span
                   style="
                     float: none;
@@ -334,15 +361,19 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >Thông báo yêu cầu chứng chỉ PKCS10 cũng như khóa công khai cho CA bên ngoài này</span
+                  >Thông báo yêu cầu chứng chỉ PKCS10 cũng như khóa công khai
+                  cho CA bên ngoài này</span
                 >
               </div>
               <br />
               <!-- Display tip bubble with icon and colored background. -->
               <div class="TipBubble" style="text-align: justify">
-                Menu thả xuống sẽ chỉ hiển thị những CA bên ngoài đã được định cấu hình. Tất cả các CA bên ngoài đều chấp nhận khóa công khai để tạo chứng chỉ ngoại trừ:&nbsp;Symantec
-                MPKI,&nbsp;Microsoft CA,&nbsp;DigiCert PKI, QuoVadis CA, EJBCA
-                and GlobalSign EPKI. Chức năng này chỉ hoạt động trong trường hợp tạo chứng chỉ. Xem&nbsp;<a
+                Menu thả xuống sẽ chỉ hiển thị những CA bên ngoài đã được định
+                cấu hình. Tất cả các CA bên ngoài đều chấp nhận khóa công khai
+                để tạo chứng chỉ ngoại trừ:&nbsp;Symantec MPKI,&nbsp;Microsoft
+                CA,&nbsp;DigiCert PKI, QuoVadis CA, EJBCA and GlobalSign EPKI.
+                Chức năng này chỉ hoạt động trong trường hợp tạo chứng chỉ.
+                Xem&nbsp;<a
                   href="default.aspx#pageid=configuring_an_external_ca"
                   target="_blank"
                   style="
@@ -403,7 +434,10 @@
           <tr>
             <td>Hồ sơ tiền điện tử</td>
             <td valign="top">
-                Chọn tạo và lưu trữ khóa/chứng chỉ trong cơ sở dữ liệu Máy chủ ADSS (chế độ phần mềm), Azure Key Vault hay lưu trữ khóa/chứng chỉ trên mô-đun bảo mật phần cứng (HSM) được định cấu hình sẵn trong Trình quản lý khóa máy chủ ADSS như được mô tả trong phần
+              Chọn tạo và lưu trữ khóa/chứng chỉ trong cơ sở dữ liệu Máy chủ
+              ADSS (chế độ phần mềm), Azure Key Vault hay lưu trữ khóa/chứng chỉ
+              trên mô-đun bảo mật phần cứng (HSM) được định cấu hình sẵn trong
+              Trình quản lý khóa máy chủ ADSS như được mô tả trong phần
               <a
                 href="page.aspx?pageid=Crypto_Processor_Settings2"
                 target="_blank"
@@ -413,15 +447,19 @@
               <strong>Ghi</strong> <br />
               <ol>
                 <li>
-                    Khi Hồ sơ tiền điện tử phần cứng được định cấu hình được đánh dấu Không khả dụng trong
+                  Khi Hồ sơ tiền điện tử phần cứng được định cấu hình được đánh
+                  dấu Không khả dụng trong
                   <a href="crypto_processor_settings2.htm" target="_blank"
                     >Quản lý chủ chốt</a
                   >
-                  màn hình (tức là bản ghi được hiển thị với tô sáng màu cam) thì hồ sơ tiền điện tử có liên quan sẽ không có sẵn ở đây để định cấu hình.<br />
+                  màn hình (tức là bản ghi được hiển thị với tô sáng màu cam)
+                  thì hồ sơ tiền điện tử có liên quan sẽ không có sẵn ở đây để
+                  định cấu hình.<br />
                   <br />
                 </li>
                 <li>
-                    Hồ sơ tiền điện tử sẽ không khả dụng cho các cấu hình nếu Cài đặt RAS được bật.
+                  Hồ sơ tiền điện tử sẽ không khả dụng cho các cấu hình nếu Cài
+                  đặt RAS được bật.
                 </li>
               </ol>
             </td>
@@ -429,7 +467,9 @@
           <tr>
             <td valign="top">Thuật toán chính<br /></td>
             <td valign="top">
-                Chọn Thuật toán khóa sẽ được sử dụng để tạo khóa thực thể cuối trong hồ sơ chứng nhận này, Hiện tại thuật toán chính sau đây được hỗ trợ<br />
+              Chọn Thuật toán khóa sẽ được sử dụng để tạo khóa thực thể cuối
+              trong hồ sơ chứng nhận này, Hiện tại thuật toán chính sau đây được
+              hỗ trợ<br />
               <ul>
                 <li>RSA</li>
                 <li>ECDSA</li>
@@ -439,7 +479,9 @@
           <tr>
             <td>Loại Curve</td>
             <td>
-                Chọn Loại đường cong sẽ được áp dụng trong khi tạo khóa thực thể cuối trong hồ sơ chứng nhận hiện tại. ADSS Server hỗ trợ các loại đường cong sau:&nbsp;<br />
+              Chọn Loại đường cong sẽ được áp dụng trong khi tạo khóa thực thể
+              cuối trong hồ sơ chứng nhận hiện tại. ADSS Server hỗ trợ các loại
+              đường cong sau:&nbsp;<br />
               <ul>
                 <li>NIST P</li>
                 <li>SEC2 K</li>
@@ -447,15 +489,18 @@
                 <li>Brainpool T</li>
               </ul>
               <div>
-                <strong>Note:&nbsp;</strong>Trình đơn thả xuống Loại đường cong sẽ chỉ khả dụng khi <strong>ECDSA</strong> Thuật toán được chọn trong trường thuật toán chính.
+                <strong>Note:&nbsp;</strong>Trình đơn thả xuống Loại đường cong
+                sẽ chỉ khả dụng khi <strong>ECDSA</strong> Thuật toán được chọn
+                trong trường thuật toán chính.
               </div>
             </td>
           </tr>
           <tr>
             <td>Độ dài khóa<br /></td>
             <td>
-                Chọn Độ dài khóa mà Máy chủ ADSS sẽ tạo trong cấu hình chứng nhận này. <br />
-                Hiện đang theo dõi Key
+              Chọn Độ dài khóa mà Máy chủ ADSS sẽ tạo trong cấu hình chứng nhận
+              này. <br />
+              Hiện đang theo dõi Key
               <span
                 style="
                   font-size: 14px;
@@ -506,7 +551,7 @@
                 "
               >
                 <li>
-                    Các khóa RSA là: 1024, 2048, 3072, 4096 and 8192&nbsp; &nbsp;
+                  Các khóa RSA là: 1024, 2048, 3072, 4096 and 8192&nbsp; &nbsp;
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
                 </li>
@@ -584,13 +629,14 @@
                       font-family: Verdana;
                       color: #000000;
                     "
-                    >&nbsp;Các phím về các loại đường cong tương ứng của chúng là:</span
+                    >&nbsp;Các phím về các loại đường cong tương ứng của chúng
+                    là:</span
                   >
                   <ul>
                     <li>Đối với NIST P: 160, 192, 224, 256, 384 and 521</li>
                     <li>Đối với SEC2 K: 256</li>
                     <li>
-                        Đối với Brainpool R &amp; Brainpool T: 160, 192, 224, 256,
+                      Đối với Brainpool R &amp; Brainpool T: 160, 192, 224, 256,
                       320, 384 và 512
                     </li>
                   </ul>
@@ -622,7 +668,7 @@
               ><br />
               <ul>
                 <li>
-                    Trong trường hợp Azure Key Vault chỉ hỗ trợ Độ dài khóa sau:
+                  Trong trường hợp Azure Key Vault chỉ hỗ trợ Độ dài khóa sau:
                   <ul>
                     <li>2048, 3072, 4096 được hỗ trợ cho các khóa RSA</li>
                     <li>256 được hỗ trợ cho Khóa ECDSA (only NIST P curve)</li>
@@ -631,7 +677,8 @@
               </ul>
               <ul>
                 <li>
-                    Trong trường hợp AWS CloudHSM, các độ dài khóa sau được hỗ trợ:
+                  Trong trường hợp AWS CloudHSM, các độ dài khóa sau được hỗ
+                  trợ:
                   <ul>
                     <li>2048, 3072, 4096 được hỗ trợ cho các khóa RSA</li>
                     <li>
@@ -672,7 +719,10 @@
               ><br />
             </td>
             <td>
-                Mục này mô tả các thuộc tính và giá trị mặc định được sử dụng cho Tên phân biệt chủ đề (DName) trong quá trình tạo chứng chỉ. Dịch vụ Chứng nhận ADSS cung cấp một định dạng linh hoạt để chỉ định DName. Các giá trị có thể là:
+              Mục này mô tả các thuộc tính và giá trị mặc định được sử dụng cho
+              Tên phân biệt chủ đề (DName) trong quá trình tạo chứng chỉ. Dịch
+              vụ Chứng nhận ADSS cung cấp một định dạng linh hoạt để chỉ định
+              DName. Các giá trị có thể là:
               <ul>
                 <li>
                   <span
@@ -804,7 +854,11 @@
                 </li>
               </ul>
               <div><br /></div>
-              Tên phân biệt chủ đề đầy đủ có thể được cung cấp cho dịch vụ chứng nhận: (a) Trong thông báo yêu cầu chứng chỉ (b) HOẶC&nbsp;trong dữ liệu PKCS10 / CSR (c) HOẶC qua cả thông báo yêu cầu chứng chỉ và dữ liệu PKCS10 / CSR.&nbsp;Để cấu hình cấu trúc DN một cách chính xác, hãy làm theo các quy tắc sau:<br />
+              Tên phân biệt chủ đề đầy đủ có thể được cung cấp cho dịch vụ chứng
+              nhận: (a) Trong thông báo yêu cầu chứng chỉ (b) HOẶC&nbsp;trong dữ
+              liệu PKCS10 / CSR (c) HOẶC qua cả thông báo yêu cầu chứng chỉ và
+              dữ liệu PKCS10 / CSR.&nbsp;Để cấu hình cấu trúc DN một cách chính
+              xác, hãy làm theo các quy tắc sau:<br />
               <ol>
                 <li>
                   <strong>Dấu phẩy phân tách DN tương đối</strong><br />
@@ -832,7 +886,13 @@
                       font-family: Verdana;
                       color: #000000;
                     "
-                    >Dịch vụ chứng nhận ADSS cố gắng tìm giá trị của DN tương đối (thuộc tính) được đặt làm biến, ví dụ: CN = $CN trước tiên từ thông báo yêu cầu và sau đó trong bất kỳ PKCS10 / CSR nào được cung cấp.&nbsp;Mọi giá trị thuộc tính bị thiếu sẽ bị loại bỏ khỏi Tên chủ đề cuối cùng. Nếu tùy chọn "Khớp mẫu với DN chủ đề trong yêu cầu" được bật và dữ liệu yêu cầu không chứa giá trị cho một yêu cầu
+                    >Dịch vụ chứng nhận ADSS cố gắng tìm giá trị của DN tương
+                    đối (thuộc tính) được đặt làm biến, ví dụ: CN = $CN trước
+                    tiên từ thông báo yêu cầu và sau đó trong bất kỳ PKCS10 /
+                    CSR nào được cung cấp.&nbsp;Mọi giá trị thuộc tính bị thiếu
+                    sẽ bị loại bỏ khỏi Tên chủ đề cuối cùng. Nếu tùy chọn "Khớp
+                    mẫu với DN chủ đề trong yêu cầu" được bật và dữ liệu yêu cầu
+                    không chứa giá trị cho một yêu cầu
                     <span
                       style="
                         font-size: 14px;
@@ -911,7 +971,10 @@
                         font-family: Verdana;
                         color: #000000;
                       "
-                      >Dịch vụ chứng nhận ADSS cố gắng tìm giá trị DName chỉ từ thông báo yêu cầu và sẽ bỏ qua mọi PKCS10 / CSR được cung cấp. Nếu dữ liệu yêu cầu không chứa giá trị DName thì yêu cầu sẽ bị từ chối.<br /> </span
+                      >Dịch vụ chứng nhận ADSS cố gắng tìm giá trị DName chỉ từ
+                      thông báo yêu cầu và sẽ bỏ qua mọi PKCS10 / CSR được cung
+                      cấp. Nếu dữ liệu yêu cầu không chứa giá trị DName thì yêu
+                      cầu sẽ bị từ chối.<br /> </span
                     ><br />
                   </span>
                 </li>
@@ -987,7 +1050,10 @@
                           font-family: Verdana;
                           color: #000000;
                         "
-                        >Dịch vụ chứng nhận ADSS cố gắng tìm giá trị DName chỉ từ PKCS10 / CSR và sẽ bỏ qua mọi RDN được cung cấp trong thông báo yêu cầu. Nếu dữ liệu yêu cầu không chứa PKCS10/CSR thì yêu cầu sẽ bị từ chối.</span
+                        >Dịch vụ chứng nhận ADSS cố gắng tìm giá trị DName chỉ
+                        từ PKCS10 / CSR và sẽ bỏ qua mọi RDN được cung cấp trong
+                        thông báo yêu cầu. Nếu dữ liệu yêu cầu không chứa
+                        PKCS10/CSR thì yêu cầu sẽ bị từ chối.</span
                       ></span
                     ><br />
                   </span>
@@ -1161,7 +1227,9 @@
                     font-family: Verdana;
                     color: #4f8a10;
                   "
-                  >Nếu Nguồn tiền điện tử là Azure Key Vault HSM, thì yêu cầu chứng chỉ chỉ có thể sử dụng các ký tự này&nbsp;Đối với bí danh chứng chỉ:</span
+                  >Nếu Nguồn tiền điện tử là Azure Key Vault HSM, thì yêu cầu
+                  chứng chỉ chỉ có thể sử dụng các ký tự này&nbsp;Đối với bí
+                  danh chứng chỉ:</span
                 ><br
                   style="
                     color: #4f8a10;
@@ -1261,7 +1329,9 @@
                     font-family: Verdana;
                     color: #4f8a10;
                   "
-                  >Nếu hồ sơ có Ủy thác CA (dưới dạng CA bên ngoài trong Chi tiết CA), thì Tên chung và Họ là các tham số bắt buộc phải được định cấu hình làm Tên phân biệt chủ đề.</span
+                  >Nếu hồ sơ có Ủy thác CA (dưới dạng CA bên ngoài trong Chi
+                  tiết CA), thì Tên chung và Họ là các tham số bắt buộc phải
+                  được định cấu hình làm Tên phân biệt chủ đề.</span
                 ><span
                   style="
                     font-size: 14px;
@@ -1313,7 +1383,8 @@
                     color: #4f8a10;
                   "
                   ><br />
-                  Các ký tự đa ngôn ngữ được hỗ trợ trong Tên phân biệt chủ đề.</span
+                  Các ký tự đa ngôn ngữ được hỗ trợ trong Tên phân biệt chủ
+                  đề.</span
                 ><span
                   style="
                     font-size: 14px;
@@ -1400,39 +1471,66 @@
           <tr>
             <td valign="top">Khớp mẫu với chủ đề DN trong yêu cầu</td>
             <td valign="top">
-                Chọn tùy chọn này nếu bạn muốn tạo chứng chỉ bằng cách sử dụng mẫu RDN chính xác được xác định trong hồ sơ chứng nhận. Nếu tùy chọn này được bật và mẫu RDN không khớp trong dữ liệu yêu cầu chứng chỉ hoặc PKCS10/CSR thì yêu cầu sẽ bị từ chối.<br />
+              Chọn tùy chọn này nếu bạn muốn tạo chứng chỉ bằng cách sử dụng mẫu
+              RDN chính xác được xác định trong hồ sơ chứng nhận. Nếu tùy chọn
+              này được bật và mẫu RDN không khớp trong dữ liệu yêu cầu chứng chỉ
+              hoặc PKCS10/CSR thì yêu cầu sẽ bị từ chối.<br />
               <br />
-              <strong>Ghi chú:</strong>&nbsp;Nếu Tên Phân biệt Chủ đề được nộp được cấu hình là <strong>$YÊU CẦU</strong> hoặc
-              <strong>$PKCS10</strong> Sau đó, sẽ không có xác thực hoặc khớp mẫu nào được thực hiện.&nbsp; Chủ đề DName sẽ được đặt như được cấu hình trong yêu cầu hoặc trong PKCS10 / CSR.<br />
+              <strong>Ghi chú:</strong>&nbsp;Nếu Tên Phân biệt Chủ đề được nộp
+              được cấu hình là <strong>$YÊU CẦU</strong> hoặc
+              <strong>$PKCS10</strong> Sau đó, sẽ không có xác thực hoặc khớp
+              mẫu nào được thực hiện.&nbsp; Chủ đề DName sẽ được đặt như được
+              cấu hình trong yêu cầu hoặc trong PKCS10 / CSR.<br />
             </td>
           </tr>
           <tr>
             <td valign="top">Thời hạn hiệu lực<br /></td>
             <td valign="top">
-                Đặt thời hạn hiệu lực và chọn đơn vị thời gian từ menu thả xuống (phút), giờ, ngày, tháng và (các) năm) để đặt thời hạn hiệu lực của chứng chỉ.<br />
+              Đặt thời hạn hiệu lực và chọn đơn vị thời gian từ menu thả xuống
+              (phút), giờ, ngày, tháng và (các) năm) để đặt thời hạn hiệu lực
+              của chứng chỉ.<br />
               <br />
-              <strong> Ghi chú:</strong> nếu giá trị '0' được định cấu hình trong thời hạn hiệu lực hoặc giá trị '0' được chuyển từ yêu cầu thì thời hạn hiệu lực được định cấu hình trong mẫu chứng chỉ đã chọn sẽ được sử dụng và đơn vị thời gian mặc định sẽ là (các) Tháng. Hơn nữa, nếu thời hạn hiệu lực được kiểm tra là có thể ghi đè và bất kỳ giá trị nào được chuyển qua yêu cầu, thì đơn vị thời gian chứng chỉ sẽ được tính bằng (các) Tháng theo mặc định.<br />
+              <strong> Ghi chú:</strong> nếu giá trị '0' được định cấu hình
+              trong thời hạn hiệu lực hoặc giá trị '0' được chuyển từ yêu cầu
+              thì thời hạn hiệu lực được định cấu hình trong mẫu chứng chỉ đã
+              chọn sẽ được sử dụng và đơn vị thời gian mặc định sẽ là (các)
+              Tháng. Hơn nữa, nếu thời hạn hiệu lực được kiểm tra là có thể ghi
+              đè và bất kỳ giá trị nào được chuyển qua yêu cầu, thì đơn vị thời
+              gian chứng chỉ sẽ được tính bằng (các) Tháng theo mặc định.<br />
             </td>
           </tr>
           <tr>
             <td valign="top">Có giá trị từ&nbsp;</td>
             <td valign="top">
-                Một lĩnh vực bắt buộc.<br />
-                Đặt khoảng thời gian Hợp lệ Từ dưới dạng thời gian hiện tại hoặc tương lai mà từ đó chứng chỉ sẽ có hiệu lực.<br />
+              Một lĩnh vực bắt buộc.<br />
+              Đặt khoảng thời gian Hợp lệ Từ dưới dạng thời gian hiện tại hoặc
+              tương lai mà từ đó chứng chỉ sẽ có hiệu lực.<br />
               <br />
               <strong> Thời gian hiện tại</strong><br />
-              Chọn tùy chọn này nếu bạn muốn cấp chứng chỉ có "Hợp lệ từ" kể từ ngày cấp<br />
+              Chọn tùy chọn này nếu bạn muốn cấp chứng chỉ có "Hợp lệ từ" kể từ
+              ngày cấp<br />
               <br />
               <strong> Thời gian tương lai</strong><br />
-              Chọn tùy chọn này nếu bạn muốn cấp chứng chỉ có "Hợp lệ từ" trong tương lai, ví dụ: bạn cấp chứng chỉ có "Hợp lệ từ" là hai ngày kể từ ngày cấp, sau đó bạn có thể đặt giá trị 2 trong trường "Sau ngày". Bạn cũng cần đặt thời gian "Từ hợp lệ" trong trường "Từ hợp lệ". Sử dụng điều khiển thời gian để đặt thời gian. Định dạng thời gian là HH: MM AM / PM<br />
+              Chọn tùy chọn này nếu bạn muốn cấp chứng chỉ có "Hợp lệ từ" trong
+              tương lai, ví dụ: bạn cấp chứng chỉ có "Hợp lệ từ" là hai ngày kể
+              từ ngày cấp, sau đó bạn có thể đặt giá trị 2 trong trường "Sau
+              ngày". Bạn cũng cần đặt thời gian "Từ hợp lệ" trong trường "Từ hợp
+              lệ". Sử dụng điều khiển thời gian để đặt thời gian. Định dạng thời
+              gian là HH: MM AM / PM<br />
             </td>
           </tr>
           <tr>
             <td valign="top">Có thể ghi đè</td>
             <td valign="top">
-                Các cờ này cho biết liệu các chi tiết được cấu hình trong hồ sơ chứng nhận có thể được ứng dụng khách sửa đổi hay không bằng cách chuyển các tham số trong thông báo yêu cầu chứng nhận. Chọn hộp kiểm cho những giá trị mà bạn muốn ứng dụng máy khách có thể ghi đè.<br />
+              Các cờ này cho biết liệu các chi tiết được cấu hình trong hồ sơ
+              chứng nhận có thể được ứng dụng khách sửa đổi hay không bằng cách
+              chuyển các tham số trong thông báo yêu cầu chứng nhận. Chọn hộp
+              kiểm cho những giá trị mà bạn muốn ứng dụng máy khách có thể ghi
+              đè.<br />
               <br />
-              <strong> Ghi chú:</strong>Trong trường hợp Azure Key Vault, Thuật toán khóa và Độ dài khóa cũng có thể ghi đè từ ADSS Server v6.0 trở đi.<br />
+              <strong> Ghi chú:</strong>Trong trường hợp Azure Key Vault, Thuật
+              toán khóa và Độ dài khóa cũng có thể ghi đè từ ADSS Server v6.0
+              trở đi.<br />
             </td>
           </tr>
           <tr>
@@ -1469,12 +1567,13 @@
           <tr>
             <td valign="top">Gia hạn chứng chỉ bằng cặp khóa hiện có</td>
             <td valign="top">
-                Chọn tùy chọn này khi cần gia hạn chứng chỉ bằng cặp khóa hiện có&nbsp;&nbsp;<br />
+              Chọn tùy chọn này khi cần gia hạn chứng chỉ bằng cặp khóa hiện
+              có&nbsp;&nbsp;<br />
             </td>
           </tr>
           <tr>
             <td valign="top">
-                Gia hạn chứng chỉ bằng cặp khóa mới (Rekey)&nbsp;<br />
+              Gia hạn chứng chỉ bằng cặp khóa mới (Rekey)&nbsp;<br />
             </td>
             <td valign="top">
               <span
@@ -1501,9 +1600,12 @@
                   font-family: Verdana;
                   color: #000000;
                 "
-                >Chọn tùy chọn này khi cần gia hạn chứng chỉ bằng cặp khóa mới&nbsp;<br /> </span
+                >Chọn tùy chọn này khi cần gia hạn chứng chỉ bằng cặp khóa
+                mới&nbsp;<br /> </span
               ><br />
-              <strong>Ghi chứ:</strong>&nbsp;PKCS10 trong yêu cầu có nghĩa là Cặp khóa được tạo ở phía máy khách và dịch vụ cũng sẽ từ chối yêu cầu REKEY và RENEW (với Khóa mới) có chứa
+              <strong>Ghi chứ:</strong>&nbsp;PKCS10 trong yêu cầu có nghĩa là
+              Cặp khóa được tạo ở phía máy khách và dịch vụ cũng sẽ từ chối yêu
+              cầu REKEY và RENEW (với Khóa mới) có chứa
               <span
                 style="
                   font-size: 14px;
@@ -1569,7 +1671,7 @@
             text-align: justify;
           "
         >
-        Các mục cấu hình như sau:
+          Các mục cấu hình như sau:
         </p>
         <table
           class="Asc_Table"
@@ -1640,7 +1742,7 @@
                   width: 150pt;
                 "
               >
-              Cho phép tạo cặp khóa thông qua dịch vụ RAS
+                Cho phép tạo cặp khóa thông qua dịch vụ RAS
               </td>
               <td
                 style="
@@ -1674,7 +1776,8 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >Bật hộp kiểm này để chuyển tiếp yêu cầu đến dịch vụ RAS nhằm tạo khóa bên trong ADSS SAM.&nbsp;&nbsp;</span
+                  >Bật hộp kiểm này để chuyển tiếp yêu cầu đến dịch vụ RAS nhằm
+                  tạo khóa bên trong ADSS SAM.&nbsp;&nbsp;</span
                 ><br />
               </td>
             </tr>
@@ -1688,7 +1791,7 @@
                   width: 150pt;
                 "
               >
-              Địa chỉ dịch vụ RAS
+                Địa chỉ dịch vụ RAS
               </td>
               <td
                 style="
@@ -1796,7 +1899,9 @@
                       font-family: Verdana;
                       color: #000000;
                     "
-                    >(Các) địa chỉ dịch vụ RAS. Người dùng có thể nhập địa chỉ vào trường và sau đó nhấn nút THÊM để đưa địa chỉ vào danh sách địa chỉ Dịch vụ RAS.</span
+                    >(Các) địa chỉ dịch vụ RAS. Người dùng có thể nhập địa chỉ
+                    vào trường và sau đó nhấn nút THÊM để đưa địa chỉ vào danh
+                    sách địa chỉ Dịch vụ RAS.</span
                   ></span
                 ><br />
               </td>
@@ -1811,7 +1916,7 @@
                   width: 150pt;
                 "
               >
-              Danh sách địa chỉ dịch vụ RAS
+                Danh sách địa chỉ dịch vụ RAS
               </td>
               <td
                 valign="top"
@@ -1969,7 +2074,8 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >. Nhiều địa chỉ dịch vụ có thể được thêm vào để xử lý các địa chỉ dịch vụ Chính và Phụ như một cơ chế dự phòng.&nbsp;<span
+                  >. Nhiều địa chỉ dịch vụ có thể được thêm vào để xử lý các địa
+                  chỉ dịch vụ Chính và Phụ như một cơ chế dự phòng.&nbsp;<span
                     style="
                       font-size: 14px;
                       font-style: normal;
@@ -1993,7 +2099,9 @@
                       font-family: Verdana;
                       color: #000000;
                     "
-                    >Nút Kiểm tra kiểm tra xem Máy chủ ADSS RAS có khả dụng không. Nút Xóa sẽ xóa địa chỉ Dịch vụ RAS đã định cấu hình.</span
+                    >Nút Kiểm tra kiểm tra xem Máy chủ ADSS RAS có khả dụng
+                    không. Nút Xóa sẽ xóa địa chỉ Dịch vụ RAS đã định cấu
+                    hình.</span
                   ></span
                 ><br />
               </td>
@@ -2008,7 +2116,7 @@
                   width: 150pt;
                 "
               >
-              Hồ sơ RAS
+                Hồ sơ RAS
               </td>
               <td
                 valign="top"
@@ -2082,7 +2190,7 @@
                   width: 150pt;
                 "
               >
-              ID khách hàng
+                ID khách hàng
               </td>
               <td
                 valign="top"
@@ -2117,7 +2225,9 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >Xác định ID máy khách cho cấu hình Chứng nhận ADSS này sẽ được bao gồm trong thông báo yêu cầu khi giao tiếp với Dịch vụ ADSS RAS để tạo cặp khóa bên trong ADSS SAM.&nbsp;</span
+                  >Xác định ID máy khách cho cấu hình Chứng nhận ADSS này sẽ
+                  được bao gồm trong thông báo yêu cầu khi giao tiếp với Dịch vụ
+                  ADSS RAS để tạo cặp khóa bên trong ADSS SAM.&nbsp;</span
                 >This client ID needs to be registered within the
                 <a href="client_manager.htm" target="_blank"
                   >Quản lý khách hàng ADSS</a
@@ -2135,7 +2245,7 @@
                   width: 150pt;
                 "
               >
-              Sử dụng xác thực máy khách TLS
+                Sử dụng xác thực máy khách TLS
               </td>
               <td
                 valign="top"
@@ -2220,7 +2330,8 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >giao tiếp với Dịch vụ ADSS RAS qua Xác thực máy khách TLS,<span
+                  >giao tiếp với Dịch vụ ADSS RAS qua Xác thực máy khách
+                  TLS,<span
                     style="
                       font-size: 14px;
                       font-style: normal;
@@ -2293,7 +2404,9 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >.Người dùng có thể chọn chứng chỉ từ danh sách các chứng chỉ có sẵn bằng cách nhấp vào menu thả xuống xuất hiện khi nó được bật.</span
+                  >.Người dùng có thể chọn chứng chỉ từ danh sách các chứng chỉ
+                  có sẵn bằng cách nhấp vào menu thả xuống xuất hiện khi nó được
+                  bật.</span
                 ><br
                   style="
                     color: #000000;
@@ -2383,7 +2496,8 @@
                     font-family: Verdana;
                     color: #000000;
                   "
-                  >&nbsp;Cần phải đăng ký CA tổ chức phát hành của Chứng chỉ xác thực máy khách TLS trong&nbsp;</span
+                  >&nbsp;Cần phải đăng ký CA tổ chức phát hành của Chứng chỉ xác
+                  thực máy khách TLS trong&nbsp;</span
                 ><a
                   href="default.aspx#pageid=step_1___identifying_the_ta"
                   target="_blank"
@@ -2484,11 +2598,14 @@
           </tbody>
         </table>
         <br />
-        Danh sách các hồ sơ chứng nhận hiện có có thể được sắp xếp theo thứ tự tăng dần hoặc giảm dần bằng cách chọn một cột bảng từ danh sách thả xuống.&nbsp;
+        Danh sách các hồ sơ chứng nhận hiện có có thể được sắp xếp theo thứ tự
+        tăng dần hoặc giảm dần bằng cách chọn một cột bảng từ danh sách thả
+        xuống.&nbsp;
       </div>
       <div class="pagelist">
         <p>
-            Nhấp vào nút Tìm kiếm trên trang chính Hồ sơ chứng nhận sẽ hiển thị màn hình sau:
+          Nhấp vào nút Tìm kiếm trên trang chính Hồ sơ chứng nhận sẽ hiển thị
+          màn hình sau:
         </p>
         <p>
           <img
@@ -2498,18 +2615,25 @@
           />
         </p>
         <p>
-            Điều này giúp xác định một loại hồ sơ chứng nhận cụ thể được tạo trong Dịch vụ chứng nhận. Hồ sơ có thể được tìm kiếm dựa trên Trạng thái, ID hồ sơ, Tên hồ sơ, Loại CA, Thuật toán chính, Độ dài khóa và thời hạn hiệu lực. Nếu một tìm kiếm dựa trên nhiều giá trị, thì chúng sẽ được kết hợp với nhau bằng cách sử dụng toán hạng "AND" và do đó chỉ các bản ghi đáp ứng tất cả các tiêu chí mới được trình bày.<br />
+          Điều này giúp xác định một loại hồ sơ chứng nhận cụ thể được tạo trong
+          Dịch vụ chứng nhận. Hồ sơ có thể được tìm kiếm dựa trên Trạng thái, ID
+          hồ sơ, Tên hồ sơ, Loại CA, Thuật toán chính, Độ dài khóa và thời hạn
+          hiệu lực. Nếu một tìm kiếm dựa trên nhiều giá trị, thì chúng sẽ được
+          kết hợp với nhau bằng cách sử dụng toán hạng "AND" và do đó chỉ các
+          bản ghi đáp ứng tất cả các tiêu chí mới được trình bày.<br />
           <br />
           <span class="TipBubble"
             ><br />
-            Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký tự đại diện</span
+            Nếu ký tự "_" được sử dụng trong tìm kiếm thì nó sẽ hoạt động như ký
+            tự đại diện</span
           >
         </p>
         <p>
           <span class="TipBubble"
             ><br />
-            Hồ sơ Đã sao chép sẽ được tạo mà không có
-            "<strong>Tên</strong>" và "<strong>Mô tả</strong>"của Hồ sơ đã chọn. ID duy nhất tự động tạo hoặc ID có sẵn tiếp theo sẽ được gán cho Hồ sơ.<br />
+            Hồ sơ Đã sao chép sẽ được tạo mà không có "<strong>Tên</strong>" và
+            "<strong>Mô tả</strong>"của Hồ sơ đã chọn. ID duy nhất tự động tạo
+            hoặc ID có sẵn tiếp theo sẽ được gán cho Hồ sơ.<br />
           </span>
         </p>
       </div>
