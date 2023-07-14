@@ -3450,14 +3450,14 @@ docAux = insDoc(
 );
 xoperational_management = insFld(
   foldersTree,
-  gFld("&nbsp;Operational&nbsp;Management&nbsp;", "operational_management.htm")
+  gFld("&nbsp;Quản lý hoạt động&nbsp;", "pages/operational_management.htm")
 );
 docAux = insDoc(
   xoperational_management,
   gLnk(
     "R",
-    "&nbsp;Starting&nbsp;&&nbsp;Stopping&nbsp;ADSS&nbsp;Server&nbsp;",
-    "basic_configuration.htm"
+    "&nbsp;Khởi động và dừng máy chủ ADSS&nbsp;",
+    "pages/basic_configuration.htm"
   )
 );
 docAux = insDoc(

@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <title>Tổng quan về dịch vụ giải mã ADSS - ADSS-Admin-Guide</title>
+    <link href="../AppStyles.css" type="text/css" rel="stylesheet" />
+    <link href="../pagestyles.css" type="text/css" rel="stylesheet" />
+    <link href="../style_indigo.css" type="text/css" rel="stylesheet" />
+    <link href="../TableLayoutCss.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="static_page.js"></script>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />
+</head>
+
+<body
+    onload="HighlightSearchText();HighlightPage('561','Starting &amp; Stopping ADSS Server');parent.MenuItemSelected('operational_management');"
+    class="page_body" data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+    <div id="divPageinHeader">
+        <p><span class="breadcrumbs" style="font-family: arial; font-size: 10px; color: #cbc9ba;"><span
+                    class="var_breadcrumbs"><a href="welcome.htm" title="">Trang chủ</a>&nbsp;&gt;&nbsp;<a
+                        href="operational_management.htm" title="">Quản lí hoạt động</a>&nbsp;&gt;&nbsp;<a
+                        href="basic_configuration.htm" title="">Khởi động và dùng máy chủ ADSS</a></span></span>
+        </p>
+        <p><span class="Asc_PageName">Khởi động và dùng máy chủ ADSS</span></p>
+        <p style="text-align: left;">Phần này mô tả cách khởi động / dừng máy chủ ADSS. Giả định rằng bạn đã cài đặt
+            thành công ADSS Server theo hướng dẫn cài đặt.</p>
+        <p class="Asc_Heading" style="text-align: justify;">Hệ điều hành Windows</p>
+        <p style="text-align: justify;">
+        </p>
+        <p style="text-align: justify;">Máy chủ ADSS có thể được khởi động / dừng bằng hai cách trên hệ điều hành
+            Windows:</p>
+        <ul>
+            <li>
+                <div class="Bullet-dot" style="text-align: left;">Khởi chạy Windows Services Panel và khởi động các dịch
+                    vụ có tên Ascertia-ADSS-Core, Ascertia-ADSS-Console và Ascertia-ADSS-Service. Đây là phương pháp
+                    khuyến nghị để khởi động máy chủ ADSS. Có sẵn các tùy chọn Dừng và Khởi động lại.<br>
+                </div>
+            </li>
+            <li>
+                <div style="margin: 0in 0in 6pt; text-align: left;" class="MsoBodyText">Máy chủ ADSS cũng có thể được
+                    khởi động bằng cách sử dụng các tệp batch. Điều hướng đến thư mục [ADSS Server Home]/tomcat/bin và
+                    chạy các tệp bat sau đây:</div>
+                <ul>
+                    <li>startup_core.bat</li>
+                    <li>startup_console.bat</li>
+                    <li>startup_service.bat<br>
+                        <br>
+                        Nếu máy chủ ADSS được khởi động bằng cách sử dụng các tệp batch, chúng có thể được dừng bằng
+                        cách thực thi các tệp batch sau đây:
+                    </li>
+                    <li>shutdown_core.bat</li>
+                    <li>shutdown_console.bat</li>
+                    <li>shutdown_service.bat<br>
+                        <div class="Asc_Highlight_Text">Đây không phải là phương pháp khuyến nghị trừ khi được hỗ trợ
+                            yêu cầu bạn làm như vậy.</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div style="text-align: justify;">
+            <div class="Asc_Heading" style="text-align: start;">Hệ điều hành UNIX</div>
+        </div>
+        <p style="text-align: justify;">Máy chủ ADSS có thể được khởi động / dừng bằng hai cách trên hệ điều hành dựa
+            trên UNIX:</p>
+        <ul>
+            <li>Máy chủ ADSS có thể được khởi động từ dịch vụ tomcat. Dưới đây là các lệnh:
+                <ul>
+                    <li>/etc/init.d/tomcatd-ADSS-core start</li>
+                    <li>/etc/init.d/tomcatd-ADSS-console start</li>
+                    <li>/etc/init.d/tomcatd-ADSS-service start<br>
+                        Các tùy chọn được hỗ trợ khác bao gồm <strong>stop</strong>, <strong>restart</strong> và
+                        <strong>status</strong>
+                    </li>
+                </ul>
+            </li>
+            <li>Máy chủ ADSS cũng có thể được khởi động bằng cách sử dụng các tệp batch. Điều hướng đến thư mục [ADSS
+                Server Home]/tomcat/bin và chạy các tệp sh sau đây:
+                <ul>
+                    <li>startup_core.sh</li>
+                    <li>startup_console.sh</li>
+                    <li>startup_service.sh<br>
+                        <br>
+                        Nếu máy chủ ADSS được khởi động bằng các tệp sh, chúng có thể được dừng bằng cách thực thi các
+                        tệp sh sau đây:
+                    </li>
+                    <li>shutdown_core.sh</li>
+                    <li>shutdown_console.sh</li>
+                    <li>shutdown_service.sh<br>
+                        <span class="Asc_Highlight_Text">Đây không phải là phương pháp khuyến nghị trừ khi được hỗ trợ
+                            yêu cầu bạn làm như vậy. </span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            <p class="TipBubble">Khi cài đặt ADSS Server bằng trình cài đặt tiêu chuẩn, không cần khởi động dịch vụ ADSS
+                Server trên Windows thủ công. Việc này được thực hiện tự động bởi trình cài đặt sau khi cài đặt thành
+                công.</p>
+        </div>
+        <p style="text-align: justify;"><span class="pagelist" style="font-family: arial;"></span></p>
+        <div style="clear:both;"></div>
+        <p></p>
+        <p style="text-align: justify;"><span
+                style="font-size: 11px; font-family: tahoma, arial, helvetica, sans-serif;">
+            </span></p>
+        <p class="Asc_See_Also">Xem thêm</p>
+        <div class="Asc_Sibling_Page_List">
+            <div class="var_Sibling_Page_List"><a href="logging_on_to_the_adss_server_console.htm" title="">Truy cập vào
+                    Bảng điều khiển máy chủ ADSS
+                </a><br><a href="adding_an_operator_to_adss_server1.htm" title="">Thêm một người điều hành vào máy chủ
+                    ADSS
+                </a><br><a href="managing_backups.htm" title="">Quản lý sao lưu
+                </a><br><a href="managing_disk_space.htm" title="">Quản lý không gian đĩa
+                </a><br><a href="auto_upgrading_adss_server.htm" title="">Nâng cấp máy chủ ADSS
+                </a><br><a href="running_the_hardware_crypto_source_test_utility.htm" title="">Kiểm tra chức năng PKCS11
+                    HSM
+                </a><br><a href="trace_logs_export_utility.htm" title="">Tiện ích xuất tập tin nhật ký theo dõi</a><br>
+            </div>
+        </div>
+    </div>
+    <div id="eJOY__extension_root" class="eJOY__extension_root_class" style="all: unset;"></div>
+</body>
+
+</html>
